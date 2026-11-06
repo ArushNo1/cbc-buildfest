@@ -118,3 +118,4 @@ Entry template:
   - The narration number check passed on the final script.
   - Frames at each scene matched the narration.
   - Headless screenshots at 1200 px and 375 px showed no console errors and no horizontal scroll.
+- 00:58 ET follow-up: narrative added a 'What to do next' scene (#43). I moved its shot from #glance to #recommend so the n = 293 call-988 tile is on screen, then re-rendered: 95.7 s, 7.6 MB. Frame at 79 s checked. check_numbers: 0 problems.

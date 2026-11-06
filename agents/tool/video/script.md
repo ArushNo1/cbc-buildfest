@@ -36,7 +36,7 @@ shot: #comments-improve
 > And 35% [F:themes.improve.audience_question.pct.overall] of improvement comments were really questions about 988, a sign to leave time for questions.
 
 ## What to do next
-shot: #glance
+shot: #recommend
 > Our top recommendation: only 293 [F:call_988.likelihood.mean.overall#n] people answered whether they would actually call 988. Make that question required, and add a short survey at the start of each session, so next season measures real change.
 
 ## Refresh next month

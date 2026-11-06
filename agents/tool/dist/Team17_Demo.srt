@@ -1,91 +1,103 @@
 1
-00:00:00,804 --> 00:00:05,532
+00:00:00,802 --> 00:00:05,530
 EveryMind trains Maryland students, school staff and families to know when to use 988.
 
 2
-00:00:05,532 --> 00:00:08,336
+00:00:05,530 --> 00:00:08,334
 Every session ends with a survey, but a spreadsheet
 
 3
-00:00:08,336 --> 00:00:10,810
+00:00:08,334 --> 00:00:10,808
 of answers doesn't tell staff what to change.
 
 4
-00:00:11,267 --> 00:00:14,024
+00:00:11,304 --> 00:00:14,061
 Our tool turns each survey export into answers.
 
 5
-00:00:14,024 --> 00:00:18,130
+00:00:14,061 --> 00:00:18,167
 Save the export, run one command, and it cleans the data, flags labels
 
 6
-00:00:18,131 --> 00:00:22,237
+00:00:18,168 --> 00:00:22,274
 it doesn't recognize, codes the comments, and rebuilds this dashboard.
 
 7
-00:00:22,237 --> 00:00:24,290
+00:00:22,274 --> 00:00:24,327
 It needs no internet and no coding.
 
 8
-00:00:24,752 --> 00:00:26,663
+00:00:24,781 --> 00:00:26,692
 Here are 1,299 responses.
 
 9
-00:00:26,663 --> 00:00:30,485
+00:00:26,692 --> 00:00:30,514
 After training, 92% say they know when to use 988.
 
 10
-00:00:30,485 --> 00:00:34,919
+00:00:30,514 --> 00:00:34,948
 The biggest jump is describing 988: 46% before, 90% after.
 
 11
-00:00:34,919 --> 00:00:41,340
+00:00:34,948 --> 00:00:41,369
 The "before" was asked afterward, so the dashboard flags that gap as an upper bound.
 
 12
-00:00:41,849 --> 00:00:43,723
+00:00:41,831 --> 00:00:43,705
 Pick any measure and any group.
 
 13
-00:00:43,723 --> 00:00:47,109
+00:00:43,705 --> 00:00:47,091
 Every bar shows how many people it rests on and a likely
 
 14
-00:00:47,109 --> 00:00:50,797
+00:00:47,091 --> 00:00:50,779
 range, and groups under ten people are hidden, never guessed.
 
 15
-00:00:50,796 --> 00:00:54,484
+00:00:50,778 --> 00:00:54,466
 Students rate the training 7.2 out of ten; school staff, 9.5.
 
 16
-00:00:54,484 --> 00:00:58,172
+00:00:54,466 --> 00:00:58,154
 The ranges don't overlap, so that gap is worth a closer look.
 
 17
-00:00:58,633 --> 00:01:01,277
+00:00:58,617 --> 00:01:01,261
 Comments are coded offline into themes.
 
 18
-00:01:01,277 --> 00:01:05,277
+00:01:01,261 --> 00:01:05,261
 What 988 is was the most valued lesson, in 47% of comments.
 
 19
-00:01:05,741 --> 00:01:09,083
+00:01:05,715 --> 00:01:09,057
 And 35% of improvement comments were really questions
 
 20
-00:01:09,083 --> 00:01:11,984
+00:01:09,057 --> 00:01:11,958
 about 988, a sign to leave time for questions.
 
 21
-00:01:12,440 --> 00:01:15,527
-Every number carries an ID that traces back to one
+00:01:12,416 --> 00:01:17,579
+Our top recommendation: only 293 people answered whether they would actually call 988.
 
 22
-00:01:15,527 --> 00:01:18,799
-findings file, the same one our memo and slides cite.
+00:01:17,579 --> 00:01:21,061
+Make that question required, and add a short survey at the
 
 23
-00:01:18,799 --> 00:01:22,133
+00:01:21,061 --> 00:01:24,603
+start of each session, so next season measures real change.
+
+24
+00:01:25,060 --> 00:01:28,147
+Every number carries an ID that traces back to one
+
+25
+00:01:28,147 --> 00:01:31,419
+findings file, the same one our memo and slides cite.
+
+26
+00:01:31,419 --> 00:01:34,753
 Next month: new export, same command, fresh dashboard.
