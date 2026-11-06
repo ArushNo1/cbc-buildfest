@@ -11,93 +11,97 @@ Every session ends with a survey, but a spreadsheet
 of answers doesn't tell staff what to change.
 
 4
-00:00:11,304 --> 00:00:14,061
-Our tool turns each survey export into answers.
+00:00:11,266 --> 00:00:12,452
+Our tool is a website.
 
 5
-00:00:14,061 --> 00:00:18,167
-Save the export, run one command, and it cleans the data, flags labels
+00:00:12,452 --> 00:00:15,471
+Open the link and the dashboard is ready: no install and
 
 6
-00:00:18,168 --> 00:00:22,274
-it doesn't recognize, codes the comments, and rebuilds this dashboard.
+00:00:15,471 --> 00:00:18,544
+no login, and every number shows how many people it rests
 
 7
-00:00:22,274 --> 00:00:24,327
-It needs no internet and no coding.
+00:00:18,543 --> 00:00:18,705
+on.
 
 8
-00:00:24,781 --> 00:00:26,692
+00:00:19,161 --> 00:00:21,072
 Here are 1,299 responses.
 
 9
-00:00:26,692 --> 00:00:30,514
+00:00:21,072 --> 00:00:24,894
 After training, 92% say they know when to use 988.
 
 10
-00:00:30,514 --> 00:00:34,948
+00:00:24,894 --> 00:00:29,328
 The biggest jump is describing 988: 46% before, 90% after.
 
 11
-00:00:34,948 --> 00:00:41,369
+00:00:29,328 --> 00:00:35,749
 The "before" was asked afterward, so the dashboard flags that gap as an upper bound.
 
 12
-00:00:41,831 --> 00:00:43,705
+00:00:36,209 --> 00:00:38,083
 Pick any measure and any group.
 
 13
-00:00:43,705 --> 00:00:47,091
+00:00:38,083 --> 00:00:41,469
 Every bar shows how many people it rests on and a likely
 
 14
-00:00:47,091 --> 00:00:50,779
+00:00:41,469 --> 00:00:45,157
 range, and groups under ten people are hidden, never guessed.
 
 15
-00:00:50,778 --> 00:00:54,466
+00:00:45,156 --> 00:00:48,844
 Students rate the training 7.2 out of ten; school staff, 9.5.
 
 16
-00:00:54,466 --> 00:00:58,154
+00:00:48,844 --> 00:00:52,532
 The ranges don't overlap, so that gap is worth a closer look.
 
 17
-00:00:58,617 --> 00:01:01,261
-Comments are coded offline into themes.
+00:00:52,991 --> 00:00:55,047
+Comments are coded into themes.
 
 18
-00:01:01,261 --> 00:01:05,261
-What 988 is was the most valued lesson, in 47% of comments.
+00:00:55,047 --> 00:01:00,485
+What 988 is was the most valued lesson, in 47% of comments, and 35% of improvement
 
 19
-00:01:05,715 --> 00:01:09,057
-And 35% of improvement comments were really questions
+00:01:00,484 --> 00:01:05,590
+comments were really questions about 988, a sign to leave time for questions.
 
 20
-00:01:09,057 --> 00:01:11,958
-about 988, a sign to leave time for questions.
-
-21
-00:01:12,416 --> 00:01:17,579
+00:01:06,045 --> 00:01:11,208
 Our top recommendation: only 293 people answered whether they would actually call 988.
 
-22
-00:01:17,579 --> 00:01:21,061
+21
+00:01:11,208 --> 00:01:14,690
 Make that question required, and add a short survey at the
 
-23
-00:01:21,061 --> 00:01:24,603
+22
+00:01:14,690 --> 00:01:18,232
 start of each session, so next season measures real change.
 
+23
+00:01:18,689 --> 00:01:21,590
+Next month, click Update and drop in the new export.
+
 24
-00:01:25,060 --> 00:01:28,147
-Every number carries an ID that traces back to one
+00:01:21,590 --> 00:01:23,376
+Here we use a made-up test file.
 
 25
-00:01:28,147 --> 00:01:31,419
-findings file, the same one our memo and slides cite.
+00:01:23,376 --> 00:01:28,286
+Every number is recalculated inside the browser, and the file never leaves the computer.
 
 26
-00:01:31,419 --> 00:01:34,753
-Next month: new export, same command, fresh dashboard.
+00:01:28,749 --> 00:01:33,162
+Counties or answer labels the tool doesn't recognize are flagged here, never dropped.
+
+27
+00:01:33,162 --> 00:01:36,484
+Download the new dashboard, and share it with staff and funders.
