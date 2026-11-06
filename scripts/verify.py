@@ -18,7 +18,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SUB = Path(os.environ.get("SUBMISSION_DIR", ROOT / "submission"))
 REQUIRED = {"Team17_Memo.pdf", "Team17_AIAppendix.pdf", "Team17_Presentation.pptx", "Team17_Demo.mp4"}
 ARTIFACT = {"Team17_TechnicalArtifact.zip", "Team17_TechnicalArtifact.txt"}  # .txt holds the link
-DATA_MEMBER = re.compile(r"(^|/)(data|\.git)/|\.(xlsx|xlsm|xls|csv|tsv|parquet|feather|sav|dta|sqlite|db)$|identity_strings", re.I)
+DATA_MEMBER = re.compile(r"^(?:[^/]+/)?data/|(^|/)\.git/|\.(xlsx|xlsm|xls|csv|tsv|parquet|feather|sav|dta|sqlite|db)$|identity_strings", re.I)
 SERVICE_IDS = {"github", "noreply@github.com", "noreply", "web-flow"}
 TEAM_OK = re.compile(r"^\s*(team\s*17)?\s*$", re.I)  # empty or "Team 17" is fine in author fields
 

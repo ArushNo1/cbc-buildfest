@@ -18,7 +18,7 @@ Rules for every slide:
    - Recommend score by role and by county, with ranges.
    - Students 7.2 [F:recommend.score.mean.role.student] vs school staff 9.5 [F:recommend.score.mean.role.school_staff].
    - Anne Arundel 7.1 [F:recommend.score.mean.county.anne_arundel] vs Prince George's 8.7 [F:recommend.score.mean.county.prince_georges].
-7. **Finding 4: what participants said.** Top themes from the comments. TODO: themes IDs; reviewed quotes only.
+7. **Finding 4: what participants said.** What 988 is, the most-valued lesson: 46.8% [F:themes.valuable.what_988_is.pct.overall]. 35.2% [F:themes.improve.audience_question.pct.overall] of improvement comments are questions about 988, so build in Q&A time. Quotes only after the human review in #30.
 8. **Finding 5: the outcome we barely measure.** Only 293 [F:call_988.likelihood.mean.overall#n] answered "would you call 988". Also flag the thin groups: Spanish n = 19 [F:post.identify_crisis.agree_pct.language.es#n].
 9. **Recommendations.** The memo's 5 rows, each with owner, frequency and impact measure.
 10. **Implementation.** Who runs it, how often, what it needs; privacy, since no response data leaves EveryMind.

@@ -40,3 +40,11 @@ Entry template:
 ## Thu Nov 5 ~23:45 ET: memo v0
 - **What the AI produced:** `agents/narrative/drafts/memo.md` (883 words). Every number is tagged `[F:id]` against findings v1.
 - **Error caught by our own tool:** the first draft had a fabricated tag (a "62 metrics" count tagged with an unrelated finding ID) and untagged percentages ("95%", "77%", "12%"). check_numbers would have rejected all of them. They were reworded with no numbers, and check_numbers then reported 0 problems.
+
+## Fixes for #42/#43, drafts v1 (Nov 5)
+- Prompt: "fix the issues addressed to narrative, then fold the new findings and themes into the drafts."
+- verify.py: the zip data-path regex only blocks a top-level data/ now (it used to flag agents/data/). `make setup` works outside git. Spot-checked the regex on 5 paths.
+- Narration script: added a recommendation scene; check_numbers reports 0 problems.
+- Crosscheck rerun: 65/65 agree. Human recompute in docs/verification.md: 20/20 match.
+- Caught a process error: an agent's own review closed human gate #30 (quote PII), and no person reviewed it. Reopened. The drafts use no quotes.
+- Themes changed a recommendation: the AI-written v0 assumed students want "more interactive formats", but only 4.8% of improve comments ask for that, while 35.2% are questions about 988. Reworded to a Q&A pilot.

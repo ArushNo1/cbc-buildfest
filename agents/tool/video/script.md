@@ -31,6 +31,10 @@ shot: compare metric=recommend.score.mean dim=role
 shot: #comments
 > Comments are coded offline into themes. What 988 is was the most valued lesson, in 47% [F:themes.valuable.what_988_is.pct.overall] of comments. And 35% [F:themes.improve.audience_question.pct.overall] of improvement comments were really questions about 988, a sign to leave time for questions.
 
+## What to do next
+shot: #glance
+> Our top recommendation: only 293 [F:call_988.likelihood.mean.overall#n] people answered whether they would actually call 988. Make that question required, and add a short survey at the start of each session, so next season measures real change.
+
 ## Refresh next month
 shot: #notes+520
 > Every number carries an ID that traces back to one findings file, the same one our memo and slides cite. Next month: new export, same command, fresh dashboard.

@@ -1,6 +1,6 @@
 # AI Process Appendix
 
-*v0. Every statement is traceable to logs/ai/*.md or docs/verification.md. Limit: 1 page.*
+*v1. Every statement is traceable to logs/ai/*.md or docs/verification.md. Limit: 1 page.*
 
 ## Tools and how we used them
 
@@ -32,8 +32,8 @@ Errors were caught by tests, by cross-checks, or by a person reading the output.
 
 ## What we verified independently
 
-- **Separate recompute.** Code written separately from the pipeline recomputed all 62 metrics from the raw file, and all of them matched.
+- **Separate recompute.** Code written separately from the pipeline recomputed 65 metrics from the raw file, and all 65 matched.
 - **Reproducible rebuild.** A rebuild on a second machine reproduced the findings file byte-for-byte.
 - **Robustness.** Synthetic test files (a new county, new answer labels, extra rows, a missing column, shifted dates) confirm the tool flags these cases rather than crashing.
-- **Hand recompute.** A team member recomputed the headline numbers by hand in Excel from the raw file (*pending, see docs/verification.md*).
+- **Hand recompute.** A team member recomputed 20 headline numbers by hand in Excel from the raw file, and all 20 matched the pipeline in both value and n.
 - **Quote review.** A team member reviewed every quote for personal information (*pending*).

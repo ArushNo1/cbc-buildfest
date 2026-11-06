@@ -1,6 +1,6 @@
 # Memo: Using 988 training feedback to evaluate and improve EveryMind's trainings
 
-*To: EveryMind training and program staff · From: Team 17 · v0 draft (numbers from findings v1, before the freeze)*
+*To: EveryMind training and program staff · From: Team 17 · v1 draft (findings v1, themes v1)*
 
 ## Key findings
 
@@ -25,21 +25,24 @@
    - Spanish-language respondents (19 [F:post.identify_crisis.agree_pct.language.es#n]) and Queen Anne's County (12 [F:post.identify_crisis.agree_pct.county.queen_annes#n]) are too few to compare reliably.
    - Other out-of-state and small counties are not reported separately.
 
-*TODO (requested from data, see the open request issue): sample composition, spring vs fall, quality and NPS by group. Themes from the comments are pending themes v1.*
+7. **What participants wrote.**
+   - Learning what 988 is was the most-valued lesson, named in 46.8% [F:themes.valuable.what_988_is.pct.overall] of the 1,063 [F:themes.valuable.what_988_is.pct.overall#n] "most valuable" comments.
+   - The biggest "improve" theme is not a complaint. 35.2% [F:themes.improve.audience_question.pct.overall] of the 651 [F:themes.improve.audience_question.pct.overall#n] improvement comments were questions about 988 itself, which shows unmet demand for Q&A time.
+   - Requests for more interaction (4.8% [F:themes.improve.more_interaction.pct.overall]) or more examples (3.5% [F:themes.improve.more_examples.pct.overall]) are rare.
 
 ## Methodology
 
 - **Preparation.** We cleaned all survey responses with documented mapping tables. These unify county spellings (for example, six versions of "Montgomery"), answer-label variants ("Very agree", "Satisfied"), stray spaces and multi-select roles. Labels the tool doesn't recognize are flagged, never silently dropped.
 - **Measures.** "Agree" means Agree or Strongly agree. Every number states its base, and percentages carry confidence ranges.
 - **Small groups.** Any group under 10 people is hidden or pooled.
-- **Checks.** Every headline number was recomputed by separate, independently written code, and it matched the pipeline on every metric it covers. A team member also recomputes them by hand in Excel.
+- **Checks.** Every headline number was recomputed by separate, independently written code, and it matched the pipeline on every metric it covers. A team member also recomputed 20 headline numbers by hand in Excel, and all 20 matched.
 
 ## Recommendations (in priority order)
 
 | # | Action | Owner · frequency | Needs | Impact measure |
 |---|---|---|---|---|
 | 1 | **Measure behavior intent for everyone.** Make the call-988 question required and add a true pre-survey (3 questions at the start of the session). | Evaluation lead · once, then every session | Survey edit (~1 hour) | Call-988 response rate; gains measured without recall bias |
-| 2 | **Redesign the student session for engagement.** Pilot more interactive formats in Anne Arundel schools (comment themes will say what students ask for). | Training manager · next semester | Facilitator time, one pilot school | Student recommend score; compare pilot vs non-pilot |
+| 2 | **Redesign the student session for engagement.** Pilot a format with built-in Q&A time in Anne Arundel schools, since a third of improvement comments are open questions about 988. | Training manager · next semester | Facilitator time, one pilot school | Student recommend score; compare pilot vs non-pilot |
 | 3 | **Run the dashboard after every training season**, and use it for grant reports. | Program coordinator · monthly + each season | Survey export, a laptop, ~5 minutes | Report turnaround; grant reports citing it |
 | 4 | **Reach and hear smaller communities.** Collect at least 30 responses before judging a county or a language group; offer the Spanish survey actively. | Outreach lead · ongoing | Survey links per partner | Number of groups with n ≥ 30 |
 | 5 | **Fix the survey form**: county as a dropdown, one answer scale for all items. | Evaluation lead · once | Survey edit | Label variants and blanks fall to zero |
@@ -55,7 +58,7 @@
 
 - **Self-report:** ratings measure confidence, not skill or behavior.
 - **Recalled "before" ratings:** the before scores were asked after training and likely overstate gains.
-- **Who answered:** the sample is mostly Anne Arundel students, so results describe them best.
+- **Who answered:** 83.1% [F:sample.respondents.pct.role.student] are students and 72.1% [F:sample.respondents.pct.county.anne_arundel] are from Anne Arundel, so results describe them best.
 - **Missing answers:** about three in four skipped the call-988 question, and about one in eight skipped the quality questions.
-- **Possible misread scale:** 31 respondents chose "Strongly disagree" on every knowledge item. Excluding them raises agreement by about two points *(TODO: cite sensitivity IDs once data adds them)*.
+- **Possible misread scale:** 31 respondents chose "Strongly disagree" on every knowledge item. Excluding them raises crisis-identification agreement from 89.9% [F:post.identify_crisis.agree_pct.overall] to 92.1% [F:post.identify_crisis.agree_pct.sensitivity.excl_straightline], so the headline numbers are, if anything, conservative.
 - **No comparison group.**

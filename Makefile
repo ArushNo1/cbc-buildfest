@@ -6,9 +6,9 @@ need = @test -e $(1) || { echo "make $@: NOT IMPLEMENTED - $(1) does not exist y
 .PHONY: setup data themes run test verify submit crosscheck fixtures
 
 setup:
-	chmod +x scripts/hooks/* scripts/*.sh
-	git config core.hooksPath scripts/hooks
 	$(PY) -m pip install -r requirements.txt
+	-chmod +x scripts/hooks/* scripts/*.sh 2>/dev/null
+	@git rev-parse --git-dir >/dev/null 2>&1 && git config core.hooksPath scripts/hooks || echo "setup: not a git checkout; commit hook skipped"
 
 data:
 	$(call need,agents/data/pipeline.py,data)
