@@ -12,6 +12,26 @@ Recompute from the raw xlsx in Excel, independently of the pipeline. Steps per I
 
 | Finding ID | Pipeline value (n) | Human value (n) | Match? | Who / when | Notes |
 |---|---|---|---|---|---|
+| `call_988.likelihood.mean.overall` | 7.66 (n=293) | | | | |
+| `change.describe_988.mean_points.overall` | 1.11 (n=1299) | | | | |
+| `change.identify_crisis.mean_points.overall` | 0.46 (n=1299) | | | | |
+| `change.know_when_to_use.mean_points.overall` | 1.01 (n=1299) | | | | |
+| `post.describe_988.agree_pct.overall` | 90.45 (n=1299) | | | | |
+| `post.identify_crisis.agree_pct.county.queen_annes` | 91.67 (n=12) | | | | |
+| `post.identify_crisis.agree_pct.language.es` | 84.21 (n=19) | | | | |
+| `post.identify_crisis.agree_pct.overall` | 89.92 (n=1299) | | | | |
+| `post.identify_crisis.agree_pct.role.student` | 89.54 (n=1080) | | | | |
+| `post.know_when_to_use.agree_pct.overall` | 92.30 (n=1299) | | | | |
+| `pre.describe_988.agree_pct.overall` | 46.50 (n=1299) | | | | |
+| `pre.identify_crisis.agree_pct.overall` | 72.21 (n=1299) | | | | |
+| `pre.know_when_to_use.agree_pct.overall` | 55.66 (n=1299) | | | | |
+| `quality.engaging.agree_pct.overall` | 88.15 (n=1148) | | | | |
+| `quality.organized.agree_pct.overall` | 91.76 (n=1141) | | | | |
+| `recommend.score.mean.county.anne_arundel` | 7.15 (n=923) | | | | |
+| `recommend.score.mean.county.prince_georges` | 8.74 (n=291) | | | | |
+| `recommend.score.mean.role.caregiver_parent` | 9.46 (n=69) | | | | |
+| `recommend.score.mean.role.school_staff` | 9.52 (n=67) | | | | |
+| `recommend.score.mean.role.student` | 7.22 (n=1051) | | | | |
 
 ## Comment classifier validation (text)
 | Field | Sample size | How drawn | Coded by | Agreement % | Kappa | Notes |
