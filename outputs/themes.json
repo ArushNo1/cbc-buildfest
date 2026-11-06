@@ -1,0 +1,6810 @@
+{
+  "counts": [
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "Anne Arundel"
+      },
+      "id": "themes.improve.accessibility.pct.county.anne_arundel",
+      "n": 389,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "accessibility"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "Montgomery"
+      },
+      "id": "themes.improve.accessibility.pct.county.montgomery",
+      "n": 21,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "accessibility"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "other_pooled"
+      },
+      "id": "themes.improve.accessibility.pct.county.other_pooled",
+      "n": 12,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "accessibility"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "Prince George's"
+      },
+      "id": "themes.improve.accessibility.pct.county.prince_georges",
+      "n": 229,
+      "n_mentions": 1,
+      "pct": 0.4,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "accessibility"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "language",
+        "level": "en"
+      },
+      "id": "themes.improve.accessibility.pct.language.en",
+      "n": 637,
+      "n_mentions": 1,
+      "pct": 0.2,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "accessibility"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "language",
+        "level": "es"
+      },
+      "id": "themes.improve.accessibility.pct.language.es",
+      "n": 14,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "accessibility"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "id": "themes.improve.accessibility.pct.overall",
+      "n": 651,
+      "n_mentions": 1,
+      "pct": 0.2,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "accessibility"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "caregiver"
+      },
+      "id": "themes.improve.accessibility.pct.role.caregiver",
+      "n": 36,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "accessibility"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "other"
+      },
+      "id": "themes.improve.accessibility.pct.role.other",
+      "n": 58,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "accessibility"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "other_pooled"
+      },
+      "id": "themes.improve.accessibility.pct.role.other_pooled",
+      "n": 8,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "accessibility"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "school_staff"
+      },
+      "id": "themes.improve.accessibility.pct.role.school_staff",
+      "n": 31,
+      "n_mentions": 1,
+      "pct": 3.2,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "accessibility"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "student"
+      },
+      "id": "themes.improve.accessibility.pct.role.student",
+      "n": 518,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "accessibility"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2025-10_to_2026-03"
+      },
+      "id": "themes.improve.accessibility.pct.training_period.2025_10_to_2026_03",
+      "n": 91,
+      "n_mentions": 1,
+      "pct": 1.1,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "accessibility"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-04_to_2026-05"
+      },
+      "id": "themes.improve.accessibility.pct.training_period.2026_04_to_2026_05",
+      "n": 326,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "accessibility"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-06_to_2026-08"
+      },
+      "id": "themes.improve.accessibility.pct.training_period.2026_06_to_2026_08",
+      "n": 32,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "accessibility"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-09_to_2026-10"
+      },
+      "id": "themes.improve.accessibility.pct.training_period.2026_09_to_2026_10",
+      "n": 200,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "accessibility"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "other_pooled"
+      },
+      "id": "themes.improve.accessibility.pct.training_period.other_pooled",
+      "n": 2,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "accessibility"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "Anne Arundel"
+      },
+      "id": "themes.improve.audience_question.pct.county.anne_arundel",
+      "n": 389,
+      "n_mentions": 226,
+      "pct": 58.1,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "audience_question"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "Montgomery"
+      },
+      "id": "themes.improve.audience_question.pct.county.montgomery",
+      "n": 21,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "audience_question"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "other_pooled"
+      },
+      "id": "themes.improve.audience_question.pct.county.other_pooled",
+      "n": 12,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "audience_question"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "Prince George's"
+      },
+      "id": "themes.improve.audience_question.pct.county.prince_georges",
+      "n": 229,
+      "n_mentions": 3,
+      "pct": 1.3,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "audience_question"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "language",
+        "level": "en"
+      },
+      "id": "themes.improve.audience_question.pct.language.en",
+      "n": 637,
+      "n_mentions": 229,
+      "pct": 35.9,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "audience_question"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "language",
+        "level": "es"
+      },
+      "id": "themes.improve.audience_question.pct.language.es",
+      "n": 14,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "audience_question"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "id": "themes.improve.audience_question.pct.overall",
+      "n": 651,
+      "n_mentions": 229,
+      "pct": 35.2,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "audience_question"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "caregiver"
+      },
+      "id": "themes.improve.audience_question.pct.role.caregiver",
+      "n": 36,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "audience_question"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "other"
+      },
+      "id": "themes.improve.audience_question.pct.role.other",
+      "n": 58,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "audience_question"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "other_pooled"
+      },
+      "id": "themes.improve.audience_question.pct.role.other_pooled",
+      "n": 8,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "audience_question"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "school_staff"
+      },
+      "id": "themes.improve.audience_question.pct.role.school_staff",
+      "n": 31,
+      "n_mentions": 1,
+      "pct": 3.2,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "audience_question"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "student"
+      },
+      "id": "themes.improve.audience_question.pct.role.student",
+      "n": 518,
+      "n_mentions": 228,
+      "pct": 44.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "audience_question"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2025-10_to_2026-03"
+      },
+      "id": "themes.improve.audience_question.pct.training_period.2025_10_to_2026_03",
+      "n": 91,
+      "n_mentions": 1,
+      "pct": 1.1,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "audience_question"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-04_to_2026-05"
+      },
+      "id": "themes.improve.audience_question.pct.training_period.2026_04_to_2026_05",
+      "n": 326,
+      "n_mentions": 67,
+      "pct": 20.6,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "audience_question"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-06_to_2026-08"
+      },
+      "id": "themes.improve.audience_question.pct.training_period.2026_06_to_2026_08",
+      "n": 32,
+      "n_mentions": 1,
+      "pct": 3.1,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "audience_question"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-09_to_2026-10"
+      },
+      "id": "themes.improve.audience_question.pct.training_period.2026_09_to_2026_10",
+      "n": 200,
+      "n_mentions": 160,
+      "pct": 80.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "audience_question"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "other_pooled"
+      },
+      "id": "themes.improve.audience_question.pct.training_period.other_pooled",
+      "n": 2,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "audience_question"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "Anne Arundel"
+      },
+      "id": "themes.improve.content_depth.pct.county.anne_arundel",
+      "n": 389,
+      "n_mentions": 22,
+      "pct": 5.7,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "content_depth"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "Montgomery"
+      },
+      "id": "themes.improve.content_depth.pct.county.montgomery",
+      "n": 21,
+      "n_mentions": 1,
+      "pct": 4.8,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "content_depth"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "other_pooled"
+      },
+      "id": "themes.improve.content_depth.pct.county.other_pooled",
+      "n": 12,
+      "n_mentions": 1,
+      "pct": 8.3,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "content_depth"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "Prince George's"
+      },
+      "id": "themes.improve.content_depth.pct.county.prince_georges",
+      "n": 229,
+      "n_mentions": 3,
+      "pct": 1.3,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "content_depth"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "language",
+        "level": "en"
+      },
+      "id": "themes.improve.content_depth.pct.language.en",
+      "n": 637,
+      "n_mentions": 26,
+      "pct": 4.1,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "content_depth"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "language",
+        "level": "es"
+      },
+      "id": "themes.improve.content_depth.pct.language.es",
+      "n": 14,
+      "n_mentions": 1,
+      "pct": 7.1,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "content_depth"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "id": "themes.improve.content_depth.pct.overall",
+      "n": 651,
+      "n_mentions": 27,
+      "pct": 4.1,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "content_depth"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "caregiver"
+      },
+      "id": "themes.improve.content_depth.pct.role.caregiver",
+      "n": 36,
+      "n_mentions": 1,
+      "pct": 2.8,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "content_depth"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "other"
+      },
+      "id": "themes.improve.content_depth.pct.role.other",
+      "n": 58,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "content_depth"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "other_pooled"
+      },
+      "id": "themes.improve.content_depth.pct.role.other_pooled",
+      "n": 8,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "content_depth"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "school_staff"
+      },
+      "id": "themes.improve.content_depth.pct.role.school_staff",
+      "n": 31,
+      "n_mentions": 2,
+      "pct": 6.5,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "content_depth"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "student"
+      },
+      "id": "themes.improve.content_depth.pct.role.student",
+      "n": 518,
+      "n_mentions": 23,
+      "pct": 4.4,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "content_depth"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2025-10_to_2026-03"
+      },
+      "id": "themes.improve.content_depth.pct.training_period.2025_10_to_2026_03",
+      "n": 91,
+      "n_mentions": 5,
+      "pct": 5.5,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "content_depth"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-04_to_2026-05"
+      },
+      "id": "themes.improve.content_depth.pct.training_period.2026_04_to_2026_05",
+      "n": 326,
+      "n_mentions": 11,
+      "pct": 3.4,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "content_depth"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-06_to_2026-08"
+      },
+      "id": "themes.improve.content_depth.pct.training_period.2026_06_to_2026_08",
+      "n": 32,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "content_depth"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-09_to_2026-10"
+      },
+      "id": "themes.improve.content_depth.pct.training_period.2026_09_to_2026_10",
+      "n": 200,
+      "n_mentions": 11,
+      "pct": 5.5,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "content_depth"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "other_pooled"
+      },
+      "id": "themes.improve.content_depth.pct.training_period.other_pooled",
+      "n": 2,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "content_depth"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "Anne Arundel"
+      },
+      "id": "themes.improve.local_followup.pct.county.anne_arundel",
+      "n": 389,
+      "n_mentions": 1,
+      "pct": 0.3,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "local_followup"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "Montgomery"
+      },
+      "id": "themes.improve.local_followup.pct.county.montgomery",
+      "n": 21,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "local_followup"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "other_pooled"
+      },
+      "id": "themes.improve.local_followup.pct.county.other_pooled",
+      "n": 12,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "local_followup"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "Prince George's"
+      },
+      "id": "themes.improve.local_followup.pct.county.prince_georges",
+      "n": 229,
+      "n_mentions": 1,
+      "pct": 0.4,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "local_followup"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "language",
+        "level": "en"
+      },
+      "id": "themes.improve.local_followup.pct.language.en",
+      "n": 637,
+      "n_mentions": 2,
+      "pct": 0.3,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "local_followup"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "language",
+        "level": "es"
+      },
+      "id": "themes.improve.local_followup.pct.language.es",
+      "n": 14,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "local_followup"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "id": "themes.improve.local_followup.pct.overall",
+      "n": 651,
+      "n_mentions": 2,
+      "pct": 0.3,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "local_followup"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "caregiver"
+      },
+      "id": "themes.improve.local_followup.pct.role.caregiver",
+      "n": 36,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "local_followup"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "other"
+      },
+      "id": "themes.improve.local_followup.pct.role.other",
+      "n": 58,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "local_followup"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "other_pooled"
+      },
+      "id": "themes.improve.local_followup.pct.role.other_pooled",
+      "n": 8,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "local_followup"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "school_staff"
+      },
+      "id": "themes.improve.local_followup.pct.role.school_staff",
+      "n": 31,
+      "n_mentions": 2,
+      "pct": 6.5,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "local_followup"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "student"
+      },
+      "id": "themes.improve.local_followup.pct.role.student",
+      "n": 518,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "local_followup"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2025-10_to_2026-03"
+      },
+      "id": "themes.improve.local_followup.pct.training_period.2025_10_to_2026_03",
+      "n": 91,
+      "n_mentions": 2,
+      "pct": 2.2,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "local_followup"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-04_to_2026-05"
+      },
+      "id": "themes.improve.local_followup.pct.training_period.2026_04_to_2026_05",
+      "n": 326,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "local_followup"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-06_to_2026-08"
+      },
+      "id": "themes.improve.local_followup.pct.training_period.2026_06_to_2026_08",
+      "n": 32,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "local_followup"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-09_to_2026-10"
+      },
+      "id": "themes.improve.local_followup.pct.training_period.2026_09_to_2026_10",
+      "n": 200,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "local_followup"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "other_pooled"
+      },
+      "id": "themes.improve.local_followup.pct.training_period.other_pooled",
+      "n": 2,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "local_followup"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "Anne Arundel"
+      },
+      "id": "themes.improve.logistics.pct.county.anne_arundel",
+      "n": 389,
+      "n_mentions": 3,
+      "pct": 0.8,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "logistics"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "Montgomery"
+      },
+      "id": "themes.improve.logistics.pct.county.montgomery",
+      "n": 21,
+      "n_mentions": 2,
+      "pct": 9.5,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "logistics"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "other_pooled"
+      },
+      "id": "themes.improve.logistics.pct.county.other_pooled",
+      "n": 12,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "logistics"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "Prince George's"
+      },
+      "id": "themes.improve.logistics.pct.county.prince_georges",
+      "n": 229,
+      "n_mentions": 10,
+      "pct": 4.4,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "logistics"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "language",
+        "level": "en"
+      },
+      "id": "themes.improve.logistics.pct.language.en",
+      "n": 637,
+      "n_mentions": 15,
+      "pct": 2.4,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "logistics"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "language",
+        "level": "es"
+      },
+      "id": "themes.improve.logistics.pct.language.es",
+      "n": 14,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "logistics"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "id": "themes.improve.logistics.pct.overall",
+      "n": 651,
+      "n_mentions": 15,
+      "pct": 2.3,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "logistics"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "caregiver"
+      },
+      "id": "themes.improve.logistics.pct.role.caregiver",
+      "n": 36,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "logistics"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "other"
+      },
+      "id": "themes.improve.logistics.pct.role.other",
+      "n": 58,
+      "n_mentions": 5,
+      "pct": 8.6,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "logistics"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "other_pooled"
+      },
+      "id": "themes.improve.logistics.pct.role.other_pooled",
+      "n": 8,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "logistics"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "school_staff"
+      },
+      "id": "themes.improve.logistics.pct.role.school_staff",
+      "n": 31,
+      "n_mentions": 1,
+      "pct": 3.2,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "logistics"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "student"
+      },
+      "id": "themes.improve.logistics.pct.role.student",
+      "n": 518,
+      "n_mentions": 8,
+      "pct": 1.5,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "logistics"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2025-10_to_2026-03"
+      },
+      "id": "themes.improve.logistics.pct.training_period.2025_10_to_2026_03",
+      "n": 91,
+      "n_mentions": 5,
+      "pct": 5.5,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "logistics"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-04_to_2026-05"
+      },
+      "id": "themes.improve.logistics.pct.training_period.2026_04_to_2026_05",
+      "n": 326,
+      "n_mentions": 7,
+      "pct": 2.1,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "logistics"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-06_to_2026-08"
+      },
+      "id": "themes.improve.logistics.pct.training_period.2026_06_to_2026_08",
+      "n": 32,
+      "n_mentions": 1,
+      "pct": 3.1,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "logistics"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-09_to_2026-10"
+      },
+      "id": "themes.improve.logistics.pct.training_period.2026_09_to_2026_10",
+      "n": 200,
+      "n_mentions": 1,
+      "pct": 0.5,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "logistics"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "other_pooled"
+      },
+      "id": "themes.improve.logistics.pct.training_period.other_pooled",
+      "n": 2,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "logistics"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "Anne Arundel"
+      },
+      "id": "themes.improve.materials.pct.county.anne_arundel",
+      "n": 389,
+      "n_mentions": 3,
+      "pct": 0.8,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "materials"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "Montgomery"
+      },
+      "id": "themes.improve.materials.pct.county.montgomery",
+      "n": 21,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "materials"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "other_pooled"
+      },
+      "id": "themes.improve.materials.pct.county.other_pooled",
+      "n": 12,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "materials"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "Prince George's"
+      },
+      "id": "themes.improve.materials.pct.county.prince_georges",
+      "n": 229,
+      "n_mentions": 7,
+      "pct": 3.1,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "materials"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "language",
+        "level": "en"
+      },
+      "id": "themes.improve.materials.pct.language.en",
+      "n": 637,
+      "n_mentions": 10,
+      "pct": 1.6,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "materials"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "language",
+        "level": "es"
+      },
+      "id": "themes.improve.materials.pct.language.es",
+      "n": 14,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "materials"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "id": "themes.improve.materials.pct.overall",
+      "n": 651,
+      "n_mentions": 10,
+      "pct": 1.5,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "materials"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "caregiver"
+      },
+      "id": "themes.improve.materials.pct.role.caregiver",
+      "n": 36,
+      "n_mentions": 3,
+      "pct": 8.3,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "materials"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "other"
+      },
+      "id": "themes.improve.materials.pct.role.other",
+      "n": 58,
+      "n_mentions": 1,
+      "pct": 1.7,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "materials"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "other_pooled"
+      },
+      "id": "themes.improve.materials.pct.role.other_pooled",
+      "n": 8,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "materials"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "school_staff"
+      },
+      "id": "themes.improve.materials.pct.role.school_staff",
+      "n": 31,
+      "n_mentions": 2,
+      "pct": 6.5,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "materials"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "student"
+      },
+      "id": "themes.improve.materials.pct.role.student",
+      "n": 518,
+      "n_mentions": 3,
+      "pct": 0.6,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "materials"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2025-10_to_2026-03"
+      },
+      "id": "themes.improve.materials.pct.training_period.2025_10_to_2026_03",
+      "n": 91,
+      "n_mentions": 6,
+      "pct": 6.6,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "materials"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-04_to_2026-05"
+      },
+      "id": "themes.improve.materials.pct.training_period.2026_04_to_2026_05",
+      "n": 326,
+      "n_mentions": 4,
+      "pct": 1.2,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "materials"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-06_to_2026-08"
+      },
+      "id": "themes.improve.materials.pct.training_period.2026_06_to_2026_08",
+      "n": 32,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "materials"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-09_to_2026-10"
+      },
+      "id": "themes.improve.materials.pct.training_period.2026_09_to_2026_10",
+      "n": 200,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "materials"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "other_pooled"
+      },
+      "id": "themes.improve.materials.pct.training_period.other_pooled",
+      "n": 2,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "materials"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "Anne Arundel"
+      },
+      "id": "themes.improve.more_examples.pct.county.anne_arundel",
+      "n": 389,
+      "n_mentions": 4,
+      "pct": 1.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "more_examples"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "Montgomery"
+      },
+      "id": "themes.improve.more_examples.pct.county.montgomery",
+      "n": 21,
+      "n_mentions": 4,
+      "pct": 19.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "more_examples"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "other_pooled"
+      },
+      "id": "themes.improve.more_examples.pct.county.other_pooled",
+      "n": 12,
+      "n_mentions": 1,
+      "pct": 8.3,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "more_examples"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "Prince George's"
+      },
+      "id": "themes.improve.more_examples.pct.county.prince_georges",
+      "n": 229,
+      "n_mentions": 14,
+      "pct": 6.1,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "more_examples"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "language",
+        "level": "en"
+      },
+      "id": "themes.improve.more_examples.pct.language.en",
+      "n": 637,
+      "n_mentions": 22,
+      "pct": 3.5,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "more_examples"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "language",
+        "level": "es"
+      },
+      "id": "themes.improve.more_examples.pct.language.es",
+      "n": 14,
+      "n_mentions": 1,
+      "pct": 7.1,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "more_examples"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "id": "themes.improve.more_examples.pct.overall",
+      "n": 651,
+      "n_mentions": 23,
+      "pct": 3.5,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "more_examples"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "caregiver"
+      },
+      "id": "themes.improve.more_examples.pct.role.caregiver",
+      "n": 36,
+      "n_mentions": 2,
+      "pct": 5.6,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "more_examples"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "other"
+      },
+      "id": "themes.improve.more_examples.pct.role.other",
+      "n": 58,
+      "n_mentions": 7,
+      "pct": 12.1,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "more_examples"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "other_pooled"
+      },
+      "id": "themes.improve.more_examples.pct.role.other_pooled",
+      "n": 8,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "more_examples"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "school_staff"
+      },
+      "id": "themes.improve.more_examples.pct.role.school_staff",
+      "n": 31,
+      "n_mentions": 3,
+      "pct": 9.7,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "more_examples"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "student"
+      },
+      "id": "themes.improve.more_examples.pct.role.student",
+      "n": 518,
+      "n_mentions": 9,
+      "pct": 1.7,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "more_examples"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2025-10_to_2026-03"
+      },
+      "id": "themes.improve.more_examples.pct.training_period.2025_10_to_2026_03",
+      "n": 91,
+      "n_mentions": 9,
+      "pct": 9.9,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "more_examples"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-04_to_2026-05"
+      },
+      "id": "themes.improve.more_examples.pct.training_period.2026_04_to_2026_05",
+      "n": 326,
+      "n_mentions": 10,
+      "pct": 3.1,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "more_examples"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-06_to_2026-08"
+      },
+      "id": "themes.improve.more_examples.pct.training_period.2026_06_to_2026_08",
+      "n": 32,
+      "n_mentions": 3,
+      "pct": 9.4,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "more_examples"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-09_to_2026-10"
+      },
+      "id": "themes.improve.more_examples.pct.training_period.2026_09_to_2026_10",
+      "n": 200,
+      "n_mentions": 1,
+      "pct": 0.5,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "more_examples"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "other_pooled"
+      },
+      "id": "themes.improve.more_examples.pct.training_period.other_pooled",
+      "n": 2,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "more_examples"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "Anne Arundel"
+      },
+      "id": "themes.improve.more_interaction.pct.county.anne_arundel",
+      "n": 389,
+      "n_mentions": 2,
+      "pct": 0.5,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "more_interaction"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "Montgomery"
+      },
+      "id": "themes.improve.more_interaction.pct.county.montgomery",
+      "n": 21,
+      "n_mentions": 1,
+      "pct": 4.8,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "more_interaction"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "other_pooled"
+      },
+      "id": "themes.improve.more_interaction.pct.county.other_pooled",
+      "n": 12,
+      "n_mentions": 1,
+      "pct": 8.3,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "more_interaction"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "Prince George's"
+      },
+      "id": "themes.improve.more_interaction.pct.county.prince_georges",
+      "n": 229,
+      "n_mentions": 27,
+      "pct": 11.8,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "more_interaction"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "language",
+        "level": "en"
+      },
+      "id": "themes.improve.more_interaction.pct.language.en",
+      "n": 637,
+      "n_mentions": 31,
+      "pct": 4.9,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "more_interaction"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "language",
+        "level": "es"
+      },
+      "id": "themes.improve.more_interaction.pct.language.es",
+      "n": 14,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "more_interaction"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "id": "themes.improve.more_interaction.pct.overall",
+      "n": 651,
+      "n_mentions": 31,
+      "pct": 4.8,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "more_interaction"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "caregiver"
+      },
+      "id": "themes.improve.more_interaction.pct.role.caregiver",
+      "n": 36,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "more_interaction"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "other"
+      },
+      "id": "themes.improve.more_interaction.pct.role.other",
+      "n": 58,
+      "n_mentions": 10,
+      "pct": 17.2,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "more_interaction"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "other_pooled"
+      },
+      "id": "themes.improve.more_interaction.pct.role.other_pooled",
+      "n": 8,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "more_interaction"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "school_staff"
+      },
+      "id": "themes.improve.more_interaction.pct.role.school_staff",
+      "n": 31,
+      "n_mentions": 4,
+      "pct": 12.9,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "more_interaction"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "student"
+      },
+      "id": "themes.improve.more_interaction.pct.role.student",
+      "n": 518,
+      "n_mentions": 17,
+      "pct": 3.3,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "more_interaction"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2025-10_to_2026-03"
+      },
+      "id": "themes.improve.more_interaction.pct.training_period.2025_10_to_2026_03",
+      "n": 91,
+      "n_mentions": 9,
+      "pct": 9.9,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "more_interaction"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-04_to_2026-05"
+      },
+      "id": "themes.improve.more_interaction.pct.training_period.2026_04_to_2026_05",
+      "n": 326,
+      "n_mentions": 20,
+      "pct": 6.1,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "more_interaction"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-06_to_2026-08"
+      },
+      "id": "themes.improve.more_interaction.pct.training_period.2026_06_to_2026_08",
+      "n": 32,
+      "n_mentions": 2,
+      "pct": 6.2,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "more_interaction"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-09_to_2026-10"
+      },
+      "id": "themes.improve.more_interaction.pct.training_period.2026_09_to_2026_10",
+      "n": 200,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "more_interaction"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "other_pooled"
+      },
+      "id": "themes.improve.more_interaction.pct.training_period.other_pooled",
+      "n": 2,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "more_interaction"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "Anne Arundel"
+      },
+      "id": "themes.improve.more_time.pct.county.anne_arundel",
+      "n": 389,
+      "n_mentions": 3,
+      "pct": 0.8,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "more_time"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "Montgomery"
+      },
+      "id": "themes.improve.more_time.pct.county.montgomery",
+      "n": 21,
+      "n_mentions": 5,
+      "pct": 23.8,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "more_time"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "other_pooled"
+      },
+      "id": "themes.improve.more_time.pct.county.other_pooled",
+      "n": 12,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "more_time"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "Prince George's"
+      },
+      "id": "themes.improve.more_time.pct.county.prince_georges",
+      "n": 229,
+      "n_mentions": 8,
+      "pct": 3.5,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "more_time"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "language",
+        "level": "en"
+      },
+      "id": "themes.improve.more_time.pct.language.en",
+      "n": 637,
+      "n_mentions": 16,
+      "pct": 2.5,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "more_time"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "language",
+        "level": "es"
+      },
+      "id": "themes.improve.more_time.pct.language.es",
+      "n": 14,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "more_time"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "id": "themes.improve.more_time.pct.overall",
+      "n": 651,
+      "n_mentions": 16,
+      "pct": 2.5,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "more_time"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "caregiver"
+      },
+      "id": "themes.improve.more_time.pct.role.caregiver",
+      "n": 36,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "more_time"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "other"
+      },
+      "id": "themes.improve.more_time.pct.role.other",
+      "n": 58,
+      "n_mentions": 5,
+      "pct": 8.6,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "more_time"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "other_pooled"
+      },
+      "id": "themes.improve.more_time.pct.role.other_pooled",
+      "n": 8,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "more_time"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "school_staff"
+      },
+      "id": "themes.improve.more_time.pct.role.school_staff",
+      "n": 31,
+      "n_mentions": 3,
+      "pct": 9.7,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "more_time"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "student"
+      },
+      "id": "themes.improve.more_time.pct.role.student",
+      "n": 518,
+      "n_mentions": 7,
+      "pct": 1.4,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "more_time"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2025-10_to_2026-03"
+      },
+      "id": "themes.improve.more_time.pct.training_period.2025_10_to_2026_03",
+      "n": 91,
+      "n_mentions": 6,
+      "pct": 6.6,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "more_time"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-04_to_2026-05"
+      },
+      "id": "themes.improve.more_time.pct.training_period.2026_04_to_2026_05",
+      "n": 326,
+      "n_mentions": 6,
+      "pct": 1.8,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "more_time"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-06_to_2026-08"
+      },
+      "id": "themes.improve.more_time.pct.training_period.2026_06_to_2026_08",
+      "n": 32,
+      "n_mentions": 3,
+      "pct": 9.4,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "more_time"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-09_to_2026-10"
+      },
+      "id": "themes.improve.more_time.pct.training_period.2026_09_to_2026_10",
+      "n": 200,
+      "n_mentions": 1,
+      "pct": 0.5,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "more_time"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "other_pooled"
+      },
+      "id": "themes.improve.more_time.pct.training_period.other_pooled",
+      "n": 2,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "more_time"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "Anne Arundel"
+      },
+      "id": "themes.improve.no_substantive.pct.county.anne_arundel",
+      "n": 389,
+      "n_mentions": 91,
+      "pct": 23.4,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "no_substantive"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "Montgomery"
+      },
+      "id": "themes.improve.no_substantive.pct.county.montgomery",
+      "n": 21,
+      "n_mentions": 3,
+      "pct": 14.3,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "no_substantive"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "other_pooled"
+      },
+      "id": "themes.improve.no_substantive.pct.county.other_pooled",
+      "n": 12,
+      "n_mentions": 5,
+      "pct": 41.7,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "no_substantive"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "Prince George's"
+      },
+      "id": "themes.improve.no_substantive.pct.county.prince_georges",
+      "n": 229,
+      "n_mentions": 56,
+      "pct": 24.5,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "no_substantive"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "language",
+        "level": "en"
+      },
+      "id": "themes.improve.no_substantive.pct.language.en",
+      "n": 637,
+      "n_mentions": 149,
+      "pct": 23.4,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "no_substantive"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "language",
+        "level": "es"
+      },
+      "id": "themes.improve.no_substantive.pct.language.es",
+      "n": 14,
+      "n_mentions": 6,
+      "pct": 42.9,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "no_substantive"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "id": "themes.improve.no_substantive.pct.overall",
+      "n": 651,
+      "n_mentions": 155,
+      "pct": 23.8,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "no_substantive"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "caregiver"
+      },
+      "id": "themes.improve.no_substantive.pct.role.caregiver",
+      "n": 36,
+      "n_mentions": 10,
+      "pct": 27.8,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "no_substantive"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "other"
+      },
+      "id": "themes.improve.no_substantive.pct.role.other",
+      "n": 58,
+      "n_mentions": 21,
+      "pct": 36.2,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "no_substantive"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "other_pooled"
+      },
+      "id": "themes.improve.no_substantive.pct.role.other_pooled",
+      "n": 8,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "no_substantive"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "school_staff"
+      },
+      "id": "themes.improve.no_substantive.pct.role.school_staff",
+      "n": 31,
+      "n_mentions": 15,
+      "pct": 48.4,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "no_substantive"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "student"
+      },
+      "id": "themes.improve.no_substantive.pct.role.student",
+      "n": 518,
+      "n_mentions": 107,
+      "pct": 20.7,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "no_substantive"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2025-10_to_2026-03"
+      },
+      "id": "themes.improve.no_substantive.pct.training_period.2025_10_to_2026_03",
+      "n": 91,
+      "n_mentions": 37,
+      "pct": 40.7,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "no_substantive"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-04_to_2026-05"
+      },
+      "id": "themes.improve.no_substantive.pct.training_period.2026_04_to_2026_05",
+      "n": 326,
+      "n_mentions": 109,
+      "pct": 33.4,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "no_substantive"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-06_to_2026-08"
+      },
+      "id": "themes.improve.no_substantive.pct.training_period.2026_06_to_2026_08",
+      "n": 32,
+      "n_mentions": 4,
+      "pct": 12.5,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "no_substantive"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-09_to_2026-10"
+      },
+      "id": "themes.improve.no_substantive.pct.training_period.2026_09_to_2026_10",
+      "n": 200,
+      "n_mentions": 5,
+      "pct": 2.5,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "no_substantive"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "other_pooled"
+      },
+      "id": "themes.improve.no_substantive.pct.training_period.other_pooled",
+      "n": 2,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "no_substantive"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "Anne Arundel"
+      },
+      "id": "themes.improve.other_unclear.pct.county.anne_arundel",
+      "n": 389,
+      "n_mentions": 44,
+      "pct": 11.3,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "other_unclear"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "Montgomery"
+      },
+      "id": "themes.improve.other_unclear.pct.county.montgomery",
+      "n": 21,
+      "n_mentions": 8,
+      "pct": 38.1,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "other_unclear"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "other_pooled"
+      },
+      "id": "themes.improve.other_unclear.pct.county.other_pooled",
+      "n": 12,
+      "n_mentions": 1,
+      "pct": 8.3,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "other_unclear"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "Prince George's"
+      },
+      "id": "themes.improve.other_unclear.pct.county.prince_georges",
+      "n": 229,
+      "n_mentions": 94,
+      "pct": 41.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "other_unclear"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "language",
+        "level": "en"
+      },
+      "id": "themes.improve.other_unclear.pct.language.en",
+      "n": 637,
+      "n_mentions": 145,
+      "pct": 22.8,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "other_unclear"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "language",
+        "level": "es"
+      },
+      "id": "themes.improve.other_unclear.pct.language.es",
+      "n": 14,
+      "n_mentions": 2,
+      "pct": 14.3,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "other_unclear"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "id": "themes.improve.other_unclear.pct.overall",
+      "n": 651,
+      "n_mentions": 147,
+      "pct": 22.6,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "other_unclear"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "caregiver"
+      },
+      "id": "themes.improve.other_unclear.pct.role.caregiver",
+      "n": 36,
+      "n_mentions": 17,
+      "pct": 47.2,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "other_unclear"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "other"
+      },
+      "id": "themes.improve.other_unclear.pct.role.other",
+      "n": 58,
+      "n_mentions": 11,
+      "pct": 19.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "other_unclear"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "other_pooled"
+      },
+      "id": "themes.improve.other_unclear.pct.role.other_pooled",
+      "n": 8,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "other_unclear"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "school_staff"
+      },
+      "id": "themes.improve.other_unclear.pct.role.school_staff",
+      "n": 31,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "other_unclear"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "student"
+      },
+      "id": "themes.improve.other_unclear.pct.role.student",
+      "n": 518,
+      "n_mentions": 118,
+      "pct": 22.8,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "other_unclear"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2025-10_to_2026-03"
+      },
+      "id": "themes.improve.other_unclear.pct.training_period.2025_10_to_2026_03",
+      "n": 91,
+      "n_mentions": 11,
+      "pct": 12.1,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "other_unclear"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-04_to_2026-05"
+      },
+      "id": "themes.improve.other_unclear.pct.training_period.2026_04_to_2026_05",
+      "n": 326,
+      "n_mentions": 91,
+      "pct": 27.9,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "other_unclear"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-06_to_2026-08"
+      },
+      "id": "themes.improve.other_unclear.pct.training_period.2026_06_to_2026_08",
+      "n": 32,
+      "n_mentions": 19,
+      "pct": 59.4,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "other_unclear"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-09_to_2026-10"
+      },
+      "id": "themes.improve.other_unclear.pct.training_period.2026_09_to_2026_10",
+      "n": 200,
+      "n_mentions": 25,
+      "pct": 12.5,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "other_unclear"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "other_pooled"
+      },
+      "id": "themes.improve.other_unclear.pct.training_period.other_pooled",
+      "n": 2,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "other_unclear"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "Anne Arundel"
+      },
+      "id": "themes.improve.practical_scripts.pct.county.anne_arundel",
+      "n": 389,
+      "n_mentions": 2,
+      "pct": 0.5,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "practical_scripts"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "Montgomery"
+      },
+      "id": "themes.improve.practical_scripts.pct.county.montgomery",
+      "n": 21,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "practical_scripts"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "other_pooled"
+      },
+      "id": "themes.improve.practical_scripts.pct.county.other_pooled",
+      "n": 12,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "practical_scripts"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "Prince George's"
+      },
+      "id": "themes.improve.practical_scripts.pct.county.prince_georges",
+      "n": 229,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "practical_scripts"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "language",
+        "level": "en"
+      },
+      "id": "themes.improve.practical_scripts.pct.language.en",
+      "n": 637,
+      "n_mentions": 2,
+      "pct": 0.3,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "practical_scripts"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "language",
+        "level": "es"
+      },
+      "id": "themes.improve.practical_scripts.pct.language.es",
+      "n": 14,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "practical_scripts"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "id": "themes.improve.practical_scripts.pct.overall",
+      "n": 651,
+      "n_mentions": 2,
+      "pct": 0.3,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "practical_scripts"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "caregiver"
+      },
+      "id": "themes.improve.practical_scripts.pct.role.caregiver",
+      "n": 36,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "practical_scripts"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "other"
+      },
+      "id": "themes.improve.practical_scripts.pct.role.other",
+      "n": 58,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "practical_scripts"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "other_pooled"
+      },
+      "id": "themes.improve.practical_scripts.pct.role.other_pooled",
+      "n": 8,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "practical_scripts"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "school_staff"
+      },
+      "id": "themes.improve.practical_scripts.pct.role.school_staff",
+      "n": 31,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "practical_scripts"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "student"
+      },
+      "id": "themes.improve.practical_scripts.pct.role.student",
+      "n": 518,
+      "n_mentions": 2,
+      "pct": 0.4,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "practical_scripts"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2025-10_to_2026-03"
+      },
+      "id": "themes.improve.practical_scripts.pct.training_period.2025_10_to_2026_03",
+      "n": 91,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "practical_scripts"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-04_to_2026-05"
+      },
+      "id": "themes.improve.practical_scripts.pct.training_period.2026_04_to_2026_05",
+      "n": 326,
+      "n_mentions": 1,
+      "pct": 0.3,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "practical_scripts"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-06_to_2026-08"
+      },
+      "id": "themes.improve.practical_scripts.pct.training_period.2026_06_to_2026_08",
+      "n": 32,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "practical_scripts"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-09_to_2026-10"
+      },
+      "id": "themes.improve.practical_scripts.pct.training_period.2026_09_to_2026_10",
+      "n": 200,
+      "n_mentions": 1,
+      "pct": 0.5,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "practical_scripts"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "other_pooled"
+      },
+      "id": "themes.improve.practical_scripts.pct.training_period.other_pooled",
+      "n": 2,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "practical_scripts"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "Anne Arundel"
+      },
+      "id": "themes.improve.share_wider.pct.county.anne_arundel",
+      "n": 389,
+      "n_mentions": 4,
+      "pct": 1.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "share_wider"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "Montgomery"
+      },
+      "id": "themes.improve.share_wider.pct.county.montgomery",
+      "n": 21,
+      "n_mentions": 1,
+      "pct": 4.8,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "share_wider"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "other_pooled"
+      },
+      "id": "themes.improve.share_wider.pct.county.other_pooled",
+      "n": 12,
+      "n_mentions": 3,
+      "pct": 25.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "share_wider"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "county",
+        "level": "Prince George's"
+      },
+      "id": "themes.improve.share_wider.pct.county.prince_georges",
+      "n": 229,
+      "n_mentions": 12,
+      "pct": 5.2,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "share_wider"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "language",
+        "level": "en"
+      },
+      "id": "themes.improve.share_wider.pct.language.en",
+      "n": 637,
+      "n_mentions": 16,
+      "pct": 2.5,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "share_wider"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "language",
+        "level": "es"
+      },
+      "id": "themes.improve.share_wider.pct.language.es",
+      "n": 14,
+      "n_mentions": 4,
+      "pct": 28.6,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "share_wider"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "id": "themes.improve.share_wider.pct.overall",
+      "n": 651,
+      "n_mentions": 20,
+      "pct": 3.1,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "share_wider"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "caregiver"
+      },
+      "id": "themes.improve.share_wider.pct.role.caregiver",
+      "n": 36,
+      "n_mentions": 4,
+      "pct": 11.1,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "share_wider"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "other"
+      },
+      "id": "themes.improve.share_wider.pct.role.other",
+      "n": 58,
+      "n_mentions": 2,
+      "pct": 3.4,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "share_wider"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "other_pooled"
+      },
+      "id": "themes.improve.share_wider.pct.role.other_pooled",
+      "n": 8,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "share_wider"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "school_staff"
+      },
+      "id": "themes.improve.share_wider.pct.role.school_staff",
+      "n": 31,
+      "n_mentions": 1,
+      "pct": 3.2,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "share_wider"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "role",
+        "level": "student"
+      },
+      "id": "themes.improve.share_wider.pct.role.student",
+      "n": 518,
+      "n_mentions": 13,
+      "pct": 2.5,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "share_wider"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2025-10_to_2026-03"
+      },
+      "id": "themes.improve.share_wider.pct.training_period.2025_10_to_2026_03",
+      "n": 91,
+      "n_mentions": 6,
+      "pct": 6.6,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "share_wider"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-04_to_2026-05"
+      },
+      "id": "themes.improve.share_wider.pct.training_period.2026_04_to_2026_05",
+      "n": 326,
+      "n_mentions": 13,
+      "pct": 4.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "share_wider"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-06_to_2026-08"
+      },
+      "id": "themes.improve.share_wider.pct.training_period.2026_06_to_2026_08",
+      "n": 32,
+      "n_mentions": 1,
+      "pct": 3.1,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "share_wider"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-09_to_2026-10"
+      },
+      "id": "themes.improve.share_wider.pct.training_period.2026_09_to_2026_10",
+      "n": 200,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "share_wider"
+    },
+    {
+      "field": "improve",
+      "group": {
+        "dimension": "training_period",
+        "level": "other_pooled"
+      },
+      "id": "themes.improve.share_wider.pct.training_period.other_pooled",
+      "n": 2,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "share_wider"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Anne Arundel"
+      },
+      "id": "themes.valuable.always_available.pct.county.anne_arundel",
+      "n": 757,
+      "n_mentions": 92,
+      "pct": 12.2,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "always_available"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Montgomery"
+      },
+      "id": "themes.valuable.always_available.pct.county.montgomery",
+      "n": 27,
+      "n_mentions": 2,
+      "pct": 7.4,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "always_available"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "other_pooled"
+      },
+      "id": "themes.valuable.always_available.pct.county.other_pooled",
+      "n": 6,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "always_available"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Prince George's"
+      },
+      "id": "themes.valuable.always_available.pct.county.prince_georges",
+      "n": 262,
+      "n_mentions": 16,
+      "pct": 6.1,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "always_available"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Queen Anne's"
+      },
+      "id": "themes.valuable.always_available.pct.county.queen_annes",
+      "n": 11,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "always_available"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "language",
+        "level": "en"
+      },
+      "id": "themes.valuable.always_available.pct.language.en",
+      "n": 1047,
+      "n_mentions": 110,
+      "pct": 10.5,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "always_available"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "language",
+        "level": "es"
+      },
+      "id": "themes.valuable.always_available.pct.language.es",
+      "n": 16,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "always_available"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "id": "themes.valuable.always_available.pct.overall",
+      "n": 1063,
+      "n_mentions": 110,
+      "pct": 10.3,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "always_available"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "caregiver"
+      },
+      "id": "themes.valuable.always_available.pct.role.caregiver",
+      "n": 47,
+      "n_mentions": 2,
+      "pct": 4.3,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "always_available"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "multiple"
+      },
+      "id": "themes.valuable.always_available.pct.role.multiple",
+      "n": 10,
+      "n_mentions": 1,
+      "pct": 10.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "always_available"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "other"
+      },
+      "id": "themes.valuable.always_available.pct.role.other",
+      "n": 72,
+      "n_mentions": 4,
+      "pct": 5.6,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "always_available"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "school_staff"
+      },
+      "id": "themes.valuable.always_available.pct.role.school_staff",
+      "n": 50,
+      "n_mentions": 3,
+      "pct": 6.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "always_available"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "student"
+      },
+      "id": "themes.valuable.always_available.pct.role.student",
+      "n": 884,
+      "n_mentions": 100,
+      "pct": 11.3,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "always_available"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2025-10_to_2026-03"
+      },
+      "id": "themes.valuable.always_available.pct.training_period.2025_10_to_2026_03",
+      "n": 121,
+      "n_mentions": 8,
+      "pct": 6.6,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "always_available"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-04_to_2026-05"
+      },
+      "id": "themes.valuable.always_available.pct.training_period.2026_04_to_2026_05",
+      "n": 386,
+      "n_mentions": 33,
+      "pct": 8.5,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "always_available"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-06_to_2026-08"
+      },
+      "id": "themes.valuable.always_available.pct.training_period.2026_06_to_2026_08",
+      "n": 36,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "always_available"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-09_to_2026-10"
+      },
+      "id": "themes.valuable.always_available.pct.training_period.2026_09_to_2026_10",
+      "n": 518,
+      "n_mentions": 69,
+      "pct": 13.3,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "always_available"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "other_pooled"
+      },
+      "id": "themes.valuable.always_available.pct.training_period.other_pooled",
+      "n": 2,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "always_available"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Anne Arundel"
+      },
+      "id": "themes.valuable.confidence_to_help.pct.county.anne_arundel",
+      "n": 757,
+      "n_mentions": 33,
+      "pct": 4.4,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "confidence_to_help"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Montgomery"
+      },
+      "id": "themes.valuable.confidence_to_help.pct.county.montgomery",
+      "n": 27,
+      "n_mentions": 2,
+      "pct": 7.4,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "confidence_to_help"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "other_pooled"
+      },
+      "id": "themes.valuable.confidence_to_help.pct.county.other_pooled",
+      "n": 6,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "confidence_to_help"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Prince George's"
+      },
+      "id": "themes.valuable.confidence_to_help.pct.county.prince_georges",
+      "n": 262,
+      "n_mentions": 21,
+      "pct": 8.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "confidence_to_help"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Queen Anne's"
+      },
+      "id": "themes.valuable.confidence_to_help.pct.county.queen_annes",
+      "n": 11,
+      "n_mentions": 1,
+      "pct": 9.1,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "confidence_to_help"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "language",
+        "level": "en"
+      },
+      "id": "themes.valuable.confidence_to_help.pct.language.en",
+      "n": 1047,
+      "n_mentions": 53,
+      "pct": 5.1,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "confidence_to_help"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "language",
+        "level": "es"
+      },
+      "id": "themes.valuable.confidence_to_help.pct.language.es",
+      "n": 16,
+      "n_mentions": 4,
+      "pct": 25.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "confidence_to_help"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "id": "themes.valuable.confidence_to_help.pct.overall",
+      "n": 1063,
+      "n_mentions": 57,
+      "pct": 5.4,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "confidence_to_help"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "caregiver"
+      },
+      "id": "themes.valuable.confidence_to_help.pct.role.caregiver",
+      "n": 47,
+      "n_mentions": 5,
+      "pct": 10.6,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "confidence_to_help"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "multiple"
+      },
+      "id": "themes.valuable.confidence_to_help.pct.role.multiple",
+      "n": 10,
+      "n_mentions": 1,
+      "pct": 10.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "confidence_to_help"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "other"
+      },
+      "id": "themes.valuable.confidence_to_help.pct.role.other",
+      "n": 72,
+      "n_mentions": 2,
+      "pct": 2.8,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "confidence_to_help"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "school_staff"
+      },
+      "id": "themes.valuable.confidence_to_help.pct.role.school_staff",
+      "n": 50,
+      "n_mentions": 1,
+      "pct": 2.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "confidence_to_help"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "student"
+      },
+      "id": "themes.valuable.confidence_to_help.pct.role.student",
+      "n": 884,
+      "n_mentions": 48,
+      "pct": 5.4,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "confidence_to_help"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2025-10_to_2026-03"
+      },
+      "id": "themes.valuable.confidence_to_help.pct.training_period.2025_10_to_2026_03",
+      "n": 121,
+      "n_mentions": 11,
+      "pct": 9.1,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "confidence_to_help"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-04_to_2026-05"
+      },
+      "id": "themes.valuable.confidence_to_help.pct.training_period.2026_04_to_2026_05",
+      "n": 386,
+      "n_mentions": 18,
+      "pct": 4.7,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "confidence_to_help"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-06_to_2026-08"
+      },
+      "id": "themes.valuable.confidence_to_help.pct.training_period.2026_06_to_2026_08",
+      "n": 36,
+      "n_mentions": 5,
+      "pct": 13.9,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "confidence_to_help"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-09_to_2026-10"
+      },
+      "id": "themes.valuable.confidence_to_help.pct.training_period.2026_09_to_2026_10",
+      "n": 518,
+      "n_mentions": 23,
+      "pct": 4.4,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "confidence_to_help"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "other_pooled"
+      },
+      "id": "themes.valuable.confidence_to_help.pct.training_period.other_pooled",
+      "n": 2,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "confidence_to_help"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Anne Arundel"
+      },
+      "id": "themes.valuable.how_contact_works.pct.county.anne_arundel",
+      "n": 757,
+      "n_mentions": 10,
+      "pct": 1.3,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "how_contact_works"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Montgomery"
+      },
+      "id": "themes.valuable.how_contact_works.pct.county.montgomery",
+      "n": 27,
+      "n_mentions": 1,
+      "pct": 3.7,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "how_contact_works"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "other_pooled"
+      },
+      "id": "themes.valuable.how_contact_works.pct.county.other_pooled",
+      "n": 6,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "how_contact_works"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Prince George's"
+      },
+      "id": "themes.valuable.how_contact_works.pct.county.prince_georges",
+      "n": 262,
+      "n_mentions": 4,
+      "pct": 1.5,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "how_contact_works"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Queen Anne's"
+      },
+      "id": "themes.valuable.how_contact_works.pct.county.queen_annes",
+      "n": 11,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "how_contact_works"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "language",
+        "level": "en"
+      },
+      "id": "themes.valuable.how_contact_works.pct.language.en",
+      "n": 1047,
+      "n_mentions": 15,
+      "pct": 1.4,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "how_contact_works"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "language",
+        "level": "es"
+      },
+      "id": "themes.valuable.how_contact_works.pct.language.es",
+      "n": 16,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "how_contact_works"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "id": "themes.valuable.how_contact_works.pct.overall",
+      "n": 1063,
+      "n_mentions": 15,
+      "pct": 1.4,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "how_contact_works"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "caregiver"
+      },
+      "id": "themes.valuable.how_contact_works.pct.role.caregiver",
+      "n": 47,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "how_contact_works"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "multiple"
+      },
+      "id": "themes.valuable.how_contact_works.pct.role.multiple",
+      "n": 10,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "how_contact_works"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "other"
+      },
+      "id": "themes.valuable.how_contact_works.pct.role.other",
+      "n": 72,
+      "n_mentions": 4,
+      "pct": 5.6,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "how_contact_works"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "school_staff"
+      },
+      "id": "themes.valuable.how_contact_works.pct.role.school_staff",
+      "n": 50,
+      "n_mentions": 2,
+      "pct": 4.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "how_contact_works"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "student"
+      },
+      "id": "themes.valuable.how_contact_works.pct.role.student",
+      "n": 884,
+      "n_mentions": 9,
+      "pct": 1.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "how_contact_works"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2025-10_to_2026-03"
+      },
+      "id": "themes.valuable.how_contact_works.pct.training_period.2025_10_to_2026_03",
+      "n": 121,
+      "n_mentions": 2,
+      "pct": 1.7,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "how_contact_works"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-04_to_2026-05"
+      },
+      "id": "themes.valuable.how_contact_works.pct.training_period.2026_04_to_2026_05",
+      "n": 386,
+      "n_mentions": 8,
+      "pct": 2.1,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "how_contact_works"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-06_to_2026-08"
+      },
+      "id": "themes.valuable.how_contact_works.pct.training_period.2026_06_to_2026_08",
+      "n": 36,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "how_contact_works"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-09_to_2026-10"
+      },
+      "id": "themes.valuable.how_contact_works.pct.training_period.2026_09_to_2026_10",
+      "n": 518,
+      "n_mentions": 5,
+      "pct": 1.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "how_contact_works"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "other_pooled"
+      },
+      "id": "themes.valuable.how_contact_works.pct.training_period.other_pooled",
+      "n": 2,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "how_contact_works"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Anne Arundel"
+      },
+      "id": "themes.valuable.no_substantive.pct.county.anne_arundel",
+      "n": 757,
+      "n_mentions": 3,
+      "pct": 0.4,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "no_substantive"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Montgomery"
+      },
+      "id": "themes.valuable.no_substantive.pct.county.montgomery",
+      "n": 27,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "no_substantive"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "other_pooled"
+      },
+      "id": "themes.valuable.no_substantive.pct.county.other_pooled",
+      "n": 6,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "no_substantive"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Prince George's"
+      },
+      "id": "themes.valuable.no_substantive.pct.county.prince_georges",
+      "n": 262,
+      "n_mentions": 4,
+      "pct": 1.5,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "no_substantive"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Queen Anne's"
+      },
+      "id": "themes.valuable.no_substantive.pct.county.queen_annes",
+      "n": 11,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "no_substantive"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "language",
+        "level": "en"
+      },
+      "id": "themes.valuable.no_substantive.pct.language.en",
+      "n": 1047,
+      "n_mentions": 7,
+      "pct": 0.7,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "no_substantive"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "language",
+        "level": "es"
+      },
+      "id": "themes.valuable.no_substantive.pct.language.es",
+      "n": 16,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "no_substantive"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "id": "themes.valuable.no_substantive.pct.overall",
+      "n": 1063,
+      "n_mentions": 7,
+      "pct": 0.7,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "no_substantive"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "caregiver"
+      },
+      "id": "themes.valuable.no_substantive.pct.role.caregiver",
+      "n": 47,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "no_substantive"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "multiple"
+      },
+      "id": "themes.valuable.no_substantive.pct.role.multiple",
+      "n": 10,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "no_substantive"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "other"
+      },
+      "id": "themes.valuable.no_substantive.pct.role.other",
+      "n": 72,
+      "n_mentions": 2,
+      "pct": 2.8,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "no_substantive"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "school_staff"
+      },
+      "id": "themes.valuable.no_substantive.pct.role.school_staff",
+      "n": 50,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "no_substantive"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "student"
+      },
+      "id": "themes.valuable.no_substantive.pct.role.student",
+      "n": 884,
+      "n_mentions": 5,
+      "pct": 0.6,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "no_substantive"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2025-10_to_2026-03"
+      },
+      "id": "themes.valuable.no_substantive.pct.training_period.2025_10_to_2026_03",
+      "n": 121,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "no_substantive"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-04_to_2026-05"
+      },
+      "id": "themes.valuable.no_substantive.pct.training_period.2026_04_to_2026_05",
+      "n": 386,
+      "n_mentions": 5,
+      "pct": 1.3,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "no_substantive"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-06_to_2026-08"
+      },
+      "id": "themes.valuable.no_substantive.pct.training_period.2026_06_to_2026_08",
+      "n": 36,
+      "n_mentions": 2,
+      "pct": 5.6,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "no_substantive"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-09_to_2026-10"
+      },
+      "id": "themes.valuable.no_substantive.pct.training_period.2026_09_to_2026_10",
+      "n": 518,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "no_substantive"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "other_pooled"
+      },
+      "id": "themes.valuable.no_substantive.pct.training_period.other_pooled",
+      "n": 2,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "no_substantive"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Anne Arundel"
+      },
+      "id": "themes.valuable.not_only_crisis.pct.county.anne_arundel",
+      "n": 757,
+      "n_mentions": 31,
+      "pct": 4.1,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "not_only_crisis"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Montgomery"
+      },
+      "id": "themes.valuable.not_only_crisis.pct.county.montgomery",
+      "n": 27,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "not_only_crisis"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "other_pooled"
+      },
+      "id": "themes.valuable.not_only_crisis.pct.county.other_pooled",
+      "n": 6,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "not_only_crisis"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Prince George's"
+      },
+      "id": "themes.valuable.not_only_crisis.pct.county.prince_georges",
+      "n": 262,
+      "n_mentions": 6,
+      "pct": 2.3,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "not_only_crisis"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Queen Anne's"
+      },
+      "id": "themes.valuable.not_only_crisis.pct.county.queen_annes",
+      "n": 11,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "not_only_crisis"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "language",
+        "level": "en"
+      },
+      "id": "themes.valuable.not_only_crisis.pct.language.en",
+      "n": 1047,
+      "n_mentions": 37,
+      "pct": 3.5,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "not_only_crisis"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "language",
+        "level": "es"
+      },
+      "id": "themes.valuable.not_only_crisis.pct.language.es",
+      "n": 16,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "not_only_crisis"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "id": "themes.valuable.not_only_crisis.pct.overall",
+      "n": 1063,
+      "n_mentions": 37,
+      "pct": 3.5,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "not_only_crisis"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "caregiver"
+      },
+      "id": "themes.valuable.not_only_crisis.pct.role.caregiver",
+      "n": 47,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "not_only_crisis"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "multiple"
+      },
+      "id": "themes.valuable.not_only_crisis.pct.role.multiple",
+      "n": 10,
+      "n_mentions": 1,
+      "pct": 10.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "not_only_crisis"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "other"
+      },
+      "id": "themes.valuable.not_only_crisis.pct.role.other",
+      "n": 72,
+      "n_mentions": 2,
+      "pct": 2.8,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "not_only_crisis"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "school_staff"
+      },
+      "id": "themes.valuable.not_only_crisis.pct.role.school_staff",
+      "n": 50,
+      "n_mentions": 1,
+      "pct": 2.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "not_only_crisis"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "student"
+      },
+      "id": "themes.valuable.not_only_crisis.pct.role.student",
+      "n": 884,
+      "n_mentions": 33,
+      "pct": 3.7,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "not_only_crisis"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2025-10_to_2026-03"
+      },
+      "id": "themes.valuable.not_only_crisis.pct.training_period.2025_10_to_2026_03",
+      "n": 121,
+      "n_mentions": 2,
+      "pct": 1.7,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "not_only_crisis"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-04_to_2026-05"
+      },
+      "id": "themes.valuable.not_only_crisis.pct.training_period.2026_04_to_2026_05",
+      "n": 386,
+      "n_mentions": 10,
+      "pct": 2.6,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "not_only_crisis"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-06_to_2026-08"
+      },
+      "id": "themes.valuable.not_only_crisis.pct.training_period.2026_06_to_2026_08",
+      "n": 36,
+      "n_mentions": 3,
+      "pct": 8.3,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "not_only_crisis"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-09_to_2026-10"
+      },
+      "id": "themes.valuable.not_only_crisis.pct.training_period.2026_09_to_2026_10",
+      "n": 518,
+      "n_mentions": 22,
+      "pct": 4.2,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "not_only_crisis"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "other_pooled"
+      },
+      "id": "themes.valuable.not_only_crisis.pct.training_period.other_pooled",
+      "n": 2,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "not_only_crisis"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Anne Arundel"
+      },
+      "id": "themes.valuable.other_unclear.pct.county.anne_arundel",
+      "n": 757,
+      "n_mentions": 217,
+      "pct": 28.7,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "other_unclear"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Montgomery"
+      },
+      "id": "themes.valuable.other_unclear.pct.county.montgomery",
+      "n": 27,
+      "n_mentions": 6,
+      "pct": 22.2,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "other_unclear"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "other_pooled"
+      },
+      "id": "themes.valuable.other_unclear.pct.county.other_pooled",
+      "n": 6,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "other_unclear"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Prince George's"
+      },
+      "id": "themes.valuable.other_unclear.pct.county.prince_georges",
+      "n": 262,
+      "n_mentions": 86,
+      "pct": 32.8,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "other_unclear"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Queen Anne's"
+      },
+      "id": "themes.valuable.other_unclear.pct.county.queen_annes",
+      "n": 11,
+      "n_mentions": 5,
+      "pct": 45.5,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "other_unclear"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "language",
+        "level": "en"
+      },
+      "id": "themes.valuable.other_unclear.pct.language.en",
+      "n": 1047,
+      "n_mentions": 310,
+      "pct": 29.6,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "other_unclear"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "language",
+        "level": "es"
+      },
+      "id": "themes.valuable.other_unclear.pct.language.es",
+      "n": 16,
+      "n_mentions": 6,
+      "pct": 37.5,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "other_unclear"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "id": "themes.valuable.other_unclear.pct.overall",
+      "n": 1063,
+      "n_mentions": 316,
+      "pct": 29.7,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "other_unclear"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "caregiver"
+      },
+      "id": "themes.valuable.other_unclear.pct.role.caregiver",
+      "n": 47,
+      "n_mentions": 20,
+      "pct": 42.6,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "other_unclear"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "multiple"
+      },
+      "id": "themes.valuable.other_unclear.pct.role.multiple",
+      "n": 10,
+      "n_mentions": 3,
+      "pct": 30.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "other_unclear"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "other"
+      },
+      "id": "themes.valuable.other_unclear.pct.role.other",
+      "n": 72,
+      "n_mentions": 15,
+      "pct": 20.8,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "other_unclear"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "school_staff"
+      },
+      "id": "themes.valuable.other_unclear.pct.role.school_staff",
+      "n": 50,
+      "n_mentions": 11,
+      "pct": 22.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "other_unclear"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "student"
+      },
+      "id": "themes.valuable.other_unclear.pct.role.student",
+      "n": 884,
+      "n_mentions": 267,
+      "pct": 30.2,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "other_unclear"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2025-10_to_2026-03"
+      },
+      "id": "themes.valuable.other_unclear.pct.training_period.2025_10_to_2026_03",
+      "n": 121,
+      "n_mentions": 35,
+      "pct": 28.9,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "other_unclear"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-04_to_2026-05"
+      },
+      "id": "themes.valuable.other_unclear.pct.training_period.2026_04_to_2026_05",
+      "n": 386,
+      "n_mentions": 122,
+      "pct": 31.6,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "other_unclear"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-06_to_2026-08"
+      },
+      "id": "themes.valuable.other_unclear.pct.training_period.2026_06_to_2026_08",
+      "n": 36,
+      "n_mentions": 8,
+      "pct": 22.2,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "other_unclear"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-09_to_2026-10"
+      },
+      "id": "themes.valuable.other_unclear.pct.training_period.2026_09_to_2026_10",
+      "n": 518,
+      "n_mentions": 149,
+      "pct": 28.8,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "other_unclear"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "other_pooled"
+      },
+      "id": "themes.valuable.other_unclear.pct.training_period.other_pooled",
+      "n": 2,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "other_unclear"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Anne Arundel"
+      },
+      "id": "themes.valuable.practice_scenarios.pct.county.anne_arundel",
+      "n": 757,
+      "n_mentions": 2,
+      "pct": 0.3,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "practice_scenarios"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Montgomery"
+      },
+      "id": "themes.valuable.practice_scenarios.pct.county.montgomery",
+      "n": 27,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "practice_scenarios"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "other_pooled"
+      },
+      "id": "themes.valuable.practice_scenarios.pct.county.other_pooled",
+      "n": 6,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "practice_scenarios"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Prince George's"
+      },
+      "id": "themes.valuable.practice_scenarios.pct.county.prince_georges",
+      "n": 262,
+      "n_mentions": 1,
+      "pct": 0.4,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "practice_scenarios"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Queen Anne's"
+      },
+      "id": "themes.valuable.practice_scenarios.pct.county.queen_annes",
+      "n": 11,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "practice_scenarios"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "language",
+        "level": "en"
+      },
+      "id": "themes.valuable.practice_scenarios.pct.language.en",
+      "n": 1047,
+      "n_mentions": 3,
+      "pct": 0.3,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "practice_scenarios"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "language",
+        "level": "es"
+      },
+      "id": "themes.valuable.practice_scenarios.pct.language.es",
+      "n": 16,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "practice_scenarios"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "id": "themes.valuable.practice_scenarios.pct.overall",
+      "n": 1063,
+      "n_mentions": 3,
+      "pct": 0.3,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "practice_scenarios"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "caregiver"
+      },
+      "id": "themes.valuable.practice_scenarios.pct.role.caregiver",
+      "n": 47,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "practice_scenarios"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "multiple"
+      },
+      "id": "themes.valuable.practice_scenarios.pct.role.multiple",
+      "n": 10,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "practice_scenarios"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "other"
+      },
+      "id": "themes.valuable.practice_scenarios.pct.role.other",
+      "n": 72,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "practice_scenarios"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "school_staff"
+      },
+      "id": "themes.valuable.practice_scenarios.pct.role.school_staff",
+      "n": 50,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "practice_scenarios"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "student"
+      },
+      "id": "themes.valuable.practice_scenarios.pct.role.student",
+      "n": 884,
+      "n_mentions": 3,
+      "pct": 0.3,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "practice_scenarios"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2025-10_to_2026-03"
+      },
+      "id": "themes.valuable.practice_scenarios.pct.training_period.2025_10_to_2026_03",
+      "n": 121,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "practice_scenarios"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-04_to_2026-05"
+      },
+      "id": "themes.valuable.practice_scenarios.pct.training_period.2026_04_to_2026_05",
+      "n": 386,
+      "n_mentions": 1,
+      "pct": 0.3,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "practice_scenarios"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-06_to_2026-08"
+      },
+      "id": "themes.valuable.practice_scenarios.pct.training_period.2026_06_to_2026_08",
+      "n": 36,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "practice_scenarios"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-09_to_2026-10"
+      },
+      "id": "themes.valuable.practice_scenarios.pct.training_period.2026_09_to_2026_10",
+      "n": 518,
+      "n_mentions": 2,
+      "pct": 0.4,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "practice_scenarios"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "other_pooled"
+      },
+      "id": "themes.valuable.practice_scenarios.pct.training_period.other_pooled",
+      "n": 2,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "practice_scenarios"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Anne Arundel"
+      },
+      "id": "themes.valuable.presenter_quality.pct.county.anne_arundel",
+      "n": 757,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "presenter_quality"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Montgomery"
+      },
+      "id": "themes.valuable.presenter_quality.pct.county.montgomery",
+      "n": 27,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "presenter_quality"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "other_pooled"
+      },
+      "id": "themes.valuable.presenter_quality.pct.county.other_pooled",
+      "n": 6,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "presenter_quality"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Prince George's"
+      },
+      "id": "themes.valuable.presenter_quality.pct.county.prince_georges",
+      "n": 262,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "presenter_quality"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Queen Anne's"
+      },
+      "id": "themes.valuable.presenter_quality.pct.county.queen_annes",
+      "n": 11,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "presenter_quality"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "language",
+        "level": "en"
+      },
+      "id": "themes.valuable.presenter_quality.pct.language.en",
+      "n": 1047,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "presenter_quality"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "language",
+        "level": "es"
+      },
+      "id": "themes.valuable.presenter_quality.pct.language.es",
+      "n": 16,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "presenter_quality"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "id": "themes.valuable.presenter_quality.pct.overall",
+      "n": 1063,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "presenter_quality"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "caregiver"
+      },
+      "id": "themes.valuable.presenter_quality.pct.role.caregiver",
+      "n": 47,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "presenter_quality"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "multiple"
+      },
+      "id": "themes.valuable.presenter_quality.pct.role.multiple",
+      "n": 10,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "presenter_quality"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "other"
+      },
+      "id": "themes.valuable.presenter_quality.pct.role.other",
+      "n": 72,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "presenter_quality"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "school_staff"
+      },
+      "id": "themes.valuable.presenter_quality.pct.role.school_staff",
+      "n": 50,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "presenter_quality"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "student"
+      },
+      "id": "themes.valuable.presenter_quality.pct.role.student",
+      "n": 884,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "presenter_quality"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2025-10_to_2026-03"
+      },
+      "id": "themes.valuable.presenter_quality.pct.training_period.2025_10_to_2026_03",
+      "n": 121,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "presenter_quality"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-04_to_2026-05"
+      },
+      "id": "themes.valuable.presenter_quality.pct.training_period.2026_04_to_2026_05",
+      "n": 386,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "presenter_quality"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-06_to_2026-08"
+      },
+      "id": "themes.valuable.presenter_quality.pct.training_period.2026_06_to_2026_08",
+      "n": 36,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "presenter_quality"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-09_to_2026-10"
+      },
+      "id": "themes.valuable.presenter_quality.pct.training_period.2026_09_to_2026_10",
+      "n": 518,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "presenter_quality"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "other_pooled"
+      },
+      "id": "themes.valuable.presenter_quality.pct.training_period.other_pooled",
+      "n": 2,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "presenter_quality"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Anne Arundel"
+      },
+      "id": "themes.valuable.recognize_crisis.pct.county.anne_arundel",
+      "n": 757,
+      "n_mentions": 1,
+      "pct": 0.1,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "recognize_crisis"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Montgomery"
+      },
+      "id": "themes.valuable.recognize_crisis.pct.county.montgomery",
+      "n": 27,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "recognize_crisis"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "other_pooled"
+      },
+      "id": "themes.valuable.recognize_crisis.pct.county.other_pooled",
+      "n": 6,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "recognize_crisis"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Prince George's"
+      },
+      "id": "themes.valuable.recognize_crisis.pct.county.prince_georges",
+      "n": 262,
+      "n_mentions": 13,
+      "pct": 5.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "recognize_crisis"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Queen Anne's"
+      },
+      "id": "themes.valuable.recognize_crisis.pct.county.queen_annes",
+      "n": 11,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "recognize_crisis"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "language",
+        "level": "en"
+      },
+      "id": "themes.valuable.recognize_crisis.pct.language.en",
+      "n": 1047,
+      "n_mentions": 14,
+      "pct": 1.3,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "recognize_crisis"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "language",
+        "level": "es"
+      },
+      "id": "themes.valuable.recognize_crisis.pct.language.es",
+      "n": 16,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "recognize_crisis"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "id": "themes.valuable.recognize_crisis.pct.overall",
+      "n": 1063,
+      "n_mentions": 14,
+      "pct": 1.3,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "recognize_crisis"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "caregiver"
+      },
+      "id": "themes.valuable.recognize_crisis.pct.role.caregiver",
+      "n": 47,
+      "n_mentions": 4,
+      "pct": 8.5,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "recognize_crisis"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "multiple"
+      },
+      "id": "themes.valuable.recognize_crisis.pct.role.multiple",
+      "n": 10,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "recognize_crisis"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "other"
+      },
+      "id": "themes.valuable.recognize_crisis.pct.role.other",
+      "n": 72,
+      "n_mentions": 1,
+      "pct": 1.4,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "recognize_crisis"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "school_staff"
+      },
+      "id": "themes.valuable.recognize_crisis.pct.role.school_staff",
+      "n": 50,
+      "n_mentions": 1,
+      "pct": 2.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "recognize_crisis"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "student"
+      },
+      "id": "themes.valuable.recognize_crisis.pct.role.student",
+      "n": 884,
+      "n_mentions": 8,
+      "pct": 0.9,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "recognize_crisis"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2025-10_to_2026-03"
+      },
+      "id": "themes.valuable.recognize_crisis.pct.training_period.2025_10_to_2026_03",
+      "n": 121,
+      "n_mentions": 5,
+      "pct": 4.1,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "recognize_crisis"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-04_to_2026-05"
+      },
+      "id": "themes.valuable.recognize_crisis.pct.training_period.2026_04_to_2026_05",
+      "n": 386,
+      "n_mentions": 8,
+      "pct": 2.1,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "recognize_crisis"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-06_to_2026-08"
+      },
+      "id": "themes.valuable.recognize_crisis.pct.training_period.2026_06_to_2026_08",
+      "n": 36,
+      "n_mentions": 1,
+      "pct": 2.8,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "recognize_crisis"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-09_to_2026-10"
+      },
+      "id": "themes.valuable.recognize_crisis.pct.training_period.2026_09_to_2026_10",
+      "n": 518,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "recognize_crisis"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "other_pooled"
+      },
+      "id": "themes.valuable.recognize_crisis.pct.training_period.other_pooled",
+      "n": 2,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "recognize_crisis"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Anne Arundel"
+      },
+      "id": "themes.valuable.resources_shared.pct.county.anne_arundel",
+      "n": 757,
+      "n_mentions": 4,
+      "pct": 0.5,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "resources_shared"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Montgomery"
+      },
+      "id": "themes.valuable.resources_shared.pct.county.montgomery",
+      "n": 27,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "resources_shared"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "other_pooled"
+      },
+      "id": "themes.valuable.resources_shared.pct.county.other_pooled",
+      "n": 6,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "resources_shared"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Prince George's"
+      },
+      "id": "themes.valuable.resources_shared.pct.county.prince_georges",
+      "n": 262,
+      "n_mentions": 2,
+      "pct": 0.8,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "resources_shared"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Queen Anne's"
+      },
+      "id": "themes.valuable.resources_shared.pct.county.queen_annes",
+      "n": 11,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "resources_shared"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "language",
+        "level": "en"
+      },
+      "id": "themes.valuable.resources_shared.pct.language.en",
+      "n": 1047,
+      "n_mentions": 6,
+      "pct": 0.6,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "resources_shared"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "language",
+        "level": "es"
+      },
+      "id": "themes.valuable.resources_shared.pct.language.es",
+      "n": 16,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "resources_shared"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "id": "themes.valuable.resources_shared.pct.overall",
+      "n": 1063,
+      "n_mentions": 6,
+      "pct": 0.6,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "resources_shared"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "caregiver"
+      },
+      "id": "themes.valuable.resources_shared.pct.role.caregiver",
+      "n": 47,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "resources_shared"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "multiple"
+      },
+      "id": "themes.valuable.resources_shared.pct.role.multiple",
+      "n": 10,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "resources_shared"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "other"
+      },
+      "id": "themes.valuable.resources_shared.pct.role.other",
+      "n": 72,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "resources_shared"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "school_staff"
+      },
+      "id": "themes.valuable.resources_shared.pct.role.school_staff",
+      "n": 50,
+      "n_mentions": 4,
+      "pct": 8.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "resources_shared"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "student"
+      },
+      "id": "themes.valuable.resources_shared.pct.role.student",
+      "n": 884,
+      "n_mentions": 2,
+      "pct": 0.2,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "resources_shared"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2025-10_to_2026-03"
+      },
+      "id": "themes.valuable.resources_shared.pct.training_period.2025_10_to_2026_03",
+      "n": 121,
+      "n_mentions": 4,
+      "pct": 3.3,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "resources_shared"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-04_to_2026-05"
+      },
+      "id": "themes.valuable.resources_shared.pct.training_period.2026_04_to_2026_05",
+      "n": 386,
+      "n_mentions": 1,
+      "pct": 0.3,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "resources_shared"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-06_to_2026-08"
+      },
+      "id": "themes.valuable.resources_shared.pct.training_period.2026_06_to_2026_08",
+      "n": 36,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "resources_shared"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-09_to_2026-10"
+      },
+      "id": "themes.valuable.resources_shared.pct.training_period.2026_09_to_2026_10",
+      "n": 518,
+      "n_mentions": 1,
+      "pct": 0.2,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "resources_shared"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "other_pooled"
+      },
+      "id": "themes.valuable.resources_shared.pct.training_period.other_pooled",
+      "n": 2,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "resources_shared"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Anne Arundel"
+      },
+      "id": "themes.valuable.scope_of_need.pct.county.anne_arundel",
+      "n": 757,
+      "n_mentions": 10,
+      "pct": 1.3,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "scope_of_need"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Montgomery"
+      },
+      "id": "themes.valuable.scope_of_need.pct.county.montgomery",
+      "n": 27,
+      "n_mentions": 1,
+      "pct": 3.7,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "scope_of_need"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "other_pooled"
+      },
+      "id": "themes.valuable.scope_of_need.pct.county.other_pooled",
+      "n": 6,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "scope_of_need"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Prince George's"
+      },
+      "id": "themes.valuable.scope_of_need.pct.county.prince_georges",
+      "n": 262,
+      "n_mentions": 1,
+      "pct": 0.4,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "scope_of_need"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Queen Anne's"
+      },
+      "id": "themes.valuable.scope_of_need.pct.county.queen_annes",
+      "n": 11,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "scope_of_need"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "language",
+        "level": "en"
+      },
+      "id": "themes.valuable.scope_of_need.pct.language.en",
+      "n": 1047,
+      "n_mentions": 12,
+      "pct": 1.1,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "scope_of_need"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "language",
+        "level": "es"
+      },
+      "id": "themes.valuable.scope_of_need.pct.language.es",
+      "n": 16,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "scope_of_need"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "id": "themes.valuable.scope_of_need.pct.overall",
+      "n": 1063,
+      "n_mentions": 12,
+      "pct": 1.1,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "scope_of_need"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "caregiver"
+      },
+      "id": "themes.valuable.scope_of_need.pct.role.caregiver",
+      "n": 47,
+      "n_mentions": 1,
+      "pct": 2.1,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "scope_of_need"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "multiple"
+      },
+      "id": "themes.valuable.scope_of_need.pct.role.multiple",
+      "n": 10,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "scope_of_need"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "other"
+      },
+      "id": "themes.valuable.scope_of_need.pct.role.other",
+      "n": 72,
+      "n_mentions": 1,
+      "pct": 1.4,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "scope_of_need"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "school_staff"
+      },
+      "id": "themes.valuable.scope_of_need.pct.role.school_staff",
+      "n": 50,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "scope_of_need"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "student"
+      },
+      "id": "themes.valuable.scope_of_need.pct.role.student",
+      "n": 884,
+      "n_mentions": 10,
+      "pct": 1.1,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "scope_of_need"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2025-10_to_2026-03"
+      },
+      "id": "themes.valuable.scope_of_need.pct.training_period.2025_10_to_2026_03",
+      "n": 121,
+      "n_mentions": 1,
+      "pct": 0.8,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "scope_of_need"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-04_to_2026-05"
+      },
+      "id": "themes.valuable.scope_of_need.pct.training_period.2026_04_to_2026_05",
+      "n": 386,
+      "n_mentions": 3,
+      "pct": 0.8,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "scope_of_need"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-06_to_2026-08"
+      },
+      "id": "themes.valuable.scope_of_need.pct.training_period.2026_06_to_2026_08",
+      "n": 36,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "scope_of_need"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-09_to_2026-10"
+      },
+      "id": "themes.valuable.scope_of_need.pct.training_period.2026_09_to_2026_10",
+      "n": 518,
+      "n_mentions": 8,
+      "pct": 1.5,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "scope_of_need"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "other_pooled"
+      },
+      "id": "themes.valuable.scope_of_need.pct.training_period.other_pooled",
+      "n": 2,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "scope_of_need"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Anne Arundel"
+      },
+      "id": "themes.valuable.what_988_is.pct.county.anne_arundel",
+      "n": 757,
+      "n_mentions": 345,
+      "pct": 45.6,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "what_988_is"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Montgomery"
+      },
+      "id": "themes.valuable.what_988_is.pct.county.montgomery",
+      "n": 27,
+      "n_mentions": 16,
+      "pct": 59.3,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "what_988_is"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "other_pooled"
+      },
+      "id": "themes.valuable.what_988_is.pct.county.other_pooled",
+      "n": 6,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "what_988_is"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Prince George's"
+      },
+      "id": "themes.valuable.what_988_is.pct.county.prince_georges",
+      "n": 262,
+      "n_mentions": 129,
+      "pct": 49.2,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "what_988_is"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Queen Anne's"
+      },
+      "id": "themes.valuable.what_988_is.pct.county.queen_annes",
+      "n": 11,
+      "n_mentions": 4,
+      "pct": 36.4,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "what_988_is"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "language",
+        "level": "en"
+      },
+      "id": "themes.valuable.what_988_is.pct.language.en",
+      "n": 1047,
+      "n_mentions": 493,
+      "pct": 47.1,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "what_988_is"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "language",
+        "level": "es"
+      },
+      "id": "themes.valuable.what_988_is.pct.language.es",
+      "n": 16,
+      "n_mentions": 5,
+      "pct": 31.2,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "what_988_is"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "id": "themes.valuable.what_988_is.pct.overall",
+      "n": 1063,
+      "n_mentions": 498,
+      "pct": 46.8,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "what_988_is"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "caregiver"
+      },
+      "id": "themes.valuable.what_988_is.pct.role.caregiver",
+      "n": 47,
+      "n_mentions": 17,
+      "pct": 36.2,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "what_988_is"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "multiple"
+      },
+      "id": "themes.valuable.what_988_is.pct.role.multiple",
+      "n": 10,
+      "n_mentions": 5,
+      "pct": 50.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "what_988_is"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "other"
+      },
+      "id": "themes.valuable.what_988_is.pct.role.other",
+      "n": 72,
+      "n_mentions": 47,
+      "pct": 65.3,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "what_988_is"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "school_staff"
+      },
+      "id": "themes.valuable.what_988_is.pct.role.school_staff",
+      "n": 50,
+      "n_mentions": 31,
+      "pct": 62.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "what_988_is"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "student"
+      },
+      "id": "themes.valuable.what_988_is.pct.role.student",
+      "n": 884,
+      "n_mentions": 398,
+      "pct": 45.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "what_988_is"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2025-10_to_2026-03"
+      },
+      "id": "themes.valuable.what_988_is.pct.training_period.2025_10_to_2026_03",
+      "n": 121,
+      "n_mentions": 62,
+      "pct": 51.2,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "what_988_is"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-04_to_2026-05"
+      },
+      "id": "themes.valuable.what_988_is.pct.training_period.2026_04_to_2026_05",
+      "n": 386,
+      "n_mentions": 174,
+      "pct": 45.1,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "what_988_is"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-06_to_2026-08"
+      },
+      "id": "themes.valuable.what_988_is.pct.training_period.2026_06_to_2026_08",
+      "n": 36,
+      "n_mentions": 22,
+      "pct": 61.1,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "what_988_is"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-09_to_2026-10"
+      },
+      "id": "themes.valuable.what_988_is.pct.training_period.2026_09_to_2026_10",
+      "n": 518,
+      "n_mentions": 240,
+      "pct": 46.3,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "what_988_is"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "other_pooled"
+      },
+      "id": "themes.valuable.what_988_is.pct.training_period.other_pooled",
+      "n": 2,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "what_988_is"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Anne Arundel"
+      },
+      "id": "themes.valuable.when_to_use.pct.county.anne_arundel",
+      "n": 757,
+      "n_mentions": 68,
+      "pct": 9.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "when_to_use"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Montgomery"
+      },
+      "id": "themes.valuable.when_to_use.pct.county.montgomery",
+      "n": 27,
+      "n_mentions": 9,
+      "pct": 33.3,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "when_to_use"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "other_pooled"
+      },
+      "id": "themes.valuable.when_to_use.pct.county.other_pooled",
+      "n": 6,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "when_to_use"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Prince George's"
+      },
+      "id": "themes.valuable.when_to_use.pct.county.prince_georges",
+      "n": 262,
+      "n_mentions": 37,
+      "pct": 14.1,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "when_to_use"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Queen Anne's"
+      },
+      "id": "themes.valuable.when_to_use.pct.county.queen_annes",
+      "n": 11,
+      "n_mentions": 3,
+      "pct": 27.3,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "when_to_use"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "language",
+        "level": "en"
+      },
+      "id": "themes.valuable.when_to_use.pct.language.en",
+      "n": 1047,
+      "n_mentions": 114,
+      "pct": 10.9,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "when_to_use"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "language",
+        "level": "es"
+      },
+      "id": "themes.valuable.when_to_use.pct.language.es",
+      "n": 16,
+      "n_mentions": 4,
+      "pct": 25.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "when_to_use"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "id": "themes.valuable.when_to_use.pct.overall",
+      "n": 1063,
+      "n_mentions": 118,
+      "pct": 11.1,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "when_to_use"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "caregiver"
+      },
+      "id": "themes.valuable.when_to_use.pct.role.caregiver",
+      "n": 47,
+      "n_mentions": 8,
+      "pct": 17.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "when_to_use"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "multiple"
+      },
+      "id": "themes.valuable.when_to_use.pct.role.multiple",
+      "n": 10,
+      "n_mentions": 2,
+      "pct": 20.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "when_to_use"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "other"
+      },
+      "id": "themes.valuable.when_to_use.pct.role.other",
+      "n": 72,
+      "n_mentions": 16,
+      "pct": 22.2,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "when_to_use"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "school_staff"
+      },
+      "id": "themes.valuable.when_to_use.pct.role.school_staff",
+      "n": 50,
+      "n_mentions": 7,
+      "pct": 14.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "when_to_use"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "student"
+      },
+      "id": "themes.valuable.when_to_use.pct.role.student",
+      "n": 884,
+      "n_mentions": 85,
+      "pct": 9.6,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "when_to_use"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2025-10_to_2026-03"
+      },
+      "id": "themes.valuable.when_to_use.pct.training_period.2025_10_to_2026_03",
+      "n": 121,
+      "n_mentions": 21,
+      "pct": 17.4,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "when_to_use"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-04_to_2026-05"
+      },
+      "id": "themes.valuable.when_to_use.pct.training_period.2026_04_to_2026_05",
+      "n": 386,
+      "n_mentions": 44,
+      "pct": 11.4,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "when_to_use"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-06_to_2026-08"
+      },
+      "id": "themes.valuable.when_to_use.pct.training_period.2026_06_to_2026_08",
+      "n": 36,
+      "n_mentions": 7,
+      "pct": 19.4,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "when_to_use"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-09_to_2026-10"
+      },
+      "id": "themes.valuable.when_to_use.pct.training_period.2026_09_to_2026_10",
+      "n": 518,
+      "n_mentions": 46,
+      "pct": 8.9,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "when_to_use"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "other_pooled"
+      },
+      "id": "themes.valuable.when_to_use.pct.training_period.other_pooled",
+      "n": 2,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "when_to_use"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Anne Arundel"
+      },
+      "id": "themes.valuable.who_can_use.pct.county.anne_arundel",
+      "n": 757,
+      "n_mentions": 89,
+      "pct": 11.8,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "who_can_use"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Montgomery"
+      },
+      "id": "themes.valuable.who_can_use.pct.county.montgomery",
+      "n": 27,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "who_can_use"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "other_pooled"
+      },
+      "id": "themes.valuable.who_can_use.pct.county.other_pooled",
+      "n": 6,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "who_can_use"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Prince George's"
+      },
+      "id": "themes.valuable.who_can_use.pct.county.prince_georges",
+      "n": 262,
+      "n_mentions": 4,
+      "pct": 1.5,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "who_can_use"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "county",
+        "level": "Queen Anne's"
+      },
+      "id": "themes.valuable.who_can_use.pct.county.queen_annes",
+      "n": 11,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "who_can_use"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "language",
+        "level": "en"
+      },
+      "id": "themes.valuable.who_can_use.pct.language.en",
+      "n": 1047,
+      "n_mentions": 93,
+      "pct": 8.9,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "who_can_use"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "language",
+        "level": "es"
+      },
+      "id": "themes.valuable.who_can_use.pct.language.es",
+      "n": 16,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "who_can_use"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "id": "themes.valuable.who_can_use.pct.overall",
+      "n": 1063,
+      "n_mentions": 93,
+      "pct": 8.7,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "who_can_use"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "caregiver"
+      },
+      "id": "themes.valuable.who_can_use.pct.role.caregiver",
+      "n": 47,
+      "n_mentions": 1,
+      "pct": 2.1,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "who_can_use"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "multiple"
+      },
+      "id": "themes.valuable.who_can_use.pct.role.multiple",
+      "n": 10,
+      "n_mentions": 1,
+      "pct": 10.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "who_can_use"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "other"
+      },
+      "id": "themes.valuable.who_can_use.pct.role.other",
+      "n": 72,
+      "n_mentions": 1,
+      "pct": 1.4,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "who_can_use"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "school_staff"
+      },
+      "id": "themes.valuable.who_can_use.pct.role.school_staff",
+      "n": 50,
+      "n_mentions": 0,
+      "pct": 0.0,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "who_can_use"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "role",
+        "level": "student"
+      },
+      "id": "themes.valuable.who_can_use.pct.role.student",
+      "n": 884,
+      "n_mentions": 90,
+      "pct": 10.2,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "who_can_use"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2025-10_to_2026-03"
+      },
+      "id": "themes.valuable.who_can_use.pct.training_period.2025_10_to_2026_03",
+      "n": 121,
+      "n_mentions": 1,
+      "pct": 0.8,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "who_can_use"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-04_to_2026-05"
+      },
+      "id": "themes.valuable.who_can_use.pct.training_period.2026_04_to_2026_05",
+      "n": 386,
+      "n_mentions": 26,
+      "pct": 6.7,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "who_can_use"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-06_to_2026-08"
+      },
+      "id": "themes.valuable.who_can_use.pct.training_period.2026_06_to_2026_08",
+      "n": 36,
+      "n_mentions": 1,
+      "pct": 2.8,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "who_can_use"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "2026-09_to_2026-10"
+      },
+      "id": "themes.valuable.who_can_use.pct.training_period.2026_09_to_2026_10",
+      "n": 518,
+      "n_mentions": 65,
+      "pct": 12.5,
+      "small_n": false,
+      "suppressed": false,
+      "theme_id": "who_can_use"
+    },
+    {
+      "field": "valuable",
+      "group": {
+        "dimension": "training_period",
+        "level": "other_pooled"
+      },
+      "id": "themes.valuable.who_can_use.pct.training_period.other_pooled",
+      "n": 2,
+      "n_mentions": null,
+      "pct": null,
+      "small_n": true,
+      "suppressed": true,
+      "theme_id": "who_can_use"
+    }
+  ],
+  "method": "Keyword and regex rules in agents/text/themes.py, documented in agents/text/codebook.md. Multi-label. Filler comments are coded only as no_substantive. A non-match is other_unclear. No network and no API key. Percents use non-empty comments as the denominator and are rounded half-to-even to 1 decimal. Groups with n < 10 are suppressed. County, role, and training-period levels with n < 10 are pooled into other_pooled. English and Spanish stay separate.",
+  "pii_screen": {
+    "method": "Regex on each non-empty comment for an email, a separated phone number (10-digit or 7-digit), a school phrase including 'my school', an honorific plus a capitalized name, 'my name is', or a role word such as trainer plus a capitalized name. 988 is not treated as a phone number. Names with no honorific and no role word are missed. n_flagged counts comment fields, not rows. Quotes still require human review.",
+    "n_flagged": 11
+  },
+  "schema_version": "0",
+  "source": {
+    "file_sha256": "72b08ff71ede02e4d6203e6096ee49904dd47fc1b74bb1f4e8539c8d263c6b26",
+    "n_rows": 1299
+  },
+  "spanish": {
+    "handling": "Spanish phrases are in the same offline rules. Rows with language es and a non-empty comment are counted here and reported as their own language group. If that group has n < 10, its counts are suppressed.",
+    "n_comments": 17
+  },
+  "taxonomy": [
+    {
+      "description": "Language access, captions, hybrid delivery, or disability access.",
+      "field": "improve",
+      "label": "Access and language",
+      "theme_id": "accessibility"
+    },
+    {
+      "description": "Asks how 988 works instead of saying how to change the training.",
+      "field": "improve",
+      "label": "Question, not a suggestion",
+      "theme_id": "audience_question"
+    },
+    {
+      "description": "Too basic, too advanced, or more on a specific population.",
+      "field": "improve",
+      "label": "Depth and populations",
+      "theme_id": "content_depth"
+    },
+    {
+      "description": "County or school resources, or a request for follow-up after the training.",
+      "field": "improve",
+      "label": "Local follow-up",
+      "theme_id": "local_followup"
+    },
+    {
+      "description": "Room, audio, slides, schedule, or parking.",
+      "field": "improve",
+      "label": "Logistics",
+      "theme_id": "logistics"
+    },
+    {
+      "description": "A request for slides, a handout, or a note people can keep.",
+      "field": "improve",
+      "label": "Slides and handouts",
+      "theme_id": "materials"
+    },
+    {
+      "description": "A request for more examples, cases, stories, or videos.",
+      "field": "improve",
+      "label": "More examples",
+      "theme_id": "more_examples"
+    },
+    {
+      "description": "More discussion or activities, or less lecture.",
+      "field": "improve",
+      "label": "More interaction",
+      "theme_id": "more_interaction"
+    },
+    {
+      "description": "The session felt rushed, too long, or too short, or the person wanted more time.",
+      "field": "improve",
+      "label": "Session length or pace",
+      "theme_id": "more_time"
+    },
+    {
+      "description": "The whole comment is filler such as n/a, nothing, good, or thanks.",
+      "field": "improve",
+      "label": "No substantive comment",
+      "theme_id": "no_substantive"
+    },
+    {
+      "description": "A non-empty comment that is not filler and matches no theme.",
+      "field": "improve",
+      "label": "Other or unclear",
+      "theme_id": "other_unclear"
+    },
+    {
+      "description": "A request for wording, steps, or a script.",
+      "field": "improve",
+      "label": "Practical scripts",
+      "theme_id": "practical_scripts"
+    },
+    {
+      "description": "Take the training to more families, schools, or a wider audience.",
+      "field": "improve",
+      "label": "Tell more people",
+      "theme_id": "share_wider"
+    },
+    {
+      "description": "24/7, anytime, free, confidential, many languages, or a real person answers.",
+      "field": "valuable",
+      "label": "Always available",
+      "theme_id": "always_available"
+    },
+    {
+      "description": "Feeling more prepared to help, or knowing what to say or do.",
+      "field": "valuable",
+      "label": "Confidence to help",
+      "theme_id": "confidence_to_help"
+    },
+    {
+      "description": "Wait time, a counselor, consent, a safety plan, or what happens on the call.",
+      "field": "valuable",
+      "label": "What a contact is like",
+      "theme_id": "how_contact_works"
+    },
+    {
+      "description": "The whole comment is filler such as n/a, nothing, good, or thanks.",
+      "field": "valuable",
+      "label": "No substantive comment",
+      "theme_id": "no_substantive"
+    },
+    {
+      "description": "You do not have to be suicidal or in crisis, and any reason is enough.",
+      "field": "valuable",
+      "label": "Not only suicide or crisis",
+      "theme_id": "not_only_crisis"
+    },
+    {
+      "description": "A non-empty comment that is not filler and matches no theme.",
+      "field": "valuable",
+      "label": "Other or unclear",
+      "theme_id": "other_unclear"
+    },
+    {
+      "description": "Role play, scenarios, examples, or practice during the training.",
+      "field": "valuable",
+      "label": "Practice and scenarios",
+      "theme_id": "practice_scenarios"
+    },
+    {
+      "description": "The presenter, trainer, or speaker was clear, engaging, or knowledgeable.",
+      "field": "valuable",
+      "label": "Presenter",
+      "theme_id": "presenter_quality"
+    },
+    {
+      "description": "Learning to notice warning signs or tell that someone is in crisis.",
+      "field": "valuable",
+      "label": "Recognizing a crisis",
+      "theme_id": "recognize_crisis"
+    },
+    {
+      "description": "Handouts, cards, links, or resource lists shared in the training.",
+      "field": "valuable",
+      "label": "Materials and resources",
+      "theme_id": "resources_shared"
+    },
+    {
+      "description": "A statistic, a death count, or how often suicide or self-harm happens.",
+      "field": "valuable",
+      "label": "Scale of the need",
+      "theme_id": "scope_of_need"
+    },
+    {
+      "description": "What the 988 lifeline is or how a contact works.",
+      "field": "valuable",
+      "label": "What 988 is",
+      "theme_id": "what_988_is"
+    },
+    {
+      "description": "When to contact 988, including versus 911.",
+      "field": "valuable",
+      "label": "When to use 988",
+      "theme_id": "when_to_use"
+    },
+    {
+      "description": "Anyone can use it, any age, or it is for everyone.",
+      "field": "valuable",
+      "label": "Who can use 988",
+      "theme_id": "who_can_use"
+    }
+  ],
+  "validation": {
+    "agreement_pct": 90.0,
+    "cohen_kappa": 0.87,
+    "procedure": "Text agent hand-coded a stratified sample, seed 17, from the codebook, without printing the classifier labels for those rows. Every non-empty Spanish comment is included, plus 25 English comments per field drawn from response ids sorted and shuffled with seed 17. Labels are response id and theme ids only, in gitignored data/processed/hand_labels.json. agreement_pct is exact theme-set match. cohen_kappa is the unweighted mean of per-theme binary Cohen's kappas on the sample. The same agent wrote the rules and the labels, so this is a consistency check, not an independent second coder. Exact set match on this sample was 75.0 before a follow-up pass added phrases the codebook already covered and the rules missed. The agreement_pct below is after that pass, on the same sample, so it is not a locked test.",
+    "sample_size": 80
+  }
+}

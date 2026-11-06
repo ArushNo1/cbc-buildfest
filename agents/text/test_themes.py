@@ -41,7 +41,9 @@ def test_classify_examples():
     assert themes.classify("", "improve") == []
     assert themes.classify("It felt rushed. We needed more time.", "improve") == ["more_time"]
     assert themes.classify("The mic cut out and the room was cold.", "improve") == ["logistics"]
-    assert themes.classify("Please add Spanish materials.", "improve") == ["accessibility"]
+    spanish = themes.classify("Please add Spanish materials.", "improve")
+    assert "accessibility" in spanish
+    assert "materials" in spanish
     assert themes.classify("Aprendí las señales de una crisis.", "valuable") == ["recognize_crisis"]
     assert themes.classify("How to recognize signs of a crisis", "valuable") == ["recognize_crisis"]
     assert "what_988_is" in themes.classify("That 988 can be called or texted", "valuable")
@@ -50,6 +52,13 @@ def test_classify_examples():
     assert themes.classify("Make it shorter", "improve") == ["more_time"]
     assert "more_examples" in themes.classify("Add real-life examples", "improve")
     assert themes.classify("Nothing, it was great", "improve") == ["no_substantive"]
+    assert themes.classify("Personally, not much to improve.", "improve") == ["no_substantive"]
+    assert "not_only_crisis" in themes.classify(
+        "It doesn't have to be during a crisis.", "valuable"
+    )
+    assert "more_interaction" in themes.classify(
+        "Let students engage with each other and discuss.", "improve"
+    )
     assert themes.classify("Más actividades", "improve") == ["more_interaction"]
     assert themes.classify("Nada, todo bien", "improve") == ["no_substantive"]
     assert themes.language_level({"language": "English (United States)"}) == "en"
