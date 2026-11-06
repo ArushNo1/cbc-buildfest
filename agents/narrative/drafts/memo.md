@@ -1,6 +1,6 @@
 # Memo: Using 988 training feedback to evaluate and improve EveryMind's trainings
 
-*To: EveryMind training and program staff · From: Team 17 · v1 draft (findings v1, themes v1)*
+*To: EveryMind training and program staff · From: Team 17*
 
 ## Key findings
 
@@ -50,7 +50,7 @@
 ## Implementation
 
 - **Who and when:** a program coordinator, once a month and at the end of each training season.
-- **Steps:** export the survey to Excel and run one command (see RUN.md). The tool rebuilds everything: cleaned data, findings and a one-file dashboard to share with staff and funders.
+- **Steps:** export the survey to Excel and run one command (see README.md in the technical artifact). The tool rebuilds everything: cleaned data, findings and a one-file dashboard to share with staff and funders.
 - **What it handles:** new counties, new answer labels and extra rows are flagged rather than breaking the tool.
 - **Privacy:** no response data leaves EveryMind's computer, and only group totals appear in outputs.
 

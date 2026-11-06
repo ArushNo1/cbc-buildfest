@@ -88,5 +88,7 @@ if __name__ == "__main__":
     OUT.mkdir(exist_ok=True)
     pdf((DRAFTS / "memo.md").read_text(), OUT / "Team17_Memo.pdf", 9.5)
     pdf((DRAFTS / "appendix.md").read_text(), OUT / "Team17_AIAppendix.pdf", 8.5)
-    deck((DRAFTS / "deck.md").read_text(), OUT / "Team17_Presentation.pptx")
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from deck_build import build as build_deck  # designed slides with dashboard charts (replaces the outline deck())
+    build_deck((DRAFTS / "deck.md").read_text(encoding="utf-8"), OUT / "Team17_Presentation.pptx")
     print("render: wrote memo, appendix, deck to", OUT, file=sys.stderr)

@@ -7,6 +7,7 @@ Identity strings = team git names/emails from history + umd/terpmail + the optio
 SUBMISSION_DIR overrides submission/ (for testing).
 """
 import json
+import shutil
 import os
 import re
 import subprocess
@@ -71,13 +72,33 @@ def check_pptx(path, pats, problems):
     problems += [f"{path.name}: identity string {h!r}" for h in identity_hits(blob, pats)]
 
 
+def probe_without_ffprobe(path):
+    """Duration and container tags from `ffmpeg -i` (e.g. imageio-ffmpeg ships ffmpeg but no ffprobe)."""
+    exe = shutil.which("ffmpeg")
+    if not exe:
+        try:
+            import imageio_ffmpeg
+            exe = imageio_ffmpeg.get_ffmpeg_exe()
+        except ImportError:
+            return None
+    err = subprocess.run([exe, "-hide_banner", "-i", str(path)], capture_output=True, text=True).stderr
+    m = re.search(r"Duration:\s*(\d+):(\d+):([\d.]+)", err)
+    if not m:
+        return None
+    head = err.split("Duration:")[0]  # container-level metadata comes before the Duration line
+    tags = dict(re.findall(r"^\s{4}(\w+)\s*:\s*(.*)$", head, re.M))
+    return {"duration": int(m.group(1)) * 3600 + int(m.group(2)) * 60 + float(m.group(3)), "tags": tags}
+
+
 def check_mp4(path, pats, problems):
     cmd = ["ffprobe", "-v", "error", "-show_entries", "format=duration:format_tags", "-of", "json", str(path)]
     try:
         fmt = json.loads(subprocess.run(cmd, capture_output=True, text=True, check=True).stdout)["format"]
     except (OSError, subprocess.CalledProcessError, ValueError, KeyError) as e:
-        problems.append(f"{path.name}: ffprobe failed ({e})")
-        return
+        fmt = probe_without_ffprobe(path)
+        if fmt is None:
+            problems.append(f"{path.name}: ffprobe failed ({e}) and no ffmpeg fallback")
+            return
     if float(fmt.get("duration", 0)) > 120:
         problems.append(f"{path.name}: {float(fmt['duration']):.1f} s, max 120 s")
     tags = fmt.get("tags", {})

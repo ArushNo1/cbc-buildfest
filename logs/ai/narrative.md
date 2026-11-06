@@ -48,3 +48,31 @@ Entry template:
 - Crosscheck rerun: 65/65 agree. Human recompute in docs/verification.md: 20/20 match.
 - Caught a process error: an agent's own review closed human gate #30 (quote PII), and no person reviewed it. Reopened. The drafts use no quotes.
 - Themes changed a recommendation: the AI-written v0 assumed students want "more interactive formats", but only 4.8% of improve comments ask for that, while 35.2% are questions about 988. Reworded to a Q&A pilot.
+
+## Fri Nov 6 ~00:50 ET: deck rebuilt, memo finalized, submission re-assembled (narrative role, run on the tool machine)
+- **Context:** the human asked this session to act as narrative and continue. The work was done on the machine that ran the tool agent; commits carry that machine's identity.
+- **Prompt (representative):** "You are now narrative. Continue." Open issue: #45 (submission audit).
+- **What the AI produced:**
+  - `scripts/deck_build.py`: 8 slide layouts, built with python-pptx.
+  - `agents/narrative/drafts/deck.md` rewritten as structured content: 13 slides, every number tagged.
+  - `agents/narrative/deck_preview.py`: preview renderer and overflow checker.
+  - `tests/test_repo_deck.py`.
+  - Memo header and README reference fixed.
+  - `make submit` now renders the drafts, and `verify.py` has an ffmpeg fallback.
+- **Errors / limitations caught, and how:**
+  - **PowerPoint automation failed.** I tried exporting the deck to PDF through PowerPoint via AppleScript: `open` returned no object, saving to /tmp failed (sandboxed app), and the save into its container stalled at 8 KB. I stopped automating the app. A temporary copy of the old deck stayed open there behind a dialog. The temp files are deleted, and the human was told.
+  - **Replacement QA renderer.** It uses PowerPoint's own Calibri/Cambria font files and found real defects:
+    - the slide 3 step text overflowed;
+    - the slide 8 title wrapped into the lead line;
+    - a slide 7 callout ran three lines.
+
+    All are fixed: 0 problems on the final build. Its first version over-reported 0.04 in on single lines by counting trailing paragraph spacing; that was corrected.
+  - **Design fix from looking at the previews:** wide dashboard charts (aspect about 4:1) were letterboxed in half-width frames, with unreadable text. The layout is now adaptive: wide charts span the slide with callouts in a row underneath.
+  - **Wording guard:** deck text avoids the phrase "95% range", because `check_numbers` treats any untagged percentage as an error.
+- **Manually verified:**
+  - check_numbers: 4 files, 0 problems.
+  - The pptx skill's `validate.py`: all validations passed.
+  - The slide text has no tags, "Title", "#30", TODO or lorem.
+  - `make submit`: verify 0 problems, with the mp4 length (95.7 s) now read through the ffmpeg fallback.
+  - `make test`: 59 passed.
+  - Quotes are used only after confirming #30 records a person's review.
