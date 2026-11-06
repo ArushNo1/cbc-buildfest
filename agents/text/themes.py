@@ -488,7 +488,9 @@ COMPILED = {
 
 
 def fold(text: str) -> str:
-    text = unicodedata.normalize("NFKD", str(text).replace("\u00a0", " "))
+    text = str(text).replace("\u00a0", " ")
+    text = text.replace("\u2019", "'").replace("\u2018", "'").replace("\u201c", '"').replace("\u201d", '"')
+    text = unicodedata.normalize("NFKD", text)
     text = "".join(ch for ch in text if not unicodedata.combining(ch))
     return re.sub(r"\s+", " ", text).strip().lower()
 

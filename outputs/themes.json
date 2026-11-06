@@ -4110,8 +4110,8 @@
       },
       "id": "themes.valuable.not_only_crisis.pct.county.anne_arundel",
       "n": 757,
-      "n_mentions": 31,
-      "pct": 4.1,
+      "n_mentions": 32,
+      "pct": 4.2,
       "small_n": false,
       "suppressed": false,
       "theme_id": "not_only_crisis"
@@ -4180,8 +4180,8 @@
       },
       "id": "themes.valuable.not_only_crisis.pct.language.en",
       "n": 1047,
-      "n_mentions": 37,
-      "pct": 3.5,
+      "n_mentions": 38,
+      "pct": 3.6,
       "small_n": false,
       "suppressed": false,
       "theme_id": "not_only_crisis"
@@ -4208,8 +4208,8 @@
       },
       "id": "themes.valuable.not_only_crisis.pct.overall",
       "n": 1063,
-      "n_mentions": 37,
-      "pct": 3.5,
+      "n_mentions": 38,
+      "pct": 3.6,
       "small_n": false,
       "suppressed": false,
       "theme_id": "not_only_crisis"
@@ -4264,8 +4264,8 @@
       },
       "id": "themes.valuable.not_only_crisis.pct.role.school_staff",
       "n": 50,
-      "n_mentions": 1,
-      "pct": 2.0,
+      "n_mentions": 2,
+      "pct": 4.0,
       "small_n": false,
       "suppressed": false,
       "theme_id": "not_only_crisis"
@@ -4292,8 +4292,8 @@
       },
       "id": "themes.valuable.not_only_crisis.pct.training_period.2025_10_to_2026_03",
       "n": 121,
-      "n_mentions": 2,
-      "pct": 1.7,
+      "n_mentions": 3,
+      "pct": 2.5,
       "small_n": false,
       "suppressed": false,
       "theme_id": "not_only_crisis"
@@ -6630,7 +6630,7 @@
   },
   "schema_version": "0",
   "source": {
-    "file_sha256": "72b08ff71ede02e4d6203e6096ee49904dd47fc1b74bb1f4e8539c8d263c6b26",
+    "file_sha256": "72796981e58f25bfe0c02865363304fdc311f75b8fab4bfbd480357bbe635f05",
     "n_rows": 1299
   },
   "spanish": {

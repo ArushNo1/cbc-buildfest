@@ -32,3 +32,10 @@ Entry template:
 - **Revision:** Rules widened to the phrases people actually used. `outputs/themes.json` records both agreement figures in `validation.procedure`.
 - **Manually verified against data:** Workbook has 1,299 rows. Non-empty valuable comments: 1,063. Non-empty improve comments: 651. Of 1,063 valuable comments, 498 (46.8 percent) are `themes.valuable.what_988_is.pct.overall`. Of 651 improve comments, 229 (35.2 percent) are `themes.improve.audience_question.pct.overall` and 155 (23.8 percent) are `themes.improve.no_substantive.pct.overall`. 17 Spanish-language rows have at least one comment. The output validates against the themes schema and contains no comment text. `other_unclear` is still 316 of 1,063 valuable comments and 147 of 651 improve comments.
 
+## 2026-11-05 23:20 ET: data v1 handoff and curly apostrophes
+- **Prompt (representative):** "Look at the GitHub issues for the text agent and fix the ones that can be fixed."
+- **What the AI produced:** Rebuilt `outputs/themes.json` from `data/processed/survey_clean.csv` after the data handoff. Straight and curly apostrophes now fold the same way. Candidate quote response ids were chosen for human review. No comment text goes in the issue.
+- **Error / limitation (if any), and how it was caught:** A comment that the codebook calls "not only a crisis" stayed out of that theme because the apostrophe was curly, so the pattern missed it. Checked by classifying that sentence both ways.
+- **Revision:** `fold` now maps curly apostrophes and quotes to straight ones. `themes.valuable.not_only_crisis.pct.overall` moved from 37 (3.5 percent) to 38 (3.6 percent) of 1,063. The hand-check agreement stayed 90.0 on the same 80 comments. Rebuilt from the clean file, the other overall counts matched the previous file.
+- **Manually verified against data:** Schema still validates. Source row count is still 1,299. The clean file and the raw workbook produce the same theme counts aside from that one apostrophe fix.
+

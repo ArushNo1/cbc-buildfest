@@ -56,6 +56,9 @@ def test_classify_examples():
     assert "not_only_crisis" in themes.classify(
         "It doesn't have to be during a crisis.", "valuable"
     )
+    assert "not_only_crisis" in themes.classify(
+        "That you don\u2019t have to be in crisis to use 988", "valuable"
+    )
     assert "more_interaction" in themes.classify(
         "Let students engage with each other and discuss.", "improve"
     )
