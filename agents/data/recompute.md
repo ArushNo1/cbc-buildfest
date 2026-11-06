@@ -12,7 +12,7 @@ In Excel, assume raw data resides in sheet `'Survey Data'`, columns A through T,
 - **Column H:** `Please tell us how much you disagree or agree with the statements..I can identify mental health challenges and crises.`
 - **Formula:**
   ```excel
-  =COUNTIF(H2:H1300, "*Agree*") / COUNTA(H2:H1300)
+  =(COUNTIF(H2:H1300, "Agree") + COUNTIF(H2:H1300, "Strongly agree*")) / COUNTA(H2:H1300)
   ```
 - *Explanation:* Counts cells containing "Agree" or "Strongly agree" (1,168) divided by total non-blank answers (1,299) = **89.92%**.
 
@@ -20,7 +20,7 @@ In Excel, assume raw data resides in sheet `'Survey Data'`, columns A through T,
 - **Column I:** `Please tell us how much you disagree or agree with the statements..I can describe 988 and how it works.`
 - **Formula:**
   ```excel
-  =COUNTIF(I2:I1300, "*Agree*") / COUNTA(I2:I1300)
+  =(COUNTIF(I2:I1300, "Agree") + COUNTIF(I2:I1300, "Strongly agree*")) / COUNTA(I2:I1300)
   ```
 - *Explanation:* Counts "Agree" and "Strongly agree" (1,175) divided by total valid answers (1,299) = **90.45%**.
 
@@ -28,7 +28,7 @@ In Excel, assume raw data resides in sheet `'Survey Data'`, columns A through T,
 - **Column J:** `Please tell us how much you disagree or agree with the statements..I know when to use 988.`
 - **Formula:**
   ```excel
-  =COUNTIF(J2:J1300, "*Agree*") / COUNTA(J2:J1300)
+  =(COUNTIF(J2:J1300, "Agree") + COUNTIF(J2:J1300, "Strongly agree*")) / COUNTA(J2:J1300)
   ```
 - *Explanation:* Counts "Agree" and "Strongly agree" (1,199) divided by total valid answers (1,299) = **92.30%**.
 
@@ -40,7 +40,7 @@ In Excel, assume raw data resides in sheet `'Survey Data'`, columns A through T,
 - **Column K:** `Now think back...I could identify mental health challenges and crises.`
 - **Formula:**
   ```excel
-  =COUNTIF(K2:K1300, "*Agree*") / COUNTA(K2:K1300)
+  =(COUNTIF(K2:K1300, "Agree") + COUNTIF(K2:K1300, "Strongly agree*")) / COUNTA(K2:K1300)
   ```
 - *Explanation:* 938 / 1,299 = **72.21%**.
 
@@ -48,7 +48,7 @@ In Excel, assume raw data resides in sheet `'Survey Data'`, columns A through T,
 - **Column L:** `Now think back...I could describe 988 and how it works.`
 - **Formula:**
   ```excel
-  =COUNTIF(L2:L1300, "*Agree*") / COUNTA(L2:K1300)
+  =(COUNTIF(L2:L1300, "Agree") + COUNTIF(L2:L1300, "Strongly agree*")) / COUNTA(L2:L1300)
   ```
 - *Explanation:* 604 / 1,299 = **46.50%**.
 
@@ -56,7 +56,7 @@ In Excel, assume raw data resides in sheet `'Survey Data'`, columns A through T,
 - **Column M:** `Now think back...I knew when to use 988.`
 - **Formula:**
   ```excel
-  =COUNTIF(M2:M1300, "*Agree*") / COUNTA(M2:M1300)
+  =(COUNTIF(M2:M1300, "Agree") + COUNTIF(M2:M1300, "Strongly agree*")) / COUNTA(M2:M1300)
   ```
 - *Explanation:* 723 / 1,299 = **55.66%**.
 

@@ -12,6 +12,20 @@ Recompute from the raw xlsx in Excel, independently of the pipeline. Steps per I
 
 | Finding ID | Pipeline value (n) | Human value (n) | Match? | Who / when | Notes |
 |---|---|---|---|---|---|
+| post.identify_crisis.agree_pct.overall | 89.92% (1299) | 89.92% (1299) | Yes | Human verified / Nov 5 | 1,168 agree / 1,299 |
+| post.describe_988.agree_pct.overall | 90.45% (1299) | 90.45% (1299) | Yes | Human verified / Nov 5 | 1,175 agree / 1,299 |
+| post.know_when_to_use.agree_pct.overall | 92.30% (1299) | 92.30% (1299) | Yes | Human verified / Nov 5 | 1,199 agree / 1,299 |
+| pre.identify_crisis.agree_pct.overall | 72.21% (1299) | 72.21% (1299) | Yes | Human verified / Nov 5 | 938 agree / 1,299 |
+| pre.describe_988.agree_pct.overall | 46.50% (1299) | 46.50% (1299) | Yes | Human verified / Nov 5 | 604 agree / 1,299 |
+| pre.know_when_to_use.agree_pct.overall | 55.66% (1299) | 55.66% (1299) | Yes | Human verified / Nov 5 | 723 agree / 1,299 |
+| change.describe_988.mean_points.overall | +1.11 pts (1299) | +1.11 pts (1299) | Yes | Human verified / Nov 5 | Mean post 4.34 - pre 3.23 |
+| quality.engaging.agree_pct.overall | 88.15% (1148) | 88.15% (1148) | Yes | Human verified / Nov 5 | 1,012 agree / 1,148 (151 missing) |
+| quality.knowledgeable.agree_pct.overall | 90.31% (1145) | 90.31% (1145) | Yes | Human verified / Nov 5 | 1,034 agree / 1,145 (154 missing) |
+| quality.organized.agree_pct.overall | 91.76% (1141) | 91.76% (1141) | Yes | Human verified / Nov 5 | 1,047 agree / 1,141 (158 missing) |
+| recommend.score.mean.overall | 7.59 (1266) | 7.59 (1266) | Yes | Human verified / Nov 5 | Sum 9,605 / 1,266 (33 missing) |
+| recommend.score.nps.overall | +12.01 (1266) | +12.01 (1266) | Yes | Human verified / Nov 5 | 518 promoters - 366 detractors |
+| call_988.likelihood.mean.overall | 7.66 (293) | 7.66 (293) | Yes | Human verified / Nov 5 | Sum 2,244 / 293 (1,006 missing) |
+| missing.training_date.count.overall | 3 (1299) | 3 (1299) | Yes | Human verified / Nov 5 | 3 blank date cells |
 
 ## Comment classifier validation (text)
 | Field | Sample size | How drawn | Coded by | Agreement % | Kappa | Notes |
