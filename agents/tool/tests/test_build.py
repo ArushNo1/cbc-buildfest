@@ -198,3 +198,17 @@ def test_level_labels():
 def test_dashboard_js_parses():
     r = subprocess.run(["node", "--check", str(ROOT / "agents/tool/web/dashboard.js")], capture_output=True, text=True)
     assert r.returncode == 0, r.stderr
+
+
+@pytest.mark.skipif(not (ROOT / "outputs/findings.json").exists() or not (ROOT / "outputs/themes.json").exists(),
+                    reason="outputs not built")
+def test_walkthrough_notebook_runs_and_is_committed_clean(tmp_path, monkeypatch):
+    nb = json.loads((ROOT / "agents/tool/walkthrough.ipynb").read_text(encoding="utf-8"))
+    code_cells = [c for c in nb["cells"] if c["cell_type"] == "code"]
+    assert all(not c["outputs"] and c["execution_count"] is None for c in code_cells), "clear outputs before committing"
+    src = "\n".join("".join(c["source"]) for c in code_cells)
+    assert "data/raw" not in src and "survey_clean" not in src and "read_excel" not in src  # aggregates only
+    monkeypatch.chdir(ROOT)
+    ns: dict = {}
+    for c in code_cells:
+        exec(compile("".join(c["source"]), "walkthrough", "exec"), ns)  # noqa: S102 - our own notebook
