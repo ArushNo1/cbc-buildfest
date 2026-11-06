@@ -51,6 +51,10 @@ Many answers are not suggestions. They are "no questions" or questions about how
 
 Each non-empty comment is checked for an email, a separated phone number (10-digit or 7-digit), a school phrase, an honorific plus a name, "my name is", a role word such as trainer plus a name, and two consecutive capitalized words that are not a place or the service name. `988` is not a phone number. A single first name with no role word is still missed. `n_flagged` counts comment fields, not rows. Quotes still need human review.
 
+## Quotes
+
+`outputs/quotes_reviewed.json` has the 11 comments kept after review. One candidate was removed because it named a local line and so identified the county. The file has the quote, its field, and its theme. It has no response id and no county, role, or language.
+
 ## Validation
 
 A stratified sample, seed 17, is hand-coded by the text agent from this codebook. Every non-empty Spanish comment is included, plus 25 English comments per field. Labels stay in `data/processed/hand_labels.json` (response id and theme ids only). `agreement_pct` is exact set match. `cohen_kappa` is the mean of per-theme binary kappas. The same agent wrote the rules and the labels, so the figure is a consistency check, not an independent coder.

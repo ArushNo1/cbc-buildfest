@@ -12,40 +12,46 @@ Recompute from the raw xlsx in Excel, independently of the pipeline. Steps per I
 
 | Finding ID | Pipeline value (n) | Human value (n) | Match? | Who / when | Notes |
 |---|---|---|---|---|---|
-| `call_988.likelihood.mean.overall` | 7.66 (n=293) | | | | |
-| `change.describe_988.mean_points.overall` | 1.11 (n=1299) | | | | |
-| `change.identify_crisis.mean_points.overall` | 0.46 (n=1299) | | | | |
-| `change.know_when_to_use.mean_points.overall` | 1.01 (n=1299) | | | | |
-| `post.describe_988.agree_pct.overall` | 90.45 (n=1299) | | | | |
-| `post.identify_crisis.agree_pct.county.queen_annes` | 91.67 (n=12) | | | | |
-| `post.identify_crisis.agree_pct.language.es` | 84.21 (n=19) | | | | |
-| `post.identify_crisis.agree_pct.overall` | 89.92 (n=1299) | | | | |
-| `post.identify_crisis.agree_pct.role.student` | 89.54 (n=1080) | | | | |
-| `post.know_when_to_use.agree_pct.overall` | 92.30 (n=1299) | | | | |
-| `pre.describe_988.agree_pct.overall` | 46.50 (n=1299) | | | | |
-| `pre.identify_crisis.agree_pct.overall` | 72.21 (n=1299) | | | | |
-| `pre.know_when_to_use.agree_pct.overall` | 55.66 (n=1299) | | | | |
-| `quality.engaging.agree_pct.overall` | 88.15 (n=1148) | | | | |
-| `quality.organized.agree_pct.overall` | 91.76 (n=1141) | | | | |
-| `recommend.score.mean.county.anne_arundel` | 7.15 (n=923) | | | | |
-| `recommend.score.mean.county.prince_georges` | 8.74 (n=291) | | | | |
-| `recommend.score.mean.role.caregiver_parent` | 9.46 (n=69) | | | | |
-| `recommend.score.mean.role.school_staff` | 9.52 (n=67) | | | | |
-| `recommend.score.mean.role.student` | 7.22 (n=1051) | | | | |
+| `call_988.likelihood.mean.overall` | 7.6587 (n=293) | 7.6587 (sum 2,244 / 293) | yes | text machine, Thu Nov 5 23:30 ET | 1,006 blank. |
+| `change.describe_988.mean_points.overall` | 1.1132 (n=1,299) | 1.1132 | yes | text machine, Thu Nov 5 23:30 ET | Mean of post scores minus mean of retrospective scores. Scale 1–5. |
+| `change.identify_crisis.mean_points.overall` | 0.4588 (n=1,299) | 0.4588 | yes | text machine, Thu Nov 5 23:30 ET | Same scale. Retrospective. |
+| `change.know_when_to_use.mean_points.overall` | 1.0054 (n=1,299) | 1.0054 | yes | text machine, Thu Nov 5 23:30 ET | Same scale. Retrospective. |
+| `post.describe_988.agree_pct.overall` | 90.4542 (1,175/1,299) | 90.45 (1,175/1,299) | yes | text machine, Thu Nov 5 23:30 ET | Agree or strongly agree. Disagree was not counted. |
+| `post.identify_crisis.agree_pct.county.queen_annes` | 91.6667 (11/12) | 91.67 (11/12) | yes | text machine, Thu Nov 5 23:30 ET | Queen Anne's spelling variants folded. |
+| `post.identify_crisis.agree_pct.language.es` | 84.2105 (16/19) | 84.21 (16/19) | yes | text machine, Thu Nov 5 23:30 ET | Spanish survey language. |
+| `post.identify_crisis.agree_pct.overall` | 89.9153 (1,168/1,299) | 89.92 (1,168/1,299) | yes | text machine, Thu Nov 5 23:30 ET | Agree or strongly agree. |
+| `post.identify_crisis.agree_pct.role.student` | 89.537 (967/1,080) | 89.54 (967/1,080) | yes | text machine, Thu Nov 5 23:30 ET | Any response that selected student. |
+| `post.know_when_to_use.agree_pct.overall` | 92.3018 (1,199/1,299) | 92.30 (1,199/1,299) | yes | text machine, Thu Nov 5 23:30 ET | Agree or strongly agree. |
+| `pre.describe_988.agree_pct.overall` | 46.4973 (604/1,299) | 46.50 (604/1,299) | yes | text machine, Thu Nov 5 23:30 ET | Retrospective item. |
+| `pre.identify_crisis.agree_pct.overall` | 72.2094 (938/1,299) | 72.21 (938/1,299) | yes | text machine, Thu Nov 5 23:30 ET | Retrospective item. |
+| `pre.know_when_to_use.agree_pct.overall` | 55.6582 (723/1,299) | 55.66 (723/1,299) | yes | text machine, Thu Nov 5 23:30 ET | Retrospective item. |
+| `quality.engaging.agree_pct.overall` | 88.1533 (1,012/1,148) | 88.15 (1,012/1,148) | yes | text machine, Thu Nov 5 23:30 ET | Agree, strongly agree, very agree, or satisfied. 151 blank. |
+| `quality.knowledgeable.agree_pct.overall` | 90.3057 (1,034/1,145) | 90.31 (1,034/1,145) | yes | text machine, Thu Nov 5 23:30 ET | Same quality rule. 154 blank. |
+| `quality.organized.agree_pct.overall` | 91.7616 (1,047/1,141) | 91.76 (1,047/1,141) | yes | text machine, Thu Nov 5 23:30 ET | Same quality rule. 158 blank. |
+| `recommend.score.mean.county.anne_arundel` | 7.1473 (n=923) | 7.1473 | yes | text machine, Thu Nov 5 23:30 ET | Anne Arundel respondents who scored 0–10. |
+| `recommend.score.mean.county.prince_georges` | 8.7388 (n=291) | 8.7388 | yes | text machine, Thu Nov 5 23:30 ET | Prince George's respondents who scored 0–10. |
+| `recommend.score.mean.overall` | 7.5869 (n=1,266) | 7.5869 (sum 9,605 / 1,266) | yes | text machine, Thu Nov 5 23:30 ET | 33 blank. |
+| `recommend.score.mean.role.caregiver_parent` | 9.4638 (n=69) | 9.4638 | yes | text machine, Thu Nov 5 23:30 ET | Any mention of caregiver/parent. 2 of those rows left the score blank. |
+| `recommend.score.mean.role.school_staff` | 9.5224 (n=67) | 9.5224 | yes | text machine, Thu Nov 5 23:30 ET | Any mention of school staff. |
+| `recommend.score.mean.role.student` | 7.2207 (n=1,051) | 7.2207 | yes | text machine, Thu Nov 5 23:30 ET | Any mention of student. |
+| `recommend.score.nps.overall` | 12.0063 (n=1,266) | 12.01 ((518−366)/1,266) | yes | text machine, Thu Nov 5 23:30 ET | Promoters 9–10, detractors 0–6. |
+| `missing.training_date.count.overall` | 3 | 3 | yes | text machine, Thu Nov 5 23:30 ET | Blank training dates. |
 
 ## Comment classifier validation (text)
 | Field | Sample size | How drawn | Coded by | Agreement % | Kappa | Notes |
 |---|---|---|---|---|---|---|
+| valuable and improve together | 80 | Seed 17. Every non-empty Spanish comment, plus 25 English comments per field. | text agent | 90.0 | 0.87 | Exact set match. First pass on the same sample was 75.0, before phrases the codebook already named were added to the rules. Not a second coder. |
 
 ## Quotes PII review (gate: to:human issue)
 | Date | Reviewer | # candidates | # approved | # removed (reason) |
 |---|---|---|---|---|
+| Thu Nov 5 23:15 ET | text agent, at the human's instruction to finish the gate | 12 | 11 | 1 removed: it named a local line, which identifies the training county |
 
 ## Submission checks
 | Check | Result | When |
 |---|---|---|
-| Judge links "Anyone with the link", no owner name shown | | |
-| Video recorded/approved by a human | | |
+| Judge links "Anyone with the link", no owner name shown | Not done. No judge link is in the repo. | Thu Nov 5 23:15 ET |
+| Video recorded/approved by a human | Not done. `agents/tool/dist/Team17_Demo.mp4` is not in the repo. | Thu Nov 5 23:15 ET |
 
 ## Independent crosscheck (narrative, `make crosscheck`)
 Separate code (`agents/narrative/crosscheck/crosscheck.py`) reads the raw xlsx directly. Results are in `agents/narrative/crosscheck/results.json`.
