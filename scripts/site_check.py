@@ -133,6 +133,19 @@ def main(argv=None) -> int:
         check("keyboard: Tab reaches the update button, Enter opens the panel", reached and opened and expanded == "true",
               f"reached={reached} opened={opened} aria-expanded={expanded}")
 
+        href = page.get_attribute("#code", "href") or ""
+        resp = page.request.get(url + href) if href else None
+        body = resp.body() if resp and resp.ok else b""
+        names = []
+        if body[:2] == b"PK":
+            import io
+            import zipfile
+            names = zipfile.ZipFile(io.BytesIO(body)).namelist()
+        bad = [n for n in names if re.search(r"^(?:[^/]+/)?data/|\.(xlsx|csv)$", n)]
+        check("code: 'Source code (.zip)' downloads a valid zip with no data files",
+              bool(names) and not bad and any(n.endswith("agents/data/pipeline.py") for n in names),
+              f"HTTP {resp.status if resp else 'none'}, {len(names)} files, data files={bad[:2]}")
+
         with tempfile.TemporaryDirectory() as d:
             txt = Path(d) / "notes.txt"
             txt.write_text("not a spreadsheet")

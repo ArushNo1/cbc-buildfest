@@ -46,7 +46,9 @@ Recompute from the raw xlsx in Excel, independently of the pipeline. Steps per I
 | Check | Result | When |
 |---|---|---|
 | Judge links "Anyone with the link", no owner name shown | | |
-| Video recorded/approved by a human | Approved (Arush): 95.7 s, content complete | Nov 5 |
+| Video recorded/approved by a human | Approved (Arush): 95.7 s, content complete. **Superseded:** that was the command-line version, replaced on Nov 6. | Nov 5 |
+| Video recorded/approved by a human: re-recorded website version (97.5 s, website flow, synthetic upload) | **Pending.** Needs a person's re-approval in #32. | Nov 6 |
+| Live site opens logged out, serves only the site (agent, automated; not the human check above) | `scripts/site_check.py --url https://team17-everymind.vercel.app`: 12/12; `/` 200; repo files 404 | Nov 6, 12:47 ET |
 
 ## Independent crosscheck (narrative, `make crosscheck`)
 Separate code (`agents/narrative/crosscheck/crosscheck.py`) reads the raw xlsx directly. Results are in `agents/narrative/crosscheck/results.json`.

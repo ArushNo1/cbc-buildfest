@@ -130,3 +130,11 @@ Entry template:
   - Added a root `vercel.json` (rewrite `/` to `site/`) so either deploy route works.
   - At 12:44 ET production returned 200, every repo and data path returned 404, and `site_check.py --url` passed 12/12 against the live site. #49 is closed.
   - Removing old per-deployment URLs is left to the person with the Vercel login (#31).
+
+## Fri Nov 6 ~14:25 ET: two loose ends fixed (user: "Yes, fix both")
+- **Video approval record:** `docs/verification.md` listed the video as approved, but that approval (Nov 5, 95.7 s) was for the command-line version. The row is now marked superseded, with a new row showing the website video's re-approval as **pending** (#32), and a separate, clearly labelled agent-automated live-site row (12/12). The human link-check row stays blank for a person to fill in.
+- **Source code for judges:** the form's run-instructions text referred to a zip that judges couldn't get, because they only receive the website link.
+  - The website now serves `Team17_TechnicalArtifact.zip` behind a quiet "Source code (.zip)" header link (`make site` copies it in).
+  - `site_check.py` checks that the link downloads a valid zip with the pipeline and no data files: 13/13 locally.
+  - The form text drops the code section until production is verified with the zip; it is added back after the redeploy.
+- **Zip rebuilt:** it differed from the committed one only in `.gitignore` (narrative's env-file ignore). `submission/` re-assembled; verify reports 0 problems.

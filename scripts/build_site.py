@@ -25,5 +25,9 @@ if __name__ == "__main__":
     (OUT / "app/manifest.json").write_text(json.dumps(files, indent=1))
     shutil.copy2(ROOT / "outputs/dashboard.html", OUT / "dashboard.html")
     shutil.copy2(ROOT / "scripts/site/index.html", OUT / "index.html")
+    # The code, for reviewers who want to read or run it (no data, no identity strings: see agents/tool/package.py)
+    zip_src = ROOT / "agents/tool/dist/Team17_TechnicalArtifact.zip"
+    if zip_src.exists():
+        shutil.copy2(zip_src, OUT / "Team17_TechnicalArtifact.zip")
     print("deploy: cd site && npx vercel deploy --prod")
     print(f"site: {len(files)} app files -> {OUT}")
