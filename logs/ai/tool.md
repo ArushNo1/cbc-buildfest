@@ -119,3 +119,24 @@ Entry template:
   - Frames at each scene matched the narration.
   - Headless screenshots at 1200 px and 375 px showed no console errors and no horizontal scroll.
 - 00:58 ET follow-up: narrative added a 'What to do next' scene (#43). I moved its shot from #glance to #recommend so the n = 293 call-988 tile is on screen, then re-rendered: 95.7 s, 7.6 MB. Frame at 79 s checked. check_numbers: 0 problems.
+
+## 2026-11-06 01:00 ET: acceptance testing and final build
+- **Prompt (representative):** "Read all GitHub issues addressed to you and run as many human tests as you can, then finalize the project."
+- **What the AI produced:**
+  - `agents/tool/acceptance.py`: 24 automated checks a reviewer would otherwise do by eye. Results are in `agents/tool/ACCEPTANCE.md`.
+  - `agents/tool/recompute_check.py`: an independent recompute of all 222 findings from the raw export.
+  - Runs of the clean-clone test, the drift-fixture test and the zip smoke test.
+  - A final rebuild of the dashboard and the zip.
+- **Errors / limitations caught, and how:**
+  - **The acceptance run found 2 real defects:**
+    - Keyboard users never saw a bar's tooltip. Focusing a bar scrolls it into view, and the scroll handler closed the tooltip. Tooltips opened from the keyboard now stay pinned and close with Escape.
+    - The "What this means" boxes used h4 directly under h2, skipping a heading level. They are now h3.
+  - **One of my checks was wrong:** it flagged 3 "unlabelled controls". They were labelled buttons inside collapsed panels, where `innerText` is empty. The check now uses `textContent`.
+  - **Drift test:** the new-county fixture showed that the pooled row also holds unrecognized counties (Garrett, 15 people), not only small groups. Relabelled "Other (pooled)", with a tooltip saying small or unrecognized groups are combined.
+  - **Coverage gap:** narrative's crosscheck covered 65 of 222 findings, so 157 dashboard numbers (month, season, quality and NPS by group, sample composition, histograms) had no independent check. My recompute covered all 222, with 0 mismatches. To show the comparison could fail, I injected 3 errors into a copy of the findings (value +0.3, n +1, numerator −1), and all 3 were reported.
+  - **Two pushes failed:**
+    - `git pull` could not update the local `origin/main` ref once. A second fetch fixed it.
+    - The pull then aborted because narrative had committed the artifact zip at the path of my stale local build. I removed my local copy, which I had generated myself.
+- **Manually verified against data:**
+  - Everything above was run in this session, by the tool agent. None of it is a human check.
+  - The human checks (headline recompute, quote PII review, video approval) are recorded in `docs/verification.md`.

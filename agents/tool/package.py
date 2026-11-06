@@ -8,7 +8,7 @@
 
 Usage:
     python3 agents/tool/package.py                       # build the zip
-    python3 agents/tool/package.py --smoke DATA=path.xlsx  # also unzip to a temp dir and run make run + make test there
+    python3 agents/tool/package.py --smoke DATA=path.xlsx  # also unzip to a temp dir and run make setup, make run, make test there
 """
 from __future__ import annotations
 
@@ -109,7 +109,7 @@ def build(out: Path) -> list[str]:
 
 
 def smoke(zip_path: Path, data: Path) -> int:
-    """Unzip into an empty folder (no git), then run the documented commands there."""
+    """Unzip into an empty folder (no git), then run the documented commands there, as a judge would."""
     with tempfile.TemporaryDirectory(prefix="t17_artifact_") as d:
         with zipfile.ZipFile(zip_path) as z:
             z.extractall(d)
@@ -118,7 +118,7 @@ def smoke(zip_path: Path, data: Path) -> int:
         raw.mkdir(parents=True)
         shutil.copy2(data, raw / data.name)
         env = {**os.environ, "PYTHONDONTWRITEBYTECODE": "1"}
-        steps = [["make", "run", f"DATA=data/raw/{data.name}"], ["make", "test"]]
+        steps = [["make", "setup"], ["make", "run", f"DATA=data/raw/{data.name}"], ["make", "test"]]
         for cmd in steps:
             print(f"package: smoke: {' '.join(cmd)}", flush=True)
             r = subprocess.run(cmd, cwd=top, env=env, capture_output=True, text=True)

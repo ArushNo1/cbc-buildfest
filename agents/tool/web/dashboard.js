@@ -112,13 +112,19 @@
     tip.style.left = Math.max(8, left) + "px";
     tip.style.top = Math.max(8, top) + "px";
   }
+  // Pointer tooltips follow the mouse and close on scroll. Keyboard tooltips stay pinned to the focused
+  // element, because focusing an element scrolls it into view (closing on scroll would hide them at once).
+  var tipNode = null, tipByPointer = false;
+  function pinTo(node) { var b = node.getBoundingClientRect(); place(b.left + Math.min(b.width, 260), b.top); }
   function showTip(node, content, evt) {
     tip.replaceChildren(content);
     tip.hidden = false;
-    if (evt && evt.clientX != null) place(evt.clientX, evt.clientY);
-    else { var b = node.getBoundingClientRect(); place(b.left + Math.min(b.width, 260), b.top); }
+    tipNode = node;
+    tipByPointer = !!(evt && evt.clientX != null);
+    if (tipByPointer) place(evt.clientX, evt.clientY);
+    else pinTo(node);
   }
-  function hideTip() { tip.hidden = true; }
+  function hideTip() { tip.hidden = true; tipNode = null; }
   function bindTip(node, make) {
     node.addEventListener("pointerenter", function (e) { showTip(node, make(), e); });
     node.addEventListener("pointermove", function (e) { if (!tip.hidden) place(e.clientX, e.clientY); });
@@ -127,7 +133,10 @@
     node.addEventListener("blur", hideTip);
   }
   document.addEventListener("keydown", function (e) { if (e.key === "Escape") hideTip(); });
-  window.addEventListener("scroll", hideTip, { passive: true });
+  window.addEventListener("scroll", function () {
+    if (tip.hidden || !tipNode) return;
+    if (tipByPointer) hideTip(); else pinTo(tipNode);
+  }, { passive: true });
 
   function tipRec(rec, unit, series) {
     var f = document.createDocumentFragment();
@@ -185,7 +194,7 @@
   // ------------------------------------------------------------------ flags
   function flagFor(rec) {
     if (!rec) return null;
-    if (rec.level === "other_pooled") return h("span", { class: "flag neutral", title: "Groups with fewer than " + T + " people, combined" }, "pooled");
+    if (rec.level === "other_pooled") return h("span", { class: "flag neutral", title: "Small or unrecognized groups combined, so no one is dropped" }, "pooled");
     if (!shown(rec)) return h("span", { class: "flag", title: "Fewer than " + T + " people" }, "⚠ under " + T);
     if (rec.small_n) return h("span", { class: "flag", title: "Small group" }, "⚠ small group");
     return null;
@@ -477,8 +486,8 @@
   // ------------------------------------------------------------------ small building blocks
   function means(meansNodes, todoNodes) {
     return h("div", { class: "means" },
-      h("div", null, h("h4", null, "What this means"), meansNodes.map(function (n) { return h("p", null, n); })),
-      h("div", null, h("h4", null, "What to do"), todoNodes.map(function (n) { return h("p", null, n); })));
+      h("div", null, h("h3", null, "What this means"), meansNodes.map(function (n) { return h("p", null, n); })),
+      h("div", null, h("h3", null, "What to do"), todoNodes.map(function (n) { return h("p", null, n); })));
   }
   function tile(label, rec, unit, scaleText) {
     if (!rec) return null;

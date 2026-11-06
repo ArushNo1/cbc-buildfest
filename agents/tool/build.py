@@ -95,7 +95,7 @@ DIMENSION_ORDER = ["county", "role", "language", "training_period", "training_mo
 TIME_DIMENSIONS = {"training_month", "training_period", "month", "period", "quarter"}
 LEVEL_LABELS = {
     "all": "All respondents",
-    "other_pooled": "Other (small groups pooled)",
+    "other_pooled": "Other (pooled)",
     "unknown": "Not recorded",
     "en": "English",
     "es": "Spanish",

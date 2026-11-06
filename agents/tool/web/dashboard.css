@@ -94,7 +94,7 @@ h3 { font-size: 1.02rem; margin: 20px 0 4px; }
 .callout.caveat { border-left: 4px solid var(--s-before); }
 .means { display: grid; gap: 8px; grid-template-columns: 1fr 1fr; margin-top: 14px; }
 .means > div { background: var(--surface-2); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; }
-.means h4 { margin: 0 0 4px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-2); }
+.means h3 { margin: 0 0 4px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-2); }
 .means p { margin: 0; }
 @media (max-width: 640px) { .means { grid-template-columns: 1fr; } }
 
