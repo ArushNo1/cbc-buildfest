@@ -67,6 +67,27 @@ def main() -> int:
                 # Element screenshots scroll and crop by themselves (page coordinates handled by Playwright).
                 loc.screenshot(path=str(OUT / name))
             print(f"deck_assets: {name}")
+        site = ROOT / "site" / "index.html"
+        if site.exists():  # the website itself (header, Update button, drop zone, dashboard), for the solution slide
+            import functools
+            import http.server
+            import socketserver
+            import threading
+
+            class Quiet(http.server.SimpleHTTPRequestHandler):
+                def log_message(self, *args):
+                    pass
+
+            httpd = socketserver.TCPServer(("127.0.0.1", 0), functools.partial(Quiet, directory=str(site.parent)))
+            threading.Thread(target=httpd.serve_forever, daemon=True).start()
+            wpage = browser.new_page(viewport={"width": 1280, "height": 820}, device_scale_factor=2, color_scheme="light")
+            wpage.goto(f"http://127.0.0.1:{httpd.server_address[1]}/")
+            wpage.wait_for_timeout(700)
+            wpage.click("#open")
+            wpage.wait_for_timeout(250)
+            wpage.screenshot(path=str(OUT / "00_website.png"))
+            httpd.shutdown()
+            print("deck_assets: 00_website.png")
         browser.close()
     return 0
 

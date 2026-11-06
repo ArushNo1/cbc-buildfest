@@ -95,7 +95,8 @@
     this.setAttribute("aria-expanded", String(open));
   };
   $("pick").onclick = function () { $("file").click(); };
-  $("file").onchange = function () { if (this.files[0]) update(this.files[0]); };
+  // Clear the input after reading, so choosing the same file again (say, after fixing it) still triggers an update.
+  $("file").onchange = function () { var f = this.files[0]; this.value = ""; if (f) update(f); };
   var drop = $("drop");
   drop.ondragover = function (e) { e.preventDefault(); drop.classList.add("over"); };
   drop.ondragleave = function () { drop.classList.remove("over"); };

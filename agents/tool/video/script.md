@@ -1,4 +1,4 @@
-# Demo video narration (Team17_Demo.mp4, 120 s max)
+# Demo video narration (Team17_Demo.mp4, 120 s max): website flow
 
 Draft v0 for narrative review before the Sat 12:00 freeze. Every number carries an `[F:…]` tag and must pass `python3 scripts/check_numbers.py agents/tool/video/script.md`. Tags are stripped before speech and captions.
 
@@ -9,15 +9,19 @@ Format, read by `agents/tool/video/make_video.py`:
   - `#section-id`: scroll to that section.
   - `#section-id+N`: scroll to the section, then N pixels further down.
   - `compare metric=<key> dim=<dimension>`: set the Compare-groups filters and scroll there.
+  - `site`: the website's top, with its Update button and the dashboard below it.
+  - `update file=<fixture>`: click "Update with a new survey export" and drop in a synthetic export from `tests/fixtures/` (run `make fixtures`). It is shown on screen as `made_up_test_export.xlsx`, so no real data ever appears.
+  - `dash-checks`: open the rebuilt dashboard's data checks.
+- Section shots (`#…`, `compare …`) act inside the dashboard. The website is recorded with `make_video.py --site` (the default when `site/` exists).
 - Lines starting with `>` are narration. Several `>` lines are joined into one paragraph.
 
 ## Problem
-shot: top
+shot: site
 > EveryMind trains Maryland students, school staff and families to know when to use 988. Every session ends with a survey, but a spreadsheet of answers doesn't tell staff what to change.
 
-## One command
+## Open the link
 shot: #glance
-> Our tool turns each survey export into answers. Save the export, run one command, and it cleans the data, flags labels it doesn't recognize, codes the comments, and rebuilds this dashboard. It needs no internet and no coding.
+> Our tool is a website. Open the link and the dashboard is ready: no install and no login, and every number shows how many people it rests on.
 
 ## Did people learn
 shot: #learning
@@ -28,17 +32,17 @@ shot: compare metric=recommend.score.mean dim=role
 > Pick any measure and any group. Every bar shows how many people it rests on and a likely range, and groups under ten people are hidden, never guessed. Students rate the training 7.2 [F:recommend.score.mean.role.student] out of ten; school staff, 9.5 [F:recommend.score.mean.role.school_staff]. The ranges don't overlap, so that gap is worth a closer look.
 
 ## What people wrote
-shot: #comments
-> Comments are coded offline into themes. What 988 is was the most valued lesson, in 47% [F:themes.valuable.what_988_is.pct.overall] of comments.
-
-## Questions left over
 shot: #comments-improve
-> And 35% [F:themes.improve.audience_question.pct.overall] of improvement comments were really questions about 988, a sign to leave time for questions.
+> Comments are coded into themes. What 988 is was the most valued lesson, in 47% [F:themes.valuable.what_988_is.pct.overall] of comments, and 35% [F:themes.improve.audience_question.pct.overall] of improvement comments were really questions about 988, a sign to leave time for questions.
 
 ## What to do next
 shot: #recommend
 > Our top recommendation: only 293 [F:call_988.likelihood.mean.overall#n] people answered whether they would actually call 988. Make that question required, and add a short survey at the start of each session, so next season measures real change.
 
-## Refresh next month
-shot: #all
-> Every number carries an ID that traces back to one findings file, the same one our memo and slides cite. Next month: new export, same command, fresh dashboard.
+## Update with next month's export
+shot: update file=fixture_new_county.xlsx
+> Next month, click Update and drop in the new export. Here we use a made-up test file. Every number is recalculated inside the browser, and the file never leaves the computer.
+
+## Nothing dropped
+shot: dash-checks
+> Counties or answer labels the tool doesn't recognize are flagged here, never dropped. Download the new dashboard, and share it with staff and funders.

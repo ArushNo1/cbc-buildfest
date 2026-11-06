@@ -213,6 +213,13 @@ SHOT_JS = """
 
 def parse_shot(shot: str) -> list:
     shot = shot.strip()
+    if shot == "site":
+        return ["site", "top", 0, None, None]
+    if shot == "dash-checks":
+        return ["checks", None, 0, None, None]
+    if shot.startswith("update"):
+        kv = dict(x.split("=", 1) for x in shot.split()[1:] if "=" in x)
+        return ["update", kv.get("file"), 0, None, None]
     if shot.startswith("compare"):
         kv = dict(x.split("=", 1) for x in shot.split()[1:] if "=" in x)
         return ["compare", "#compare", 0, kv.get("metric"), kv.get("dim")]
@@ -222,51 +229,141 @@ def parse_shot(shot: str) -> list:
     return ["scroll", "top", 0, None, None]
 
 
-def capture(scenes: list[dict], dashboard: Path, work: Path) -> tuple[Path, float]:
+CHECKS_JS = """
+() => {
+  const d = [...document.querySelectorAll('details')].find(x => /Data checks/.test((x.querySelector('summary') || {}).textContent || ''));
+  if (!d) return 'missing data checks';
+  d.open = true;
+  const row = [...d.querySelectorAll('tr')].find(r => /unknown/.test(r.textContent) && /\\d/.test(r.textContent));
+  (row || d).scrollIntoView({ block: 'center', behavior: 'smooth' });
+  if (row) row.style.outline = '3px solid #b4510f';
+  return 'ok';
+}
+"""
+RESET_JS = """
+() => {
+  const f = document.getElementById('dash'); f.removeAttribute('srcdoc'); f.src = 'dashboard.html';
+  const panel = document.getElementById('panel'); panel.classList.remove('open');
+  document.getElementById('open').setAttribute('aria-expanded', 'false');
+  document.getElementById('dl').hidden = true;
+  document.getElementById('file').value = '';
+  const st = document.getElementById('status'); st.textContent = ''; st.className = '';
+  document.getElementById('which').textContent = 'Showing: the provided survey data';
+}
+"""
+UPLOAD_NAME = "made_up_test_export.xlsx"  # what the website shows; makes clear on screen that the data is synthetic
+
+
+def serve(directory: Path):
+    import functools
+    import http.server
+    import socketserver
+    import threading
+
+    class Quiet(http.server.SimpleHTTPRequestHandler):
+        def log_message(self, *args):
+            pass
+
+    httpd = socketserver.TCPServer(("127.0.0.1", 0), functools.partial(Quiet, directory=str(directory)))
+    threading.Thread(target=httpd.serve_forever, daemon=True).start()
+    return httpd, f"http://127.0.0.1:{httpd.server_address[1]}/"
+
+
+def capture(scenes: list[dict], dashboard: Path, work: Path, site: Path | None = None,
+            fixtures: Path | None = None) -> tuple[Path, float]:
     try:
         from playwright.sync_api import sync_playwright
     except ImportError:
         raise VideoError("Playwright is not installed: python3 -m pip install playwright && python3 -m playwright install chromium") from None
+    upload = None
+    if any(parse_shot(sc["shot"])[0] == "update" for sc in scenes):
+        if site is None:
+            raise VideoError("an `update` shot needs the website (site/); run make site")
+        name = next(parse_shot(sc["shot"])[1] for sc in scenes if parse_shot(sc["shot"])[0] == "update")
+        src = (fixtures or ROOT / "tests" / "fixtures") / (name or "fixture_new_county.xlsx")
+        if not src.exists():
+            raise VideoError(f"synthetic export {src} not found; run make fixtures")
+        upload = work / UPLOAD_NAME
+        shutil.copyfile(src, upload)
+    httpd = None
     with sync_playwright() as p:
         try:
             browser = p.chromium.launch()
         except Exception as e:  # noqa: BLE001 - surface the install hint
             raise VideoError(f"can't start headless Chromium ({e.__class__.__name__}). Run: python3 -m playwright install chromium") from None
+        if site is not None:
+            httpd, url = serve(site)
+        else:
+            url = dashboard.resolve().as_uri()
         ctx = browser.new_context(viewport=VIEW, device_scale_factor=1, color_scheme="light", reduced_motion="no-preference",
                                   record_video_dir=str(work), record_video_size=VIEW)
         t0 = time.monotonic()
         page = ctx.new_page()
-        page.goto(dashboard.resolve().as_uri())
+        page.goto(url)
         page.wait_for_load_state("load")
+
+        def frame():
+            if site is None:
+                return page.main_frame
+            return page.query_selector("#dash").content_frame()
+
+        def ready_frame():
+            page.wait_for_function("() => { const d = document.getElementById('dash').contentDocument;"
+                                   " return d && d.querySelector('.tile'); }", timeout=60_000)
+            frame().add_style_tag(content="#tip{display:none!important} html{scroll-behavior:auto}")
+
+        if site is not None:
+            ready_frame()
+            if upload is not None:  # warm-up: load the in-browser tools once, before recording starts
+                page.click("#open")
+                page.set_input_files("#file", str(upload))
+                page.wait_for_function("document.getElementById('status').className === 'ok'", timeout=300_000)
+                page.evaluate(RESET_JS)
+                page.wait_for_timeout(300)
+                ready_frame()
         page.evaluate(OVERLAY_JS)
         page.wait_for_timeout(300)
         lead = time.monotonic() - t0
-        for s in scenes:
-            # wait until this scene's planned start, then record when it really started
-            target = lead + s["start_s"]
-            now = time.monotonic() - t0
-            if target > now:
-                page.wait_for_timeout(int((target - now) * 1000))
-            s["real_start_s"] = round(time.monotonic() - t0 - lead, 3)
-            res = page.evaluate(SHOT_JS, parse_shot(s["shot"]))
-            if res != "ok":
-                ctx.close(); browser.close()
-                raise VideoError(f"scene '{s['title']}': shot `{s['shot']}` failed ({res})")
-            for c in s["captions"]:
-                due = lead + s["real_start_s"] + c["at_s"]
+        try:
+            for sc in scenes:
+                # wait until this scene's planned start, then record when it really started
+                target = lead + sc["start_s"]
                 now = time.monotonic() - t0
-                if due > now:
-                    page.wait_for_timeout(int((due - now) * 1000))
-                page.evaluate("(t) => { document.getElementById('demo-cap').textContent = t; }", c["text"])
-            end = lead + s["real_start_s"] + s["dur_s"]
-            now = time.monotonic() - t0
-            if end > now:
-                page.wait_for_timeout(int((end - now) * 1000))
-            page.evaluate("() => { document.getElementById('demo-cap').textContent = ''; }")
-        page.wait_for_timeout(700)
-        video = Path(page.video.path())
-        ctx.close()
-        browser.close()
+                if target > now:
+                    page.wait_for_timeout(int((target - now) * 1000))
+                sc["real_start_s"] = round(time.monotonic() - t0 - lead, 3)
+                shot = parse_shot(sc["shot"])
+                if shot[0] == "update":
+                    if page.get_attribute("#open", "aria-expanded") != "true":
+                        page.click("#open")
+                    page.set_input_files("#file", str(upload))
+                    res = "ok"
+                elif shot[0] == "checks":
+                    page.wait_for_function("document.getElementById('status').className === 'ok'", timeout=60_000)
+                    ready_frame()
+                    res = frame().evaluate(CHECKS_JS)
+                else:
+                    res = frame().evaluate(SHOT_JS, shot)
+                if res != "ok":
+                    raise VideoError(f"scene '{sc['title']}': shot `{sc['shot']}` failed ({res})")
+                for c in sc["captions"]:
+                    due = lead + sc["real_start_s"] + c["at_s"]
+                    now = time.monotonic() - t0
+                    if due > now:
+                        page.wait_for_timeout(int((due - now) * 1000))
+                    page.evaluate("(t) => { document.getElementById('demo-cap').textContent = t; }", c["text"])
+                end = lead + sc["real_start_s"] + sc["dur_s"]
+                now = time.monotonic() - t0
+                if end > now:
+                    page.wait_for_timeout(int((end - now) * 1000))
+                page.evaluate("() => { document.getElementById('demo-cap').textContent = ''; }")
+            page.wait_for_timeout(700)
+            video = Path(page.video.path())
+        finally:
+            ctx.close()
+            browser.close()
+            if httpd:
+                httpd.shutdown()
     return video, lead
 
 
@@ -326,6 +423,9 @@ def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description="Build the demo video from the dashboard and the narration script")
     ap.add_argument("--script", type=Path, default=SCRIPT)
     ap.add_argument("--dashboard", type=Path, default=DASHBOARD)
+    ap.add_argument("--site", type=Path, default=ROOT / "site", help="record the website (default when site/ exists)")
+    ap.add_argument("--no-site", action="store_true", help="record outputs/dashboard.html directly instead of the website")
+    ap.add_argument("--fixtures", type=Path, default=ROOT / "tests" / "fixtures", help="synthetic exports for `update` shots")
     ap.add_argument("--out", type=Path, default=OUT)
     ap.add_argument("--voice", default="Samantha")
     ap.add_argument("--rate", type=int, default=182, help="words per minute for `say`")
@@ -353,10 +453,12 @@ def main(argv=None) -> int:
         if args.dry_run:
             print(f"video: dry run OK; captions -> {srt_path}")
             return 0
-        html = args.dashboard.read_text(encoding="utf-8")
+        site = None if args.no_site or not (args.site / "index.html").exists() else args.site
+        html = (site / "dashboard.html" if site else args.dashboard).read_text(encoding="utf-8")
         if "(EXAMPLE DATA)</title>" in html and not args.allow_example:
             raise VideoError("the dashboard is stamped EXAMPLE DATA; build it from real outputs first (make run)")
-        raw, lead = capture(scenes, args.dashboard, work)
+        print(f"video: recording {'the website ' + str(site) if site else args.dashboard}")
+        raw, lead = capture(scenes, args.dashboard, work, site=site, fixtures=args.fixtures)
         encode(raw, lead, scenes, total, args.out)
         srt_path.write_text(srt([{**s, "start_s": s.get("real_start_s", s["start_s"])} for s in scenes]), encoding="utf-8")
         dur = probe_duration(args.out)

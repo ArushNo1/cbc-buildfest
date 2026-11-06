@@ -109,3 +109,18 @@ Entry template:
   - The malformed-file message leaked internals ("RuntimeError: pipeline.py stopped … /app/data/raw/upload.xlsx").
   - If the CDN failed, the message blamed the user's file.
   - **My test was wrong once:** Playwright's offline mode also blocks localhost, so the first privacy check failed with 0 tiles. It now uses request routing.
+
+## Fri Nov 6 ~12:45 ET: #49 deploy problem found; #47 website demo; #48 deck polish (issues-watch run, this machine)
+- **#49 (found while checking #46's live URL, logged out):**
+  - `https://team17-everymind.vercel.app/` returned Vercel's own `NOT_FOUND`; the site was only at `/site/index.html`. The deploy had been made from the repo root.
+  - The same deploy publicly served the repo, including `docs/verification.md`, which names team members.
+  - Raw and processed data were not served: HEAD requests on those paths returned 404, and nothing was downloaded.
+  - Filed as a blocker to narrative, which holds the Vercel login. Added a root `.vercelignore` (allow only `site/`), and `site_check.py --url` now fails cleanly on a broken deployment.
+- **#47:** narration rewritten for the website flow. All 8 scenes pass check_numbers, and the planned length is 97.5 s.
+  - `make_video.py` records the website: section shots act inside the dashboard iframe, and the captions sit on the wrapper.
+  - The upload scene drops a synthetic fixture renamed `made_up_test_export.xlsx`, so no real data appears.
+  - A hidden warm-up update runs before recording, so Pyodide's one-time load is not on camera; the lead-in is trimmed.
+- **#48:** the deck already had charts (39edf8d). Polish: slide 3 now shows the website itself (new asset `00_website.png`) plus the live address. All 13 slides pass the overflow check, and check_numbers reports 0 problems.
+- **A real website bug found by the video recorder:** the first website recording timed out in its last scene. Reproduced outside the recorder: choosing the **same file again** did nothing. The file input kept its old value, so the browser fired no change event, and a staff member who fixed an export and re-picked it would get no response. Fixed in `scripts/site/index.html` (the input is cleared after reading), with a new same-file check in `site_check.py`, which now passes 12/12.
+- **The deck stays true:** slide 11 said a person "approved the demo video". The re-recorded video is not yet approved (#32 reopened), so that clause was removed. It can return after the human re-approval.
+- **Form text:** `agents/tool/dist/FORM_run_instructions.txt` now leads with the website (open the link, Update, drop the file). The command line is optional.

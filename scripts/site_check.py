@@ -156,6 +156,15 @@ def main(argv=None) -> int:
                   msg[:90])
             check("update: the new county in the export is flagged in the rebuilt dashboard", bool(flagged), str(flagged[:1]))
 
+            page.evaluate("() => { const s = document.getElementById('status'); s.textContent = ''; s.className = ''; }")
+            page.set_input_files("#file", str(fixture))  # the same file again, as after fixing an export
+            try:
+                page.wait_for_function("['ok','bad'].includes(document.getElementById('status').className)", timeout=120_000)
+                again = page.inner_text("#status")
+            except Exception:  # noqa: BLE001
+                again = "no response"
+            check("update: choosing the same file a second time updates again", again.startswith("Done"), again[:60])
+
             import openpyxl
             wb = openpyxl.Workbook()
             wb.active.title = "Sheet1"

@@ -223,7 +223,12 @@ def l_solution(s, d):
         text(s, x + 0.95, y + 0.08, w - 1.1, 0.4, head, size=17, bold=True, color=TEAL, space_after=0)
         text(s, x + 0.95, y + 0.46, w - 1.1, 0.58, body, size=13.5, color=INK, line=1.0, space_after=0)
     text(s, x, 5.25, w, 1.5, d["bullets"], size=14, bullets=True, space_after=5, name="Features")
-    fx, fy, fw, fh = picture(s, d["image"], 6.35, 1.5, W - M - 6.35, 5.2, d.get("alt", ""), crop=(0.07, 0.0, 0.07, 0.3))
+    crop = tuple(float(v) for v in d["crop"].split(",")) if d.get("crop") else (0.0, 0.0, 0.0, 0.0)
+    maxh = 4.75 if d.get("url") else 5.2
+    fx, fy, fw, fh = picture(s, d["image"], 6.35, 1.5, W - M - 6.35, maxh, d.get("alt", ""), crop=crop)
+    if d.get("url"):
+        text(s, fx, fy + fh + 0.12, fw, 0.4, [[("Live: ", {"color": MUTED, "bold": False}), (d["url"], {})]],
+             size=16, bold=True, color=TEAL, name="Website address")
 
 
 def l_stats(s, d):

@@ -33,8 +33,9 @@ step: 3 | Share the dashboard | Download it as one file for staff, presenters an
 - New counties, answer labels and rows are flagged, never dropped
 - Every number shows how many people it rests on, with a confidence range
 - Groups under 10 people are hidden, for privacy and reliability
-image: agents/tool/dist/deck_assets/01_dashboard_overview.png
-alt: The dashboard's opening view: headline tiles, each showing a value, its n and a confidence range.
+image: agents/tool/dist/deck_assets/00_website.png
+alt: The website: an "Update with a new survey export" button and drop zone above the dashboard's headline numbers.
+url: team17-everymind.vercel.app
 notes: Staff need no coding: open team17-everymind.vercel.app and drag in next month's export. The file never leaves their computer. Unknown labels show up in a data-checks panel instead of breaking the tool.
 
 ## Finding 1: participants leave confident
@@ -110,7 +111,7 @@ lead: AI did the work; tests, independent code and people checked it
 card: How we used it | Claude Code ran as four coordinated agents (data, text, tool, narrative) that shared work only through the repository and its issue board.
 card: Errors we caught | A wrong missing-date count (0 instead of 3). An unsupported "2.4 points" claim (really 2.2). A comment classifier that missed half the comments. A chart that implied trends across empty months.
 card: Independent checks | Separate code recomputed every published number from the raw file, and all matched. Rebuilding on a second machine gave identical results. Synthetic "next month" files are flagged, not crashed on.
-card: Human checks | A team member recomputed 20 headline numbers in Excel: all matched. A person reviewed every quote for personal information and approved the demo video.
+card: Human checks | A team member recomputed 20 headline numbers in Excel: all matched. A person reviewed every quote for personal information.
 notes: Full details, including representative prompts, are in the AI Process Appendix.
 
 ## Limitations

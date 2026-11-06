@@ -1,34 +1,18 @@
-Team17_TechnicalArtifact.zip: a Python pipeline that turns the survey export into checked findings and a one-file dashboard. Runs on macOS, Windows and Linux.
+Team 17 technical artifact: a website that turns the post-training survey export into checked findings and a dashboard. No install, no login, no commands.
 
-TO VIEW THE RESULTS (no install)
-1. Download Team17_TechnicalArtifact.zip and unzip it.
-2. Open Team17_TechnicalArtifact/outputs/dashboard.html in any web browser. It works offline.
+TO VIEW THE RESULTS
+1. Open https://team17-everymind.vercel.app in any web browser (Chrome, Edge, Firefox or Safari; desktop or phone).
+2. The dashboard for the provided dataset opens directly. Every number shows how many people it is based on and a confidence range. Groups with fewer than 10 people are hidden.
 
-TO RE-RUN ON THE PROVIDED DATASET
-1. Install Python 3.10 or newer.
-2. Open a terminal in the unzipped Team17_TechnicalArtifact folder.
-3. Install the packages:
+TO RE-RUN IT ON THE PROVIDED DATASET (or next month's export)
+1. Click "Update with a new survey export" at the top of the page.
+2. Drag BuildFest_EveryMind_Survey_Data_FULL.xlsx onto the page, or click "Choose a file…".
+3. Wait for "Done". The first update takes about a minute while the browser loads its tools; later updates take seconds. Everything is calculated inside the browser tab: the file is not uploaded anywhere.
+4. The dashboard rebuilds from the file. Counties or answer labels it doesn't recognize are listed under "How to read this, and its limits" → "Data checks", never dropped.
+5. Optional: click "Download this dashboard" to save it as a single file you can email.
+
+FOR REVIEWERS WHO WANT THE CODE (optional)
+The same pipeline runs on the command line with Python 3.10 or newer. In the unzipped Team17_TechnicalArtifact folder:
    python3 -m pip install -r requirements.txt
-4. Create a folder data/raw inside it, and copy BuildFest_EveryMind_Survey_Data_FULL.xlsx there.
-5. Rebuild everything:
-   - macOS/Linux:
-     make run DATA=data/raw/BuildFest_EveryMind_Survey_Data_FULL.xlsx
-   - Windows, or without make, run the three steps in order:
-     python3 agents/data/pipeline.py --data data/raw/BuildFest_EveryMind_Survey_Data_FULL.xlsx
-     python3 agents/text/themes.py
-     python3 agents/tool/build.py --strict
-   On Windows, type "py" instead of "python3".
-6. Open outputs/dashboard.html.
-
-WHAT IT PRODUCES
-- outputs/findings.json: every number, with n, its denominator and a 95% range.
-- outputs/themes.json: themes coded from the open-ended comments.
-- outputs/dashboard.html: the dashboard.
-
-A new month's export works the same way. Unknown counties or answer labels are flagged on the dashboard, never dropped.
-
-OPTIONAL CHECKS
-- make test: 58 automated tests, on synthetic data.
-- python3 agents/tool/recompute_check.py: an independent recompute of every number from the raw file.
-
-Full instructions and troubleshooting: README.md inside the zip.
+   make run DATA=data/raw/BuildFest_EveryMind_Survey_Data_FULL.xlsx
+README.md inside the zip has the full steps, including Windows.
