@@ -6631,7 +6631,8 @@
   "schema_version": "0",
   "source": {
     "file_sha256": "72796981e58f25bfe0c02865363304fdc311f75b8fab4bfbd480357bbe635f05",
-    "n_rows": 1299
+    "n_rows": 1299,
+    "raw_file_sha256": "72b08ff71ede02e4d6203e6096ee49904dd47fc1b74bb1f4e8539c8d263c6b26"
   },
   "spanish": {
     "handling": "Spanish phrases are in the same offline rules. Rows with language es and a non-empty comment are counted here and reported as their own language group. If that group has n < 10, its counts are suppressed.",
@@ -6641,162 +6642,189 @@
     {
       "description": "Language access, captions, hybrid delivery, or disability access.",
       "field": "improve",
+      "kind": "theme",
       "label": "Access and language",
       "theme_id": "accessibility"
     },
     {
       "description": "Asks how 988 works instead of saying how to change the training.",
       "field": "improve",
+      "kind": "catch_all",
       "label": "Question, not a suggestion",
       "theme_id": "audience_question"
     },
     {
       "description": "Too basic, too advanced, or more on a specific population.",
       "field": "improve",
+      "kind": "theme",
       "label": "Depth and populations",
       "theme_id": "content_depth"
     },
     {
       "description": "County or school resources, or a request for follow-up after the training.",
       "field": "improve",
+      "kind": "theme",
       "label": "Local follow-up",
       "theme_id": "local_followup"
     },
     {
       "description": "Room, audio, slides, schedule, or parking.",
       "field": "improve",
+      "kind": "theme",
       "label": "Logistics",
       "theme_id": "logistics"
     },
     {
       "description": "A request for slides, a handout, or a note people can keep.",
       "field": "improve",
+      "kind": "theme",
       "label": "Slides and handouts",
       "theme_id": "materials"
     },
     {
       "description": "A request for more examples, cases, stories, or videos.",
       "field": "improve",
+      "kind": "theme",
       "label": "More examples",
       "theme_id": "more_examples"
     },
     {
       "description": "More discussion or activities, or less lecture.",
       "field": "improve",
+      "kind": "theme",
       "label": "More interaction",
       "theme_id": "more_interaction"
     },
     {
       "description": "The session felt rushed, too long, or too short, or the person wanted more time.",
       "field": "improve",
+      "kind": "theme",
       "label": "Session length or pace",
       "theme_id": "more_time"
     },
     {
       "description": "The whole comment is filler such as n/a, nothing, good, or thanks.",
       "field": "improve",
+      "kind": "catch_all",
       "label": "No substantive comment",
       "theme_id": "no_substantive"
     },
     {
       "description": "A non-empty comment that is not filler and matches no theme.",
       "field": "improve",
+      "kind": "catch_all",
       "label": "Other or unclear",
       "theme_id": "other_unclear"
     },
     {
       "description": "A request for wording, steps, or a script.",
       "field": "improve",
+      "kind": "theme",
       "label": "Practical scripts",
       "theme_id": "practical_scripts"
     },
     {
       "description": "Take the training to more families, schools, or a wider audience.",
       "field": "improve",
+      "kind": "theme",
       "label": "Tell more people",
       "theme_id": "share_wider"
     },
     {
       "description": "24/7, anytime, free, confidential, many languages, or a real person answers.",
       "field": "valuable",
+      "kind": "theme",
       "label": "Always available",
       "theme_id": "always_available"
     },
     {
       "description": "Feeling more prepared to help, or knowing what to say or do.",
       "field": "valuable",
+      "kind": "theme",
       "label": "Confidence to help",
       "theme_id": "confidence_to_help"
     },
     {
       "description": "Wait time, a counselor, consent, a safety plan, or what happens on the call.",
       "field": "valuable",
+      "kind": "theme",
       "label": "What a contact is like",
       "theme_id": "how_contact_works"
     },
     {
       "description": "The whole comment is filler such as n/a, nothing, good, or thanks.",
       "field": "valuable",
+      "kind": "catch_all",
       "label": "No substantive comment",
       "theme_id": "no_substantive"
     },
     {
       "description": "You do not have to be suicidal or in crisis, and any reason is enough.",
       "field": "valuable",
+      "kind": "theme",
       "label": "Not only suicide or crisis",
       "theme_id": "not_only_crisis"
     },
     {
       "description": "A non-empty comment that is not filler and matches no theme.",
       "field": "valuable",
+      "kind": "catch_all",
       "label": "Other or unclear",
       "theme_id": "other_unclear"
     },
     {
       "description": "Role play, scenarios, examples, or practice during the training.",
       "field": "valuable",
+      "kind": "theme",
       "label": "Practice and scenarios",
       "theme_id": "practice_scenarios"
     },
     {
       "description": "The presenter, trainer, or speaker was clear, engaging, or knowledgeable.",
       "field": "valuable",
+      "kind": "theme",
       "label": "Presenter",
       "theme_id": "presenter_quality"
     },
     {
       "description": "Learning to notice warning signs or tell that someone is in crisis.",
       "field": "valuable",
+      "kind": "theme",
       "label": "Recognizing a crisis",
       "theme_id": "recognize_crisis"
     },
     {
       "description": "Handouts, cards, links, or resource lists shared in the training.",
       "field": "valuable",
+      "kind": "theme",
       "label": "Materials and resources",
       "theme_id": "resources_shared"
     },
     {
       "description": "A statistic, a death count, or how often suicide or self-harm happens.",
       "field": "valuable",
+      "kind": "theme",
       "label": "Scale of the need",
       "theme_id": "scope_of_need"
     },
     {
       "description": "What the 988 lifeline is or how a contact works.",
       "field": "valuable",
+      "kind": "theme",
       "label": "What 988 is",
       "theme_id": "what_988_is"
     },
     {
       "description": "When to contact 988, including versus 911.",
       "field": "valuable",
+      "kind": "theme",
       "label": "When to use 988",
       "theme_id": "when_to_use"
     },
     {
       "description": "Anyone can use it, any age, or it is for everyone.",
       "field": "valuable",
+      "kind": "theme",
       "label": "Who can use 988",
       "theme_id": "who_can_use"
     }

@@ -46,3 +46,10 @@ Entry template:
 - **Revision:** Quote list dropped from 12 candidates to 11.
 - **Manually verified against data:** Post identify 1,168/1,299, describe 1,175/1,299, when to use 1,199/1,299. Pre 938, 604, and 723 out of 1,299. Quality 1,012/1,148, 1,034/1,145, 1,047/1,141. Recommend mean 9,605/1,266 and NPS (518−366)/1,266. Call-988 mean 2,244/293. Missing training dates 3. Change means 0.4588, 1.1132, and 1.0054 on the 1–5 scale. Queen Anne's identify 11/12, Spanish identify 16/19, student identify 967/1,080. Recommend means: Anne Arundel 7.1473 (n=923), Prince George's 8.7388 (n=291), caregiver/parent any mention 9.4638 (n=69), school staff any mention 9.5224 (n=67), student any mention 7.2207 (n=1,051). Each matched `outputs/findings.json`.
 
+## 2026-11-05 23:40 ET: keep the validation numbers on a clean rebuild
+- **Prompt (representative):** "A clean run drops the validation stats because the hand labels are gitignored, and the theme file hashes the clean csv instead of the workbook."
+- **What the AI produced:** `agents/text/validation_summary.json` stores the sample size, agreement, kappa, row count, and raw workbook sha256, with no row ids. A machine without the label file uses that copy only when the raw sha256 and row count match. `outputs/themes.json` now also has `source.raw_file_sha256`. `other_unclear`, `no_substantive`, and `audience_question` are marked `kind: catch_all`.
+- **Error / limitation (if any), and how it was caught:** Rebuilding themes on a machine without the labels rewrote validation to sample size 0 and a blank agreement. That was the bug in issue 41. The stored copy is still the same agent's check, not a second coder.
+- **Revision:** The live check on this machine is unchanged: 80 comments, 90.0 percent exact match, kappa 0.87.
+- **Manually verified against data:** Rebuilt from the clean file. Row count 1,299. Raw sha256 matches `outputs/validation_report.json`. Theme counts were not retuned.
+

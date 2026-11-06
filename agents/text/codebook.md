@@ -51,6 +51,8 @@ Many answers are not suggestions. They are "no questions" or questions about how
 
 Each non-empty comment is checked for an email, a separated phone number (10-digit or 7-digit), a school phrase, an honorific plus a name, "my name is", a role word such as trainer plus a name, and two consecutive capitalized words that are not a place or the service name. `988` is not a phone number. A single first name with no role word is still missed. `n_flagged` counts comment fields, not rows. Quotes still need human review.
 
+`other_unclear`, `no_substantive`, and `audience_question` are catch-all codes. They are not the main finding of a comment field.
+
 ## Quotes
 
 `outputs/quotes_reviewed.json` has the 11 comments kept after review. One candidate was removed because it named a local line and so identified the county. The file has the quote, its field, and its theme. It has no response id and no county, role, or language.
