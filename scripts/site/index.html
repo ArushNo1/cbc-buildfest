@@ -54,12 +54,39 @@
 
 <iframe id="dash" src="dashboard.html" title="Survey dashboard"></iframe>
 
-<script src="https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js"></script>
 <script>
 (function () {
   "use strict";
   var $ = function (id) { return document.getElementById(id); };
   var panel = $("panel"), status = $("status"), py = null;
+  var PYODIDE = "https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js";
+
+  // Viewing the dashboard needs no network. The analysis tools load only when someone updates.
+  function loadScript(src) {
+    return new Promise(function (resolve, reject) {
+      var s = document.createElement("script");
+      s.src = src; s.onload = resolve;
+      s.onerror = function () { reject(new Error("tools-unavailable")); };
+      document.head.appendChild(s);
+    });
+  }
+  function paint() { return new Promise(function (r) { requestAnimationFrame(function () { setTimeout(r, 30); }); }); }
+
+  // Plain-language messages for the problems staff can fix themselves.
+  function explain(err) {
+    var text = String((err && err.message) || err || "");
+    if (/tools-unavailable|Failed to fetch|NetworkError|load(ing)? ?pyodide/i.test(text))
+      return "Couldn't load the analysis tools. Check the internet connection and try again. Your file was not sent anywhere.";
+    if (/Sheet 'Survey Data' not found/i.test(text))
+      return "This workbook has no sheet named \u201cSurvey Data\u201d. Please use the survey export as downloaded, without renaming the sheet.";
+    if (/missing|required column|KeyError/i.test(text))
+      return "This file is missing columns the survey export normally has. Please export the survey again, without removing columns.";
+    if (/zip|BadZipFile|not a zip|InvalidFileException/i.test(text))
+      return "This file couldn't be opened as an Excel workbook. Please save it as .xlsx and try again.";
+    var last = text.split("\n").filter(Boolean).slice(-1)[0] || "unknown error";
+    last = last.replace(/^\w*Error:\s*/, "").replace(/\S*\/app\/data\/raw\/upload\.xlsx/g, "your file");
+    return "Couldn't build the dashboard from this file. Check that it's the survey export with the usual columns. (Detail: " + last + ")";
+  }
 
   function say(msg, cls) { status.textContent = msg; status.className = cls || ""; }
 
@@ -77,6 +104,8 @@
   async function boot() {
     if (py) return py;
     say("Loading the analysis tools (one time, about a minute)…");
+    await paint();
+    if (typeof loadPyodide === "undefined") await loadScript(PYODIDE);
     var p = await loadPyodide();
     await p.loadPackage(["pandas", "micropip"]);
     await p.pyimport("micropip").install("openpyxl");
@@ -95,7 +124,8 @@
     $("open").disabled = true;
     try {
       var p = await boot();
-      say("Reading " + file.name + " and rebuilding every number…");
+      say("Reading " + file.name + " and rebuilding every number. This can take a few seconds…");
+      await paint();  // show the message before the calculation briefly occupies the tab
       p.FS.mkdirTree("/app/data/raw");
       p.FS.writeFile("/app/data/raw/upload.xlsx", new Uint8Array(await file.arrayBuffer()));
       var html = p.runPython("run.run('/app/data/raw/upload.xlsx')");
@@ -109,7 +139,7 @@
       say("Done. The dashboard below now reflects " + file.name + ". Any labels or counties the tool didn't recognize are listed in its data-quality section.", "ok");
     } catch (err) {
       console.error(err);
-      say("Couldn't build the dashboard from this file. Check that it's the survey export with the usual columns. Details: " + String(err.message || err).split("\n").filter(Boolean).slice(-1)[0], "bad");
+      say(explain(err), "bad");
     } finally {
       $("open").disabled = false;
     }

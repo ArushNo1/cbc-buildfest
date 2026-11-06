@@ -87,3 +87,25 @@ Entry template:
 ## Vercel deploy + website wording (Nov 6)
 - Deployed site/ to https://team17-everymind.vercel.app (Vercel CLI, project team17-everymind). Checked logged out with curl: index, dashboard and manifest return 200. The CLI wrote a token file to site/.env.local, which is gitignored and returns 404 when requested.
 - Memo, deck and appendix now describe the website flow instead of "run one command". submission/Team17_TechnicalArtifact.txt holds the URL.
+
+## Fri Nov 6 ~12:30 ET: #46 website browser test (issues-watch run, tool/narrative on this machine)
+- **Prompt (representative):** "Watch for new GitHub issues addressed to you and resolve them." #46: browser-test the website (site/) and fix what breaks.
+- **What the AI produced:** `scripts/site_check.py`, a headless-Chromium test of the real website flow. Changes to `scripts/site/index.html`:
+  - Pyodide loads only when someone updates;
+  - plain-language errors;
+  - the status message paints before the calculation.
+
+  The dashboard's refresh note now leads with the website's Update button.
+- **Results:** 11/11 site checks pass.
+  - Load passes in light, dark and 375 px, with no horizontal scroll.
+  - Keyboard: Tab reaches the update button, and Enter opens the panel.
+  - A non-Excel file gets a plain message.
+  - A synthetic export rebuilds the dashboard in the browser through Pyodide, and its new county is flagged (`unknown_county` = 16).
+  - A workbook without the survey sheet gets a plain message.
+  - Viewing the dashboard makes no third-party request.
+  - **Parity:** the real export rebuilt in the browser equals `outputs/dashboard.html` on all 73 metrics. The run was local, and the file was not uploaded.
+- **Issues found:**
+  - The website fetched the Pyodide loader from a CDN on every page view, so viewing depended on, and contacted, a third party. It is now lazy-loaded.
+  - The malformed-file message leaked internals ("RuntimeError: pipeline.py stopped … /app/data/raw/upload.xlsx").
+  - If the CDN failed, the message blamed the user's file.
+  - **My test was wrong once:** Playwright's offline mode also blocks localhost, so the first privacy check failed with 0 tiles. It now uses request routing.

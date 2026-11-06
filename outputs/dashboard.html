@@ -1123,9 +1123,10 @@ pre.cmd { background: var(--surface-2); border: 1px solid var(--border); border-
       h("li", null, "Respondents are not spread evenly across counties and roles. Check the n before comparing groups: results for small groups rest on few people."),
       h("li", null, "There is no comparison group of people who did not take the training."))));
     var steps = h("div", { class: "note" }, h("h3", null, "Refresh with next month’s export"),
-      h("p", null, "Save the new survey export (.xlsx) anywhere on the computer, then from the project folder run:"),
-      h("pre", { class: "cmd" }, "make setup        # first time on a computer only\nmake run DATA=path/to/new_export.xlsx"),
-      h("p", null, "This rebuilds every number and this page (outputs/dashboard.html). New counties, roles or answer labels are flagged in the data checks, not dropped silently. Full steps are in agents/tool/RUN.md."));
+      h("p", null, "On the website: click “Update with a new survey export” at the top of the page and drop in the new .xlsx. Everything is recalculated inside your browser; the file is not uploaded."),
+      h("p", null, "From the project folder instead:"),
+      h("pre", { class: "cmd" }, "make run DATA=path/to/new_export.xlsx"),
+      h("p", null, "Either way, every number and this page are rebuilt. New counties, roles or answer labels are flagged in the data checks, not dropped silently."));
     g.appendChild(steps);
     var src = META.source || {};
     g.appendChild(h("div", { class: "note" }, h("h3", null, "Where the numbers come from"), h("ul", null,
