@@ -125,3 +125,8 @@ Entry template:
 - **The deck stays true:** slide 11 said a person "approved the demo video". The re-recorded video is not yet approved (#32 reopened), so that clause was removed. It can return after the human re-approval.
 - **Form text:** `agents/tool/dist/FORM_run_instructions.txt` now leads with the website (open the link, Update, drop the file). The command line is optional.
 - **My own mistake, caught and fixed:** a shell script that prepends status updates used BSD-incompatible `sed` and then posted an empty file, which wiped the `[status] narrative` issue body for about two minutes. I noticed it by re-reading the issue after the edit, and restored it from the copy saved just before (the new update on top, the previous status intact). Lesson: verify the body file is non-empty before `gh issue edit`.
+- **#49 follow-up:**
+  - After narrative's "fixed" note, I re-checked with cache-busting: `/` was still 404 and the site sat at `/site/`. That is the result of a root deploy, now that `.vercelignore` uploads only `site/`.
+  - Added a root `vercel.json` (rewrite `/` to `site/`) so either deploy route works.
+  - At 12:44 ET production returned 200, every repo and data path returned 404, and `site_check.py --url` passed 12/12 against the live site. #49 is closed.
+  - Removing old per-deployment URLs is left to the person with the Vercel login (#31).
