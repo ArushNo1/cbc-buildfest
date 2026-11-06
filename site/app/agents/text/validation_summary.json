@@ -1,0 +1,8 @@
+{
+  "agreement_pct": 90.0,
+  "cohen_kappa": 0.87,
+  "n_rows": 1299,
+  "procedure": "Text agent hand-coded a stratified sample, seed 17, from the codebook, without printing the classifier labels for those rows. Every non-empty Spanish comment is included, plus 25 English comments per field drawn from response ids sorted and shuffled with seed 17. Labels are response id and theme ids only, in gitignored data/processed/hand_labels.json. agreement_pct is exact theme-set match. cohen_kappa is the unweighted mean of per-theme binary Cohen's kappas on the sample. The same agent wrote the rules and the labels, so this is a consistency check, not an independent second coder. Exact set match on this sample was 75.0 before a follow-up pass added phrases the codebook already covered and the rules missed. The agreement_pct below is after that pass, on the same sample, so it is not a locked test. This copy is what a machine without data/processed/hand_labels.json reports. It applies only when the raw survey sha256 and the row count match the values in this file. The hand labels stay on the text machine and are not in git.",
+  "raw_file_sha256": "72b08ff71ede02e4d6203e6096ee49904dd47fc1b74bb1f4e8539c8d263c6b26",
+  "sample_size": 80
+}

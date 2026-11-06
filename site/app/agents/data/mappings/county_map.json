@@ -1,0 +1,46 @@
+{
+  "rules": [
+    {
+      "pattern": "^anne\\s+arundel",
+      "canonical": "Anne Arundel",
+      "level_id": "anne_arundel",
+      "state": "MD",
+      "in_state": true
+    },
+    {
+      "pattern": "^prince\\s+george",
+      "canonical": "Prince George's",
+      "level_id": "prince_georges",
+      "state": "MD",
+      "in_state": true
+    },
+    {
+      "pattern": "^montgomery",
+      "canonical": "Montgomery",
+      "level_id": "montgomery",
+      "state": "MD",
+      "in_state": true
+    },
+    {
+      "pattern": "^queen\\s+anne",
+      "canonical": "Queen Anne's",
+      "level_id": "queen_annes",
+      "state": "MD",
+      "in_state": true
+    },
+    {
+      "pattern": "^fairfax",
+      "canonical": "Fairfax (VA)",
+      "level_id": "fairfax_va",
+      "state": "VA",
+      "in_state": false
+    },
+    {
+      "pattern": "^harris",
+      "canonical": "Harris (TX)",
+      "level_id": "harris_tx",
+      "state": "TX",
+      "in_state": false
+    }
+  ]
+}

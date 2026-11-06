@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "findings.schema.json",
+  "title": "outputs/findings.json",
+  "x-schema-version": "1",
+  "description": "Single source of truth for every quantitative number in the memo, deck, dashboard and video. Aggregates only. Deterministic: no timestamps; provenance is the input file hash. v1 owned and validated by data agent.",
+  "type": "object",
+  "required": ["schema_version", "source", "small_n_threshold", "findings"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "type": "string" },
+    "note": { "type": "string" },
+    "source": {
+      "type": "object",
+      "required": ["file_sha256", "sheet", "n_rows"],
+      "properties": {
+        "file_sha256": { "type": "string" },
+        "sheet": { "type": "string" },
+        "n_rows": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "small_n_threshold": { "type": "integer", "description": "small_n = n < this (default 10)." },
+    "findings": { "type": "array", "items": { "$ref": "#/$defs/finding" } }
+  },
+  "$defs": {
+    "finding": {
+      "type": "object",
+      "required": ["id", "label", "value", "unit", "n", "denominator", "group", "small_n", "suppressed", "caveat"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9_]+(\\.[a-z0-9_]+)+$",
+          "description": "Stable, never reused. <measure>.<item>.<stat>.<dimension>[.<level>], e.g. post.identify_crisis.agree_pct.overall, post.identify_crisis.agree_pct.county.anne_arundel"
+        },
+        "label": { "type": "string", "description": "Plain-English, as a staff member would read it." },
+        "value": { "type": ["number", "null"], "description": "null iff suppressed." },
+        "unit": { "enum": ["pct", "mean", "count", "points", "nps", "median"], "description": "pct is on a 0-100 scale (78.5, not 0.785)." },
+        "n": { "type": "integer", "minimum": 0, "description": "Respondents in the base (valid, non-missing answers) — the denominator count. Always reported." },
+        "numerator": { "type": ["integer", "null"], "description": "For pct/count: respondents meeting the condition." },
+        "n_missing": { "type": ["integer", "null"], "description": "Respondents in the group excluded for a missing/unknown answer." },
+        "denominator": { "type": "string", "description": "Who is in the base, in words: 'students who answered the post item on identifying crises'." },
+        "ci_low": { "type": ["number", "null"] },
+        "ci_high": { "type": ["number", "null"] },
+        "ci_method": { "enum": ["wilson95", "t95", "bootstrap95", null] },
+        "group": {
+          "type": "object",
+          "required": ["dimension", "level"],
+          "properties": {
+            "dimension": { "type": "string", "description": "overall | role | county | language | training_month | training_period | ..." },
+            "level": { "type": "string", "description": "'all' for overall; 'other_pooled' for pooled small groups." }
+          }
+        },
+        "small_n": { "type": "boolean" },
+        "suppressed": { "type": "boolean" },
+        "caveat": { "type": "string", "description": "Required wording for retrospective items, small n, high missingness. '' if none." },
+        "source_columns": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}

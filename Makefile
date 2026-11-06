@@ -3,7 +3,7 @@ DATA ?= data/raw/BuildFest_EveryMind_Survey_Data_FULL.xlsx
 PY   ?= python3
 need = @test -e $(1) || { echo "make $@: NOT IMPLEMENTED - $(1) does not exist yet (owner: $(2) agent)" >&2; exit 1; }
 
-.PHONY: setup data themes run test verify submit crosscheck fixtures
+.PHONY: setup data themes run test verify submit crosscheck fixtures site
 
 setup:
 	$(PY) -m pip install -r requirements.txt
@@ -41,3 +41,7 @@ crosscheck:
 # Synthetic raw-format workbooks (base + drift variants) -> tests/fixtures/ (gitignored)
 fixtures:
 	$(PY) agents/narrative/fixtures/make_fixtures.py --out tests/fixtures
+
+# Static website for staff (Vercel-ready): dashboard + in-browser refresh
+site:
+	$(PY) scripts/build_site.py

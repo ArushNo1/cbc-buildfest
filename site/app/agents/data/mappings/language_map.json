@@ -1,0 +1,16 @@
+{
+  "rules": [
+    {
+      "pattern": "english",
+      "canonical": "en",
+      "level_id": "en",
+      "label": "English"
+    },
+    {
+      "pattern": "español|espanol",
+      "canonical": "es",
+      "level_id": "es",
+      "label": "Spanish"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "response_id": {
+    "type": "exact",
+    "names": ["id", "response_id", "response id"]
+  },
+  "start_time": {
+    "type": "contains",
+    "substrings": ["start time"]
+  },
+  "completion_time": {
+    "type": "contains",
+    "substrings": ["completion time"]
+  },
+  "language": {
+    "type": "contains",
+    "substrings": ["language"]
+  },
+  "roles": {
+    "type": "contains",
+    "substrings": ["are you a"]
+  },
+  "training_date": {
+    "type": "contains",
+    "substrings": ["date of your training"]
+  },
+  "county": {
+    "type": "contains",
+    "substrings": ["which county"]
+  },
+  "post_identify_crisis": {
+    "type": "contains_all",
+    "substrings": ["disagree or agree with the statements", "identify mental health"]
+  },
+  "post_describe_988": {
+    "type": "contains_all",
+    "substrings": ["disagree or agree with the statements", "describe 988"]
+  },
+  "post_know_when_to_use": {
+    "type": "contains_all",
+    "substrings": ["disagree or agree with the statements", "when to use 988"]
+  },
+  "pre_identify_crisis": {
+    "type": "contains_all",
+    "substrings": ["think back", "identify mental health"]
+  },
+  "pre_describe_988": {
+    "type": "contains_all",
+    "substrings": ["think back", "describe 988"]
+  },
+  "pre_know_when_to_use": {
+    "type": "contains_all",
+    "substrings": ["think back", "when to use 988"]
+  },
+  "quality_engaging": {
+    "type": "contains_all",
+    "substrings": ["aspects of the training", "engaged"]
+  },
+  "quality_knowledgeable": {
+    "type": "contains_all",
+    "substrings": ["aspects of the training", "subject matter"]
+  },
+  "quality_organized": {
+    "type": "contains_all",
+    "substrings": ["aspects of the training", "organized"]
+  },
+  "recommend": {
+    "type": "contains",
+    "substrings": ["likely are you to recommend"]
+  },
+  "call_988_likelihood": {
+    "type": "contains",
+    "substrings": ["likely are you to call 988"]
+  },
+  "comment_valuable": {
+    "type": "contains",
+    "substrings": ["most valuable"]
+  },
+  "comment_improve": {
+    "type": "contains",
+    "substrings": ["improve this training"]
+  }
+}

@@ -76,3 +76,10 @@ Entry template:
   - `make submit`: verify 0 problems, with the mp4 length (95.7 s) now read through the ffmpeg fallback.
   - `make test`: 59 passed.
   - Quotes are used only after confirming #30 records a person's review.
+
+## Website artifact (Nov 6)
+- Prompt (human): "This is too technical for a non-technical person. Pick a new format, a website deployable on Vercel."
+- Built site/ (`make site`): it opens on the current dashboard, and staff drop in a new .xlsx to rebuild it in the browser via Pyodide. It reuses the unchanged pipeline, themes and build code. Data never leaves the computer.
+- Checks: pandas 2.2.3 (Pyodide's version) gives byte-identical findings to the official run. Under Node+Pyodide on the real file, findings were byte-identical in 21 s. All 6 drift fixtures exit 0. Identity scan of site/: 0 hits.
+- Error caught by testing: the first version assumed Pyodide ships openpyxl, and it doesn't ("No known package"). Switched to micropip.
+- Not checked: the page's interactive UI in a real browser (no browser on this machine).

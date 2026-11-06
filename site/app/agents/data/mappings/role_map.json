@@ -1,0 +1,24 @@
+{
+  "rules": [
+    {
+      "pattern": "^student",
+      "canonical": "Student",
+      "level_id": "student"
+    },
+    {
+      "pattern": "^school\\s+staff",
+      "canonical": "School staff member",
+      "level_id": "school_staff"
+    },
+    {
+      "pattern": "^caregiver",
+      "canonical": "Caregiver/parent",
+      "level_id": "caregiver_parent"
+    },
+    {
+      "pattern": "^other",
+      "canonical": "Other (e.g., community member)",
+      "level_id": "other"
+    }
+  ]
+}
