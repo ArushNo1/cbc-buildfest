@@ -40,6 +40,7 @@ Recompute from the raw xlsx in Excel, independently of the pipeline. Steps per I
 ## Quotes PII review (gate: to:human issue)
 | Date | Reviewer | # candidates | # approved | # removed (reason) |
 |---|---|---|---|---|
+| Nov 5 | Arush | 11 | 11 | 0 (text agent had already dropped id 71, a local place name) |
 
 ## Submission checks
 | Check | Result | When |
