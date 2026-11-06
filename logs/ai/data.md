@@ -26,3 +26,19 @@ Entry template:
   - Validated all 1,299 rows of `survey_clean.csv` against `contracts/cleaned_data.schema.json` with zero schema violations.
   - Validated `outputs/findings.json` against `contracts/findings.schema.json` with zero schema violations.
   - Ran 11 automated pytest unit and drift tests in `agents/data/tests/`: 11 passed.
+
+## 2026-11-05 23:28 ET: Sensitivity findings, sample composition, time cuts, and histograms
+- **Prompt (representative):** "Add pooled small counties, time cuts, sensitivity findings excluding straightliners, quality and NPS by group, and score distributions per issues #38, #39, and #40."
+- **What the AI produced:** Expanded `agents/data/pipeline.py` to generate 222 findings including sensitivity findings (`excl_straightline`), sample composition percentages, spring vs. fall period cuts, monthly line cuts, quality/NPS group cuts, and 0-10 distribution histograms.
+- **Error / limitation (if any), and how it was caught:**
+  - In `agents/data/limitations.md`, sensitivity text had stated approximately 2.4 pp instead of 2.20–2.26 pp. Caught by narrative crosscheck.
+  - In Excel `COUNTIF(H2:H1300, "*Agree*")`, wildcard matched "Disagree" and "Strongly disagree" because they end in "agree". Caught during manual formula replication; corrected in `agents/data/recompute.md` to `=(COUNTIF(..., "Agree") + COUNTIF(..., "Strongly agree*")) / COUNTA(...)`.
+- **Revision:**
+  - Updated `agents/data/limitations.md` to report exact 2.20 pp (identify), 2.21 pp (describe), and 2.26 pp (know when to use) gains.
+  - Published 3 sensitivity findings to `outputs/findings.json`.
+  - Added sample composition counts/shares, time cuts (spring/fall/other and monthly), and 0-10 score histograms.
+- **Manually verified against data:**
+  - `agents/narrative/crosscheck/crosscheck.py` diffed 65 metrics against `outputs/findings.json`: 65 agreed, 0 mismatches.
+  - `scripts/check_numbers.py agents/narrative/drafts/memo.md` verified 0 problems.
+  - `agents/tool/build.py` successfully built `outputs/dashboard.html` with 73 displayed metrics from 222 findings.
+  - Full test suite (50 tests) passed.

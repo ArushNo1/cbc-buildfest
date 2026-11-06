@@ -467,7 +467,8 @@ def compute_all_findings(df: pd.DataFrame, source_sha: str, n_raw: int,
         "anne_arundel": (county_clean == "Anne Arundel", "Anne Arundel"),
         "prince_georges": (county_clean == "Prince George's", "Prince George's"),
         "montgomery": (county_clean == "Montgomery", "Montgomery"),
-        "queen_annes": (county_clean == "Queen Anne's", "Queen Anne's")
+        "queen_annes": (county_clean == "Queen Anne's", "Queen Anne's"),
+        "other_pooled": (~county_clean.isin(["Anne Arundel", "Prince George's", "Montgomery", "Queen Anne's"]), "Other counties (pooled)")
     }
 
     # Roles: any-mention of each canonical role
@@ -791,6 +792,291 @@ def compute_all_findings(df: pd.DataFrame, source_sha: str, n_raw: int,
                     ci_high=ci_r_high,
                     ci_method="t95"
                 ))
+
+                # Recommend NPS for subgroup
+                nps_sub = (100.0 * ((s_rec_sub >= 9).sum() - (s_rec_sub <= 6).sum()) / n_rec_sub) if n_rec_sub > 0 else None
+                findings.append(make_finding(
+                    fid=f"recommend.score.nps.{dim}.{level}",
+                    label=f"Net Promoter Score (NPS) — {words}",
+                    value=nps_sub,
+                    unit="nps",
+                    n=n_rec_sub,
+                    n_total=sub_total,
+                    numerator=None,
+                    denominator_desc=f"{words} respondents who gave a 0-10 recommend score (9-10 minus 0-6)",
+                    group_dim=dim,
+                    group_level=level,
+                    source_cols=["recommend", dim],
+                    caveat="Standard NPS calculation: % promoters (9-10) minus % detractors (0-6)."
+                ))
+
+            # Quality items for subgroup
+            for q_id, q_col, q_desc in qualities:
+                if q_col in df:
+                    s_q_sub = sub_df[q_col].dropna()
+                    n_q_sub = len(s_q_sub)
+                    k_q_sub = int((s_q_sub >= 4).sum())
+                    val_q_sub = (100.0 * k_q_sub / n_q_sub) if n_q_sub > 0 else None
+                    ci_q_l, ci_q_h = calc_wilson_ci(k_q_sub, n_q_sub)
+                    findings.append(make_finding(
+                        fid=f"quality.{q_id}.agree_pct.{dim}.{level}",
+                        label=f"Agree or strongly agree: {q_desc} — {words}",
+                        value=val_q_sub,
+                        unit="pct",
+                        n=n_q_sub,
+                        n_total=sub_total,
+                        numerator=k_q_sub,
+                        denominator_desc=f"{words} respondents with a recognized answer to this quality item",
+                        group_dim=dim,
+                        group_level=level,
+                        source_cols=[q_col, dim],
+                        caveat="~12% non-response on quality items.",
+                        ci_low=ci_q_l,
+                        ci_high=ci_q_h,
+                        ci_method="wilson95"
+                    ))
+
+    # 7. Sensitivity findings: exclude respondents who chose "Strongly disagree" (1) on all 3 post items
+    post_cols_present = [f"post_{item}" for item in items if f"post_{item}" in df]
+    if len(post_cols_present) == 3:
+        is_straightline = (df["post_identify_crisis"] == 1) & (df["post_describe_988"] == 1) & (df["post_know_when_to_use"] == 1)
+        df_sens = df[~is_straightline]
+        for item in items:
+            lbl = item_labels[item]
+            p_col = f"post_{item}"
+            s_sens = df_sens[p_col].dropna()
+            n_sens = len(s_sens)
+            k_sens = int((s_sens >= 4).sum())
+            val_sens = (100.0 * k_sens / n_sens) if n_sens > 0 else None
+            ci_l, ci_h = calc_wilson_ci(k_sens, n_sens)
+            findings.append(make_finding(
+                fid=f"post.{item}.agree_pct.sensitivity.excl_straightline",
+                label=f"Agree or strongly agree they can {lbl} (sensitivity: excluding 31 all-strongly-disagree respondents)",
+                value=val_sens,
+                unit="pct",
+                n=n_sens,
+                n_total=len(df_sens),
+                numerator=k_sens,
+                denominator_desc="respondents with a recognized answer, excluding those who chose 'Strongly disagree' on every post item",
+                group_dim="sensitivity",
+                group_level="excl_straightline",
+                source_cols=[p_col],
+                caveat="Excludes 31 respondents who marked Strongly Disagree on all three post items (potential disengagement or scale misread).",
+                ci_low=ci_l,
+                ci_high=ci_h,
+                ci_method="wilson95"
+            ))
+
+    # 8. Sample composition: total, role, county, language
+    findings.append(make_finding(
+        fid="sample.respondents.count.overall",
+        label="Total survey respondents in dataset",
+        value=len(df),
+        unit="count",
+        n=len(df),
+        n_total=len(df),
+        numerator=len(df),
+        denominator_desc="total survey respondents",
+        group_dim="overall",
+        group_level="all",
+        source_cols=["response_id"]
+    ))
+
+    for dim, masks in subgroups:
+        for level, (mask, words) in masks.items():
+            k_comp = int(mask.sum())
+            pct_comp = (100.0 * k_comp / len(df)) if len(df) > 0 else None
+            ci_l, ci_h = calc_wilson_ci(k_comp, len(df))
+            findings.append(make_finding(
+                fid=f"sample.respondents.count.{dim}.{level}",
+                label=f"Respondent count — {words}",
+                value=k_comp,
+                unit="count",
+                n=len(df),
+                n_total=len(df),
+                numerator=k_comp,
+                denominator_desc="total survey respondents",
+                group_dim=dim,
+                group_level=level,
+                source_cols=[dim]
+            ))
+            findings.append(make_finding(
+                fid=f"sample.respondents.pct.{dim}.{level}",
+                label=f"Share of total respondents — {words} (%)",
+                value=pct_comp,
+                unit="pct",
+                n=len(df),
+                n_total=len(df),
+                numerator=k_comp,
+                denominator_desc="total survey respondents",
+                group_dim=dim,
+                group_level=level,
+                source_cols=[dim],
+                ci_low=ci_l,
+                ci_high=ci_h,
+                ci_method="wilson95"
+            ))
+
+    # 9. Time cuts: Training Periods & Training Months
+    if "training_month" in df:
+        month_series = df["training_month"].fillna("")
+        period_masks = {
+            "spring_2026": (month_series.isin(["2026-04", "2026-05"]), "Spring 2026 (Apr–May)"),
+            "fall_2026": (month_series.isin(["2026-09", "2026-10"]), "Fall 2026 (Sep–Oct)"),
+            "other_periods": ((month_series != "") & ~month_series.isin(["2026-04", "2026-05", "2026-09", "2026-10"]), "Other months")
+        }
+        for p_level, (p_mask, p_words) in period_masks.items():
+            p_sub = df[p_mask]
+            p_total = len(p_sub)
+            for item in items:
+                p_col = f"post_{item}"
+                if p_col in df:
+                    s_p = p_sub[p_col].dropna()
+                    n_p = len(s_p)
+                    k_p = int((s_p >= 4).sum())
+                    val_p = (100.0 * k_p / n_p) if n_p > 0 else None
+                    ci_l, ci_h = calc_wilson_ci(k_p, n_p)
+                    findings.append(make_finding(
+                        fid=f"post.{item}.agree_pct.training_period.{p_level}",
+                        label=f"Agree or strongly agree they can {item_labels[item]} — {p_words}",
+                        value=val_p,
+                        unit="pct",
+                        n=n_p,
+                        n_total=p_total,
+                        numerator=k_p,
+                        denominator_desc=f"{p_words} respondents with a recognized answer to this post item",
+                        group_dim="training_period",
+                        group_level=p_level,
+                        source_cols=[p_col, "training_date"],
+                        ci_low=ci_l,
+                        ci_high=ci_h,
+                        ci_method="wilson95"
+                    ))
+            if "recommend" in df:
+                s_r_p = p_sub["recommend"].dropna()
+                n_r_p = len(s_r_p)
+                val_r_p = float(s_r_p.mean()) if n_r_p > 0 else None
+                ci_l, ci_h = calc_t_ci(s_r_p)
+                findings.append(make_finding(
+                    fid=f"recommend.score.mean.training_period.{p_level}",
+                    label=f"Average recommend score (0-10) — {p_words}",
+                    value=val_r_p,
+                    unit="mean",
+                    n=n_r_p,
+                    n_total=p_total,
+                    numerator=None,
+                    denominator_desc=f"{p_words} respondents who gave a 0-10 recommend score",
+                    group_dim="training_period",
+                    group_level=p_level,
+                    source_cols=["recommend", "training_date"],
+                    ci_low=ci_l,
+                    ci_high=ci_h,
+                    ci_method="t95"
+                ))
+
+        # Monthly line cuts
+        unique_months = sorted([m for m in month_series.unique() if m])
+        for ym in unique_months:
+            m_level = ym.replace("-", "_")
+            m_mask = month_series == ym
+            m_sub = df[m_mask]
+            m_total = len(m_sub)
+            for item in items:
+                p_col = f"post_{item}"
+                if p_col in df:
+                    s_m = m_sub[p_col].dropna()
+                    n_m = len(s_m)
+                    k_m = int((s_m >= 4).sum())
+                    val_m = (100.0 * k_m / n_m) if n_m > 0 else None
+                    ci_l, ci_h = calc_wilson_ci(k_m, n_m)
+                    findings.append(make_finding(
+                        fid=f"post.{item}.agree_pct.training_month.{m_level}",
+                        label=f"Agree or strongly agree they can {item_labels[item]} — {ym}",
+                        value=val_m,
+                        unit="pct",
+                        n=n_m,
+                        n_total=m_total,
+                        numerator=k_m,
+                        denominator_desc=f"{ym} respondents with a recognized answer to this post item",
+                        group_dim="training_month",
+                        group_level=m_level,
+                        source_cols=[p_col, "training_date"],
+                        ci_low=ci_l,
+                        ci_high=ci_h,
+                        ci_method="wilson95"
+                    ))
+            if "recommend" in df:
+                s_r_m = m_sub["recommend"].dropna()
+                n_r_m = len(s_r_m)
+                val_r_m = float(s_r_m.mean()) if n_r_m > 0 else None
+                ci_l, ci_h = calc_t_ci(s_r_m)
+                findings.append(make_finding(
+                    fid=f"recommend.score.mean.training_month.{m_level}",
+                    label=f"Average recommend score (0-10) — {ym}",
+                    value=val_r_m,
+                    unit="mean",
+                    n=n_r_m,
+                    n_total=m_total,
+                    numerator=None,
+                    denominator_desc=f"{ym} respondents who gave a 0-10 recommend score",
+                    group_dim="training_month",
+                    group_level=m_level,
+                    source_cols=["recommend", "training_date"],
+                    ci_low=ci_l,
+                    ci_high=ci_h,
+                    ci_method="t95"
+                ))
+
+    # 10. Score distributions: Recommend 0-10
+    if "recommend" in df:
+        s_rec = df["recommend"].dropna()
+        n_rec = len(s_rec)
+        for k in range(11):
+            k_count = int((s_rec == k).sum())
+            k_pct = (100.0 * k_count / n_rec) if n_rec > 0 else None
+            ci_l, ci_h = calc_wilson_ci(k_count, n_rec)
+            findings.append(make_finding(
+                fid=f"recommend.score.dist_{k}.overall",
+                label=f"Recommend score: {k} out of 10 (% of respondents)",
+                value=k_pct,
+                unit="pct",
+                n=n_rec,
+                n_total=len(df),
+                numerator=k_count,
+                denominator_desc="respondents who gave a 0-10 recommend score",
+                group_dim="overall",
+                group_level="all",
+                source_cols=["recommend"],
+                ci_low=ci_l,
+                ci_high=ci_h,
+                ci_method="wilson95"
+            ))
+
+    # 11. Score distributions: Call 988 0-10
+    if "call_988_likelihood" in df and "call_988_likelihood" not in missing_set:
+        s_c988 = df["call_988_likelihood"].dropna()
+        n_c988 = len(s_c988)
+        for k in range(11):
+            k_count = int((s_c988 == k).sum())
+            k_pct = (100.0 * k_count / n_c988) if n_c988 > 0 else None
+            ci_l, ci_h = calc_wilson_ci(k_count, n_c988)
+            findings.append(make_finding(
+                fid=f"call_988.likelihood.dist_{k}.overall",
+                label=f"Likelihood to call 988: {k} out of 10 (% of respondents)",
+                value=k_pct,
+                unit="pct",
+                n=n_c988,
+                n_total=len(df),
+                numerator=k_count,
+                denominator_desc="respondents who answered the optional call-988 question",
+                group_dim="overall",
+                group_level="all",
+                source_cols=["call_988_likelihood"],
+                caveat="High non-response rate (~77% missing); represents only respondents who answered this optional question.",
+                ci_low=ci_l,
+                ci_high=ci_h,
+                ci_method="wilson95"
+            ))
 
     return findings
 

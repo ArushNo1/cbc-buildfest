@@ -614,6 +614,102 @@
       ]
     },
     {
+      "id": "recommend.score.nps.county.anne_arundel",
+      "label": "Net Promoter Score (NPS) — Anne Arundel",
+      "value": -4.8754,
+      "unit": "nps",
+      "n": 923,
+      "numerator": null,
+      "n_missing": 14,
+      "denominator": "Anne Arundel respondents who gave a 0-10 recommend score (9-10 minus 0-6)",
+      "ci_low": null,
+      "ci_high": null,
+      "ci_method": null,
+      "group": {
+        "dimension": "county",
+        "level": "anne_arundel"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "Standard NPS calculation: % promoters (9-10) minus % detractors (0-6).",
+      "source_columns": [
+        "recommend",
+        "county"
+      ]
+    },
+    {
+      "id": "quality.engaging.agree_pct.county.anne_arundel",
+      "label": "Agree or strongly agree: presenter(s) engaged the participants — Anne Arundel",
+      "value": 87.234,
+      "unit": "pct",
+      "n": 799,
+      "numerator": 697,
+      "n_missing": 138,
+      "denominator": "Anne Arundel respondents with a recognized answer to this quality item",
+      "ci_low": 84.74,
+      "ci_high": 89.37,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "county",
+        "level": "anne_arundel"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "~12% non-response on quality items.",
+      "source_columns": [
+        "quality_engaging",
+        "county"
+      ]
+    },
+    {
+      "id": "quality.knowledgeable.agree_pct.county.anne_arundel",
+      "label": "Agree or strongly agree: presenter(s) knew the subject matter well — Anne Arundel",
+      "value": 89.7114,
+      "unit": "pct",
+      "n": 797,
+      "numerator": 715,
+      "n_missing": 140,
+      "denominator": "Anne Arundel respondents with a recognized answer to this quality item",
+      "ci_low": 87.41,
+      "ci_high": 91.63,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "county",
+        "level": "anne_arundel"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "~12% non-response on quality items.",
+      "source_columns": [
+        "quality_knowledgeable",
+        "county"
+      ]
+    },
+    {
+      "id": "quality.organized.agree_pct.county.anne_arundel",
+      "label": "Agree or strongly agree: training was well organized — Anne Arundel",
+      "value": 91.5829,
+      "unit": "pct",
+      "n": 796,
+      "numerator": 729,
+      "n_missing": 141,
+      "denominator": "Anne Arundel respondents with a recognized answer to this quality item",
+      "ci_low": 89.45,
+      "ci_high": 93.32,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "county",
+        "level": "anne_arundel"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "~12% non-response on quality items.",
+      "source_columns": [
+        "quality_organized",
+        "county"
+      ]
+    },
+    {
       "id": "post.identify_crisis.agree_pct.county.prince_georges",
       "label": "Agree or strongly agree they can identify mental health challenges and crises — Prince George's",
       "value": 88.6731,
@@ -706,6 +802,102 @@
       "caveat": "",
       "source_columns": [
         "recommend",
+        "county"
+      ]
+    },
+    {
+      "id": "recommend.score.nps.county.prince_georges",
+      "label": "Net Promoter Score (NPS) — Prince George's",
+      "value": 56.0137,
+      "unit": "nps",
+      "n": 291,
+      "numerator": null,
+      "n_missing": 18,
+      "denominator": "Prince George's respondents who gave a 0-10 recommend score (9-10 minus 0-6)",
+      "ci_low": null,
+      "ci_high": null,
+      "ci_method": null,
+      "group": {
+        "dimension": "county",
+        "level": "prince_georges"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "Standard NPS calculation: % promoters (9-10) minus % detractors (0-6).",
+      "source_columns": [
+        "recommend",
+        "county"
+      ]
+    },
+    {
+      "id": "quality.engaging.agree_pct.county.prince_georges",
+      "label": "Agree or strongly agree: presenter(s) engaged the participants — Prince George's",
+      "value": 89.2256,
+      "unit": "pct",
+      "n": 297,
+      "numerator": 265,
+      "n_missing": 12,
+      "denominator": "Prince George's respondents with a recognized answer to this quality item",
+      "ci_low": 85.19,
+      "ci_high": 92.26,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "county",
+        "level": "prince_georges"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "~12% non-response on quality items.",
+      "source_columns": [
+        "quality_engaging",
+        "county"
+      ]
+    },
+    {
+      "id": "quality.knowledgeable.agree_pct.county.prince_georges",
+      "label": "Agree or strongly agree: presenter(s) knew the subject matter well — Prince George's",
+      "value": 90.8784,
+      "unit": "pct",
+      "n": 296,
+      "numerator": 269,
+      "n_missing": 13,
+      "denominator": "Prince George's respondents with a recognized answer to this quality item",
+      "ci_low": 87.05,
+      "ci_high": 93.66,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "county",
+        "level": "prince_georges"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "~12% non-response on quality items.",
+      "source_columns": [
+        "quality_knowledgeable",
+        "county"
+      ]
+    },
+    {
+      "id": "quality.organized.agree_pct.county.prince_georges",
+      "label": "Agree or strongly agree: training was well organized — Prince George's",
+      "value": 91.8089,
+      "unit": "pct",
+      "n": 293,
+      "numerator": 269,
+      "n_missing": 16,
+      "denominator": "Prince George's respondents with a recognized answer to this quality item",
+      "ci_low": 88.1,
+      "ci_high": 94.43,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "county",
+        "level": "prince_georges"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "~12% non-response on quality items.",
+      "source_columns": [
+        "quality_organized",
         "county"
       ]
     },
@@ -806,6 +998,102 @@
       ]
     },
     {
+      "id": "recommend.score.nps.county.montgomery",
+      "label": "Net Promoter Score (NPS) — Montgomery",
+      "value": 82.3529,
+      "unit": "nps",
+      "n": 34,
+      "numerator": null,
+      "n_missing": 0,
+      "denominator": "Montgomery respondents who gave a 0-10 recommend score (9-10 minus 0-6)",
+      "ci_low": null,
+      "ci_high": null,
+      "ci_method": null,
+      "group": {
+        "dimension": "county",
+        "level": "montgomery"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "Standard NPS calculation: % promoters (9-10) minus % detractors (0-6).",
+      "source_columns": [
+        "recommend",
+        "county"
+      ]
+    },
+    {
+      "id": "quality.engaging.agree_pct.county.montgomery",
+      "label": "Agree or strongly agree: presenter(s) engaged the participants — Montgomery",
+      "value": 97.0588,
+      "unit": "pct",
+      "n": 34,
+      "numerator": 33,
+      "n_missing": 0,
+      "denominator": "Montgomery respondents with a recognized answer to this quality item",
+      "ci_low": 85.08,
+      "ci_high": 99.48,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "county",
+        "level": "montgomery"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "~12% non-response on quality items.",
+      "source_columns": [
+        "quality_engaging",
+        "county"
+      ]
+    },
+    {
+      "id": "quality.knowledgeable.agree_pct.county.montgomery",
+      "label": "Agree or strongly agree: presenter(s) knew the subject matter well — Montgomery",
+      "value": 97.0588,
+      "unit": "pct",
+      "n": 34,
+      "numerator": 33,
+      "n_missing": 0,
+      "denominator": "Montgomery respondents with a recognized answer to this quality item",
+      "ci_low": 85.08,
+      "ci_high": 99.48,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "county",
+        "level": "montgomery"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "~12% non-response on quality items.",
+      "source_columns": [
+        "quality_knowledgeable",
+        "county"
+      ]
+    },
+    {
+      "id": "quality.organized.agree_pct.county.montgomery",
+      "label": "Agree or strongly agree: training was well organized — Montgomery",
+      "value": 91.1765,
+      "unit": "pct",
+      "n": 34,
+      "numerator": 31,
+      "n_missing": 0,
+      "denominator": "Montgomery respondents with a recognized answer to this quality item",
+      "ci_low": 77.04,
+      "ci_high": 96.95,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "county",
+        "level": "montgomery"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "~12% non-response on quality items.",
+      "source_columns": [
+        "quality_organized",
+        "county"
+      ]
+    },
+    {
       "id": "post.identify_crisis.agree_pct.county.queen_annes",
       "label": "Agree or strongly agree they can identify mental health challenges and crises — Queen Anne's",
       "value": 91.6667,
@@ -898,6 +1186,294 @@
       "caveat": "",
       "source_columns": [
         "recommend",
+        "county"
+      ]
+    },
+    {
+      "id": "recommend.score.nps.county.queen_annes",
+      "label": "Net Promoter Score (NPS) — Queen Anne's",
+      "value": 0.0,
+      "unit": "nps",
+      "n": 11,
+      "numerator": null,
+      "n_missing": 1,
+      "denominator": "Queen Anne's respondents who gave a 0-10 recommend score (9-10 minus 0-6)",
+      "ci_low": null,
+      "ci_high": null,
+      "ci_method": null,
+      "group": {
+        "dimension": "county",
+        "level": "queen_annes"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "Standard NPS calculation: % promoters (9-10) minus % detractors (0-6).",
+      "source_columns": [
+        "recommend",
+        "county"
+      ]
+    },
+    {
+      "id": "quality.engaging.agree_pct.county.queen_annes",
+      "label": "Agree or strongly agree: presenter(s) engaged the participants — Queen Anne's",
+      "value": 90.9091,
+      "unit": "pct",
+      "n": 11,
+      "numerator": 10,
+      "n_missing": 1,
+      "denominator": "Queen Anne's respondents with a recognized answer to this quality item",
+      "ci_low": 62.26,
+      "ci_high": 98.38,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "county",
+        "level": "queen_annes"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "~12% non-response on quality items.",
+      "source_columns": [
+        "quality_engaging",
+        "county"
+      ]
+    },
+    {
+      "id": "quality.knowledgeable.agree_pct.county.queen_annes",
+      "label": "Agree or strongly agree: presenter(s) knew the subject matter well — Queen Anne's",
+      "value": 90.9091,
+      "unit": "pct",
+      "n": 11,
+      "numerator": 10,
+      "n_missing": 1,
+      "denominator": "Queen Anne's respondents with a recognized answer to this quality item",
+      "ci_low": 62.26,
+      "ci_high": 98.38,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "county",
+        "level": "queen_annes"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "~12% non-response on quality items.",
+      "source_columns": [
+        "quality_knowledgeable",
+        "county"
+      ]
+    },
+    {
+      "id": "quality.organized.agree_pct.county.queen_annes",
+      "label": "Agree or strongly agree: training was well organized — Queen Anne's",
+      "value": 100.0,
+      "unit": "pct",
+      "n": 11,
+      "numerator": 11,
+      "n_missing": 1,
+      "denominator": "Queen Anne's respondents with a recognized answer to this quality item",
+      "ci_low": 74.12,
+      "ci_high": 100.0,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "county",
+        "level": "queen_annes"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "~12% non-response on quality items.",
+      "source_columns": [
+        "quality_organized",
+        "county"
+      ]
+    },
+    {
+      "id": "post.identify_crisis.agree_pct.county.other_pooled",
+      "label": "Agree or strongly agree they can identify mental health challenges and crises — Other counties (pooled)",
+      "value": null,
+      "unit": "pct",
+      "n": 7,
+      "numerator": null,
+      "n_missing": 0,
+      "denominator": "Other counties (pooled) respondents with a recognized answer to this post item",
+      "ci_low": null,
+      "ci_high": null,
+      "ci_method": null,
+      "group": {
+        "dimension": "county",
+        "level": "other_pooled"
+      },
+      "small_n": true,
+      "suppressed": true,
+      "caveat": "Fewer than 10 respondents (n=7); value suppressed for statistical reliability.",
+      "source_columns": [
+        "post_identify_crisis",
+        "county"
+      ]
+    },
+    {
+      "id": "post.describe_988.agree_pct.county.other_pooled",
+      "label": "Agree or strongly agree they can describe 988 and how it works — Other counties (pooled)",
+      "value": null,
+      "unit": "pct",
+      "n": 7,
+      "numerator": null,
+      "n_missing": 0,
+      "denominator": "Other counties (pooled) respondents with a recognized answer to this post item",
+      "ci_low": null,
+      "ci_high": null,
+      "ci_method": null,
+      "group": {
+        "dimension": "county",
+        "level": "other_pooled"
+      },
+      "small_n": true,
+      "suppressed": true,
+      "caveat": "Fewer than 10 respondents (n=7); value suppressed for statistical reliability.",
+      "source_columns": [
+        "post_describe_988",
+        "county"
+      ]
+    },
+    {
+      "id": "post.know_when_to_use.agree_pct.county.other_pooled",
+      "label": "Agree or strongly agree they can know when to use 988 — Other counties (pooled)",
+      "value": null,
+      "unit": "pct",
+      "n": 7,
+      "numerator": null,
+      "n_missing": 0,
+      "denominator": "Other counties (pooled) respondents with a recognized answer to this post item",
+      "ci_low": null,
+      "ci_high": null,
+      "ci_method": null,
+      "group": {
+        "dimension": "county",
+        "level": "other_pooled"
+      },
+      "small_n": true,
+      "suppressed": true,
+      "caveat": "Fewer than 10 respondents (n=7); value suppressed for statistical reliability.",
+      "source_columns": [
+        "post_know_when_to_use",
+        "county"
+      ]
+    },
+    {
+      "id": "recommend.score.mean.county.other_pooled",
+      "label": "Average recommend score (0-10) — Other counties (pooled)",
+      "value": null,
+      "unit": "mean",
+      "n": 7,
+      "numerator": null,
+      "n_missing": 0,
+      "denominator": "Other counties (pooled) respondents who gave a 0-10 recommend score",
+      "ci_low": null,
+      "ci_high": null,
+      "ci_method": null,
+      "group": {
+        "dimension": "county",
+        "level": "other_pooled"
+      },
+      "small_n": true,
+      "suppressed": true,
+      "caveat": "Fewer than 10 respondents (n=7); value suppressed for statistical reliability.",
+      "source_columns": [
+        "recommend",
+        "county"
+      ]
+    },
+    {
+      "id": "recommend.score.nps.county.other_pooled",
+      "label": "Net Promoter Score (NPS) — Other counties (pooled)",
+      "value": null,
+      "unit": "nps",
+      "n": 7,
+      "numerator": null,
+      "n_missing": 0,
+      "denominator": "Other counties (pooled) respondents who gave a 0-10 recommend score (9-10 minus 0-6)",
+      "ci_low": null,
+      "ci_high": null,
+      "ci_method": null,
+      "group": {
+        "dimension": "county",
+        "level": "other_pooled"
+      },
+      "small_n": true,
+      "suppressed": true,
+      "caveat": "Standard NPS calculation: % promoters (9-10) minus % detractors (0-6). Fewer than 10 respondents (n=7); value suppressed for statistical reliability.",
+      "source_columns": [
+        "recommend",
+        "county"
+      ]
+    },
+    {
+      "id": "quality.engaging.agree_pct.county.other_pooled",
+      "label": "Agree or strongly agree: presenter(s) engaged the participants — Other counties (pooled)",
+      "value": null,
+      "unit": "pct",
+      "n": 7,
+      "numerator": null,
+      "n_missing": 0,
+      "denominator": "Other counties (pooled) respondents with a recognized answer to this quality item",
+      "ci_low": null,
+      "ci_high": null,
+      "ci_method": null,
+      "group": {
+        "dimension": "county",
+        "level": "other_pooled"
+      },
+      "small_n": true,
+      "suppressed": true,
+      "caveat": "~12% non-response on quality items. Fewer than 10 respondents (n=7); value suppressed for statistical reliability.",
+      "source_columns": [
+        "quality_engaging",
+        "county"
+      ]
+    },
+    {
+      "id": "quality.knowledgeable.agree_pct.county.other_pooled",
+      "label": "Agree or strongly agree: presenter(s) knew the subject matter well — Other counties (pooled)",
+      "value": null,
+      "unit": "pct",
+      "n": 7,
+      "numerator": null,
+      "n_missing": 0,
+      "denominator": "Other counties (pooled) respondents with a recognized answer to this quality item",
+      "ci_low": null,
+      "ci_high": null,
+      "ci_method": null,
+      "group": {
+        "dimension": "county",
+        "level": "other_pooled"
+      },
+      "small_n": true,
+      "suppressed": true,
+      "caveat": "~12% non-response on quality items. Fewer than 10 respondents (n=7); value suppressed for statistical reliability.",
+      "source_columns": [
+        "quality_knowledgeable",
+        "county"
+      ]
+    },
+    {
+      "id": "quality.organized.agree_pct.county.other_pooled",
+      "label": "Agree or strongly agree: training was well organized — Other counties (pooled)",
+      "value": null,
+      "unit": "pct",
+      "n": 7,
+      "numerator": null,
+      "n_missing": 0,
+      "denominator": "Other counties (pooled) respondents with a recognized answer to this quality item",
+      "ci_low": null,
+      "ci_high": null,
+      "ci_method": null,
+      "group": {
+        "dimension": "county",
+        "level": "other_pooled"
+      },
+      "small_n": true,
+      "suppressed": true,
+      "caveat": "~12% non-response on quality items. Fewer than 10 respondents (n=7); value suppressed for statistical reliability.",
+      "source_columns": [
+        "quality_organized",
         "county"
       ]
     },
@@ -998,6 +1574,102 @@
       ]
     },
     {
+      "id": "recommend.score.nps.role.student",
+      "label": "Net Promoter Score (NPS) — student (any mention)",
+      "value": -1.8078,
+      "unit": "nps",
+      "n": 1051,
+      "numerator": null,
+      "n_missing": 29,
+      "denominator": "student (any mention) respondents who gave a 0-10 recommend score (9-10 minus 0-6)",
+      "ci_low": null,
+      "ci_high": null,
+      "ci_method": null,
+      "group": {
+        "dimension": "role",
+        "level": "student"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "Standard NPS calculation: % promoters (9-10) minus % detractors (0-6).",
+      "source_columns": [
+        "recommend",
+        "role"
+      ]
+    },
+    {
+      "id": "quality.engaging.agree_pct.role.student",
+      "label": "Agree or strongly agree: presenter(s) engaged the participants — student (any mention)",
+      "value": 86.4662,
+      "unit": "pct",
+      "n": 931,
+      "numerator": 805,
+      "n_missing": 149,
+      "denominator": "student (any mention) respondents with a recognized answer to this quality item",
+      "ci_low": 84.12,
+      "ci_high": 88.51,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "role",
+        "level": "student"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "~12% non-response on quality items.",
+      "source_columns": [
+        "quality_engaging",
+        "role"
+      ]
+    },
+    {
+      "id": "quality.knowledgeable.agree_pct.role.student",
+      "label": "Agree or strongly agree: presenter(s) knew the subject matter well — student (any mention)",
+      "value": 88.8052,
+      "unit": "pct",
+      "n": 929,
+      "numerator": 825,
+      "n_missing": 151,
+      "denominator": "student (any mention) respondents with a recognized answer to this quality item",
+      "ci_low": 86.62,
+      "ci_high": 90.68,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "role",
+        "level": "student"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "~12% non-response on quality items.",
+      "source_columns": [
+        "quality_knowledgeable",
+        "role"
+      ]
+    },
+    {
+      "id": "quality.organized.agree_pct.role.student",
+      "label": "Agree or strongly agree: training was well organized — student (any mention)",
+      "value": 90.8009,
+      "unit": "pct",
+      "n": 924,
+      "numerator": 839,
+      "n_missing": 156,
+      "denominator": "student (any mention) respondents with a recognized answer to this quality item",
+      "ci_low": 88.76,
+      "ci_high": 92.5,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "role",
+        "level": "student"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "~12% non-response on quality items.",
+      "source_columns": [
+        "quality_organized",
+        "role"
+      ]
+    },
+    {
       "id": "post.identify_crisis.agree_pct.role.school_staff",
       "label": "Agree or strongly agree they can identify mental health challenges and crises — school staff (any mention)",
       "value": 94.1176,
@@ -1090,6 +1762,102 @@
       "caveat": "",
       "source_columns": [
         "recommend",
+        "role"
+      ]
+    },
+    {
+      "id": "recommend.score.nps.role.school_staff",
+      "label": "Net Promoter Score (NPS) — school staff (any mention)",
+      "value": 83.5821,
+      "unit": "nps",
+      "n": 67,
+      "numerator": null,
+      "n_missing": 1,
+      "denominator": "school staff (any mention) respondents who gave a 0-10 recommend score (9-10 minus 0-6)",
+      "ci_low": null,
+      "ci_high": null,
+      "ci_method": null,
+      "group": {
+        "dimension": "role",
+        "level": "school_staff"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "Standard NPS calculation: % promoters (9-10) minus % detractors (0-6).",
+      "source_columns": [
+        "recommend",
+        "role"
+      ]
+    },
+    {
+      "id": "quality.engaging.agree_pct.role.school_staff",
+      "label": "Agree or strongly agree: presenter(s) engaged the participants — school staff (any mention)",
+      "value": 95.5882,
+      "unit": "pct",
+      "n": 68,
+      "numerator": 65,
+      "n_missing": 0,
+      "denominator": "school staff (any mention) respondents with a recognized answer to this quality item",
+      "ci_low": 87.81,
+      "ci_high": 98.49,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "role",
+        "level": "school_staff"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "~12% non-response on quality items.",
+      "source_columns": [
+        "quality_engaging",
+        "role"
+      ]
+    },
+    {
+      "id": "quality.knowledgeable.agree_pct.role.school_staff",
+      "label": "Agree or strongly agree: presenter(s) knew the subject matter well — school staff (any mention)",
+      "value": 100.0,
+      "unit": "pct",
+      "n": 68,
+      "numerator": 68,
+      "n_missing": 0,
+      "denominator": "school staff (any mention) respondents with a recognized answer to this quality item",
+      "ci_low": 94.65,
+      "ci_high": 100.0,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "role",
+        "level": "school_staff"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "~12% non-response on quality items.",
+      "source_columns": [
+        "quality_knowledgeable",
+        "role"
+      ]
+    },
+    {
+      "id": "quality.organized.agree_pct.role.school_staff",
+      "label": "Agree or strongly agree: training was well organized — school staff (any mention)",
+      "value": 100.0,
+      "unit": "pct",
+      "n": 68,
+      "numerator": 68,
+      "n_missing": 0,
+      "denominator": "school staff (any mention) respondents with a recognized answer to this quality item",
+      "ci_low": 94.65,
+      "ci_high": 100.0,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "role",
+        "level": "school_staff"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "~12% non-response on quality items.",
+      "source_columns": [
+        "quality_organized",
         "role"
       ]
     },
@@ -1190,6 +1958,102 @@
       ]
     },
     {
+      "id": "recommend.score.nps.role.caregiver_parent",
+      "label": "Net Promoter Score (NPS) — caregiver/parent (any mention)",
+      "value": 78.2609,
+      "unit": "nps",
+      "n": 69,
+      "numerator": null,
+      "n_missing": 2,
+      "denominator": "caregiver/parent (any mention) respondents who gave a 0-10 recommend score (9-10 minus 0-6)",
+      "ci_low": null,
+      "ci_high": null,
+      "ci_method": null,
+      "group": {
+        "dimension": "role",
+        "level": "caregiver_parent"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "Standard NPS calculation: % promoters (9-10) minus % detractors (0-6).",
+      "source_columns": [
+        "recommend",
+        "role"
+      ]
+    },
+    {
+      "id": "quality.engaging.agree_pct.role.caregiver_parent",
+      "label": "Agree or strongly agree: presenter(s) engaged the participants — caregiver/parent (any mention)",
+      "value": 94.2857,
+      "unit": "pct",
+      "n": 70,
+      "numerator": 66,
+      "n_missing": 1,
+      "denominator": "caregiver/parent (any mention) respondents with a recognized answer to this quality item",
+      "ci_low": 86.21,
+      "ci_high": 97.76,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "role",
+        "level": "caregiver_parent"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "~12% non-response on quality items.",
+      "source_columns": [
+        "quality_engaging",
+        "role"
+      ]
+    },
+    {
+      "id": "quality.knowledgeable.agree_pct.role.caregiver_parent",
+      "label": "Agree or strongly agree: presenter(s) knew the subject matter well — caregiver/parent (any mention)",
+      "value": 95.6522,
+      "unit": "pct",
+      "n": 69,
+      "numerator": 66,
+      "n_missing": 2,
+      "denominator": "caregiver/parent (any mention) respondents with a recognized answer to this quality item",
+      "ci_low": 87.98,
+      "ci_high": 98.51,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "role",
+        "level": "caregiver_parent"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "~12% non-response on quality items.",
+      "source_columns": [
+        "quality_knowledgeable",
+        "role"
+      ]
+    },
+    {
+      "id": "quality.organized.agree_pct.role.caregiver_parent",
+      "label": "Agree or strongly agree: training was well organized — caregiver/parent (any mention)",
+      "value": 94.2857,
+      "unit": "pct",
+      "n": 70,
+      "numerator": 66,
+      "n_missing": 1,
+      "denominator": "caregiver/parent (any mention) respondents with a recognized answer to this quality item",
+      "ci_low": 86.21,
+      "ci_high": 97.76,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "role",
+        "level": "caregiver_parent"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "~12% non-response on quality items.",
+      "source_columns": [
+        "quality_organized",
+        "role"
+      ]
+    },
+    {
       "id": "post.identify_crisis.agree_pct.role.other",
       "label": "Agree or strongly agree they can identify mental health challenges and crises — other/community (any mention)",
       "value": 93.6842,
@@ -1282,6 +2146,102 @@
       "caveat": "",
       "source_columns": [
         "recommend",
+        "role"
+      ]
+    },
+    {
+      "id": "recommend.score.nps.role.other",
+      "label": "Net Promoter Score (NPS) — other/community (any mention)",
+      "value": 79.7872,
+      "unit": "nps",
+      "n": 94,
+      "numerator": null,
+      "n_missing": 1,
+      "denominator": "other/community (any mention) respondents who gave a 0-10 recommend score (9-10 minus 0-6)",
+      "ci_low": null,
+      "ci_high": null,
+      "ci_method": null,
+      "group": {
+        "dimension": "role",
+        "level": "other"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "Standard NPS calculation: % promoters (9-10) minus % detractors (0-6).",
+      "source_columns": [
+        "recommend",
+        "role"
+      ]
+    },
+    {
+      "id": "quality.engaging.agree_pct.role.other",
+      "label": "Agree or strongly agree: presenter(s) engaged the participants — other/community (any mention)",
+      "value": 93.617,
+      "unit": "pct",
+      "n": 94,
+      "numerator": 88,
+      "n_missing": 1,
+      "denominator": "other/community (any mention) respondents with a recognized answer to this quality item",
+      "ci_low": 86.77,
+      "ci_high": 97.04,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "role",
+        "level": "other"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "~12% non-response on quality items.",
+      "source_columns": [
+        "quality_engaging",
+        "role"
+      ]
+    },
+    {
+      "id": "quality.knowledgeable.agree_pct.role.other",
+      "label": "Agree or strongly agree: presenter(s) knew the subject matter well — other/community (any mention)",
+      "value": 95.7447,
+      "unit": "pct",
+      "n": 94,
+      "numerator": 90,
+      "n_missing": 1,
+      "denominator": "other/community (any mention) respondents with a recognized answer to this quality item",
+      "ci_low": 89.56,
+      "ci_high": 98.33,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "role",
+        "level": "other"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "~12% non-response on quality items.",
+      "source_columns": [
+        "quality_knowledgeable",
+        "role"
+      ]
+    },
+    {
+      "id": "quality.organized.agree_pct.role.other",
+      "label": "Agree or strongly agree: training was well organized — other/community (any mention)",
+      "value": 94.6809,
+      "unit": "pct",
+      "n": 94,
+      "numerator": 89,
+      "n_missing": 1,
+      "denominator": "other/community (any mention) respondents with a recognized answer to this quality item",
+      "ci_low": 88.15,
+      "ci_high": 97.71,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "role",
+        "level": "other"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "~12% non-response on quality items.",
+      "source_columns": [
+        "quality_organized",
         "role"
       ]
     },
@@ -1382,6 +2342,102 @@
       ]
     },
     {
+      "id": "recommend.score.nps.language.en",
+      "label": "Net Promoter Score (NPS) — English-survey",
+      "value": 11.6186,
+      "unit": "nps",
+      "n": 1248,
+      "numerator": null,
+      "n_missing": 32,
+      "denominator": "English-survey respondents who gave a 0-10 recommend score (9-10 minus 0-6)",
+      "ci_low": null,
+      "ci_high": null,
+      "ci_method": null,
+      "group": {
+        "dimension": "language",
+        "level": "en"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "Standard NPS calculation: % promoters (9-10) minus % detractors (0-6).",
+      "source_columns": [
+        "recommend",
+        "language"
+      ]
+    },
+    {
+      "id": "quality.engaging.agree_pct.language.en",
+      "label": "Agree or strongly agree: presenter(s) engaged the participants — English-survey",
+      "value": 88.0531,
+      "unit": "pct",
+      "n": 1130,
+      "numerator": 995,
+      "n_missing": 150,
+      "denominator": "English-survey respondents with a recognized answer to this quality item",
+      "ci_low": 86.03,
+      "ci_high": 89.82,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "language",
+        "level": "en"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "~12% non-response on quality items.",
+      "source_columns": [
+        "quality_engaging",
+        "language"
+      ]
+    },
+    {
+      "id": "quality.knowledgeable.agree_pct.language.en",
+      "label": "Agree or strongly agree: presenter(s) knew the subject matter well — English-survey",
+      "value": 90.2396,
+      "unit": "pct",
+      "n": 1127,
+      "numerator": 1017,
+      "n_missing": 153,
+      "denominator": "English-survey respondents with a recognized answer to this quality item",
+      "ci_low": 88.37,
+      "ci_high": 91.84,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "language",
+        "level": "en"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "~12% non-response on quality items.",
+      "source_columns": [
+        "quality_knowledgeable",
+        "language"
+      ]
+    },
+    {
+      "id": "quality.organized.agree_pct.language.en",
+      "label": "Agree or strongly agree: training was well organized — English-survey",
+      "value": 91.6296,
+      "unit": "pct",
+      "n": 1123,
+      "numerator": 1029,
+      "n_missing": 157,
+      "denominator": "English-survey respondents with a recognized answer to this quality item",
+      "ci_low": 89.86,
+      "ci_high": 93.11,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "language",
+        "level": "en"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "~12% non-response on quality items.",
+      "source_columns": [
+        "quality_organized",
+        "language"
+      ]
+    },
+    {
       "id": "post.identify_crisis.agree_pct.language.es",
       "label": "Agree or strongly agree they can identify mental health challenges and crises — Spanish-survey",
       "value": 84.2105,
@@ -1475,6 +2531,2742 @@
       "source_columns": [
         "recommend",
         "language"
+      ]
+    },
+    {
+      "id": "recommend.score.nps.language.es",
+      "label": "Net Promoter Score (NPS) — Spanish-survey",
+      "value": 38.8889,
+      "unit": "nps",
+      "n": 18,
+      "numerator": null,
+      "n_missing": 1,
+      "denominator": "Spanish-survey respondents who gave a 0-10 recommend score (9-10 minus 0-6)",
+      "ci_low": null,
+      "ci_high": null,
+      "ci_method": null,
+      "group": {
+        "dimension": "language",
+        "level": "es"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "Standard NPS calculation: % promoters (9-10) minus % detractors (0-6).",
+      "source_columns": [
+        "recommend",
+        "language"
+      ]
+    },
+    {
+      "id": "quality.engaging.agree_pct.language.es",
+      "label": "Agree or strongly agree: presenter(s) engaged the participants — Spanish-survey",
+      "value": 94.4444,
+      "unit": "pct",
+      "n": 18,
+      "numerator": 17,
+      "n_missing": 1,
+      "denominator": "Spanish-survey respondents with a recognized answer to this quality item",
+      "ci_low": 74.24,
+      "ci_high": 99.01,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "language",
+        "level": "es"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "~12% non-response on quality items.",
+      "source_columns": [
+        "quality_engaging",
+        "language"
+      ]
+    },
+    {
+      "id": "quality.knowledgeable.agree_pct.language.es",
+      "label": "Agree or strongly agree: presenter(s) knew the subject matter well — Spanish-survey",
+      "value": 94.4444,
+      "unit": "pct",
+      "n": 18,
+      "numerator": 17,
+      "n_missing": 1,
+      "denominator": "Spanish-survey respondents with a recognized answer to this quality item",
+      "ci_low": 74.24,
+      "ci_high": 99.01,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "language",
+        "level": "es"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "~12% non-response on quality items.",
+      "source_columns": [
+        "quality_knowledgeable",
+        "language"
+      ]
+    },
+    {
+      "id": "quality.organized.agree_pct.language.es",
+      "label": "Agree or strongly agree: training was well organized — Spanish-survey",
+      "value": 100.0,
+      "unit": "pct",
+      "n": 18,
+      "numerator": 18,
+      "n_missing": 1,
+      "denominator": "Spanish-survey respondents with a recognized answer to this quality item",
+      "ci_low": 82.41,
+      "ci_high": 100.0,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "language",
+        "level": "es"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "~12% non-response on quality items.",
+      "source_columns": [
+        "quality_organized",
+        "language"
+      ]
+    },
+    {
+      "id": "post.identify_crisis.agree_pct.sensitivity.excl_straightline",
+      "label": "Agree or strongly agree they can identify mental health challenges and crises (sensitivity: excluding 31 all-strongly-disagree respondents)",
+      "value": 92.1136,
+      "unit": "pct",
+      "n": 1268,
+      "numerator": 1168,
+      "n_missing": 0,
+      "denominator": "respondents with a recognized answer, excluding those who chose 'Strongly disagree' on every post item",
+      "ci_low": 90.5,
+      "ci_high": 93.47,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "sensitivity",
+        "level": "excl_straightline"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "Excludes 31 respondents who marked Strongly Disagree on all three post items (potential disengagement or scale misread).",
+      "source_columns": [
+        "post_identify_crisis"
+      ]
+    },
+    {
+      "id": "post.describe_988.agree_pct.sensitivity.excl_straightline",
+      "label": "Agree or strongly agree they can describe 988 and how it works (sensitivity: excluding 31 all-strongly-disagree respondents)",
+      "value": 92.6656,
+      "unit": "pct",
+      "n": 1268,
+      "numerator": 1175,
+      "n_missing": 0,
+      "denominator": "respondents with a recognized answer, excluding those who chose 'Strongly disagree' on every post item",
+      "ci_low": 91.1,
+      "ci_high": 93.98,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "sensitivity",
+        "level": "excl_straightline"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "Excludes 31 respondents who marked Strongly Disagree on all three post items (potential disengagement or scale misread).",
+      "source_columns": [
+        "post_describe_988"
+      ]
+    },
+    {
+      "id": "post.know_when_to_use.agree_pct.sensitivity.excl_straightline",
+      "label": "Agree or strongly agree they can know when to use 988 (sensitivity: excluding 31 all-strongly-disagree respondents)",
+      "value": 94.5584,
+      "unit": "pct",
+      "n": 1268,
+      "numerator": 1199,
+      "n_missing": 0,
+      "denominator": "respondents with a recognized answer, excluding those who chose 'Strongly disagree' on every post item",
+      "ci_low": 93.17,
+      "ci_high": 95.68,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "sensitivity",
+        "level": "excl_straightline"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "Excludes 31 respondents who marked Strongly Disagree on all three post items (potential disengagement or scale misread).",
+      "source_columns": [
+        "post_know_when_to_use"
+      ]
+    },
+    {
+      "id": "sample.respondents.count.overall",
+      "label": "Total survey respondents in dataset",
+      "value": 1299.0,
+      "unit": "count",
+      "n": 1299,
+      "numerator": 1299,
+      "n_missing": 0,
+      "denominator": "total survey respondents",
+      "ci_low": null,
+      "ci_high": null,
+      "ci_method": null,
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "response_id"
+      ]
+    },
+    {
+      "id": "sample.respondents.count.county.anne_arundel",
+      "label": "Respondent count — Anne Arundel",
+      "value": 937.0,
+      "unit": "count",
+      "n": 1299,
+      "numerator": 937,
+      "n_missing": 0,
+      "denominator": "total survey respondents",
+      "ci_low": null,
+      "ci_high": null,
+      "ci_method": null,
+      "group": {
+        "dimension": "county",
+        "level": "anne_arundel"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "county"
+      ]
+    },
+    {
+      "id": "sample.respondents.pct.county.anne_arundel",
+      "label": "Share of total respondents — Anne Arundel (%)",
+      "value": 72.1324,
+      "unit": "pct",
+      "n": 1299,
+      "numerator": 937,
+      "n_missing": 0,
+      "denominator": "total survey respondents",
+      "ci_low": 69.63,
+      "ci_high": 74.5,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "county",
+        "level": "anne_arundel"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "county"
+      ]
+    },
+    {
+      "id": "sample.respondents.count.county.prince_georges",
+      "label": "Respondent count — Prince George's",
+      "value": 309.0,
+      "unit": "count",
+      "n": 1299,
+      "numerator": 309,
+      "n_missing": 0,
+      "denominator": "total survey respondents",
+      "ci_low": null,
+      "ci_high": null,
+      "ci_method": null,
+      "group": {
+        "dimension": "county",
+        "level": "prince_georges"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "county"
+      ]
+    },
+    {
+      "id": "sample.respondents.pct.county.prince_georges",
+      "label": "Share of total respondents — Prince George's (%)",
+      "value": 23.7875,
+      "unit": "pct",
+      "n": 1299,
+      "numerator": 309,
+      "n_missing": 0,
+      "denominator": "total survey respondents",
+      "ci_low": 21.55,
+      "ci_high": 26.18,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "county",
+        "level": "prince_georges"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "county"
+      ]
+    },
+    {
+      "id": "sample.respondents.count.county.montgomery",
+      "label": "Respondent count — Montgomery",
+      "value": 34.0,
+      "unit": "count",
+      "n": 1299,
+      "numerator": 34,
+      "n_missing": 0,
+      "denominator": "total survey respondents",
+      "ci_low": null,
+      "ci_high": null,
+      "ci_method": null,
+      "group": {
+        "dimension": "county",
+        "level": "montgomery"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "county"
+      ]
+    },
+    {
+      "id": "sample.respondents.pct.county.montgomery",
+      "label": "Share of total respondents — Montgomery (%)",
+      "value": 2.6174,
+      "unit": "pct",
+      "n": 1299,
+      "numerator": 34,
+      "n_missing": 0,
+      "denominator": "total survey respondents",
+      "ci_low": 1.88,
+      "ci_high": 3.64,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "county",
+        "level": "montgomery"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "county"
+      ]
+    },
+    {
+      "id": "sample.respondents.count.county.queen_annes",
+      "label": "Respondent count — Queen Anne's",
+      "value": 12.0,
+      "unit": "count",
+      "n": 1299,
+      "numerator": 12,
+      "n_missing": 0,
+      "denominator": "total survey respondents",
+      "ci_low": null,
+      "ci_high": null,
+      "ci_method": null,
+      "group": {
+        "dimension": "county",
+        "level": "queen_annes"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "county"
+      ]
+    },
+    {
+      "id": "sample.respondents.pct.county.queen_annes",
+      "label": "Share of total respondents — Queen Anne's (%)",
+      "value": 0.9238,
+      "unit": "pct",
+      "n": 1299,
+      "numerator": 12,
+      "n_missing": 0,
+      "denominator": "total survey respondents",
+      "ci_low": 0.53,
+      "ci_high": 1.61,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "county",
+        "level": "queen_annes"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "county"
+      ]
+    },
+    {
+      "id": "sample.respondents.count.county.other_pooled",
+      "label": "Respondent count — Other counties (pooled)",
+      "value": 7.0,
+      "unit": "count",
+      "n": 1299,
+      "numerator": 7,
+      "n_missing": 0,
+      "denominator": "total survey respondents",
+      "ci_low": null,
+      "ci_high": null,
+      "ci_method": null,
+      "group": {
+        "dimension": "county",
+        "level": "other_pooled"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "county"
+      ]
+    },
+    {
+      "id": "sample.respondents.pct.county.other_pooled",
+      "label": "Share of total respondents — Other counties (pooled) (%)",
+      "value": 0.5389,
+      "unit": "pct",
+      "n": 1299,
+      "numerator": 7,
+      "n_missing": 0,
+      "denominator": "total survey respondents",
+      "ci_low": 0.26,
+      "ci_high": 1.11,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "county",
+        "level": "other_pooled"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "county"
+      ]
+    },
+    {
+      "id": "sample.respondents.count.role.student",
+      "label": "Respondent count — student (any mention)",
+      "value": 1080.0,
+      "unit": "count",
+      "n": 1299,
+      "numerator": 1080,
+      "n_missing": 0,
+      "denominator": "total survey respondents",
+      "ci_low": null,
+      "ci_high": null,
+      "ci_method": null,
+      "group": {
+        "dimension": "role",
+        "level": "student"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "role"
+      ]
+    },
+    {
+      "id": "sample.respondents.pct.role.student",
+      "label": "Share of total respondents — student (any mention) (%)",
+      "value": 83.1409,
+      "unit": "pct",
+      "n": 1299,
+      "numerator": 1080,
+      "n_missing": 0,
+      "denominator": "total survey respondents",
+      "ci_low": 81.01,
+      "ci_high": 85.08,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "role",
+        "level": "student"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "role"
+      ]
+    },
+    {
+      "id": "sample.respondents.count.role.school_staff",
+      "label": "Respondent count — school staff (any mention)",
+      "value": 68.0,
+      "unit": "count",
+      "n": 1299,
+      "numerator": 68,
+      "n_missing": 0,
+      "denominator": "total survey respondents",
+      "ci_low": null,
+      "ci_high": null,
+      "ci_method": null,
+      "group": {
+        "dimension": "role",
+        "level": "school_staff"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "role"
+      ]
+    },
+    {
+      "id": "sample.respondents.pct.role.school_staff",
+      "label": "Share of total respondents — school staff (any mention) (%)",
+      "value": 5.2348,
+      "unit": "pct",
+      "n": 1299,
+      "numerator": 68,
+      "n_missing": 0,
+      "denominator": "total survey respondents",
+      "ci_low": 4.15,
+      "ci_high": 6.58,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "role",
+        "level": "school_staff"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "role"
+      ]
+    },
+    {
+      "id": "sample.respondents.count.role.caregiver_parent",
+      "label": "Respondent count — caregiver/parent (any mention)",
+      "value": 71.0,
+      "unit": "count",
+      "n": 1299,
+      "numerator": 71,
+      "n_missing": 0,
+      "denominator": "total survey respondents",
+      "ci_low": null,
+      "ci_high": null,
+      "ci_method": null,
+      "group": {
+        "dimension": "role",
+        "level": "caregiver_parent"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "role"
+      ]
+    },
+    {
+      "id": "sample.respondents.pct.role.caregiver_parent",
+      "label": "Share of total respondents — caregiver/parent (any mention) (%)",
+      "value": 5.4657,
+      "unit": "pct",
+      "n": 1299,
+      "numerator": 71,
+      "n_missing": 0,
+      "denominator": "total survey respondents",
+      "ci_low": 4.36,
+      "ci_high": 6.84,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "role",
+        "level": "caregiver_parent"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "role"
+      ]
+    },
+    {
+      "id": "sample.respondents.count.role.other",
+      "label": "Respondent count — other/community (any mention)",
+      "value": 95.0,
+      "unit": "count",
+      "n": 1299,
+      "numerator": 95,
+      "n_missing": 0,
+      "denominator": "total survey respondents",
+      "ci_low": null,
+      "ci_high": null,
+      "ci_method": null,
+      "group": {
+        "dimension": "role",
+        "level": "other"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "role"
+      ]
+    },
+    {
+      "id": "sample.respondents.pct.role.other",
+      "label": "Share of total respondents — other/community (any mention) (%)",
+      "value": 7.3133,
+      "unit": "pct",
+      "n": 1299,
+      "numerator": 95,
+      "n_missing": 0,
+      "denominator": "total survey respondents",
+      "ci_low": 6.02,
+      "ci_high": 8.86,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "role",
+        "level": "other"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "role"
+      ]
+    },
+    {
+      "id": "sample.respondents.count.language.en",
+      "label": "Respondent count — English-survey",
+      "value": 1280.0,
+      "unit": "count",
+      "n": 1299,
+      "numerator": 1280,
+      "n_missing": 0,
+      "denominator": "total survey respondents",
+      "ci_low": null,
+      "ci_high": null,
+      "ci_method": null,
+      "group": {
+        "dimension": "language",
+        "level": "en"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "language"
+      ]
+    },
+    {
+      "id": "sample.respondents.pct.language.en",
+      "label": "Share of total respondents — English-survey (%)",
+      "value": 98.5373,
+      "unit": "pct",
+      "n": 1299,
+      "numerator": 1280,
+      "n_missing": 0,
+      "denominator": "total survey respondents",
+      "ci_low": 97.73,
+      "ci_high": 99.06,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "language",
+        "level": "en"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "language"
+      ]
+    },
+    {
+      "id": "sample.respondents.count.language.es",
+      "label": "Respondent count — Spanish-survey",
+      "value": 19.0,
+      "unit": "count",
+      "n": 1299,
+      "numerator": 19,
+      "n_missing": 0,
+      "denominator": "total survey respondents",
+      "ci_low": null,
+      "ci_high": null,
+      "ci_method": null,
+      "group": {
+        "dimension": "language",
+        "level": "es"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "language"
+      ]
+    },
+    {
+      "id": "sample.respondents.pct.language.es",
+      "label": "Share of total respondents — Spanish-survey (%)",
+      "value": 1.4627,
+      "unit": "pct",
+      "n": 1299,
+      "numerator": 19,
+      "n_missing": 0,
+      "denominator": "total survey respondents",
+      "ci_low": 0.94,
+      "ci_high": 2.27,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "language",
+        "level": "es"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "language"
+      ]
+    },
+    {
+      "id": "post.identify_crisis.agree_pct.training_period.spring_2026",
+      "label": "Agree or strongly agree they can identify mental health challenges and crises — Spring 2026 (Apr–May)",
+      "value": 91.828,
+      "unit": "pct",
+      "n": 465,
+      "numerator": 427,
+      "n_missing": 0,
+      "denominator": "Spring 2026 (Apr–May) respondents with a recognized answer to this post item",
+      "ci_low": 88.98,
+      "ci_high": 93.99,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "training_period",
+        "level": "spring_2026"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "post_identify_crisis",
+        "training_date"
+      ]
+    },
+    {
+      "id": "post.describe_988.agree_pct.training_period.spring_2026",
+      "label": "Agree or strongly agree they can describe 988 and how it works — Spring 2026 (Apr–May)",
+      "value": 90.1075,
+      "unit": "pct",
+      "n": 465,
+      "numerator": 419,
+      "n_missing": 0,
+      "denominator": "Spring 2026 (Apr–May) respondents with a recognized answer to this post item",
+      "ci_low": 87.06,
+      "ci_high": 92.5,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "training_period",
+        "level": "spring_2026"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "post_describe_988",
+        "training_date"
+      ]
+    },
+    {
+      "id": "post.know_when_to_use.agree_pct.training_period.spring_2026",
+      "label": "Agree or strongly agree they can know when to use 988 — Spring 2026 (Apr–May)",
+      "value": 93.1183,
+      "unit": "pct",
+      "n": 465,
+      "numerator": 433,
+      "n_missing": 0,
+      "denominator": "Spring 2026 (Apr–May) respondents with a recognized answer to this post item",
+      "ci_low": 90.45,
+      "ci_high": 95.08,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "training_period",
+        "level": "spring_2026"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "post_know_when_to_use",
+        "training_date"
+      ]
+    },
+    {
+      "id": "recommend.score.mean.training_period.spring_2026",
+      "label": "Average recommend score (0-10) — Spring 2026 (Apr–May)",
+      "value": 7.6939,
+      "unit": "mean",
+      "n": 441,
+      "numerator": null,
+      "n_missing": 24,
+      "denominator": "Spring 2026 (Apr–May) respondents who gave a 0-10 recommend score",
+      "ci_low": 7.49,
+      "ci_high": 7.9,
+      "ci_method": "t95",
+      "group": {
+        "dimension": "training_period",
+        "level": "spring_2026"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "recommend",
+        "training_date"
+      ]
+    },
+    {
+      "id": "post.identify_crisis.agree_pct.training_period.fall_2026",
+      "label": "Agree or strongly agree they can identify mental health challenges and crises — Fall 2026 (Sep–Oct)",
+      "value": 88.854,
+      "unit": "pct",
+      "n": 637,
+      "numerator": 566,
+      "n_missing": 0,
+      "denominator": "Fall 2026 (Sep–Oct) respondents with a recognized answer to this post item",
+      "ci_low": 86.17,
+      "ci_high": 91.07,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "training_period",
+        "level": "fall_2026"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "post_identify_crisis",
+        "training_date"
+      ]
+    },
+    {
+      "id": "post.describe_988.agree_pct.training_period.fall_2026",
+      "label": "Agree or strongly agree they can describe 988 and how it works — Fall 2026 (Sep–Oct)",
+      "value": 91.2088,
+      "unit": "pct",
+      "n": 637,
+      "numerator": 581,
+      "n_missing": 0,
+      "denominator": "Fall 2026 (Sep–Oct) respondents with a recognized answer to this post item",
+      "ci_low": 88.76,
+      "ci_high": 93.17,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "training_period",
+        "level": "fall_2026"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "post_describe_988",
+        "training_date"
+      ]
+    },
+    {
+      "id": "post.know_when_to_use.agree_pct.training_period.fall_2026",
+      "label": "Agree or strongly agree they can know when to use 988 — Fall 2026 (Sep–Oct)",
+      "value": 91.9937,
+      "unit": "pct",
+      "n": 637,
+      "numerator": 586,
+      "n_missing": 0,
+      "denominator": "Fall 2026 (Sep–Oct) respondents with a recognized answer to this post item",
+      "ci_low": 89.63,
+      "ci_high": 93.86,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "training_period",
+        "level": "fall_2026"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "post_know_when_to_use",
+        "training_date"
+      ]
+    },
+    {
+      "id": "recommend.score.mean.training_period.fall_2026",
+      "label": "Average recommend score (0-10) — Fall 2026 (Sep–Oct)",
+      "value": 7.0973,
+      "unit": "mean",
+      "n": 637,
+      "numerator": null,
+      "n_missing": 0,
+      "denominator": "Fall 2026 (Sep–Oct) respondents who gave a 0-10 recommend score",
+      "ci_low": 6.92,
+      "ci_high": 7.28,
+      "ci_method": "t95",
+      "group": {
+        "dimension": "training_period",
+        "level": "fall_2026"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "recommend",
+        "training_date"
+      ]
+    },
+    {
+      "id": "post.identify_crisis.agree_pct.training_period.other_periods",
+      "label": "Agree or strongly agree they can identify mental health challenges and crises — Other months",
+      "value": 88.6598,
+      "unit": "pct",
+      "n": 194,
+      "numerator": 172,
+      "n_missing": 0,
+      "denominator": "Other months respondents with a recognized answer to this post item",
+      "ci_low": 83.43,
+      "ci_high": 92.39,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "training_period",
+        "level": "other_periods"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "post_identify_crisis",
+        "training_date"
+      ]
+    },
+    {
+      "id": "post.describe_988.agree_pct.training_period.other_periods",
+      "label": "Agree or strongly agree they can describe 988 and how it works — Other months",
+      "value": 88.6598,
+      "unit": "pct",
+      "n": 194,
+      "numerator": 172,
+      "n_missing": 0,
+      "denominator": "Other months respondents with a recognized answer to this post item",
+      "ci_low": 83.43,
+      "ci_high": 92.39,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "training_period",
+        "level": "other_periods"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "post_describe_988",
+        "training_date"
+      ]
+    },
+    {
+      "id": "post.know_when_to_use.agree_pct.training_period.other_periods",
+      "label": "Agree or strongly agree they can know when to use 988 — Other months",
+      "value": 91.2371,
+      "unit": "pct",
+      "n": 194,
+      "numerator": 177,
+      "n_missing": 0,
+      "denominator": "Other months respondents with a recognized answer to this post item",
+      "ci_low": 86.42,
+      "ci_high": 94.46,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "training_period",
+        "level": "other_periods"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "post_know_when_to_use",
+        "training_date"
+      ]
+    },
+    {
+      "id": "recommend.score.mean.training_period.other_periods",
+      "label": "Average recommend score (0-10) — Other months",
+      "value": 9.0378,
+      "unit": "mean",
+      "n": 185,
+      "numerator": null,
+      "n_missing": 9,
+      "denominator": "Other months respondents who gave a 0-10 recommend score",
+      "ci_low": 8.8,
+      "ci_high": 9.28,
+      "ci_method": "t95",
+      "group": {
+        "dimension": "training_period",
+        "level": "other_periods"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "recommend",
+        "training_date"
+      ]
+    },
+    {
+      "id": "post.identify_crisis.agree_pct.training_month.2025_10",
+      "label": "Agree or strongly agree they can identify mental health challenges and crises — 2025-10",
+      "value": 92.8571,
+      "unit": "pct",
+      "n": 28,
+      "numerator": 26,
+      "n_missing": 0,
+      "denominator": "2025-10 respondents with a recognized answer to this post item",
+      "ci_low": 77.35,
+      "ci_high": 98.02,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "training_month",
+        "level": "2025_10"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "post_identify_crisis",
+        "training_date"
+      ]
+    },
+    {
+      "id": "post.describe_988.agree_pct.training_month.2025_10",
+      "label": "Agree or strongly agree they can describe 988 and how it works — 2025-10",
+      "value": 89.2857,
+      "unit": "pct",
+      "n": 28,
+      "numerator": 25,
+      "n_missing": 0,
+      "denominator": "2025-10 respondents with a recognized answer to this post item",
+      "ci_low": 72.8,
+      "ci_high": 96.29,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "training_month",
+        "level": "2025_10"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "post_describe_988",
+        "training_date"
+      ]
+    },
+    {
+      "id": "post.know_when_to_use.agree_pct.training_month.2025_10",
+      "label": "Agree or strongly agree they can know when to use 988 — 2025-10",
+      "value": 92.8571,
+      "unit": "pct",
+      "n": 28,
+      "numerator": 26,
+      "n_missing": 0,
+      "denominator": "2025-10 respondents with a recognized answer to this post item",
+      "ci_low": 77.35,
+      "ci_high": 98.02,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "training_month",
+        "level": "2025_10"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "post_know_when_to_use",
+        "training_date"
+      ]
+    },
+    {
+      "id": "recommend.score.mean.training_month.2025_10",
+      "label": "Average recommend score (0-10) — 2025-10",
+      "value": 9.4286,
+      "unit": "mean",
+      "n": 28,
+      "numerator": null,
+      "n_missing": 0,
+      "denominator": "2025-10 respondents who gave a 0-10 recommend score",
+      "ci_low": 9.14,
+      "ci_high": 9.72,
+      "ci_method": "t95",
+      "group": {
+        "dimension": "training_month",
+        "level": "2025_10"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "recommend",
+        "training_date"
+      ]
+    },
+    {
+      "id": "post.identify_crisis.agree_pct.training_month.2025_11",
+      "label": "Agree or strongly agree they can identify mental health challenges and crises — 2025-11",
+      "value": null,
+      "unit": "pct",
+      "n": 7,
+      "numerator": null,
+      "n_missing": 0,
+      "denominator": "2025-11 respondents with a recognized answer to this post item",
+      "ci_low": null,
+      "ci_high": null,
+      "ci_method": null,
+      "group": {
+        "dimension": "training_month",
+        "level": "2025_11"
+      },
+      "small_n": true,
+      "suppressed": true,
+      "caveat": "Fewer than 10 respondents (n=7); value suppressed for statistical reliability.",
+      "source_columns": [
+        "post_identify_crisis",
+        "training_date"
+      ]
+    },
+    {
+      "id": "post.describe_988.agree_pct.training_month.2025_11",
+      "label": "Agree or strongly agree they can describe 988 and how it works — 2025-11",
+      "value": null,
+      "unit": "pct",
+      "n": 7,
+      "numerator": null,
+      "n_missing": 0,
+      "denominator": "2025-11 respondents with a recognized answer to this post item",
+      "ci_low": null,
+      "ci_high": null,
+      "ci_method": null,
+      "group": {
+        "dimension": "training_month",
+        "level": "2025_11"
+      },
+      "small_n": true,
+      "suppressed": true,
+      "caveat": "Fewer than 10 respondents (n=7); value suppressed for statistical reliability.",
+      "source_columns": [
+        "post_describe_988",
+        "training_date"
+      ]
+    },
+    {
+      "id": "post.know_when_to_use.agree_pct.training_month.2025_11",
+      "label": "Agree or strongly agree they can know when to use 988 — 2025-11",
+      "value": null,
+      "unit": "pct",
+      "n": 7,
+      "numerator": null,
+      "n_missing": 0,
+      "denominator": "2025-11 respondents with a recognized answer to this post item",
+      "ci_low": null,
+      "ci_high": null,
+      "ci_method": null,
+      "group": {
+        "dimension": "training_month",
+        "level": "2025_11"
+      },
+      "small_n": true,
+      "suppressed": true,
+      "caveat": "Fewer than 10 respondents (n=7); value suppressed for statistical reliability.",
+      "source_columns": [
+        "post_know_when_to_use",
+        "training_date"
+      ]
+    },
+    {
+      "id": "recommend.score.mean.training_month.2025_11",
+      "label": "Average recommend score (0-10) — 2025-11",
+      "value": null,
+      "unit": "mean",
+      "n": 7,
+      "numerator": null,
+      "n_missing": 0,
+      "denominator": "2025-11 respondents who gave a 0-10 recommend score",
+      "ci_low": null,
+      "ci_high": null,
+      "ci_method": null,
+      "group": {
+        "dimension": "training_month",
+        "level": "2025_11"
+      },
+      "small_n": true,
+      "suppressed": true,
+      "caveat": "Fewer than 10 respondents (n=7); value suppressed for statistical reliability.",
+      "source_columns": [
+        "recommend",
+        "training_date"
+      ]
+    },
+    {
+      "id": "post.identify_crisis.agree_pct.training_month.2025_12",
+      "label": "Agree or strongly agree they can identify mental health challenges and crises — 2025-12",
+      "value": 88.8889,
+      "unit": "pct",
+      "n": 36,
+      "numerator": 32,
+      "n_missing": 0,
+      "denominator": "2025-12 respondents with a recognized answer to this post item",
+      "ci_low": 74.69,
+      "ci_high": 95.59,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "training_month",
+        "level": "2025_12"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "post_identify_crisis",
+        "training_date"
+      ]
+    },
+    {
+      "id": "post.describe_988.agree_pct.training_month.2025_12",
+      "label": "Agree or strongly agree they can describe 988 and how it works — 2025-12",
+      "value": 91.6667,
+      "unit": "pct",
+      "n": 36,
+      "numerator": 33,
+      "n_missing": 0,
+      "denominator": "2025-12 respondents with a recognized answer to this post item",
+      "ci_low": 78.17,
+      "ci_high": 97.13,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "training_month",
+        "level": "2025_12"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "post_describe_988",
+        "training_date"
+      ]
+    },
+    {
+      "id": "post.know_when_to_use.agree_pct.training_month.2025_12",
+      "label": "Agree or strongly agree they can know when to use 988 — 2025-12",
+      "value": 91.6667,
+      "unit": "pct",
+      "n": 36,
+      "numerator": 33,
+      "n_missing": 0,
+      "denominator": "2025-12 respondents with a recognized answer to this post item",
+      "ci_low": 78.17,
+      "ci_high": 97.13,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "training_month",
+        "level": "2025_12"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "post_know_when_to_use",
+        "training_date"
+      ]
+    },
+    {
+      "id": "recommend.score.mean.training_month.2025_12",
+      "label": "Average recommend score (0-10) — 2025-12",
+      "value": 9.25,
+      "unit": "mean",
+      "n": 36,
+      "numerator": null,
+      "n_missing": 0,
+      "denominator": "2025-12 respondents who gave a 0-10 recommend score",
+      "ci_low": 8.74,
+      "ci_high": 9.76,
+      "ci_method": "t95",
+      "group": {
+        "dimension": "training_month",
+        "level": "2025_12"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "recommend",
+        "training_date"
+      ]
+    },
+    {
+      "id": "post.identify_crisis.agree_pct.training_month.2026_01",
+      "label": "Agree or strongly agree they can identify mental health challenges and crises — 2026-01",
+      "value": 88.0952,
+      "unit": "pct",
+      "n": 42,
+      "numerator": 37,
+      "n_missing": 0,
+      "denominator": "2026-01 respondents with a recognized answer to this post item",
+      "ci_low": 75.0,
+      "ci_high": 94.81,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "training_month",
+        "level": "2026_01"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "post_identify_crisis",
+        "training_date"
+      ]
+    },
+    {
+      "id": "post.describe_988.agree_pct.training_month.2026_01",
+      "label": "Agree or strongly agree they can describe 988 and how it works — 2026-01",
+      "value": 92.8571,
+      "unit": "pct",
+      "n": 42,
+      "numerator": 39,
+      "n_missing": 0,
+      "denominator": "2026-01 respondents with a recognized answer to this post item",
+      "ci_low": 80.99,
+      "ci_high": 97.54,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "training_month",
+        "level": "2026_01"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "post_describe_988",
+        "training_date"
+      ]
+    },
+    {
+      "id": "post.know_when_to_use.agree_pct.training_month.2026_01",
+      "label": "Agree or strongly agree they can know when to use 988 — 2026-01",
+      "value": 92.8571,
+      "unit": "pct",
+      "n": 42,
+      "numerator": 39,
+      "n_missing": 0,
+      "denominator": "2026-01 respondents with a recognized answer to this post item",
+      "ci_low": 80.99,
+      "ci_high": 97.54,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "training_month",
+        "level": "2026_01"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "post_know_when_to_use",
+        "training_date"
+      ]
+    },
+    {
+      "id": "recommend.score.mean.training_month.2026_01",
+      "label": "Average recommend score (0-10) — 2026-01",
+      "value": 9.3902,
+      "unit": "mean",
+      "n": 41,
+      "numerator": null,
+      "n_missing": 1,
+      "denominator": "2026-01 respondents who gave a 0-10 recommend score",
+      "ci_low": 8.92,
+      "ci_high": 9.86,
+      "ci_method": "t95",
+      "group": {
+        "dimension": "training_month",
+        "level": "2026_01"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "recommend",
+        "training_date"
+      ]
+    },
+    {
+      "id": "post.identify_crisis.agree_pct.training_month.2026_02",
+      "label": "Agree or strongly agree they can identify mental health challenges and crises — 2026-02",
+      "value": null,
+      "unit": "pct",
+      "n": 9,
+      "numerator": null,
+      "n_missing": 0,
+      "denominator": "2026-02 respondents with a recognized answer to this post item",
+      "ci_low": null,
+      "ci_high": null,
+      "ci_method": null,
+      "group": {
+        "dimension": "training_month",
+        "level": "2026_02"
+      },
+      "small_n": true,
+      "suppressed": true,
+      "caveat": "Fewer than 10 respondents (n=9); value suppressed for statistical reliability.",
+      "source_columns": [
+        "post_identify_crisis",
+        "training_date"
+      ]
+    },
+    {
+      "id": "post.describe_988.agree_pct.training_month.2026_02",
+      "label": "Agree or strongly agree they can describe 988 and how it works — 2026-02",
+      "value": null,
+      "unit": "pct",
+      "n": 9,
+      "numerator": null,
+      "n_missing": 0,
+      "denominator": "2026-02 respondents with a recognized answer to this post item",
+      "ci_low": null,
+      "ci_high": null,
+      "ci_method": null,
+      "group": {
+        "dimension": "training_month",
+        "level": "2026_02"
+      },
+      "small_n": true,
+      "suppressed": true,
+      "caveat": "Fewer than 10 respondents (n=9); value suppressed for statistical reliability.",
+      "source_columns": [
+        "post_describe_988",
+        "training_date"
+      ]
+    },
+    {
+      "id": "post.know_when_to_use.agree_pct.training_month.2026_02",
+      "label": "Agree or strongly agree they can know when to use 988 — 2026-02",
+      "value": null,
+      "unit": "pct",
+      "n": 9,
+      "numerator": null,
+      "n_missing": 0,
+      "denominator": "2026-02 respondents with a recognized answer to this post item",
+      "ci_low": null,
+      "ci_high": null,
+      "ci_method": null,
+      "group": {
+        "dimension": "training_month",
+        "level": "2026_02"
+      },
+      "small_n": true,
+      "suppressed": true,
+      "caveat": "Fewer than 10 respondents (n=9); value suppressed for statistical reliability.",
+      "source_columns": [
+        "post_know_when_to_use",
+        "training_date"
+      ]
+    },
+    {
+      "id": "recommend.score.mean.training_month.2026_02",
+      "label": "Average recommend score (0-10) — 2026-02",
+      "value": null,
+      "unit": "mean",
+      "n": 9,
+      "numerator": null,
+      "n_missing": 0,
+      "denominator": "2026-02 respondents who gave a 0-10 recommend score",
+      "ci_low": null,
+      "ci_high": null,
+      "ci_method": null,
+      "group": {
+        "dimension": "training_month",
+        "level": "2026_02"
+      },
+      "small_n": true,
+      "suppressed": true,
+      "caveat": "Fewer than 10 respondents (n=9); value suppressed for statistical reliability.",
+      "source_columns": [
+        "recommend",
+        "training_date"
+      ]
+    },
+    {
+      "id": "post.identify_crisis.agree_pct.training_month.2026_03",
+      "label": "Agree or strongly agree they can identify mental health challenges and crises — 2026-03",
+      "value": 96.6667,
+      "unit": "pct",
+      "n": 30,
+      "numerator": 29,
+      "n_missing": 0,
+      "denominator": "2026-03 respondents with a recognized answer to this post item",
+      "ci_low": 83.33,
+      "ci_high": 99.41,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "training_month",
+        "level": "2026_03"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "post_identify_crisis",
+        "training_date"
+      ]
+    },
+    {
+      "id": "post.describe_988.agree_pct.training_month.2026_03",
+      "label": "Agree or strongly agree they can describe 988 and how it works — 2026-03",
+      "value": 96.6667,
+      "unit": "pct",
+      "n": 30,
+      "numerator": 29,
+      "n_missing": 0,
+      "denominator": "2026-03 respondents with a recognized answer to this post item",
+      "ci_low": 83.33,
+      "ci_high": 99.41,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "training_month",
+        "level": "2026_03"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "post_describe_988",
+        "training_date"
+      ]
+    },
+    {
+      "id": "post.know_when_to_use.agree_pct.training_month.2026_03",
+      "label": "Agree or strongly agree they can know when to use 988 — 2026-03",
+      "value": 96.6667,
+      "unit": "pct",
+      "n": 30,
+      "numerator": 29,
+      "n_missing": 0,
+      "denominator": "2026-03 respondents with a recognized answer to this post item",
+      "ci_low": 83.33,
+      "ci_high": 99.41,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "training_month",
+        "level": "2026_03"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "post_know_when_to_use",
+        "training_date"
+      ]
+    },
+    {
+      "id": "recommend.score.mean.training_month.2026_03",
+      "label": "Average recommend score (0-10) — 2026-03",
+      "value": 9.5417,
+      "unit": "mean",
+      "n": 24,
+      "numerator": null,
+      "n_missing": 6,
+      "denominator": "2026-03 respondents who gave a 0-10 recommend score",
+      "ci_low": 9.21,
+      "ci_high": 9.87,
+      "ci_method": "t95",
+      "group": {
+        "dimension": "training_month",
+        "level": "2026_03"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "recommend",
+        "training_date"
+      ]
+    },
+    {
+      "id": "post.identify_crisis.agree_pct.training_month.2026_04",
+      "label": "Agree or strongly agree they can identify mental health challenges and crises — 2026-04",
+      "value": 90.1024,
+      "unit": "pct",
+      "n": 293,
+      "numerator": 264,
+      "n_missing": 0,
+      "denominator": "2026-04 respondents with a recognized answer to this post item",
+      "ci_low": 86.15,
+      "ci_high": 93.02,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "training_month",
+        "level": "2026_04"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "post_identify_crisis",
+        "training_date"
+      ]
+    },
+    {
+      "id": "post.describe_988.agree_pct.training_month.2026_04",
+      "label": "Agree or strongly agree they can describe 988 and how it works — 2026-04",
+      "value": 88.0546,
+      "unit": "pct",
+      "n": 293,
+      "numerator": 258,
+      "n_missing": 0,
+      "denominator": "2026-04 respondents with a recognized answer to this post item",
+      "ci_low": 83.84,
+      "ci_high": 91.28,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "training_month",
+        "level": "2026_04"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "post_describe_988",
+        "training_date"
+      ]
+    },
+    {
+      "id": "post.know_when_to_use.agree_pct.training_month.2026_04",
+      "label": "Agree or strongly agree they can know when to use 988 — 2026-04",
+      "value": 91.8089,
+      "unit": "pct",
+      "n": 293,
+      "numerator": 269,
+      "n_missing": 0,
+      "denominator": "2026-04 respondents with a recognized answer to this post item",
+      "ci_low": 88.1,
+      "ci_high": 94.43,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "training_month",
+        "level": "2026_04"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "post_know_when_to_use",
+        "training_date"
+      ]
+    },
+    {
+      "id": "recommend.score.mean.training_month.2026_04",
+      "label": "Average recommend score (0-10) — 2026-04",
+      "value": 7.4093,
+      "unit": "mean",
+      "n": 281,
+      "numerator": null,
+      "n_missing": 12,
+      "denominator": "2026-04 respondents who gave a 0-10 recommend score",
+      "ci_low": 7.14,
+      "ci_high": 7.68,
+      "ci_method": "t95",
+      "group": {
+        "dimension": "training_month",
+        "level": "2026_04"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "recommend",
+        "training_date"
+      ]
+    },
+    {
+      "id": "post.identify_crisis.agree_pct.training_month.2026_05",
+      "label": "Agree or strongly agree they can identify mental health challenges and crises — 2026-05",
+      "value": 94.7674,
+      "unit": "pct",
+      "n": 172,
+      "numerator": 163,
+      "n_missing": 0,
+      "denominator": "2026-05 respondents with a recognized answer to this post item",
+      "ci_low": 90.36,
+      "ci_high": 97.22,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "training_month",
+        "level": "2026_05"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "post_identify_crisis",
+        "training_date"
+      ]
+    },
+    {
+      "id": "post.describe_988.agree_pct.training_month.2026_05",
+      "label": "Agree or strongly agree they can describe 988 and how it works — 2026-05",
+      "value": 93.6047,
+      "unit": "pct",
+      "n": 172,
+      "numerator": 161,
+      "n_missing": 0,
+      "denominator": "2026-05 respondents with a recognized answer to this post item",
+      "ci_low": 88.91,
+      "ci_high": 96.39,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "training_month",
+        "level": "2026_05"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "post_describe_988",
+        "training_date"
+      ]
+    },
+    {
+      "id": "post.know_when_to_use.agree_pct.training_month.2026_05",
+      "label": "Agree or strongly agree they can know when to use 988 — 2026-05",
+      "value": 95.3488,
+      "unit": "pct",
+      "n": 172,
+      "numerator": 164,
+      "n_missing": 0,
+      "denominator": "2026-05 respondents with a recognized answer to this post item",
+      "ci_low": 91.09,
+      "ci_high": 97.62,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "training_month",
+        "level": "2026_05"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "post_know_when_to_use",
+        "training_date"
+      ]
+    },
+    {
+      "id": "recommend.score.mean.training_month.2026_05",
+      "label": "Average recommend score (0-10) — 2026-05",
+      "value": 8.1937,
+      "unit": "mean",
+      "n": 160,
+      "numerator": null,
+      "n_missing": 12,
+      "denominator": "2026-05 respondents who gave a 0-10 recommend score",
+      "ci_low": 7.92,
+      "ci_high": 8.47,
+      "ci_method": "t95",
+      "group": {
+        "dimension": "training_month",
+        "level": "2026_05"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "recommend",
+        "training_date"
+      ]
+    },
+    {
+      "id": "post.identify_crisis.agree_pct.training_month.2026_06",
+      "label": "Agree or strongly agree they can identify mental health challenges and crises — 2026-06",
+      "value": 66.6667,
+      "unit": "pct",
+      "n": 27,
+      "numerator": 18,
+      "n_missing": 0,
+      "denominator": "2026-06 respondents with a recognized answer to this post item",
+      "ci_low": 47.82,
+      "ci_high": 81.36,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "training_month",
+        "level": "2026_06"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "post_identify_crisis",
+        "training_date"
+      ]
+    },
+    {
+      "id": "post.describe_988.agree_pct.training_month.2026_06",
+      "label": "Agree or strongly agree they can describe 988 and how it works — 2026-06",
+      "value": 59.2593,
+      "unit": "pct",
+      "n": 27,
+      "numerator": 16,
+      "n_missing": 0,
+      "denominator": "2026-06 respondents with a recognized answer to this post item",
+      "ci_low": 40.73,
+      "ci_high": 75.49,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "training_month",
+        "level": "2026_06"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "post_describe_988",
+        "training_date"
+      ]
+    },
+    {
+      "id": "post.know_when_to_use.agree_pct.training_month.2026_06",
+      "label": "Agree or strongly agree they can know when to use 988 — 2026-06",
+      "value": 70.3704,
+      "unit": "pct",
+      "n": 27,
+      "numerator": 19,
+      "n_missing": 0,
+      "denominator": "2026-06 respondents with a recognized answer to this post item",
+      "ci_low": 51.52,
+      "ci_high": 84.15,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "training_month",
+        "level": "2026_06"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "post_know_when_to_use",
+        "training_date"
+      ]
+    },
+    {
+      "id": "recommend.score.mean.training_month.2026_06",
+      "label": "Average recommend score (0-10) — 2026-06",
+      "value": 6.8846,
+      "unit": "mean",
+      "n": 26,
+      "numerator": null,
+      "n_missing": 1,
+      "denominator": "2026-06 respondents who gave a 0-10 recommend score",
+      "ci_low": 5.89,
+      "ci_high": 7.88,
+      "ci_method": "t95",
+      "group": {
+        "dimension": "training_month",
+        "level": "2026_06"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "recommend",
+        "training_date"
+      ]
+    },
+    {
+      "id": "post.identify_crisis.agree_pct.training_month.2026_07",
+      "label": "Agree or strongly agree they can identify mental health challenges and crises — 2026-07",
+      "value": null,
+      "unit": "pct",
+      "n": 7,
+      "numerator": null,
+      "n_missing": 0,
+      "denominator": "2026-07 respondents with a recognized answer to this post item",
+      "ci_low": null,
+      "ci_high": null,
+      "ci_method": null,
+      "group": {
+        "dimension": "training_month",
+        "level": "2026_07"
+      },
+      "small_n": true,
+      "suppressed": true,
+      "caveat": "Fewer than 10 respondents (n=7); value suppressed for statistical reliability.",
+      "source_columns": [
+        "post_identify_crisis",
+        "training_date"
+      ]
+    },
+    {
+      "id": "post.describe_988.agree_pct.training_month.2026_07",
+      "label": "Agree or strongly agree they can describe 988 and how it works — 2026-07",
+      "value": null,
+      "unit": "pct",
+      "n": 7,
+      "numerator": null,
+      "n_missing": 0,
+      "denominator": "2026-07 respondents with a recognized answer to this post item",
+      "ci_low": null,
+      "ci_high": null,
+      "ci_method": null,
+      "group": {
+        "dimension": "training_month",
+        "level": "2026_07"
+      },
+      "small_n": true,
+      "suppressed": true,
+      "caveat": "Fewer than 10 respondents (n=7); value suppressed for statistical reliability.",
+      "source_columns": [
+        "post_describe_988",
+        "training_date"
+      ]
+    },
+    {
+      "id": "post.know_when_to_use.agree_pct.training_month.2026_07",
+      "label": "Agree or strongly agree they can know when to use 988 — 2026-07",
+      "value": null,
+      "unit": "pct",
+      "n": 7,
+      "numerator": null,
+      "n_missing": 0,
+      "denominator": "2026-07 respondents with a recognized answer to this post item",
+      "ci_low": null,
+      "ci_high": null,
+      "ci_method": null,
+      "group": {
+        "dimension": "training_month",
+        "level": "2026_07"
+      },
+      "small_n": true,
+      "suppressed": true,
+      "caveat": "Fewer than 10 respondents (n=7); value suppressed for statistical reliability.",
+      "source_columns": [
+        "post_know_when_to_use",
+        "training_date"
+      ]
+    },
+    {
+      "id": "recommend.score.mean.training_month.2026_07",
+      "label": "Average recommend score (0-10) — 2026-07",
+      "value": null,
+      "unit": "mean",
+      "n": 6,
+      "numerator": null,
+      "n_missing": 1,
+      "denominator": "2026-07 respondents who gave a 0-10 recommend score",
+      "ci_low": null,
+      "ci_high": null,
+      "ci_method": null,
+      "group": {
+        "dimension": "training_month",
+        "level": "2026_07"
+      },
+      "small_n": true,
+      "suppressed": true,
+      "caveat": "Fewer than 10 respondents (n=6); value suppressed for statistical reliability.",
+      "source_columns": [
+        "recommend",
+        "training_date"
+      ]
+    },
+    {
+      "id": "post.identify_crisis.agree_pct.training_month.2026_08",
+      "label": "Agree or strongly agree they can identify mental health challenges and crises — 2026-08",
+      "value": null,
+      "unit": "pct",
+      "n": 8,
+      "numerator": null,
+      "n_missing": 0,
+      "denominator": "2026-08 respondents with a recognized answer to this post item",
+      "ci_low": null,
+      "ci_high": null,
+      "ci_method": null,
+      "group": {
+        "dimension": "training_month",
+        "level": "2026_08"
+      },
+      "small_n": true,
+      "suppressed": true,
+      "caveat": "Fewer than 10 respondents (n=8); value suppressed for statistical reliability.",
+      "source_columns": [
+        "post_identify_crisis",
+        "training_date"
+      ]
+    },
+    {
+      "id": "post.describe_988.agree_pct.training_month.2026_08",
+      "label": "Agree or strongly agree they can describe 988 and how it works — 2026-08",
+      "value": null,
+      "unit": "pct",
+      "n": 8,
+      "numerator": null,
+      "n_missing": 0,
+      "denominator": "2026-08 respondents with a recognized answer to this post item",
+      "ci_low": null,
+      "ci_high": null,
+      "ci_method": null,
+      "group": {
+        "dimension": "training_month",
+        "level": "2026_08"
+      },
+      "small_n": true,
+      "suppressed": true,
+      "caveat": "Fewer than 10 respondents (n=8); value suppressed for statistical reliability.",
+      "source_columns": [
+        "post_describe_988",
+        "training_date"
+      ]
+    },
+    {
+      "id": "post.know_when_to_use.agree_pct.training_month.2026_08",
+      "label": "Agree or strongly agree they can know when to use 988 — 2026-08",
+      "value": null,
+      "unit": "pct",
+      "n": 8,
+      "numerator": null,
+      "n_missing": 0,
+      "denominator": "2026-08 respondents with a recognized answer to this post item",
+      "ci_low": null,
+      "ci_high": null,
+      "ci_method": null,
+      "group": {
+        "dimension": "training_month",
+        "level": "2026_08"
+      },
+      "small_n": true,
+      "suppressed": true,
+      "caveat": "Fewer than 10 respondents (n=8); value suppressed for statistical reliability.",
+      "source_columns": [
+        "post_know_when_to_use",
+        "training_date"
+      ]
+    },
+    {
+      "id": "recommend.score.mean.training_month.2026_08",
+      "label": "Average recommend score (0-10) — 2026-08",
+      "value": null,
+      "unit": "mean",
+      "n": 8,
+      "numerator": null,
+      "n_missing": 0,
+      "denominator": "2026-08 respondents who gave a 0-10 recommend score",
+      "ci_low": null,
+      "ci_high": null,
+      "ci_method": null,
+      "group": {
+        "dimension": "training_month",
+        "level": "2026_08"
+      },
+      "small_n": true,
+      "suppressed": true,
+      "caveat": "Fewer than 10 respondents (n=8); value suppressed for statistical reliability.",
+      "source_columns": [
+        "recommend",
+        "training_date"
+      ]
+    },
+    {
+      "id": "post.identify_crisis.agree_pct.training_month.2026_09",
+      "label": "Agree or strongly agree they can identify mental health challenges and crises — 2026-09",
+      "value": 90.6336,
+      "unit": "pct",
+      "n": 363,
+      "numerator": 329,
+      "n_missing": 0,
+      "denominator": "2026-09 respondents with a recognized answer to this post item",
+      "ci_low": 87.2,
+      "ci_high": 93.22,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "training_month",
+        "level": "2026_09"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "post_identify_crisis",
+        "training_date"
+      ]
+    },
+    {
+      "id": "post.describe_988.agree_pct.training_month.2026_09",
+      "label": "Agree or strongly agree they can describe 988 and how it works — 2026-09",
+      "value": 91.7355,
+      "unit": "pct",
+      "n": 363,
+      "numerator": 333,
+      "n_missing": 0,
+      "denominator": "2026-09 respondents with a recognized answer to this post item",
+      "ci_low": 88.45,
+      "ci_high": 94.15,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "training_month",
+        "level": "2026_09"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "post_describe_988",
+        "training_date"
+      ]
+    },
+    {
+      "id": "post.know_when_to_use.agree_pct.training_month.2026_09",
+      "label": "Agree or strongly agree they can know when to use 988 — 2026-09",
+      "value": 94.2149,
+      "unit": "pct",
+      "n": 363,
+      "numerator": 342,
+      "n_missing": 0,
+      "denominator": "2026-09 respondents with a recognized answer to this post item",
+      "ci_low": 91.32,
+      "ci_high": 96.19,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "training_month",
+        "level": "2026_09"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "post_know_when_to_use",
+        "training_date"
+      ]
+    },
+    {
+      "id": "recommend.score.mean.training_month.2026_09",
+      "label": "Average recommend score (0-10) — 2026-09",
+      "value": 7.1928,
+      "unit": "mean",
+      "n": 363,
+      "numerator": null,
+      "n_missing": 0,
+      "denominator": "2026-09 respondents who gave a 0-10 recommend score",
+      "ci_low": 6.96,
+      "ci_high": 7.42,
+      "ci_method": "t95",
+      "group": {
+        "dimension": "training_month",
+        "level": "2026_09"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "recommend",
+        "training_date"
+      ]
+    },
+    {
+      "id": "post.identify_crisis.agree_pct.training_month.2026_10",
+      "label": "Agree or strongly agree they can identify mental health challenges and crises — 2026-10",
+      "value": 86.4964,
+      "unit": "pct",
+      "n": 274,
+      "numerator": 237,
+      "n_missing": 0,
+      "denominator": "2026-10 respondents with a recognized answer to this post item",
+      "ci_low": 81.94,
+      "ci_high": 90.04,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "training_month",
+        "level": "2026_10"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "post_identify_crisis",
+        "training_date"
+      ]
+    },
+    {
+      "id": "post.describe_988.agree_pct.training_month.2026_10",
+      "label": "Agree or strongly agree they can describe 988 and how it works — 2026-10",
+      "value": 90.5109,
+      "unit": "pct",
+      "n": 274,
+      "numerator": 248,
+      "n_missing": 0,
+      "denominator": "2026-10 respondents with a recognized answer to this post item",
+      "ci_low": 86.46,
+      "ci_high": 93.44,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "training_month",
+        "level": "2026_10"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "post_describe_988",
+        "training_date"
+      ]
+    },
+    {
+      "id": "post.know_when_to_use.agree_pct.training_month.2026_10",
+      "label": "Agree or strongly agree they can know when to use 988 — 2026-10",
+      "value": 89.0511,
+      "unit": "pct",
+      "n": 274,
+      "numerator": 244,
+      "n_missing": 0,
+      "denominator": "2026-10 respondents with a recognized answer to this post item",
+      "ci_low": 84.8,
+      "ci_high": 92.22,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "training_month",
+        "level": "2026_10"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "post_know_when_to_use",
+        "training_date"
+      ]
+    },
+    {
+      "id": "recommend.score.mean.training_month.2026_10",
+      "label": "Average recommend score (0-10) — 2026-10",
+      "value": 6.9708,
+      "unit": "mean",
+      "n": 274,
+      "numerator": null,
+      "n_missing": 0,
+      "denominator": "2026-10 respondents who gave a 0-10 recommend score",
+      "ci_low": 6.69,
+      "ci_high": 7.25,
+      "ci_method": "t95",
+      "group": {
+        "dimension": "training_month",
+        "level": "2026_10"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "recommend",
+        "training_date"
+      ]
+    },
+    {
+      "id": "recommend.score.dist_0.overall",
+      "label": "Recommend score: 0 out of 10 (% of respondents)",
+      "value": 1.3428,
+      "unit": "pct",
+      "n": 1266,
+      "numerator": 17,
+      "n_missing": 33,
+      "denominator": "respondents who gave a 0-10 recommend score",
+      "ci_low": 0.84,
+      "ci_high": 2.14,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "recommend"
+      ]
+    },
+    {
+      "id": "recommend.score.dist_1.overall",
+      "label": "Recommend score: 1 out of 10 (% of respondents)",
+      "value": 0.7109,
+      "unit": "pct",
+      "n": 1266,
+      "numerator": 9,
+      "n_missing": 33,
+      "denominator": "respondents who gave a 0-10 recommend score",
+      "ci_low": 0.37,
+      "ci_high": 1.35,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "recommend"
+      ]
+    },
+    {
+      "id": "recommend.score.dist_2.overall",
+      "label": "Recommend score: 2 out of 10 (% of respondents)",
+      "value": 1.1058,
+      "unit": "pct",
+      "n": 1266,
+      "numerator": 14,
+      "n_missing": 33,
+      "denominator": "respondents who gave a 0-10 recommend score",
+      "ci_low": 0.66,
+      "ci_high": 1.85,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "recommend"
+      ]
+    },
+    {
+      "id": "recommend.score.dist_3.overall",
+      "label": "Recommend score: 3 out of 10 (% of respondents)",
+      "value": 1.8167,
+      "unit": "pct",
+      "n": 1266,
+      "numerator": 23,
+      "n_missing": 33,
+      "denominator": "respondents who gave a 0-10 recommend score",
+      "ci_low": 1.21,
+      "ci_high": 2.71,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "recommend"
+      ]
+    },
+    {
+      "id": "recommend.score.dist_4.overall",
+      "label": "Recommend score: 4 out of 10 (% of respondents)",
+      "value": 3.2385,
+      "unit": "pct",
+      "n": 1266,
+      "numerator": 41,
+      "n_missing": 33,
+      "denominator": "respondents who gave a 0-10 recommend score",
+      "ci_low": 2.4,
+      "ci_high": 4.36,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "recommend"
+      ]
+    },
+    {
+      "id": "recommend.score.dist_5.overall",
+      "label": "Recommend score: 5 out of 10 (% of respondents)",
+      "value": 11.9273,
+      "unit": "pct",
+      "n": 1266,
+      "numerator": 151,
+      "n_missing": 33,
+      "denominator": "respondents who gave a 0-10 recommend score",
+      "ci_low": 10.26,
+      "ci_high": 13.83,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "recommend"
+      ]
+    },
+    {
+      "id": "recommend.score.dist_6.overall",
+      "label": "Recommend score: 6 out of 10 (% of respondents)",
+      "value": 8.7678,
+      "unit": "pct",
+      "n": 1266,
+      "numerator": 111,
+      "n_missing": 33,
+      "denominator": "respondents who gave a 0-10 recommend score",
+      "ci_low": 7.33,
+      "ci_high": 10.45,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "recommend"
+      ]
+    },
+    {
+      "id": "recommend.score.dist_7.overall",
+      "label": "Recommend score: 7 out of 10 (% of respondents)",
+      "value": 11.5324,
+      "unit": "pct",
+      "n": 1266,
+      "numerator": 146,
+      "n_missing": 33,
+      "denominator": "respondents who gave a 0-10 recommend score",
+      "ci_low": 9.89,
+      "ci_high": 13.41,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "recommend"
+      ]
+    },
+    {
+      "id": "recommend.score.dist_8.overall",
+      "label": "Recommend score: 8 out of 10 (% of respondents)",
+      "value": 18.6414,
+      "unit": "pct",
+      "n": 1266,
+      "numerator": 236,
+      "n_missing": 33,
+      "denominator": "respondents who gave a 0-10 recommend score",
+      "ci_low": 16.59,
+      "ci_high": 20.88,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "recommend"
+      ]
+    },
+    {
+      "id": "recommend.score.dist_9.overall",
+      "label": "Recommend score: 9 out of 10 (% of respondents)",
+      "value": 13.9021,
+      "unit": "pct",
+      "n": 1266,
+      "numerator": 176,
+      "n_missing": 33,
+      "denominator": "respondents who gave a 0-10 recommend score",
+      "ci_low": 12.11,
+      "ci_high": 15.92,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "recommend"
+      ]
+    },
+    {
+      "id": "recommend.score.dist_10.overall",
+      "label": "Recommend score: 10 out of 10 (% of respondents)",
+      "value": 27.0142,
+      "unit": "pct",
+      "n": 1266,
+      "numerator": 342,
+      "n_missing": 33,
+      "denominator": "respondents who gave a 0-10 recommend score",
+      "ci_low": 24.64,
+      "ci_high": 29.53,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "",
+      "source_columns": [
+        "recommend"
+      ]
+    },
+    {
+      "id": "call_988.likelihood.dist_0.overall",
+      "label": "Likelihood to call 988: 0 out of 10 (% of respondents)",
+      "value": 1.3652,
+      "unit": "pct",
+      "n": 293,
+      "numerator": 4,
+      "n_missing": 1006,
+      "denominator": "respondents who answered the optional call-988 question",
+      "ci_low": 0.53,
+      "ci_high": 3.46,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "High non-response rate (~77% missing); represents only respondents who answered this optional question.",
+      "source_columns": [
+        "call_988_likelihood"
+      ]
+    },
+    {
+      "id": "call_988.likelihood.dist_1.overall",
+      "label": "Likelihood to call 988: 1 out of 10 (% of respondents)",
+      "value": 0.6826,
+      "unit": "pct",
+      "n": 293,
+      "numerator": 2,
+      "n_missing": 1006,
+      "denominator": "respondents who answered the optional call-988 question",
+      "ci_low": 0.19,
+      "ci_high": 2.45,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "High non-response rate (~77% missing); represents only respondents who answered this optional question.",
+      "source_columns": [
+        "call_988_likelihood"
+      ]
+    },
+    {
+      "id": "call_988.likelihood.dist_2.overall",
+      "label": "Likelihood to call 988: 2 out of 10 (% of respondents)",
+      "value": 2.3891,
+      "unit": "pct",
+      "n": 293,
+      "numerator": 7,
+      "n_missing": 1006,
+      "denominator": "respondents who answered the optional call-988 question",
+      "ci_low": 1.16,
+      "ci_high": 4.85,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "High non-response rate (~77% missing); represents only respondents who answered this optional question.",
+      "source_columns": [
+        "call_988_likelihood"
+      ]
+    },
+    {
+      "id": "call_988.likelihood.dist_3.overall",
+      "label": "Likelihood to call 988: 3 out of 10 (% of respondents)",
+      "value": 2.7304,
+      "unit": "pct",
+      "n": 293,
+      "numerator": 8,
+      "n_missing": 1006,
+      "denominator": "respondents who answered the optional call-988 question",
+      "ci_low": 1.39,
+      "ci_high": 5.29,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "High non-response rate (~77% missing); represents only respondents who answered this optional question.",
+      "source_columns": [
+        "call_988_likelihood"
+      ]
+    },
+    {
+      "id": "call_988.likelihood.dist_4.overall",
+      "label": "Likelihood to call 988: 4 out of 10 (% of respondents)",
+      "value": 3.7543,
+      "unit": "pct",
+      "n": 293,
+      "numerator": 11,
+      "n_missing": 1006,
+      "denominator": "respondents who answered the optional call-988 question",
+      "ci_low": 2.11,
+      "ci_high": 6.6,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "High non-response rate (~77% missing); represents only respondents who answered this optional question.",
+      "source_columns": [
+        "call_988_likelihood"
+      ]
+    },
+    {
+      "id": "call_988.likelihood.dist_5.overall",
+      "label": "Likelihood to call 988: 5 out of 10 (% of respondents)",
+      "value": 9.5563,
+      "unit": "pct",
+      "n": 293,
+      "numerator": 28,
+      "n_missing": 1006,
+      "denominator": "respondents who answered the optional call-988 question",
+      "ci_low": 6.69,
+      "ci_high": 13.46,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "High non-response rate (~77% missing); represents only respondents who answered this optional question.",
+      "source_columns": [
+        "call_988_likelihood"
+      ]
+    },
+    {
+      "id": "call_988.likelihood.dist_6.overall",
+      "label": "Likelihood to call 988: 6 out of 10 (% of respondents)",
+      "value": 6.4846,
+      "unit": "pct",
+      "n": 293,
+      "numerator": 19,
+      "n_missing": 1006,
+      "denominator": "respondents who answered the optional call-988 question",
+      "ci_low": 4.19,
+      "ci_high": 9.91,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "High non-response rate (~77% missing); represents only respondents who answered this optional question.",
+      "source_columns": [
+        "call_988_likelihood"
+      ]
+    },
+    {
+      "id": "call_988.likelihood.dist_7.overall",
+      "label": "Likelihood to call 988: 7 out of 10 (% of respondents)",
+      "value": 10.9215,
+      "unit": "pct",
+      "n": 293,
+      "numerator": 32,
+      "n_missing": 1006,
+      "denominator": "respondents who answered the optional call-988 question",
+      "ci_low": 7.84,
+      "ci_high": 15.01,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "High non-response rate (~77% missing); represents only respondents who answered this optional question.",
+      "source_columns": [
+        "call_988_likelihood"
+      ]
+    },
+    {
+      "id": "call_988.likelihood.dist_8.overall",
+      "label": "Likelihood to call 988: 8 out of 10 (% of respondents)",
+      "value": 15.0171,
+      "unit": "pct",
+      "n": 293,
+      "numerator": 44,
+      "n_missing": 1006,
+      "denominator": "respondents who answered the optional call-988 question",
+      "ci_low": 11.38,
+      "ci_high": 19.56,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "High non-response rate (~77% missing); represents only respondents who answered this optional question.",
+      "source_columns": [
+        "call_988_likelihood"
+      ]
+    },
+    {
+      "id": "call_988.likelihood.dist_9.overall",
+      "label": "Likelihood to call 988: 9 out of 10 (% of respondents)",
+      "value": 17.0648,
+      "unit": "pct",
+      "n": 293,
+      "numerator": 50,
+      "n_missing": 1006,
+      "denominator": "respondents who answered the optional call-988 question",
+      "ci_low": 13.19,
+      "ci_high": 21.79,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "High non-response rate (~77% missing); represents only respondents who answered this optional question.",
+      "source_columns": [
+        "call_988_likelihood"
+      ]
+    },
+    {
+      "id": "call_988.likelihood.dist_10.overall",
+      "label": "Likelihood to call 988: 10 out of 10 (% of respondents)",
+      "value": 30.0341,
+      "unit": "pct",
+      "n": 293,
+      "numerator": 88,
+      "n_missing": 1006,
+      "denominator": "respondents who answered the optional call-988 question",
+      "ci_low": 25.07,
+      "ci_high": 35.51,
+      "ci_method": "wilson95",
+      "group": {
+        "dimension": "overall",
+        "level": "all"
+      },
+      "small_n": false,
+      "suppressed": false,
+      "caveat": "High non-response rate (~77% missing); represents only respondents who answered this optional question.",
+      "source_columns": [
+        "call_988_likelihood"
       ]
     }
   ]

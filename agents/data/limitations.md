@@ -48,7 +48,7 @@ This document provides a comprehensive accounting of data constraints, sample bi
   - **31 respondents** marked "Strongly disagree" (score 1) across all three post-training knowledge items.
   - **17 respondents** marked "Strongly disagree" across all six knowledge items (pre and post).
 - **Hypothesis:** A subset of participants (particularly secondary students taking digital surveys quickly) may have misread the scale polarity (assuming 1 = "Best" or "Strongly agree") or engaged in uniform speed-running/disengagement.
-- **Treatment:** In accordance with non-destructive data cleaning standards, these rows are preserved in the dataset and flagged (`straightline_post_strongly_disagree`, `straightline_all_strongly_disagree`) rather than arbitrarily deleted. Sensitivity analyses reveal that excluding these 31 rows raises post-agreement proportions by approximately 2.4 percentage points.
+- **Treatment:** In accordance with non-destructive data cleaning standards, these rows are preserved in the dataset and flagged (`straightline_post_strongly_disagree`, `straightline_all_strongly_disagree`) rather than arbitrarily deleted. Sensitivity analyses reveal that excluding these 31 rows raises post-agreement proportions by approximately 2.2 percentage points (identify crises: 92.11% [+2.20 pp, `post.identify_crisis.agree_pct.sensitivity.excl_straightline`]; describe 988: 92.67% [+2.21 pp, `post.describe_988.agree_pct.sensitivity.excl_straightline`]; know when to use: 94.56% [+2.26 pp, `post.know_when_to_use.agree_pct.sensitivity.excl_straightline`]; see sensitivity findings in `outputs/findings.json`).
 
 ---
 
