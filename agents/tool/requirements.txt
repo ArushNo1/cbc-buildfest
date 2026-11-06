@@ -1,0 +1,4 @@
+# Only for making the demo video (agents/tool/video/make_video.py). Not needed to run the artifact.
+playwright>=1.40          # then: python3 -m playwright install chromium
+# ffmpeg: `brew install ffmpeg`, or the lighter pip build below
+# imageio-ffmpeg>=0.5

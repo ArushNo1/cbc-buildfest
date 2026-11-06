@@ -93,3 +93,19 @@ This runs the automated checks on synthetic data. They need no survey file.
 | `build: WARNING ... n=… < 10 but value not suppressed; hidden in dashboard` | The analysis published a value for a group under 10 people. The dashboard hid it. | Nothing for viewers. Maintainers should fix the suppression in the data step. |
 | A chart section says "could not be drawn" | A browser problem or an unexpected file shape. | Open the file in a current Chrome, Edge, Firefox or Safari. The numbers are still in **All numbers**. |
 | `python3: command not found` (Windows) | Python isn't on the PATH. | Install Python 3.10+ from python.org and tick "Add to PATH", or use WSL. |
+
+## Making the demo video (maintainers only)
+
+You don't need this to run the tool. The video is built from the dashboard and the narration in `agents/tool/video/script.md`:
+
+```bash
+python3 -m pip install -r agents/tool/requirements.txt
+python3 -m playwright install chromium
+brew install ffmpeg
+python3 agents/tool/video/make_video.py --dry-run
+python3 agents/tool/video/make_video.py
+```
+
+- `--dry-run` checks every number in the script against `outputs/`, times the speech and writes captions, without needing a browser or ffmpeg.
+- The full run writes `agents/tool/dist/Team17_Demo.mp4` (120 s max) and `Team17_Demo.srt`.
+- Speech uses macOS `say`. On other systems add `--no-tts` for a captions-only video.

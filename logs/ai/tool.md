@@ -61,3 +61,23 @@ Entry template:
   - `make run` and `make test` (48 passed) succeeded in the unzipped folder;
   - the rebuilt `outputs/findings.json` was identical to the committed file;
   - `outputs/dashboard.html` differed only because the clean rebuild nulls the comment-coder validation stats. That is the same cause as in #41.
+
+## 2026-11-05 23:55 ET: narration script and video pipeline (capture not yet run)
+- **Prompt (representative):** "Install ffmpeg and a headless browser, then build the demo video proof of concept: headless capture of the dashboard, captions, narration, ffmpeg."
+- **What the AI produced:**
+  - `agents/tool/video/script.md`: 6 scenes, each number tagged `[F:…]`. `check_numbers` reports 0 problems.
+  - `agents/tool/video/make_video.py`, which:
+    - parses the scenes and runs the number check (a mismatch stops the build);
+    - generates speech with macOS `say`;
+    - plans the timeline and caption cards and refuses anything over 117 s;
+    - records the dashboard in headless Chromium, with captions drawn into the page so ffmpeg needs no subtitle filter;
+    - muxes the audio at each scene's measured start time and strips metadata.
+  - `agents/tool/tests/test_video.py` (6 tests; no browser or ffmpeg needed).
+- **Errors / limitations caught, and how:**
+  - **Installs failed.** Homebrew's ffmpeg install and Playwright's Chromium download both failed. The first error ("Failed to create dir") looked like a sandbox restriction. Reading the full log showed "No space left on device": the disk had about 450 MB free. I stopped the install and removed only Homebrew's temp unpack folder from my own run. No user files were touched. Capture and encoding are blocked until space is freed.
+  - **Speech text.** I spotted a likely misreading of "988" ("nine hundred eighty-eight"), so the spoken text now says "nine eight eight" while captions keep "988". Covered by a unit test.
+  - **Rebuild issue fixed by text.** Text's fix for #41 (`raw_file_sha256`) let the dashboard confirm both files come from the same export. The dashboard was rebuilt.
+- **Manually verified against data:**
+  - `make_video.py --dry-run`: the number check passed against `outputs/`.
+  - Speech timing with the Samantha voice at 182 wpm comes to 84.1 s planned (limit 120 s).
+  - Before writing the "students vs. staff" line, I checked in `outputs/findings.json` that the ranges don't overlap: student recommend mean 7.22 (7.08–7.36, n = 1,051) vs. school staff 9.52 (9.34–9.71, n = 67).
