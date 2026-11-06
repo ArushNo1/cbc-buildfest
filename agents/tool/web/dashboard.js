@@ -175,7 +175,10 @@
   }
   function ticksFor(lo, hi, count) {
     var st = niceStep(hi - lo, count), out = [];
-    for (var v = Math.ceil(lo / st - 1e-9) * st; v <= hi + st * 1e-9; v += st) out.push(Math.round(v * 1e6) / 1e6);
+    // Prefer steps of 2 over 2.5 when that still gives a readable number of ticks (0-10 -> 0,2,4,...).
+    var p = Math.pow(10, Math.floor(Math.log10(st)));
+    if (Math.abs(st / p - 2.5) < 1e-9 && (hi - lo) / (2 * p) <= 6) st = 2 * p;
+    for (var v = Math.ceil(lo / st - 1e-9) * st; v <= hi + st * 1e-9; v += st) out.push(Math.round(v * 1e6) / 1e6 || 0);  // || 0 drops -0
     return out;
   }
 
@@ -208,8 +211,8 @@
     if (cfg.labelWidth) root.style.setProperty("--label-w", cfg.labelWidth);
     var leg = [];
     if (cfg.series.length > 1) cfg.series.forEach(function (sr) { leg.push({ cls: sr.cls || "", name: sr.name, bg: sr.cls ? null : "var(--s-after)" }); });
-    if (hasCI) leg.push({ cls: "ci", name: "95% range (likely spread of the true value)" });
-    if (cfg.ref && cfg.ref.value != null) leg.push({ cls: "ref", name: cfg.ref.label });
+    if (hasCI) leg.push({ cls: "k-ci", name: "95% range (likely spread of the true value)" });
+    if (cfg.ref && cfg.ref.value != null) leg.push({ cls: "k-ref", name: cfg.ref.label });
     if (leg.length) root.appendChild(legend(leg));
 
     cfg.rows.forEach(function (row, ri) {
@@ -273,17 +276,20 @@
     else window.addEventListener("resize", run);
     requestAnimationFrame(run);
   }
+  var SEASON = { winter: 1, spring: 4, summer: 7, fall: 9, autumn: 9 };
   function monthIndex(level) {
     var m = /^(\d{4})[_-](\d{1,2})(?:_to_\d{4}[_-]\d{1,2})?$/.exec(level);
-    return m ? Number(m[1]) * 12 + Number(m[2]) - 1 : null;
+    if (m) return Number(m[1]) * 12 + Number(m[2]) - 1;
+    m = /^(winter|spring|summer|fall|autumn)[_-](\d{4})$/.exec(level);
+    return m ? Number(m[2]) * 12 + SEASON[m[1]] - 1 : null;
   }
 
   function timeChart(cfg) {
     var outer = h("div");
     var leg = [];
     if (cfg.recs.some(function (r) { return r.ci_low != null; })) leg.push({ cls: "", name: "Shaded band: 95% range", bg: "color-mix(in srgb, var(--s-after) 25%, transparent)" });
-    if (cfg.ref && cfg.ref.value != null) leg.push({ cls: "refh", name: cfg.ref.label });
-    leg.push({ cls: "", name: "× = fewer than " + T + " people, not shown", bg: "transparent" });
+    if (cfg.ref && cfg.ref.value != null) leg.push({ cls: "k-refh", name: cfg.ref.label });
+    if (cfg.recs.some(function (r) { return !shown(r) && monthIndex(r.level) != null; })) leg.push({ cls: "", name: "× = fewer than " + T + " people, not shown", bg: "transparent" });
     outer.appendChild(legend(leg));
     var wrap = h("div", { class: "svgchart", role: "img", "aria-label": cfg.ariaLabel });
     outer.appendChild(wrap);
@@ -293,6 +299,7 @@
     var allMonths = recs.every(function (r) { return monthIndex(r.level) != null; });
     recs.sort(function (a, b) { return allMonths ? monthIndex(a.level) - monthIndex(b.level) : (a.level < b.level ? -1 : 1); });
     var xi = recs.map(function (r, i) { return allMonths ? monthIndex(r.level) : i; });
+    var monthly = recs.every(function (r) { return /^\d{4}[_-]\d{1,2}$/.test(r.level); });
     measured(wrap, function (W) {
       var H = 280, m = { l: 52, r: 24, t: 16, b: 58 };
       var d = domainFor(cfg.scale, recs.concat(cfg.ref ? [{ value: cfg.ref.value }] : [])), lo = d[0], hi = d[1];
@@ -322,7 +329,8 @@
       };
       recs.forEach(function (r, i) {
         if (!shown(r)) { flush(); return; }
-        if (allMonths && seg.length && xi[i] - seg[seg.length - 1].x > 1) flush();
+        // Monthly data: months with no trainings break the line (no implied continuity).
+        if (allMonths && monthly && seg.length && xi[i] - seg[seg.length - 1].x > 1) flush();
         seg.push({ x: xi[i], r: r });
       });
       flush();
@@ -526,6 +534,21 @@
     call.forEach(function (m) { add(tiles, tile("Likely to call 988: average score", m.overall, m.unit, "/ 10")); });
     if (!tiles.childNodes.length) { el.appendChild(empty("No headline numbers in this data build.")); return; }
     el.appendChild(tiles);
+    var comp = BY.get("sample.respondents.pct");
+    if (comp) {
+      el.appendChild(h("h3", null, "Who answered"));
+      el.appendChild(sub("Share of all " + fmtInt((META.source || {}).n_rows) + " respondents in each group. Roles can overlap (a person can be a student and a caregiver), so role shares can add up to more than 100%."));
+      ["county", "role", "language"].forEach(function (d) {
+        var rows = (comp.dims[d] || []).slice().sort(function (a, b) {
+          if ((a.level === "other_pooled") !== (b.level === "other_pooled")) return a.level === "other_pooled" ? 1 : -1;
+          return (b.value || 0) - (a.value || 0);
+        });
+        if (!rows.length) return;
+        el.appendChild(rowChart({ rows: rows.map(function (r) { return { label: r.level_label, sub: r.numerator != null ? fmtInt(r.numerator) + " people" : "n = " + fmtInt(r.n), lanes: [{ rec: r, series: { name: "", cls: "" } }], flag: flagFor(r) }; }),
+          unit: "pct", scale: { lo: 0, hi: 100, mark: "bar", fixed: true }, series: [{}], axisTitle: "% of all respondents, by " + lc(META.dimension_labels[d] || d),
+          ariaLabel: "Share of respondents by " + (META.dimension_labels[d] || d) }));
+      });
+    }
     var ps = post.filter(function (m) { return shown(m.overall); }).sort(function (a, b) { return a.overall.value - b.overall.value; });
     if (ps.length) {
       var lo = ps[0];
@@ -558,6 +581,14 @@
     });
     el.appendChild(tableDetails("Show as a table", recTable("Agreement before and after training", tItems, "pct", "Statement")));
 
+    var sens = items.map(function (m) { return { m: m, r: ((m.dims.sensitivity || [])[0]) }; }).filter(function (x) { return x.r && shown(x.r); });
+    if (sens.length) {
+      el.appendChild(h("div", { class: "callout", role: "note" },
+        h("p", null, h("b", null, "Sensitivity check: "), sens[0].r.caveat || "excluding respondents who gave the same answer throughout."),
+        h("p", null, "After-training agreement without them: " + sens.map(function (x) {
+          return "“" + lc(x.m.item_label) + "” " + fmt(x.r.value, "pct") + " (n = " + fmtInt(x.r.n) + ")";
+        }).join("; ") + ".")));
+    }
     var ch = items.map(function (m) { return { m: m, r: overall("change." + m.item + ".mean_points") }; }).filter(function (x) { return x.r; });
     if (ch.length) {
       el.appendChild(h("h3", null, "Average self-rated change"));
@@ -646,7 +677,9 @@
   // ---- Compare groups (one filter row scopes the chart, table and summary)
   function renderCompare() {
     var el = slot("compare");
-    var cands = metricsWhere(function (m) { return Object.keys(m.dims).length > 0 && m.dist_bin == null; });
+    var NOT_GROUPS = ["sensitivity"];
+    var groupDims = function (m) { return (m.dim_order || Object.keys(m.dims)).filter(function (d) { return NOT_GROUPS.indexOf(d) < 0; }); };
+    var cands = metricsWhere(function (m) { return groupDims(m).length > 0 && m.dist_bin == null; });
     if (!cands.length) { el.appendChild(empty("No group breakdowns in this data build.")); return; }
     el.appendChild(sub("Pick a measure and a way to split people into groups. Bars start at zero; the vertical line marks the result for everyone. Groups with fewer than " + T + " people are not shown on their own."));
     var mSel = h("select", { id: "cmp-metric" });
@@ -666,7 +699,7 @@
     mSel.value = def.key;
 
     function fillDims(m, keep) {
-      var dims = m.dim_order || Object.keys(m.dims);
+      var dims = groupDims(m);
       dSel.replaceChildren.apply(dSel, dims.map(function (d) { return h("option", { value: d }, META.dimension_labels[d] || d); }));
       dSel.value = dims.indexOf(keep) >= 0 ? keep : (dims.indexOf("county") >= 0 ? "county" : dims[0]);
     }
@@ -703,6 +736,10 @@
       if (cav) nodes.push(caveatBox(cav));
       // Plain-language summary: selection only (highest, lowest, whether their ranges overlap).
       var vis = sorted.filter(function (r) { return shown(r) && r.level !== "other_pooled"; });
+      if (isTime) {
+        var timedVis = vis.filter(function (r) { return monthIndex(r.level) != null; });
+        if (timedVis.length >= 2) vis = timedVis;
+      }
       var hidden = recs.filter(function (r) { return !shown(r); }).length;
       var mt = [];
       if (vis.length >= 2) {
@@ -718,7 +755,8 @@
       } else if (vis.length === 1) {
         mt.push("Only one group is large enough to show: " + vis[0].level_label + " (" + fmt(vis[0].value, m.unit) + ", n = " + fmtInt(vis[0].n) + ").");
       } else mt.push("No group is large enough to show on its own.");
-      if (hidden) mt.push(hidden + (hidden === 1 ? " group has" : " groups have") + " fewer than " + T + " people and " + (hidden === 1 ? "is" : "are") + " not shown on " + (hidden === 1 ? "its" : "their") + " own.");
+      var noun = isTime ? (dim === "training_month" ? ["month", "months"] : ["period", "periods"]) : ["group", "groups"];
+      if (hidden) mt.push(hidden + " " + (hidden === 1 ? noun[0] + " has" : noun[1] + " have") + " fewer than " + T + " people and " + (hidden === 1 ? "is" : "are") + " not shown on " + (hidden === 1 ? "its" : "their") + " own.");
       nodes.push(means(mt, ["Before acting on a gap, check that both groups have enough people (n) and that their ranges don’t overlap.",
         "For a low group, read its comments and talk with the presenters who serve it; then watch whether the gap closes next quarter."]));
       out.replaceChildren.apply(out, nodes);
@@ -745,7 +783,7 @@
         return (b.overall.value || 0) - (a.overall.value || 0) || (a.item_label < b.item_label ? -1 : 1);
       });
       var n0 = ms[0].overall.n;
-      el.appendChild(h("h3", null, "“" + th.fields[field] + "”"));
+      el.appendChild(h("h3", { id: "comments-" + field }, "“" + th.fields[field] + "”"));
       el.appendChild(sub("n = " + fmtInt(n0) + " people wrote something here."));
       el.appendChild(rowChart({ rows: ms.map(function (m) { var r = m.overall; return { label: m.item_label, sub: shown(r) ? fmtInt(r.numerator) + " of " + fmtInt(r.n) + " comments" : "n = " + fmtInt(r.n), lanes: [{ rec: r, series: { name: "", cls: "" } }],
         flag: isCatch(m) ? h("span", { class: "flag neutral", title: m.description || "" }, CATCH_ALL[m.item]) : flagFor(r) }; }),

@@ -56,6 +56,7 @@ MEASURE_LABELS = {
     "recommend": "Would recommend",
     "call_988": "Would call 988",
     "missing": "Data completeness",
+    "sample": "Who took the survey",
     "themes": "Comments",
 }
 ITEM_LABELS = {
@@ -68,6 +69,7 @@ ITEM_LABELS = {
     "score": "Would recommend the training (0–10)",
     "likelihood": "Likely to call 988 in a crisis (0–10)",
     "training_date": "Training date",
+    "respondents": "Respondents",
 }
 STAT_LABELS = {
     "agree_pct": "% agree or strongly agree",
@@ -85,7 +87,10 @@ DIMENSION_LABELS = {
     "language": "Survey language",
     "training_month": "Training month",
     "training_period": "Training period",
+    "sensitivity": "Sensitivity check",
 }
+SAMPLE_STAT_LABELS = {"pct": "% of all respondents", "count": "number of respondents"}
+SEASON_MONTH = {"winter": 1, "spring": 4, "summer": 7, "fall": 9, "autumn": 9}
 DIMENSION_ORDER = ["county", "role", "language", "training_period", "training_month"]
 TIME_DIMENSIONS = {"training_month", "training_period", "month", "period", "quarter"}
 LEVEL_LABELS = {
@@ -102,6 +107,8 @@ LEVEL_LABELS = {
     "multiple": "More than one role",
     "school_staff": "School staff",
     "other": "Other (e.g., community member)",
+    "other_periods": "Other months",
+    "excl_straightline": "Excluding same-answer-throughout responses",
 }
 MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 FIELD_LABELS = {"valuable": "Most valuable thing learned", "improve": "How to improve the training"}
@@ -215,6 +222,17 @@ def level_label(dimension: str, level: str, group: dict, raw_level: str | None =
     return pretty(level)
 
 
+def time_key(level: str) -> int:
+    """Months since year 0 for YYYY_MM, YYYY-MM_to_YYYY-MM and season_YYYY levels; unparseable levels sort last."""
+    m = re.match(r"(\d{4})[_-](\d{1,2})(?:_to_|$)", level)
+    if m:
+        return int(m.group(1)) * 12 + int(m.group(2)) - 1
+    m = re.fullmatch(r"(winter|spring|summer|fall|autumn)[_-](\d{4})", level)
+    if m:
+        return int(m.group(2)) * 12 + SEASON_MONTH[m.group(1)] - 1
+    return 10**9
+
+
 def dimension_label(dim: str) -> str:
     return DIMENSION_LABELS.get(dim, pretty(dim))
 
@@ -307,7 +325,8 @@ def group_metrics(records: list[dict], titles: dict) -> list[dict]:
                 "dist_bin": int(dist.group(1)) if dist else None,
                 "measure_label": MEASURE_LABELS.get(parts["measure"], pretty(parts["measure"])),
                 "item_label": titles.get(key) or ITEM_LABELS.get(parts["item"]) or pretty(parts["item"]),
-                "stat_label": STAT_LABELS.get(parts["stat"], pretty(parts["stat"])),
+                "stat_label": (SAMPLE_STAT_LABELS if parts["measure"] == "sample" else STAT_LABELS).get(
+                    parts["stat"], pretty(parts["stat"])),
                 "overall": None, "dims": {},
             }
         if r["dimension"] == "overall":
@@ -319,7 +338,10 @@ def group_metrics(records: list[dict], titles: dict) -> list[dict]:
         m = metrics[key]
         dims = {}
         for d in sorted(m["dims"], key=lambda d: (DIMENSION_ORDER.index(d) if d in DIMENSION_ORDER else 99, d)):
-            rows = sorted(m["dims"][d], key=lambda r: (r["level"] == "other_pooled", r["level"]))
+            if d in TIME_DIMENSIONS:
+                rows = sorted(m["dims"][d], key=lambda r: (time_key(r["level"]), r["level"]))
+            else:
+                rows = sorted(m["dims"][d], key=lambda r: (r["level"] == "other_pooled", r["level"]))
             dims[d] = rows
         m["dims"] = dims
         m["dim_order"] = list(dims)  # JSON objects are emitted with sorted keys; this keeps the intended order

@@ -81,3 +81,40 @@ Entry template:
   - `make_video.py --dry-run`: the number check passed against `outputs/`.
   - Speech timing with the Samantha voice at 182 wpm comes to 84.1 s planned (limit 120 s).
   - Before writing the "students vs. staff" line, I checked in `outputs/findings.json` that the ranges don't overlap: student recommend mean 7.22 (7.08–7.36, n = 1,051) vs. school staff 9.52 (9.34–9.71, n = 67).
+
+## 2026-11-06 00:50 ET: video PoC rendered; dashboard picks up findings v1.1 (time cuts, distributions, sensitivity, sample mix)
+- **Prompt (representative):** "Space freed, retry" (install ffmpeg and Chromium, then render the video proof of concept).
+- **What the AI produced:**
+  - Rendered `agents/tool/dist/Team17_Demo.mp4`:
+    - 83.1 s, 1280x720, H.264/AAC, 6.1 MB, metadata stripped;
+    - `.srt` captions alongside;
+    - 7 scenes, narration from macOS `say`.
+  - Dashboard changes for data's new findings (they answered #40):
+    - training-month line chart, broken at months with no trainings;
+    - season periods in date order;
+    - 0–10 histograms for the recommend and call-988 scores;
+    - a "Who answered" composition chart;
+    - the sensitivity check (excluding straight-line "Strongly disagree" responders) shown as a note in the learning section, kept out of the group picker.
+- **Errors / limitations caught, and how:**
+  - **Install problems:**
+    - Homebrew's ffmpeg install failed twice inside the command sandbox at `ca-certificates` (`undefined method '[]' for nil` in `load_tab`).
+    - A retry with the sandbox disabled was refused by the permission system. I did not work around it.
+    - Switched to `imageio-ffmpeg` (pip; static ffmpeg with libx264 and aac). It has no ffprobe, so `make_video.py` now reads the duration from ffmpeg's own output.
+    - Five ffmpeg dependencies Homebrew had poured stay in `/opt/homebrew/Cellar`. They are harmless and `brew autoremove` clears them.
+  - **The Playwright browser cache vanished between two runs.** `~/Library/Caches/ms-playwright` was gone, likely cleared under low disk space. Reinstalled with `--only-shell` (headless shell only, about 200 MB instead of about 570 MB).
+  - **Bugs found by reviewing frames pulled from the rendered video:**
+    - The legend's "95% range" swatch shared the `.ci` class with the absolutely positioned whiskers, so it floated to the top of the page as stray "⊢" marks. It had looked like a missing swatch in the first review.
+    - The 0–10 axis showed "-0" (`Math.ceil(-1e-9) * 2.5`) and steps of 2.5. Fixed to 0, 2, 4, …
+    - The narration about improvement comments played over the "most valuable" chart. The scene was split, with a new anchor on the "improve" chart.
+    - The closing line about IDs showed the caveats list. It now shows the "All numbers" table.
+    - Caption cards broke mid-phrase. They now split one card per sentence, into even halves when a sentence is long.
+  - **New-findings integration:**
+    - Season levels (`fall_2026`, `spring_2026`, `other_periods`) sorted alphabetically, putting fall before spring. Added chronological ordering.
+    - The "months with no trainings break the line" rule also hid the spring-to-fall line. It is now limited to monthly data.
+  - **Wording:** I had written "The conclusions don't change." under the sensitivity numbers. That interpretation isn't backed by a finding, so I removed it.
+  - **My own test was wrong:** it expected `spring_2026` before `2026_04`. Spring maps to April, so they tie and the tie breaks by name. The test was corrected, not the code.
+- **Manually verified against data:**
+  - Scene start times in the render were within 50 ms of plan.
+  - The narration number check passed on the final script.
+  - Frames at each scene matched the narration.
+  - Headless screenshots at 1200 px and 375 px showed no console errors and no horizontal scroll.

@@ -212,3 +212,11 @@ def test_walkthrough_notebook_runs_and_is_committed_clean(tmp_path, monkeypatch)
     ns: dict = {}
     for c in code_cells:
         exec(compile("".join(c["source"]), "walkthrough", "exec"), ns)  # noqa: S102 - our own notebook
+
+
+def test_time_levels_sort_chronologically_and_get_readable_labels():
+    levels = ["other_periods", "fall_2026", "spring_2026", "2026_04", "2025_10"]
+    assert sorted(levels, key=lambda lv: (build.time_key(lv), lv)) == ["2025_10", "2026_04", "spring_2026", "fall_2026", "other_periods"]  # spring = April; ties break by name
+    assert build.level_label("training_period", "fall_2026", {}) == "Fall 2026"
+    assert build.level_label("training_period", "other_periods", {}) == "Other months"
+    assert build.level_label("training_period", "2026-04_to_2026-05", {}) == "Apr 2026 – May 2026"

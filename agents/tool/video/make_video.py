@@ -92,27 +92,26 @@ def check_numbers(script_text: str, name: str) -> None:
 
 
 def caption_chunks(text: str, max_chars: int = 88) -> list[str]:
-    """Split narration into caption cards: sentence-first, then on word boundaries."""
-    sentences = re.split(r"(?<=[.!?:;])\s+", text.strip())
+    """Split narration into caption cards: one card per sentence; a long sentence is cut into
+    near-equal parts on word boundaries (no tiny leftovers)."""
+    sentences = [x for x in re.split(r"(?<=[.!?])\s+", text.strip()) if x]
     chunks: list[str] = []
     for sent in sentences:
-        words, line = sent.split(), ""
-        for w in words:
-            if line and len(line) + 1 + len(w) > max_chars:
+        if len(sent) <= max_chars:
+            chunks.append(sent)
+            continue
+        parts = -(-len(sent) // max_chars)
+        target = len(sent) / parts
+        line = ""
+        for w in sent.split():
+            if line and len(line) >= target * 0.92 and len(chunks) < 10_000:
                 chunks.append(line)
                 line = w
             else:
                 line = f"{line} {w}".strip()
         if line:
             chunks.append(line)
-    # merge very short tails into the previous card
-    merged: list[str] = []
-    for c in chunks:
-        if merged and len(c) < 18 and len(merged[-1]) + 1 + len(c) <= max_chars + 12:
-            merged[-1] = f"{merged[-1]} {c}"
-        else:
-            merged.append(c)
-    return merged
+    return chunks
 
 
 # ----------------------------------------------------------------------------- audio
@@ -310,11 +309,15 @@ def encode(video: Path, lead: float, scenes: list[dict], total: float, out: Path
 
 def probe_duration(path: Path) -> float | None:
     ff = shutil.which("ffprobe")
-    if not ff:
-        return None
-    out = subprocess.run([ff, "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(path)],
-                         capture_output=True, text=True).stdout.strip()
-    return float(out) if out else None
+    if ff:
+        out = subprocess.run([ff, "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(path)],
+                             capture_output=True, text=True).stdout.strip()
+        if out:
+            return float(out)
+    # No ffprobe (e.g. imageio-ffmpeg): ffmpeg prints "Duration: HH:MM:SS.ss" when given only an input.
+    err = subprocess.run([ffmpeg_exe(), "-hide_banner", "-i", str(path)], capture_output=True, text=True).stderr
+    m = re.search(r"Duration:\s*(\d+):(\d+):([\d.]+)", err)
+    return int(m.group(1)) * 3600 + int(m.group(2)) * 60 + float(m.group(3)) if m else None
 
 
 # ----------------------------------------------------------------------------- main
