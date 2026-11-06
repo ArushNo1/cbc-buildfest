@@ -183,6 +183,30 @@
       "denominator": "all rows"
     },
     {
+      "id": "post.identify_crisis.agree_pct.sensitivity.excl_straightline",
+      "value": 92.1136,
+      "n": 1268,
+      "n_missing": 0,
+      "numerator": 1168,
+      "denominator": "respondents with a recognized answer, excluding those who chose 'Strongly disagree' on every post item"
+    },
+    {
+      "id": "post.describe_988.agree_pct.sensitivity.excl_straightline",
+      "value": 92.6656,
+      "n": 1268,
+      "n_missing": 0,
+      "numerator": 1175,
+      "denominator": "respondents with a recognized answer, excluding those who chose 'Strongly disagree' on every post item"
+    },
+    {
+      "id": "post.know_when_to_use.agree_pct.sensitivity.excl_straightline",
+      "value": 94.5584,
+      "n": 1268,
+      "n_missing": 0,
+      "numerator": 1199,
+      "denominator": "respondents with a recognized answer, excluding those who chose 'Strongly disagree' on every post item"
+    },
+    {
       "id": "post.identify_crisis.agree_pct.county.anne_arundel",
       "value": 90.1814,
       "n": 937,
@@ -245,6 +269,70 @@
       "n_missing": 18,
       "numerator": null,
       "denominator": "Prince George's respondents who gave a 0-10 recommend score"
+    },
+    {
+      "id": "post.identify_crisis.agree_pct.county.montgomery",
+      "value": 91.1765,
+      "n": 34,
+      "n_missing": 0,
+      "numerator": 31,
+      "denominator": "Montgomery respondents with a recognized answer to this post item"
+    },
+    {
+      "id": "post.describe_988.agree_pct.county.montgomery",
+      "value": 97.0588,
+      "n": 34,
+      "n_missing": 0,
+      "numerator": 33,
+      "denominator": "Montgomery respondents with a recognized answer to this post item"
+    },
+    {
+      "id": "post.know_when_to_use.agree_pct.county.montgomery",
+      "value": 97.0588,
+      "n": 34,
+      "n_missing": 0,
+      "numerator": 33,
+      "denominator": "Montgomery respondents with a recognized answer to this post item"
+    },
+    {
+      "id": "recommend.score.mean.county.montgomery",
+      "value": 9.3824,
+      "n": 34,
+      "n_missing": 0,
+      "numerator": null,
+      "denominator": "Montgomery respondents who gave a 0-10 recommend score"
+    },
+    {
+      "id": "post.identify_crisis.agree_pct.county.queen_annes",
+      "value": 91.6667,
+      "n": 12,
+      "n_missing": 0,
+      "numerator": 11,
+      "denominator": "Queen Anne's respondents with a recognized answer to this post item"
+    },
+    {
+      "id": "post.describe_988.agree_pct.county.queen_annes",
+      "value": 91.6667,
+      "n": 12,
+      "n_missing": 0,
+      "numerator": 11,
+      "denominator": "Queen Anne's respondents with a recognized answer to this post item"
+    },
+    {
+      "id": "post.know_when_to_use.agree_pct.county.queen_annes",
+      "value": 91.6667,
+      "n": 12,
+      "n_missing": 0,
+      "numerator": 11,
+      "denominator": "Queen Anne's respondents with a recognized answer to this post item"
+    },
+    {
+      "id": "recommend.score.mean.county.queen_annes",
+      "value": 7.1818,
+      "n": 11,
+      "n_missing": 1,
+      "numerator": null,
+      "denominator": "Queen Anne's respondents who gave a 0-10 recommend score"
     },
     {
       "id": "post.identify_crisis.agree_pct.role.student",

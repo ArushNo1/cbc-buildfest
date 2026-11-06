@@ -103,7 +103,9 @@ def groups(df, c):
     if "county" in c:
         county = df[c["county"]].map(norm).str.replace(r" county.*$", "", regex=True)
         out += [("county", "anne_arundel", county == "anne arundel", "Anne Arundel"),
-                ("county", "prince_georges", county == "prince george's", "Prince George's")]
+                ("county", "prince_georges", county == "prince george's", "Prince George's"),
+                ("county", "montgomery", county == "montgomery", "Montgomery"),
+                ("county", "queen_annes", county == "queen anne's", "Queen Anne's")]
     if "role" in c:
         roles = df[c["role"]].map(lambda v: {norm(t) for t in str(v).split(";") if norm(t)} if pd.notna(v) else set())
         for level, test, words in [("student", "student", "student"), ("school_staff", "school staff", "school staff"),
@@ -144,6 +146,12 @@ def compute(df):
         d = df[c["training_date"]]
         out.append({"id": "missing.training_date.count.overall", "value": int(d.isna().sum()), "n": len(d),
                     "n_missing": int(d.isna().sum()), "numerator": None, "denominator": "all rows"})
+    post_cols = [f"post_{i}" for i in ITEMS if f"post_{i}" in s]
+    if post_cols:  # sensitivity: drop respondents answering "Strongly disagree" (1) on every post item
+        keep = ~pd.concat([s[k] == 1 for k in post_cols], axis=1).all(axis=1)
+        for k in post_cols:
+            out.append(agree_pct(f"{k.replace('_', '.', 1)}.agree_pct.sensitivity.excl_straightline", s[k][keep],
+                                 "respondents with a recognized answer, excluding those who chose 'Strongly disagree' on every post item"))
     for dim, level, mask, words in groups(df, c):
         for item in ITEMS:
             if f"post_{item}" in s:
