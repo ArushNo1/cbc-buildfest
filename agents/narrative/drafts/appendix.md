@@ -36,7 +36,6 @@ Errors were caught by tests, by cross-checks, or by a person reading the output.
 - **Separate recompute.** Code written separately from the pipeline recomputed 65 metrics from the raw file, and all 65 matched.
 - **Second recompute of everything.** A separate script, written by another agent, recomputed all 222 findings from the raw file, and all 222 matched. It caught all 3 errors deliberately planted in a test copy.
 - **Reproducible rebuild.** A rebuild on a second machine reproduced the findings file byte-for-byte.
-- **Same numbers in the browser.** The website reruns the same code inside the browser. On the real file its findings matched the official run byte-for-byte, and all 6 synthetic test files rebuilt without errors.
-- **Robustness.** Synthetic test files (a new county, new answer labels, extra rows, a missing column, shifted dates) confirm the tool flags these cases rather than crashing.
+- **Robustness.** The website reruns the same code in the browser and matched the official findings byte-for-byte. Six synthetic test files (new county, new labels, extra rows, a missing column, shifted dates) are flagged rather than crashing.
 - **Hand recompute.** A team member recomputed 20 headline numbers by hand in Excel from the raw file, and all 20 matched the pipeline in both value and n.
 - **Quote review.** A team member read all 11 candidate quotes in the raw file and confirmed none contain personal information.
