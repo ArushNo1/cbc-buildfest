@@ -10,3 +10,10 @@ TO RE-RUN IT ON THE PROVIDED DATASET (or next month's export)
 3. Wait for "Done". The first update takes about a minute while the browser loads its tools; later updates take seconds. Everything is calculated inside the browser tab: the file is not uploaded anywhere.
 4. The dashboard rebuilds from the file. Counties or answer labels it doesn't recognize are listed under "How to read this, and its limits" → "Data checks", never dropped.
 5. Optional: click "Download this dashboard" to save it as a single file you can email.
+
+SOURCE CODE (optional, for reviewers)
+1. Click "Source code (.zip)" at the top right of the website, and unzip it.
+2. With Python 3.10 or newer, in the unzipped Team17_TechnicalArtifact folder, copy the dataset into data/raw/ and run:
+   python3 -m pip install -r requirements.txt
+   make run DATA=data/raw/BuildFest_EveryMind_Survey_Data_FULL.xlsx
+README.md inside the zip has the full steps, including Windows.

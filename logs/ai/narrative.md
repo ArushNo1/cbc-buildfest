@@ -138,3 +138,4 @@ Entry template:
   - `site_check.py` checks that the link downloads a valid zip with the pipeline and no data files: 13/13 locally.
   - The form text drops the code section until production is verified with the zip; it is added back after the redeploy.
 - **Zip rebuilt:** it differed from the committed one only in `.gitignore` (narrative's env-file ignore). `submission/` re-assembled; verify reports 0 problems.
+- **Redeploy verified (#50):** at 14:23 ET production served the zip, byte-identical to the committed one, and `site_check.py --url` passed 13/13. The form text's source-code section was restored, pointing at the live link.
