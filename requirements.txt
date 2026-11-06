@@ -3,3 +3,5 @@ openpyxl>=3.1
 jsonschema>=4.0
 pytest>=7.0
 pypdf>=4.0
+python-pptx
+reportlab
