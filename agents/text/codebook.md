@@ -1,82 +1,66 @@
 # Comment codebook (text agent)
 
-Offline rules for the two free-text fields. The executable copy is `agents/text/themes.py`. This file is the include/exclude definition. v0 of `contracts/themes.schema.json` is accepted as the v1 contract: no fields renamed or removed, so there is no breaking handoff.
+Offline rules for the two free-text fields. The executable copy is `agents/text/themes.py`. A comment can match more than one theme. Percents use non-empty comments as the denominator and can sum past 100.
 
-Run:
+`other_unclear` and `no_substantive` are exclusive of other themes. A suggestion that also says "great" keeps the suggestion. A comment with no suggestion, including "nothing", "no questions", and praise only, is `no_substantive`.
 
-```bash
-python3 agents/text/themes.py --fixture          # synthetic rows, writes outputs/themes.json
-python3 agents/text/themes.py                    # data/processed/survey_clean.csv after make data
-```
+County, role, and training-period levels with n under 10 are pooled into `other_pooled`. `en` and `es` stay separate. `n` under 10 is suppressed. `n` is still shown.
 
-`--fixture` output is labeled synthetic in the `note` field. Do not cite it.
-
-## What a count means
-
-- One response can carry more than one theme. Percents can sum past 100.
-- `n` is non-empty comments for that field in that group. Blank cells are not in the denominator.
-- `n_mentions` is how many of those comments matched the theme.
-- `pct` is `100 * n_mentions / n`, rounded half-to-even to 1 decimal.
-- `small_n` is `n < 10`. Those cells are suppressed (`n_mentions` and `pct` null). `n` is still shown.
-- County, role, and training period levels with `n < 10` are pooled into `other_pooled` before counting. They are not listed on their own.
-- `language` levels `en` and `es` are never pooled. If `es` has `n < 10`, it stays visible and its counts are suppressed.
-
-Cite IDs as `themes.<field>.<theme_id>.pct.overall` or `themes.<field>.<theme_id>.pct.<dimension>.<level>`.
+Until `data/processed/survey_clean.csv` exists, `themes.py` reads the raw workbook and applies a provisional map: language from the English or Español label, role to student / school_staff / caregiver / other, and the county spellings in the case brief. The clean file wins once the data agent publishes it.
 
 ## Field: most valuable (`valuable`)
 
 | theme_id | Label | Include | Exclude |
 |---|---|---|---|
-| recognize_crisis | Recognizing a crisis | Warning signs, how to tell someone is in crisis, señales de alerta | A bare mention of the word crisis with no recognition skill |
-| what_988_is | What 988 is | What the lifeline is, how a call or text works, línea 988 | When to use it (that is `when_to_use`) |
-| when_to_use | When to use 988 | When to call or text, 988 versus 911, cuándo llamar | Logistics of the training itself |
-| confidence_to_help | Confidence to help | Feels more prepared, knows what to say or do, confianza para ayudar | Praise of the presenter only |
-| practice_scenarios | Practice and scenarios | Role play, scenarios, examples, practice, dinámica, ejemplos | A request for more of these (that belongs on `improve`) |
-| resources_shared | Materials and resources | Handout, card, link, resource list, folleto, recursos | A request for local follow-up (improve: `local_followup`) |
-| presenter_quality | Presenter | Presenter, trainer, or speaker was clear, engaging, or knowledgeable | A person's name. Names are a PII flag, not a theme |
-| other_unclear | Other or unclear | Non-empty and not filler, and no theme above matched | Filler (`no_substantive`) |
-| no_substantive | No substantive comment | The whole comment is filler: n/a, nothing, nothing it was great, everything, good, thanks, nada, nada todo bien, gracias, idk | Any comment that also states a specific point |
+| what_988_is | What 988 is | Names 988, the hotline, the warmline, the number, or how it works | A specific lesson with no name for the service |
+| who_can_use | Who can use it | Anyone, any age, for everyone | "Everyone" with no claim that everyone can use the service |
+| always_available | Always available | 24/7, anytime, confidential, free, languages, a real person | A one-time story with no access claim |
+| not_only_crisis | Not only suicide or crisis | Not just suicide, no need to be in crisis, any reason | A warning-sign comment with no such claim |
+| when_to_use | When to use 988 | When to call or text, 988 versus 911 | Who may call (`who_can_use`) |
+| confidence_to_help | Helping someone | How to help a friend or family, what to say, reach out, pedir ayuda | The service exists but no helping skill |
+| recognize_crisis | Recognizing a crisis | Warning signs, risk factors, how to identify, señales | The word crisis with no recognition skill |
+| how_contact_works | What a contact is like | Wait time, counselor, consent, safety plan, police | The bare fact that 988 exists |
+| scope_of_need | Scale of the need | A statistic, a death count, self-harm rates | A personal story with no count |
+| practice_scenarios | Practice and scenarios | Role play, scenarios, examples | A request for more of these on the improve field |
+| resources_shared | Materials | Handout, magnet, slides, video, website | Praise of the presenter only |
+| presenter_quality | Presenter | Presenter, trainer, speaker, facilitator | A person's name. Names are a PII flag |
+| other_unclear | Other or unclear | Non-empty, not filler, no theme above | Filler |
+| no_substantive | No substantive comment | The whole comment is filler: n/a, nothing, good, everything, idk, gracias | A specific lesson |
 
 ## Field: what to improve (`improve`)
 
+Many answers are not suggestions. They are "no questions" or questions about how 988 works. Those are coded on purpose.
+
 | theme_id | Label | Include | Exclude |
 |---|---|---|---|
-| more_time | Session length or pace | Too fast, rushed, too long, too short, wanted longer, más tiempo, muy rápido | "Time" with no pace or duration complaint |
-| more_interaction | More interaction | More discussion, activities, less lecture, más interacción | A scenario request with no interaction word (`more_examples`) |
-| more_examples | More examples | More examples, cases, stories, or videos, más ejemplos | Examples the person already valued (that is the other field) |
-| practical_scripts | Practical scripts | What to say, step by step, a script, qué decir | General confidence with no ask for a script |
-| local_followup | Local follow-up | County resources, follow-up, something for our school or area | A handout they already received (`resources_shared` on valuable) |
-| accessibility | Access and language | Spanish materials, captions, hybrid or online, disability access, idioma | A one-word language label with no request |
-| logistics | Logistics | Room, audio, mic, slides, schedule, parking, sonido | Content complaints |
-| content_depth | Depth and populations | Too basic, too advanced, more on youth, LGBTQ, veterans, más profundo | A logistics complaint |
-| other_unclear | Other or unclear | Same rule as the valuable field | Filler |
-| no_substantive | No substantive comment | Same filler rule, including "nothing to improve" and "todo bien" | A specific change request |
-
-Spanish comments use the same rules, with Spanish phrases in the patterns. They are also counted in `spanish.n_comments` when `language` is `es` and at least one comment is non-empty.
+| more_time | Session length or pace | Too fast, too short, more time, one hour, pressed for time | Praise that the pace was fine |
+| more_interaction | More interaction | Interactive, Kahoot, a game, discussion, audience, participation | A video request with no interaction word |
+| more_examples | More examples | Examples, scenarios, videos, a dialogue, a mock call | Slides to keep (`materials`) |
+| practical_scripts | Practical scripts | What to say, a script, step by step | A general request for examples |
+| materials | Slides and handouts | Slides, ppt, handout, a brief note to keep | A complaint that the video would not play |
+| local_followup | Local follow-up | County resources, follow-up, resources for our county | A general 988 fact |
+| accessibility | Access and language | Spanish materials, captions, hybrid, disability access | A request to visit more schools (`share_wider`) |
+| logistics | Logistics | Tech, bugs, could not see the video, in person, food, room, audio | A request for more videos |
+| content_depth | Depth and populations | Beyond suicide, LGBTQ, learn more, more on identifying a crisis | A logistics complaint |
+| share_wider | Tell more people | More families, schools, or a wider audience, compartir | A change to the session itself |
+| audience_question | Question, not a suggestion | How many, what if, why, or a question mark, and no training change | "No questions" (`no_substantive`) |
+| other_unclear | Other or unclear | Same rule as the valuable field | Filler or praise only |
+| no_substantive | No substantive comment | Nothing, no questions, no notes, praise and no change request | Any specific suggestion |
 
 ## PII screen
 
-Applied to every non-empty comment before any quote can leave the machine.
-
-Flags:
-
-- Email addresses.
-- Phone numbers written with separators, including a 7-digit local number such as `555-0100`. Bare digit strings are not flagged, so response ids are not treated as phones. `988` is not a phone number.
-- School phrases (`high school`, `middle school`, `elementary school`, `escuela`, `my school`).
-- Honorific plus a capitalized name (`Dr. Rivera`), "my name is", and a role word plus a capitalized name (`trainer Jane Doe`).
-
-`pii_screen.n_flagged` counts non-empty comment fields with at least one flag, not rows. The screen misses names that have no honorific. That is why quotes go to the human as response ids, and `outputs/quotes_reviewed.json` is written only after that review. No comment text is written to git.
+Each non-empty comment is checked for an email, a separated phone number (10-digit or 7-digit), a school phrase, an honorific plus a name, "my name is", a role word such as trainer plus a name, and two consecutive capitalized words that are not a place or the service name. `988` is not a phone number. A single first name with no role word is still missed. `n_flagged` counts comment fields, not rows. Quotes still need human review.
 
 ## Validation
 
-Not run yet. Themes v1 will draw a stratified sample with seed 17, hand-code it blind to the classifier, and store the labels only under `data/processed/`. Until that happens, `agreement_pct` stays null. This codebook does not claim an agreement rate.
+A stratified sample, seed 17, is hand-coded by the text agent from this codebook. Every non-empty Spanish comment is included, plus 25 English comments per field. Labels stay in `data/processed/hand_labels.json` (response id and theme ids only). `agreement_pct` is exact set match. `cohen_kappa` is the mean of per-theme binary kappas. The same agent wrote the rules and the labels, so the figure is a consistency check, not an independent coder.
 
 ## Groups
 
 | dimension | level | rule |
 |---|---|---|
 | overall | all | Every non-empty comment for that field |
-| language | en, es, other languages | `en` and `es` stay separate. Any other language with n under 10 joins `other_pooled` |
-| county | canonical county or `other_pooled` | From `county`. Levels under 10 are pooled |
-| role | student, a single other role, multiple, unspecified, or `other_pooled` | `student` if any role token contains student; otherwise the only token; otherwise `multiple`. Levels under 10 are pooled |
-| training_period | date band or `other_pooled` | From `training_month`, else the first 7 characters of `training_date`. Bands: 2025-10 to 2026-03, 2026-04 to 2026-05, 2026-06 to 2026-08, 2026-09 to 2026-10. Anything else is `other`. Levels under 10 are pooled |
+| language | en, es | From the language column. These two are never pooled |
+| county | canonical county or other_pooled | Provisional map until the clean file exists |
+| role | student, school_staff, caregiver, other, multiple, or other_pooled | Student wins if any role token says student |
+| training_period | date band or other_pooled | 2025-10 to 2026-03, 2026-04 to 2026-05, 2026-06 to 2026-08, 2026-09 to 2026-10 |

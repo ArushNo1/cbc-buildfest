@@ -12,20 +12,26 @@ Recompute from the raw xlsx in Excel, independently of the pipeline. Steps per I
 
 | Finding ID | Pipeline value (n) | Human value (n) | Match? | Who / when | Notes |
 |---|---|---|---|---|---|
-| post.identify_crisis.agree_pct.overall | 89.92% (1299) | 89.92% (1299) | Yes | Human verified / Nov 5 | 1,168 agree / 1,299 |
-| post.describe_988.agree_pct.overall | 90.45% (1299) | 90.45% (1299) | Yes | Human verified / Nov 5 | 1,175 agree / 1,299 |
-| post.know_when_to_use.agree_pct.overall | 92.30% (1299) | 92.30% (1299) | Yes | Human verified / Nov 5 | 1,199 agree / 1,299 |
-| pre.identify_crisis.agree_pct.overall | 72.21% (1299) | 72.21% (1299) | Yes | Human verified / Nov 5 | 938 agree / 1,299 |
-| pre.describe_988.agree_pct.overall | 46.50% (1299) | 46.50% (1299) | Yes | Human verified / Nov 5 | 604 agree / 1,299 |
-| pre.know_when_to_use.agree_pct.overall | 55.66% (1299) | 55.66% (1299) | Yes | Human verified / Nov 5 | 723 agree / 1,299 |
-| change.describe_988.mean_points.overall | +1.11 pts (1299) | +1.11 pts (1299) | Yes | Human verified / Nov 5 | Mean post 4.34 - pre 3.23 |
-| quality.engaging.agree_pct.overall | 88.15% (1148) | 88.15% (1148) | Yes | Human verified / Nov 5 | 1,012 agree / 1,148 (151 missing) |
-| quality.knowledgeable.agree_pct.overall | 90.31% (1145) | 90.31% (1145) | Yes | Human verified / Nov 5 | 1,034 agree / 1,145 (154 missing) |
-| quality.organized.agree_pct.overall | 91.76% (1141) | 91.76% (1141) | Yes | Human verified / Nov 5 | 1,047 agree / 1,141 (158 missing) |
-| recommend.score.mean.overall | 7.59 (1266) | 7.59 (1266) | Yes | Human verified / Nov 5 | Sum 9,605 / 1,266 (33 missing) |
-| recommend.score.nps.overall | +12.01 (1266) | +12.01 (1266) | Yes | Human verified / Nov 5 | 518 promoters - 366 detractors |
-| call_988.likelihood.mean.overall | 7.66 (293) | 7.66 (293) | Yes | Human verified / Nov 5 | Sum 2,244 / 293 (1,006 missing) |
-| missing.training_date.count.overall | 3 (1299) | 3 (1299) | Yes | Human verified / Nov 5 | 3 blank date cells |
+| `call_988.likelihood.mean.overall` | 7.66 (n=293) | 7.66 (n=293) | Yes | Daksh / Nov 5 | Verified in Excel |
+| `change.describe_988.mean_points.overall` | 1.11 (n=1299) | 1.11 (n=1299) | Yes | Daksh / Nov 5 | Verified in Excel |
+| `change.identify_crisis.mean_points.overall` | 0.46 (n=1299) | 0.46 (n=1299) | Yes | Daksh / Nov 5 | Verified in Excel |
+| `change.know_when_to_use.mean_points.overall` | 1.01 (n=1299) | 1.01 (n=1299) | Yes | Daksh / Nov 5 | Verified in Excel |
+| `post.describe_988.agree_pct.overall` | 90.45 (n=1299) | 90.45 (n=1299) | Yes | Daksh / Nov 5 | Verified in Excel |
+| `post.identify_crisis.agree_pct.county.queen_annes` | 91.67 (n=12) | 91.67 (n=12) | Yes | Daksh / Nov 5 | Verified in Excel |
+| `post.identify_crisis.agree_pct.language.es` | 84.21 (n=19) | 84.21 (n=19) | Yes | Daksh / Nov 5 | Verified in Excel |
+| `post.identify_crisis.agree_pct.overall` | 89.92 (n=1299) | 89.92 (n=1299) | Yes | Daksh / Nov 5 | Verified in Excel |
+| `post.identify_crisis.agree_pct.role.student` | 89.54 (n=1080) | 89.54 (n=1080) | Yes | Daksh / Nov 5 | Verified in Excel |
+| `post.know_when_to_use.agree_pct.overall` | 92.30 (n=1299) | 92.30 (n=1299) | Yes | Daksh / Nov 5 | Verified in Excel |
+| `pre.describe_988.agree_pct.overall` | 46.50 (n=1299) | 46.50 (n=1299) | Yes | Daksh / Nov 5 | Verified in Excel |
+| `pre.identify_crisis.agree_pct.overall` | 72.21 (n=1299) | 72.21 (n=1299) | Yes | Daksh / Nov 5 | Verified in Excel |
+| `pre.know_when_to_use.agree_pct.overall` | 55.66 (n=1299) | 55.66 (n=1299) | Yes | Daksh / Nov 5 | Verified in Excel |
+| `quality.engaging.agree_pct.overall` | 88.15 (n=1148) | 88.15 (n=1148) | Yes | Daksh / Nov 5 | Verified in Excel |
+| `quality.organized.agree_pct.overall` | 91.76 (n=1141) | 91.76 (n=1141) | Yes | Daksh / Nov 5 | Verified in Excel |
+| `recommend.score.mean.county.anne_arundel` | 7.15 (n=923) | 7.15 (n=923) | Yes | Daksh / Nov 5 | Verified in Excel |
+| `recommend.score.mean.county.prince_georges` | 8.74 (n=291) | 8.74 (n=291) | Yes | Daksh / Nov 5 | Verified in Excel |
+| `recommend.score.mean.role.caregiver_parent` | 9.46 (n=69) | 9.46 (n=69) | Yes | Daksh / Nov 5 | Verified in Excel |
+| `recommend.score.mean.role.school_staff` | 9.52 (n=67) | 9.52 (n=67) | Yes | Daksh / Nov 5 | Verified in Excel |
+| `recommend.score.mean.role.student` | 7.22 (n=1051) | 7.22 (n=1051) | Yes | Daksh / Nov 5 | Verified in Excel |
 
 ## Comment classifier validation (text)
 | Field | Sample size | How drawn | Coded by | Agreement % | Kappa | Notes |

@@ -27,3 +27,16 @@ Entry template:
 - **Error 4 (AI fixture generator):** missing training dates were drawn at random (p=0.25%), so the n=300 base fixture had **zero** missing dates, while the real export has 3. It looked faithful but missed a known edge case. **Caught by** reading the missing-value counts per column. **Fix:** a fixed minimum of 1 missing date, and a test asserting ≥1.
 - **Manually verified:** (1) the crosscheck matched label counts tallied separately in-session from the raw file (see docs/verification.md); (2) the base fixture has the same 20 headers (byte-for-byte, NBSPs included), the same dtypes, and label sets that are subsets of the real ones. This is asserted by a test that runs whenever the raw file is present locally.
 - **Observation passed to data (aggregate only):** 31 of 1,299 respondents chose "Strongly disagree" on all 3 post items (17 on all 6 knowledge items). Possible misread scale or same-answer-throughout responses; worth a data-quality flag. Not adjudicated here.
+## Thu Nov 5 ~23:15 ET: verifying the data agent's findings v1 handoff (#37)
+- **Prompt (representative):** "data agent just committed. Do what you need to do next."
+- **What was claimed:** the data agent (#37, #35) reported "100% agreement with crosscheck (54/54)".
+- **Independently verified, not taken on trust:**
+  - Re-ran `make crosscheck`: 54/54 agree. Extended it to the 8 new county cuts (Montgomery n=34, Queen Anne's n=12): 62/62.
+  - Grepped `agents/data/pipeline.py` for any use of the crosscheck: none, only a docstring mention.
+  - Rebuilt findings from the raw file on this machine: byte-identical to the committed outputs.
+  - Schema v1 valid; small-n suppression consistent; caveats and CIs present.
+- **Limitation found:** the data agent tuned its definitions to match the crosscheck's (D-010), so 62/62 shows the code is right under shared definitions. It does not show that two independent analysts would choose the same definitions. The human Excel recompute (#29) remains the definition-independent check.
+- **Error caught (data agent's AI-written limitations.md):** "excluding these 31 rows raises post-agreement proportions by approximately 2.4 percentage points." Recomputed from raw: +2.20 / +2.21 / +2.26 pp (n 1,299 → 1,268), and the number had no finding ID. **Fix requested** to:data: correct the text and publish the three `*.sensitivity.excl_straightline` IDs. The crosscheck now computes them, so they are diffed when they appear.
+## Thu Nov 5 ~23:45 ET: memo v0
+- **What the AI produced:** `agents/narrative/drafts/memo.md` (883 words). Every number is tagged `[F:id]` against findings v1.
+- **Error caught by our own tool:** the first draft had a fabricated tag (a "62 metrics" count tagged with an unrelated finding ID) and untagged percentages ("95%", "77%", "12%"). check_numbers would have rejected all of them. They were reworded with no numbers, and check_numbers then reported 0 problems.

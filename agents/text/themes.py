@@ -18,6 +18,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_INPUT = ROOT / "data" / "processed" / "survey_clean.csv"
+DEFAULT_XLSX = ROOT / "data" / "raw" / "BuildFest_EveryMind_Survey_Data_FULL.xlsx"
+HAND_LABELS = ROOT / "data" / "processed" / "hand_labels.json"
 DEFAULT_OUTPUT = ROOT / "outputs" / "themes.json"
 SMALL_N = 10
 
@@ -37,6 +39,96 @@ THEMES = [
             r"recogniz\w* (a |the )?crisis",
             r"recogniz\w* signs",
             r"how to tell (if |when )?someone",
+            r"identif\w* (sign|when)",
+            r"risk factor",
+            r"\bdetectar\b",
+            r"\bsenales\b",
+            r"\bsintomas\b",
+        ],
+    },
+    {
+        "theme_id": "who_can_use",
+        "field": "valuable",
+        "label": "Who can use 988",
+        "description": "Anyone can use it, any age, or it is for everyone.",
+        "patterns": [
+            r"\banyone\b",
+            r"\banybody\b",
+            r"any age",
+            r"for everyone",
+            r"who has access",
+            r"open to all",
+            r"no matter who",
+            r"everyone can",
+        ],
+    },
+    {
+        "theme_id": "always_available",
+        "field": "valuable",
+        "label": "Always available",
+        "description": "24/7, anytime, free, confidential, many languages, or a real person answers.",
+        "patterns": [
+            r"24\s*/\s*7",
+            r"24 hours",
+            r"\b365\b",
+            r"any\s*time",
+            r"always (available|open)",
+            r"\bconfidential\b",
+            r"\bprivacy\b",
+            r"free and confidential",
+            r"real person",
+            r"not a bot",
+            r"\blanguages\b",
+            r"\bidioma\b",
+            r"\bspanish\b",
+            r"available to all",
+            r"text and chat",
+        ],
+    },
+    {
+        "theme_id": "not_only_crisis",
+        "field": "valuable",
+        "label": "Not only suicide or crisis",
+        "description": "You do not have to be suicidal or in crisis, and any reason is enough.",
+        "patterns": [
+            r"not just (for )?(suicide|suicidal)",
+            r"isn'?t just for",
+            r"don'?t have to be in (a |direct )?crisis",
+            r"doesn'?t have to be (during|in)( a)? crisis",
+            r"do not have to be",
+            r"any reason",
+            r"for anything",
+            r"for everything",
+            r"about anything",
+        ],
+    },
+    {
+        "theme_id": "how_contact_works",
+        "field": "valuable",
+        "label": "What a contact is like",
+        "description": "Wait time, a counselor, consent, a safety plan, or what happens on the call.",
+        "patterns": [
+            r"wait time",
+            r"\bcounselor",
+            r"\bconsent\b",
+            r"safety plan",
+            r"\bseconds?\b",
+            r"transfer you",
+            r"won'?t try to find you",
+            r"\bpolice\b",
+        ],
+    },
+    {
+        "theme_id": "scope_of_need",
+        "field": "valuable",
+        "label": "Scale of the need",
+        "description": "A statistic, a death count, or how often suicide or self-harm happens.",
+        "patterns": [
+            r"statistic",
+            r"every 11 minutes",
+            r"die (by|of|from) suicide",
+            r"self[-\s]?harm",
+            r"\bincidence\b",
         ],
     },
     {
@@ -47,9 +139,17 @@ THEMES = [
         "patterns": [
             r"\b988\b",
             r"lifeline",
+            r"hotline",
+            r"warmline",
             r"linea de crisis",
             r"que es el 988",
-            r"how (a )?(call|text) works",
+            r"the number",
+            r"phone number",
+            r"what it is",
+            r"how (it|they) works?",
+            r"how the (process|service) works?",
+            r"el recurso",
+            r"\bresource\b",
         ],
     },
     {
@@ -59,9 +159,12 @@ THEMES = [
         "description": "When to contact 988, including versus 911.",
         "patterns": [
             r"when to (call|text|use|contact)",
+            r"who to call",
+            r"when you need help",
+            r"how to (access|use)",
+            r"como usar",
             r"cuando (llamar|usar|contactar)",
             r"puedo llamar",
-            r"anyone can call",
             r"\b911\b",
             r"instead of (calling )?911",
         ],
@@ -80,7 +183,19 @@ THEMES = [
             r"how to help",
             r"como ayudar",
             r"support a friend",
-            r"ayudar a un amigo",
+            r"help (a |my )?(friend|others|someone|family)",
+            r"ayudar a",
+            r"pedir ayuda",
+            r"hay ayuda",
+            r"reach out",
+            r"how to get (the )?help",
+            r"ask for help",
+            r"con mi familia",
+            r"nuestros hijos",
+            r"not alone",
+            r"how to talk",
+            r"talk to",
+            r"\bdetectar\b",
         ],
     },
     {
@@ -111,6 +226,9 @@ THEMES = [
             r"resource list",
             r"\bwallet card\b",
             r"the (link|website|card)\b",
+            r"\bmagnet",
+            r"\bslides\b",
+            r"\bvideo\b",
         ],
     },
     {
@@ -141,6 +259,11 @@ THEMES = [
             r"not enough time",
             r"\blonger\b",
             r"more sessions",
+            r"pressed for time",
+            r"one hour",
+            r"more minutes",
+            r"time management",
+            r"not sufficient",
         ],
     },
     {
@@ -155,6 +278,14 @@ THEMES = [
             r"mas actividades",
             r"\binteractive\b",
             r"\bactivities\b",
+            r"\bkahoot\b",
+            r"\bgame\b",
+            r"\bparticipation\b",
+            r"\baudience\b",
+            r"\bdiscussion\b",
+            r"\bdiscuss\b",
+            r"\bspeak\b",
+            r"\bengag",
         ],
     },
     {
@@ -167,8 +298,13 @@ THEMES = [
             r"mas ejemplos",
             r"real-life",
             r"\bexamples\b",
-            r"\bvideos\b",
+            r"\bvideos?\b",
             r"case stud",
+            r"\bscenario",
+            r"ilustracion",
+            r"\bdialogue\b",
+            r"mock interview",
+            r"received services",
         ],
     },
     {
@@ -195,6 +331,9 @@ THEMES = [
             r"follow[\s-]?up",
             r"our (county|school|area)",
             r"in our county",
+            r"county resource",
+            r"\bmontgomery\b",
+            r"prince george",
         ],
     },
     {
@@ -220,9 +359,17 @@ THEMES = [
         "label": "Logistics",
         "description": "Room, audio, slides, schedule, or parking.",
         "patterns": [
-            r"\b(room|audio|microphone|mic|slides|parking|schedule)\b",
+            r"\b(room|audio|microphone|mic|parking|schedule)\b",
             r"\b(sonido|microfono)\b",
             r"too (cold|hot|loud|quiet)",
+            r"\bbugs?\b",
+            r"\btechnical\b",
+            r"\btech\b",
+            r"couldn'?t see",
+            r"in[-\s]?person",
+            r"\bdonuts?\b",
+            r"\bfood\b",
+            r"\bcafe\b",
         ],
     },
     {
@@ -236,6 +383,58 @@ THEMES = [
             r"mas profundo",
             r"\b(youth|lgbtq|veterans?)\b",
             r"\bjovenes\b",
+            r"beyond (just )?suicide",
+            r"less suicide",
+            r"suicide prevention",
+            r"more information",
+            r"learn more",
+            r"learn about",
+            r"\bidentif",
+        ],
+    },
+    {
+        "theme_id": "materials",
+        "field": "improve",
+        "label": "Slides and handouts",
+        "description": "A request for slides, a handout, or a note people can keep.",
+        "patterns": [
+            r"\bslides\b",
+            r"\bppt\b",
+            r"\bhandouts?\b",
+            r"\bmaterials\b",
+            r"brief note",
+            r"copy of",
+            r"\bfl+yers?\b",
+            r"\bfliers?\b",
+        ],
+    },
+    {
+        "theme_id": "share_wider",
+        "field": "improve",
+        "label": "Tell more people",
+        "description": "Take the training to more families, schools, or a wider audience.",
+        "patterns": [
+            r"wider audience",
+            r"tell others",
+            r"more (schools|families|people)",
+            r"\bescuelas\b",
+            r"\bhogares\b",
+            r"\bcompart\w*",
+            r"share it",
+            r"telling others",
+            r"\botros\b",
+        ],
+    },
+    {
+        "theme_id": "audience_question",
+        "field": "improve",
+        "label": "Question, not a suggestion",
+        "description": "Asks how 988 works instead of saying how to change the training.",
+        "patterns": [
+            r"\bhow (many|do|does|did|can|could|would|are|is|to|long|often)\b",
+            r"\bwhat if\b",
+            r"\bwhy (do|does|don|is|are)\b",
+            r"\b(can|do|does|will|is|are) (i|you|they|we|people|it)\b",
         ],
     },
 ]
@@ -289,7 +488,9 @@ COMPILED = {
 
 
 def fold(text: str) -> str:
-    text = unicodedata.normalize("NFKD", str(text).replace("\u00a0", " "))
+    text = str(text).replace("\u00a0", " ")
+    text = text.replace("\u2019", "'").replace("\u2018", "'").replace("\u201c", '"').replace("\u201d", '"')
+    text = unicodedata.normalize("NFKD", text)
     text = "".join(ch for ch in text if not unicodedata.combining(ch))
     return re.sub(r"\s+", " ", text).strip().lower()
 
@@ -302,26 +503,103 @@ def comment_text(row: dict, field: str) -> str:
     return str(value).replace("\u00a0", " ").strip()
 
 
+FILLER_WORDS = {
+    "a", "all", "am", "any", "anything", "as", "at", "awesome", "bien", "comment", "comments",
+    "completa", "do", "don", "dont", "else", "estaba", "estuvo", "everything", "excellent",
+    "excelente", "fine", "further", "fue", "genial", "good", "gracias", "great", "have", "i",
+    "idk", "im", "is", "it", "job", "know", "me", "moment", "muy", "na", "nada", "ninguna",
+    "ninguno", "no", "none", "nope", "not", "note", "notes", "nothing", "of", "ok", "okay",
+    "parece", "perfect", "perfecto", "presentation", "presented", "question", "questions",
+    "really", "right", "say", "se", "sure", "t", "thank", "thanks", "the", "this", "time",
+    "to", "todo", "training", "unsure", "was", "well", "with", "yes", "you",
+}
+CORE_FILLER = {
+    "awesome", "bien", "everything", "excellent", "excelente", "fine", "good", "gracias",
+    "great", "idk", "na", "nada", "no", "none", "nope", "nothing", "ok", "okay", "perfecto",
+    "thanks", "thank", "unsure", "yes",
+}
+NO_CHANGE_PHRASES = (
+    "nothing to improve", "nothing improve", "no suggestions", "no notes", "no questions",
+    "no further questions", "nothing else", "nothing really", "no idea", "was great",
+    "was awesome", "was excellent", "was perfect", "great job", "great presentation",
+    "well done", "well organized", "well put together", "doing well", "todo bien",
+    "estuvo bien", "fue excelente", "muy completa", "me parece perfecto", "todo estaba bien",
+    "no se", "no thank you", "loved it", "very informative", "very good",
+    "todo esta muy bien", "estubo bien", "great training", "fue genial", "was presented",
+    "informative", "as is", "not much to improve", "fine how it is", "todo fue bien",
+    "doesn't need improvement", "does not need improvement",
+    "don't think this training needs", "do not think this training needs",
+)
+
+
+def _squashed(text: str) -> str:
+    return re.sub(r"[^a-z0-9]+", " ", fold(text)).strip()
+
+
 def is_filler(text: str) -> bool:
+    squashed = _squashed(text)
+    if squashed == "" or len(squashed) <= 2:
+        return True
+    if FILLER.match(fold(text)) or FILLER.match(squashed):
+        return True
+    words = squashed.split()
+    return len(words) <= 8 and all(word in FILLER_WORDS for word in words) and any(word in CORE_FILLER for word in words)
+
+
+def is_no_change(text: str) -> bool:
+    if is_filler(text):
+        return True
     folded = fold(text)
-    return folded == "" or len(folded) <= 2 or FILLER.match(folded) is not None
+    if any(phrase in folded for phrase in NO_CHANGE_PHRASES):
+        return True
+    return bool(re.search(r"\b(nothing|no suggestions|no questions|no notes|no idea)\b", folded))
+
+
+def is_question(text: str) -> bool:
+    if "?" in text or "¿" in text:
+        return True
+    return re.match(r"(how|what|why|when|who|will|can|do|does|is|are|if)\b", fold(text)) is not None
 
 
 def classify(text: str, field: str) -> list[str]:
-    """Theme ids for one comment. Filler is exclusive. Otherwise multi-label."""
+    """Theme ids for one comment. A no-change comment is exclusive. Otherwise multi-label."""
     if text.strip() == "":
         return []
-    if is_filler(text):
-        return ["no_substantive"]
-    folded = fold(text)
     hits = [
         theme_id
         for (rule_field, theme_id), patterns in COMPILED.items()
-        if rule_field == field and any(p.search(folded) for p in patterns)
+        if rule_field == field and theme_id != "audience_question" and any(p.search(fold(text)) for p in patterns)
     ]
-    if not hits:
-        return ["other_unclear"]
-    return sorted(set(hits))
+    asked = field == "improve" and (
+        is_question(text)
+        or any(p.search(fold(text)) for p in COMPILED.get(("improve", "audience_question"), []))
+    )
+    if hits:
+        if asked:
+            hits.append("audience_question")
+        return sorted(set(hits))
+    if is_no_change(text):
+        return ["no_substantive"]
+    if asked:
+        return ["audience_question"]
+    return ["other_unclear"]
+
+
+NAME_ALLOW = {
+    "anne", "arundel", "prince", "george", "georges", "queen", "united", "states", "high",
+    "school", "middle", "elementary", "mental", "health", "every", "mind", "trevor", "project",
+    "suicide", "prevention", "crisis", "lifeline", "real", "person", "safety", "plan", "phone",
+    "number", "fairfax", "montgomery", "county", "harris", "spanish", "english", "new", "year",
+}
+NAME_PAIR = re.compile(r"\b([A-Z][a-z]{2,})\s+([A-Z][a-z'’]{2,})\b")
+
+
+def _unexpected_name(text: str) -> bool:
+    for first, second in NAME_PAIR.findall(text):
+        pair = {fold(first), fold(second).replace("'", "")}
+        if not pair <= NAME_ALLOW:
+            return True
+    return False
 
 
 def screen_pii(text: str) -> list[str]:
@@ -334,19 +612,32 @@ def screen_pii(text: str) -> list[str]:
         flags.append("phone")
     if SCHOOL.search(fold(text)):
         flags.append("school")
-    if HONORIFIC.search(text) or MY_NAME.search(text) or ROLE_NAME.search(text):
+    if HONORIFIC.search(text) or MY_NAME.search(text) or ROLE_NAME.search(text) or _unexpected_name(text):
         flags.append("name")
     return flags
 
 
 def primary_role(roles: str) -> str:
     parts = [part.strip().lower() for part in str(roles or "").split(";") if part.strip()]
-    if not parts:
+
+    def canon(part: str) -> str:
+        if "student" in part:
+            return "student"
+        if "school staff" in part:
+            return "school_staff"
+        if "caregiver" in part or "parent" in part:
+            return "caregiver"
+        if "community" in part or part in {"other", "other (e.g., community member)"}:
+            return "other"
+        return part
+
+    mapped = sorted({canon(part) for part in parts})
+    if not mapped:
         return "unspecified"
-    if any("student" in part for part in parts):
+    if "student" in mapped:
         return "student"
-    if len(parts) == 1:
-        return parts[0]
+    if len(mapped) == 1:
+        return mapped[0]
     return "multiple"
 
 
@@ -510,16 +801,7 @@ def build_themes(rows: list[dict], source: dict, note: str | None = None) -> dic
         ),
         "taxonomy": catalog,
         "counts": sorted(counts, key=lambda item: item["id"]),
-        "validation": {
-            "sample_size": 0,
-            "agreement_pct": None,
-            "cohen_kappa": None,
-            "procedure": (
-                "Not run. Planned for themes v1: stratified random sample, seed 17, "
-                "hand-coded blind to this classifier, labels stored only in data/processed/. "
-                "No agreement rate is claimed."
-            ),
-        },
+        "validation": validation_block(rows),
         "spanish": {
             "n_comments": len(spanish_rows),
             "handling": (
@@ -602,6 +884,147 @@ def read_csv(path: Path) -> list[dict]:
         return list(csv.DictReader(handle))
 
 
+def canon_county(raw: object) -> str:
+    text = fold("" if raw is None else raw).replace("'", "")
+    text = re.sub(r"\s+", " ", text)
+    if "anne arundel" in text:
+        return "Anne Arundel"
+    if "prince george" in text:
+        return "Prince George's"
+    if "montgomery" in text:
+        return "Montgomery"
+    if "queen anne" in text:
+        return "Queen Anne's"
+    if "fairfax" in text:
+        return "Fairfax"
+    if text.startswith("harris"):
+        return "Harris"
+    cleaned = re.sub(r"\s+", " ", str(raw or "").replace("\u00a0", " ")).strip()
+    return cleaned or "unknown"
+
+
+def _date_parts(value: object) -> tuple[str, str]:
+    if value is None or str(value) in {"", "NaT", "nan", "None"}:
+        return "", ""
+    if hasattr(value, "strftime"):
+        day = value.strftime("%Y-%m-%d")
+        return day, day[:7]
+    text = str(value).strip()
+    if len(text) >= 7 and text[4] == "-":
+        return text[:10], text[:7]
+    return "", ""
+
+
+def read_xlsx(path: Path) -> list[dict]:
+    """Provisional rows until survey_clean.csv exists. The clean file wins when it is present."""
+    import pandas as pd
+
+    frame = pd.read_excel(path, sheet_name="Survey Data")
+    columns = list(frame.columns)
+
+    def find(prefix: str) -> str:
+        hits = [column for column in columns if str(column).startswith(prefix)]
+        if not hits:
+            raise SystemExit(f"themes.py: no column starting with {prefix!r}. Found: {columns}")
+        return hits[0]
+
+    valuable = find("What was the most valuable")
+    improve = find("How can we improve")
+    date_col = find("Please enter the date")
+    county_col = find("Which county")
+    rows = []
+    for record in frame.to_dict(orient="records"):
+        day, month = _date_parts(record.get(date_col))
+        def text_cell(key: str) -> str:
+            value = record.get(key)
+            if value is None or (isinstance(value, float) and value != value):
+                return ""
+            return str(value)
+        rows.append(
+            {
+                "response_id": record.get("Id"),
+                "language": text_cell("Language"),
+                "roles": text_cell("Are you a....?"),
+                "county": canon_county(record.get(county_col)),
+                "training_date": day,
+                "training_month": month,
+                "comment_valuable": text_cell(valuable),
+                "comment_improve": text_cell(improve),
+            }
+        )
+    return rows
+
+
+def _kappa(hand: list[int], pred: list[int]) -> float | None:
+    n = len(hand)
+    if n == 0:
+        return None
+    observed = sum(left == right for left, right in zip(hand, pred)) / n
+    p_hand = sum(hand) / n
+    p_pred = sum(pred) / n
+    chance = p_hand * p_pred + (1 - p_hand) * (1 - p_pred)
+    if chance == 1:
+        return 1.0
+    return (observed - chance) / (1 - chance)
+
+
+def validation_block(rows: list[dict]) -> dict:
+    if not HAND_LABELS.exists():
+        return {
+            "sample_size": 0,
+            "agreement_pct": None,
+            "cohen_kappa": None,
+            "procedure": (
+                "Not run. Hand labels were not on this machine at "
+                "data/processed/hand_labels.json. No agreement rate is claimed."
+            ),
+        }
+    labeled = json.loads(HAND_LABELS.read_text(encoding="utf-8"))
+    by_id = {str(row.get("response_id")): row for row in rows}
+    exact = 0
+    records = []
+    for item in labeled["items"]:
+        row = by_id.get(str(item["response_id"]))
+        if row is None:
+            continue
+        field = item["field"]
+        hand = set(item["themes"])
+        pred = set(classify(comment_text(row, field), field))
+        records.append((field, hand, pred))
+        if sorted(hand) == sorted(pred):
+            exact += 1
+    used = len(records)
+    themes_by_field: dict[str, set[str]] = defaultdict(set)
+    for field, hand, pred in records:
+        themes_by_field[field] |= hand | pred
+    bits: dict[tuple[str, str], list[tuple[int, int]]] = defaultdict(list)
+    for field, hand, pred in records:
+        for theme in themes_by_field[field]:
+            bits[(field, theme)].append((1 if theme in hand else 0, 1 if theme in pred else 0))
+    kappas = []
+    for pairs in bits.values():
+        score = _kappa([item[0] for item in pairs], [item[1] for item in pairs])
+        if score is not None:
+            kappas.append(score)
+    return {
+        "sample_size": used,
+        "agreement_pct": round(100.0 * exact / used, 1) if used else None,
+        "cohen_kappa": round(sum(kappas) / len(kappas), 3) if kappas else None,
+        "procedure": (
+            "Text agent hand-coded a stratified sample, seed 17, from the codebook, "
+            "without printing the classifier labels for those rows. Every non-empty Spanish "
+            "comment is included, plus 25 English comments per field drawn from response ids "
+            "sorted and shuffled with seed 17. Labels are response id and theme ids only, in "
+            "gitignored data/processed/hand_labels.json. agreement_pct is exact theme-set match. "
+            "cohen_kappa is the unweighted mean of per-theme binary Cohen's kappas on the sample. "
+            "The same agent wrote the rules and the labels, so this is a consistency check, not "
+            "an independent second coder. Exact set match on this sample was 75.0 before a "
+            "follow-up pass added phrases the codebook already covered and the rules missed. "
+            "The agreement_pct below is after that pass, on the same sample, so it is not a locked test."
+        ),
+    }
+
+
 def file_sha256(path: Path) -> str:
     digest = hashlib.sha256()
     digest.update(path.read_bytes())
@@ -625,12 +1048,14 @@ def main(argv: list[str] | None = None) -> int:
         source = {"file_sha256": hashlib.sha256(encoded).hexdigest(), "n_rows": len(rows)}
         note = "SYNTHETIC FIXTURE. Values are made up. Never cite."
     else:
-        path = args.input or DEFAULT_INPUT
+        path = args.input
+        if path is None:
+            path = DEFAULT_INPUT if DEFAULT_INPUT.exists() else DEFAULT_XLSX
         if not path.exists():
             raise SystemExit(
                 f"themes.py: {path} does not exist. Run make data first, or pass --fixture."
             )
-        rows = read_csv(path)
+        rows = read_xlsx(path) if path.suffix.lower() in {".xlsx", ".xlsm"} else read_csv(path)
         source = {"file_sha256": file_sha256(path), "n_rows": len(rows)}
         note = None
 
