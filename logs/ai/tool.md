@@ -140,3 +140,18 @@ Entry template:
 - **Manually verified against data:**
   - Everything above was run in this session, by the tool agent. None of it is a human check.
   - The human checks (headline recompute, quote PII review, video approval) are recorded in `docs/verification.md`.
+
+## 2026-11-06 01:45 ET: audit against the official submission form
+- **Prompt (representative):** "Make sure everything follows this submission format" (the BuildFest Submission Form PDF).
+- **What the AI produced:**
+  - An audit of every deliverable against the form and the case brief's pages 9–12.
+  - `agents/tool/dist/FORM_run_instructions.txt`: paste-ready text for the form's required "Technical Artifact: Run or Access Instructions" field, with no names.
+  - `agents/tool/deck_assets.py` and `agents/tool/dist/deck_assets/` (10 PNGs): slide-ready screenshots of the real dashboard charts.
+  - Judge-facing fixes to RUN.md (setup works without git; Windows `py`; no `git pull` advice).
+  - `acceptance.py` now skips cleanly inside the zip.
+- **Errors / limitations caught, and how:**
+  - **The deck is not final.** Reading the slide XML showed outline text, not content: slide 1 literally says "Title"; slides 3–5 describe charts ("Screenshot of the dashboard.", "Chart: …") instead of showing them, and there are no images at all; slide 7 contains an internal note about issue "#30"; slide 9 says "The memo's 5 rows" instead of listing them; slide 12 is a bare heading. Reported to narrative, who owns the deck.
+  - **The memo header still says "v1 draft"**, which conflicts with the form's "all files are final". Reported to narrative.
+  - **`submission/Team17_TechnicalArtifact.zip` is an older build** than `agents/tool/dist/`. Reported to narrative (#44).
+  - **My first `deck_assets.py` exported the wrong region 10 times.** It mixed viewport coordinates from `bounding_box()` with full-page clipping. Caught by looking at a contact sheet of the images; fixed by using element screenshots.
+- **Manually verified:** followed the form instructions literally in a fresh unzip, and every step worked (see `agents/tool/ACCEPTANCE.md`).

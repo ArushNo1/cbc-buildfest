@@ -39,3 +39,4 @@ Automated by `agents/tool/acceptance.py` on outputs built from input fingerprint
 | Artifact zip: unzip into a non-git folder → `make setup` → `make run` → `make test` (`package.py --smoke`) | Pass |
 | Zip reproducibility | Pass: built on two machines, byte-identical. |
 | `make verify` | Pass except the mp4 checks, which need `ffprobe` (not installed on this machine). Length and metadata are covered above with ffmpeg. |
+| Form run instructions (`agents/tool/dist/FORM_run_instructions.txt`) followed literally in a fresh unzip: view the dashboard with no install, `pip install`, the three-command no-`make` path, `make run`, `make test`, `recompute_check.py` | Pass: every step works. 58 tests pass; the recompute matches 222/222; acceptance inside the zip passes 18/18 (video and identity checks are skipped there by design). |

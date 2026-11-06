@@ -16,11 +16,13 @@ Open a terminal in the project folder (the one that contains `Makefile`), then r
 make setup
 ```
 
-`make setup` installs the Python packages in `requirements.txt` and, in a git checkout, turns on the repo's commit checks. If you unzipped the artifact (no git) and `make setup` stops at a `git config` error, install the packages directly instead:
+`make setup` installs the Python packages in `requirements.txt`. In a git checkout it also turns on the repo's commit checks; in an unzipped copy it skips them. Without `make` (for example on Windows), install the packages directly:
 
 ```bash
 python3 -m pip install -r requirements.txt
 ```
+
+On Windows, type `py` instead of `python3` in every command.
 
 ## Run it
 
@@ -83,16 +85,16 @@ This runs the automated checks on synthetic data. They need no survey file.
 
 | You see | What it means | What to do |
 |---|---|---|
-| `make run: NOT IMPLEMENTED - agents/... does not exist yet` | A step hasn't been written yet (during development). | Pull the latest code: `git pull --rebase`. |
+| `make run: NOT IMPLEMENTED - agents/... does not exist yet` | Your copy is missing a step's code. | Download and unzip the artifact again (in a git checkout: `git pull`). |
 | `No module named pandas` (or openpyxl, jsonschema) | Packages aren't installed. | `make setup`, or `python3 -m pip install -r requirements.txt` |
 | An error naming the sheet or a column | The export's layout changed (renamed sheet or missing column). | Re-export with the same columns, or report the error message to the data maintainer. |
-| `build: ERROR findings ... does not match contracts/findings.schema.json` | The analysis output and the dashboard disagree on the file format. | Pull the latest code so both sides match, then rerun. |
+| `build: ERROR findings ... does not match contracts/findings.schema.json` | The analysis output and the dashboard disagree on the file format. | Use one complete copy of the artifact (all parts from the same version), then rerun. |
 | `build: ERROR ... duplicate IDs` | Two numbers share an ID. | Report it to the data maintainer; IDs must be unique. |
 | A red **EXAMPLE DATA** banner on the dashboard | The dashboard was built without real outputs and used the synthetic examples. | Run the full `make run DATA=...` command. Never cite numbers from a page with this banner. |
 | "⚠ comments were coded from a different export" under the title | `themes.json` and `findings.json` came from different files. | Run `make run DATA=...` again so both are rebuilt from the same export. |
 | `build: WARNING ... n=… < 10 but value not suppressed; hidden in dashboard` | The analysis published a value for a group under 10 people. The dashboard hid it. | Nothing for viewers. Maintainers should fix the suppression in the data step. |
 | A chart section says "could not be drawn" | A browser problem or an unexpected file shape. | Open the file in a current Chrome, Edge, Firefox or Safari. The numbers are still in **All numbers**. |
-| `python3: command not found` (Windows) | Python isn't on the PATH. | Install Python 3.10+ from python.org and tick "Add to PATH", or use WSL. |
+| `python3: command not found` (Windows) | Windows calls it `py`. | Type `py` instead of `python3`. If that also fails, install Python 3.10+ from python.org and tick "Add to PATH". |
 
 ## Making the demo video (maintainers only)
 
