@@ -36,13 +36,14 @@ It must be deterministic: same input, byte-identical outputs. No timestamps. Sor
    - **Call-988 likelihood:** 77% missing. Report who answered and don't generalize.
    - **Cuts:** role, county, language, time (month or training period).
    - **Small n:** `small_n = n < 10`. Suppress (value null) or pool into an `other_pooled` level. n is always reported.
-6. **Synthetic fixture generator** at `tests/fixtures/make_fixture.py`. It writes a fake xlsx with the same columns into a temp dir; never commit the xlsx. Add drift tests in `agents/data/tests/`: a new county, a new Likert label, extra rows, and a missing column (which should give a clear error). These run in CI, which never sees the real data.
+6. **Drift tests** in `agents/data/tests/`, using **narrative's synthetic generator**, `agents/narrative/fixtures/make_fixtures.py`. Narrative owns the generator; you don't write one. Its README shows how to call it. Run your pipeline on each variant (base, new county, new Likert label, extra rows, missing column, shifted dates) and assert on the outcome. These tests run in CI, which never sees the real data.
 7. **Docs** (in `agents/data/`): `data_dictionary.md` (raw column → clean column, type, scale, mapping) and `limitations.md`. Limitations covers the retrospective bias, missingness, the student- and Anne Arundel-heavy sample, self-report, no control group, and the date clustering.
 
 ## Rules specific to you
 - Row-level data stays in `data/`. `findings.json` contains no response IDs, no free text and no cell with n<10 unsuppressed.
 - Finding IDs are stable after the Sat 12:00 freeze. Changing one requires a `type:decision` issue.
 - Log each real AI mistake you catch (wrong mapping, wrong denominator, …) in `logs/ai/data.md`, with how you caught it.
+- Narrative runs an **independent crosscheck** (`make crosscheck`) with separate code, reading data/raw directly. Each mismatch against `findings.json` becomes a `to:data` issue titled `[crosscheck] mismatch: <id>`, showing both values and both denominators. Fix the number, or explain the definitional difference in that issue.
 - A human will hand-recompute the headline numbers from the raw xlsx. Make that easy: for each headline ID, keep a one-line "how to recompute in Excel" note in `agents/data/recompute.md`.
 
 ## Milestones (ET)

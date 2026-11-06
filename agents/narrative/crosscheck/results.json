@@ -1,0 +1,442 @@
+{
+  "source": {
+    "file_sha256": "72b08ff71ede02e4d6203e6096ee49904dd47fc1b74bb1f4e8539c8d263c6b26",
+    "n_rows": 1299
+  },
+  "tolerance": 0.05,
+  "mapping": "1-5 Likert; 'Very agree'=5, 'Satisfied'=4, 'Neither agree or/nor disagree'=3; agree = score >= 4; unrecognized labels and blanks count as n_missing; 0-10 scores outside 0..10 are missing; roles are any-mention of the multi-select",
+  "metrics": [
+    {
+      "id": "post.identify_crisis.agree_pct.overall",
+      "value": 89.9153,
+      "n": 1299,
+      "n_missing": 0,
+      "numerator": 1168,
+      "denominator": "respondents with a recognized answer to this post item"
+    },
+    {
+      "id": "post.identify_crisis.mean.overall",
+      "value": 4.2502,
+      "n": 1299,
+      "n_missing": 0,
+      "numerator": null,
+      "denominator": "respondents with a recognized answer to this post item (1-5)"
+    },
+    {
+      "id": "pre.identify_crisis.agree_pct.overall",
+      "value": 72.2094,
+      "n": 1299,
+      "n_missing": 0,
+      "numerator": 938,
+      "denominator": "respondents with a recognized answer to this retrospective 'before' item"
+    },
+    {
+      "id": "pre.identify_crisis.mean.overall",
+      "value": 3.7914,
+      "n": 1299,
+      "n_missing": 0,
+      "numerator": null,
+      "denominator": "respondents with a recognized answer to this retrospective 'before' item (1-5)"
+    },
+    {
+      "id": "change.identify_crisis.mean_points.overall",
+      "value": 0.4588,
+      "n": 1299,
+      "n_missing": 0,
+      "numerator": null,
+      "denominator": "respondents with recognized answers to both the before and after item (post minus pre, points on 1-5)"
+    },
+    {
+      "id": "post.describe_988.agree_pct.overall",
+      "value": 90.4542,
+      "n": 1299,
+      "n_missing": 0,
+      "numerator": 1175,
+      "denominator": "respondents with a recognized answer to this post item"
+    },
+    {
+      "id": "post.describe_988.mean.overall",
+      "value": 4.3426,
+      "n": 1299,
+      "n_missing": 0,
+      "numerator": null,
+      "denominator": "respondents with a recognized answer to this post item (1-5)"
+    },
+    {
+      "id": "pre.describe_988.agree_pct.overall",
+      "value": 46.4973,
+      "n": 1299,
+      "n_missing": 0,
+      "numerator": 604,
+      "denominator": "respondents with a recognized answer to this retrospective 'before' item"
+    },
+    {
+      "id": "pre.describe_988.mean.overall",
+      "value": 3.2294,
+      "n": 1299,
+      "n_missing": 0,
+      "numerator": null,
+      "denominator": "respondents with a recognized answer to this retrospective 'before' item (1-5)"
+    },
+    {
+      "id": "change.describe_988.mean_points.overall",
+      "value": 1.1132,
+      "n": 1299,
+      "n_missing": 0,
+      "numerator": null,
+      "denominator": "respondents with recognized answers to both the before and after item (post minus pre, points on 1-5)"
+    },
+    {
+      "id": "post.know_when_to_use.agree_pct.overall",
+      "value": 92.3018,
+      "n": 1299,
+      "n_missing": 0,
+      "numerator": 1199,
+      "denominator": "respondents with a recognized answer to this post item"
+    },
+    {
+      "id": "post.know_when_to_use.mean.overall",
+      "value": 4.4426,
+      "n": 1299,
+      "n_missing": 0,
+      "numerator": null,
+      "denominator": "respondents with a recognized answer to this post item (1-5)"
+    },
+    {
+      "id": "pre.know_when_to_use.agree_pct.overall",
+      "value": 55.6582,
+      "n": 1299,
+      "n_missing": 0,
+      "numerator": 723,
+      "denominator": "respondents with a recognized answer to this retrospective 'before' item"
+    },
+    {
+      "id": "pre.know_when_to_use.mean.overall",
+      "value": 3.4373,
+      "n": 1299,
+      "n_missing": 0,
+      "numerator": null,
+      "denominator": "respondents with a recognized answer to this retrospective 'before' item (1-5)"
+    },
+    {
+      "id": "change.know_when_to_use.mean_points.overall",
+      "value": 1.0054,
+      "n": 1299,
+      "n_missing": 0,
+      "numerator": null,
+      "denominator": "respondents with recognized answers to both the before and after item (post minus pre, points on 1-5)"
+    },
+    {
+      "id": "quality.engaging.agree_pct.overall",
+      "value": 88.1533,
+      "n": 1148,
+      "n_missing": 151,
+      "numerator": 1012,
+      "denominator": "respondents with a recognized answer to this quality item"
+    },
+    {
+      "id": "quality.knowledgeable.agree_pct.overall",
+      "value": 90.3057,
+      "n": 1145,
+      "n_missing": 154,
+      "numerator": 1034,
+      "denominator": "respondents with a recognized answer to this quality item"
+    },
+    {
+      "id": "quality.organized.agree_pct.overall",
+      "value": 91.7616,
+      "n": 1141,
+      "n_missing": 158,
+      "numerator": 1047,
+      "denominator": "respondents with a recognized answer to this quality item"
+    },
+    {
+      "id": "recommend.score.mean.overall",
+      "value": 7.5869,
+      "n": 1266,
+      "n_missing": 33,
+      "numerator": null,
+      "denominator": "respondents who gave a 0-10 recommend score"
+    },
+    {
+      "id": "recommend.score.nps.overall",
+      "value": 12.0063,
+      "n": 1266,
+      "n_missing": 33,
+      "numerator": null,
+      "denominator": "respondents who gave a 0-10 recommend score (9-10 minus 0-6)"
+    },
+    {
+      "id": "call_988.likelihood.mean.overall",
+      "value": 7.6587,
+      "n": 293,
+      "n_missing": 1006,
+      "numerator": null,
+      "denominator": "respondents who answered the optional call-988 question"
+    },
+    {
+      "id": "missing.training_date.count.overall",
+      "value": 3,
+      "n": 1299,
+      "n_missing": 3,
+      "numerator": null,
+      "denominator": "all rows"
+    },
+    {
+      "id": "post.identify_crisis.agree_pct.county.anne_arundel",
+      "value": 90.1814,
+      "n": 937,
+      "n_missing": 0,
+      "numerator": 845,
+      "denominator": "Anne Arundel respondents with a recognized answer to this post item"
+    },
+    {
+      "id": "post.describe_988.agree_pct.county.anne_arundel",
+      "value": 91.1419,
+      "n": 937,
+      "n_missing": 0,
+      "numerator": 854,
+      "denominator": "Anne Arundel respondents with a recognized answer to this post item"
+    },
+    {
+      "id": "post.know_when_to_use.agree_pct.county.anne_arundel",
+      "value": 92.4226,
+      "n": 937,
+      "n_missing": 0,
+      "numerator": 866,
+      "denominator": "Anne Arundel respondents with a recognized answer to this post item"
+    },
+    {
+      "id": "recommend.score.mean.county.anne_arundel",
+      "value": 7.1473,
+      "n": 923,
+      "n_missing": 14,
+      "numerator": null,
+      "denominator": "Anne Arundel respondents who gave a 0-10 recommend score"
+    },
+    {
+      "id": "post.identify_crisis.agree_pct.county.prince_georges",
+      "value": 88.6731,
+      "n": 309,
+      "n_missing": 0,
+      "numerator": 274,
+      "denominator": "Prince George's respondents with a recognized answer to this post item"
+    },
+    {
+      "id": "post.describe_988.agree_pct.county.prince_georges",
+      "value": 87.3786,
+      "n": 309,
+      "n_missing": 0,
+      "numerator": 270,
+      "denominator": "Prince George's respondents with a recognized answer to this post item"
+    },
+    {
+      "id": "post.know_when_to_use.agree_pct.county.prince_georges",
+      "value": 91.2621,
+      "n": 309,
+      "n_missing": 0,
+      "numerator": 282,
+      "denominator": "Prince George's respondents with a recognized answer to this post item"
+    },
+    {
+      "id": "recommend.score.mean.county.prince_georges",
+      "value": 8.7388,
+      "n": 291,
+      "n_missing": 18,
+      "numerator": null,
+      "denominator": "Prince George's respondents who gave a 0-10 recommend score"
+    },
+    {
+      "id": "post.identify_crisis.agree_pct.role.student",
+      "value": 89.537,
+      "n": 1080,
+      "n_missing": 0,
+      "numerator": 967,
+      "denominator": "student (any mention) respondents with a recognized answer to this post item"
+    },
+    {
+      "id": "post.describe_988.agree_pct.role.student",
+      "value": 90.2778,
+      "n": 1080,
+      "n_missing": 0,
+      "numerator": 975,
+      "denominator": "student (any mention) respondents with a recognized answer to this post item"
+    },
+    {
+      "id": "post.know_when_to_use.agree_pct.role.student",
+      "value": 92.1296,
+      "n": 1080,
+      "n_missing": 0,
+      "numerator": 995,
+      "denominator": "student (any mention) respondents with a recognized answer to this post item"
+    },
+    {
+      "id": "recommend.score.mean.role.student",
+      "value": 7.2207,
+      "n": 1051,
+      "n_missing": 29,
+      "numerator": null,
+      "denominator": "student (any mention) respondents who gave a 0-10 recommend score"
+    },
+    {
+      "id": "post.identify_crisis.agree_pct.role.school_staff",
+      "value": 94.1176,
+      "n": 68,
+      "n_missing": 0,
+      "numerator": 64,
+      "denominator": "school staff (any mention) respondents with a recognized answer to this post item"
+    },
+    {
+      "id": "post.describe_988.agree_pct.role.school_staff",
+      "value": 91.1765,
+      "n": 68,
+      "n_missing": 0,
+      "numerator": 62,
+      "denominator": "school staff (any mention) respondents with a recognized answer to this post item"
+    },
+    {
+      "id": "post.know_when_to_use.agree_pct.role.school_staff",
+      "value": 94.1176,
+      "n": 68,
+      "n_missing": 0,
+      "numerator": 64,
+      "denominator": "school staff (any mention) respondents with a recognized answer to this post item"
+    },
+    {
+      "id": "recommend.score.mean.role.school_staff",
+      "value": 9.5224,
+      "n": 67,
+      "n_missing": 1,
+      "numerator": null,
+      "denominator": "school staff (any mention) respondents who gave a 0-10 recommend score"
+    },
+    {
+      "id": "post.identify_crisis.agree_pct.role.caregiver_parent",
+      "value": 87.3239,
+      "n": 71,
+      "n_missing": 0,
+      "numerator": 62,
+      "denominator": "caregiver/parent (any mention) respondents with a recognized answer to this post item"
+    },
+    {
+      "id": "post.describe_988.agree_pct.role.caregiver_parent",
+      "value": 90.1408,
+      "n": 71,
+      "n_missing": 0,
+      "numerator": 64,
+      "denominator": "caregiver/parent (any mention) respondents with a recognized answer to this post item"
+    },
+    {
+      "id": "post.know_when_to_use.agree_pct.role.caregiver_parent",
+      "value": 90.1408,
+      "n": 71,
+      "n_missing": 0,
+      "numerator": 64,
+      "denominator": "caregiver/parent (any mention) respondents with a recognized answer to this post item"
+    },
+    {
+      "id": "recommend.score.mean.role.caregiver_parent",
+      "value": 9.4638,
+      "n": 69,
+      "n_missing": 2,
+      "numerator": null,
+      "denominator": "caregiver/parent (any mention) respondents who gave a 0-10 recommend score"
+    },
+    {
+      "id": "post.identify_crisis.agree_pct.role.other",
+      "value": 93.6842,
+      "n": 95,
+      "n_missing": 0,
+      "numerator": 89,
+      "denominator": "other/community (any mention) respondents with a recognized answer to this post item"
+    },
+    {
+      "id": "post.describe_988.agree_pct.role.other",
+      "value": 92.6316,
+      "n": 95,
+      "n_missing": 0,
+      "numerator": 88,
+      "denominator": "other/community (any mention) respondents with a recognized answer to this post item"
+    },
+    {
+      "id": "post.know_when_to_use.agree_pct.role.other",
+      "value": 94.7368,
+      "n": 95,
+      "n_missing": 0,
+      "numerator": 90,
+      "denominator": "other/community (any mention) respondents with a recognized answer to this post item"
+    },
+    {
+      "id": "recommend.score.mean.role.other",
+      "value": 9.2766,
+      "n": 94,
+      "n_missing": 1,
+      "numerator": null,
+      "denominator": "other/community (any mention) respondents who gave a 0-10 recommend score"
+    },
+    {
+      "id": "post.identify_crisis.agree_pct.language.en",
+      "value": 90.0,
+      "n": 1280,
+      "n_missing": 0,
+      "numerator": 1152,
+      "denominator": "English-survey respondents with a recognized answer to this post item"
+    },
+    {
+      "id": "post.describe_988.agree_pct.language.en",
+      "value": 90.4688,
+      "n": 1280,
+      "n_missing": 0,
+      "numerator": 1158,
+      "denominator": "English-survey respondents with a recognized answer to this post item"
+    },
+    {
+      "id": "post.know_when_to_use.agree_pct.language.en",
+      "value": 92.3438,
+      "n": 1280,
+      "n_missing": 0,
+      "numerator": 1182,
+      "denominator": "English-survey respondents with a recognized answer to this post item"
+    },
+    {
+      "id": "recommend.score.mean.language.en",
+      "value": 7.5777,
+      "n": 1248,
+      "n_missing": 32,
+      "numerator": null,
+      "denominator": "English-survey respondents who gave a 0-10 recommend score"
+    },
+    {
+      "id": "post.identify_crisis.agree_pct.language.es",
+      "value": 84.2105,
+      "n": 19,
+      "n_missing": 0,
+      "numerator": 16,
+      "denominator": "Spanish-survey respondents with a recognized answer to this post item"
+    },
+    {
+      "id": "post.describe_988.agree_pct.language.es",
+      "value": 89.4737,
+      "n": 19,
+      "n_missing": 0,
+      "numerator": 17,
+      "denominator": "Spanish-survey respondents with a recognized answer to this post item"
+    },
+    {
+      "id": "post.know_when_to_use.agree_pct.language.es",
+      "value": 89.4737,
+      "n": 19,
+      "n_missing": 0,
+      "numerator": 17,
+      "denominator": "Spanish-survey respondents with a recognized answer to this post item"
+    },
+    {
+      "id": "recommend.score.mean.language.es",
+      "value": 8.2222,
+      "n": 18,
+      "n_missing": 1,
+      "numerator": null,
+      "denominator": "Spanish-survey respondents who gave a 0-10 recommend score"
+    }
+  ]
+}

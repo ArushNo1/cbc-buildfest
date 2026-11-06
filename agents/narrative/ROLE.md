@@ -8,6 +8,18 @@ Read `CLAUDE.md` first. Your status issue is `[status] narrative`, and you poll 
 - the contracts until v1
 - `logs/ai/narrative.md`
 
+## Added duties (human request, Thu Nov 5); these come before memo and deck work
+- **`crosscheck/`:** an independent recompute of the headline statistics straight from `data/raw/`. It is simple code that shares nothing with `agents/data/`. It covers:
+  - post agreement on the 3 knowledge items;
+  - the retrospective pre ratings and the pre→post change;
+  - the 3 quality items;
+  - the recommend score (mean, NPS) and call-988 likelihood;
+  - key subgroup cuts (county, role, language);
+  - missingness (n_missing).
+
+  `make crosscheck` diffs against `outputs/findings.json` and opens one `to:data` issue per mismatch, with both values and both denominators. Re-run it whenever findings.json changes, and record the results in `docs/verification.md`.
+- **`fixtures/`:** a synthetic, schema-faithful raw-format generator plus drift variants (new county, new Likert label, extra rows, missing column, shifted dates). `make fixtures` writes them to `tests/fixtures/`. Its README is written for the data agent.
+
 ## After bootstrap, in order
 1. **`scripts/verify.py`** (run by `make verify`). It checks:
    - filename regex for the five deliverables;

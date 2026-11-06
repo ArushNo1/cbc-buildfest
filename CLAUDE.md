@@ -83,9 +83,10 @@ Known mess:
 | Path | Owner |
 |---|---|
 | `CLAUDE.md`, `README.md`, `Makefile`, `requirements.txt`, `scripts/`, `.github/`, `.claude/`, `docs/`, `submission/`, `tests/test_repo_*.py` | narrative |
+| `agents/narrative/crosscheck/` (independent recompute), `agents/narrative/fixtures/` (synthetic generator), `tests/fixtures/` (its generated, gitignored output) | narrative |
 | `contracts/cleaned_data.schema.json`, `contracts/findings.schema.json` | narrative (v0), then **data** from v1 |
 | `contracts/themes.schema.json` | narrative (v0), then **text** from v1 |
-| `agents/data/`, `tests/fixtures/`, `outputs/findings.json`, `outputs/validation_report.json` | data |
+| `agents/data/` (including drift tests in `agents/data/tests/`), `outputs/findings.json`, `outputs/validation_report.json` | data |
 | `agents/text/`, `outputs/themes.json`, `outputs/quotes_reviewed.json` | text |
 | `agents/tool/`, `outputs/dashboard.html` and any other dashboard/video outputs | tool |
 | `logs/ai/<name>.md` | that agent (append-only) |
@@ -122,6 +123,8 @@ Need a new dependency? Request it from narrative (`requirements.txt`), or keep i
 | `make test` | pytest over `tests/` and `agents/` | everyone |
 | `make verify` | repo guards + submission checks | narrative: `scripts/verify.py` |
 | `make submit` | assemble `submission/` | narrative: `scripts/submit.py` |
+| `make crosscheck DATA=…` | independent recompute of headline numbers vs `findings.json`; opens a `to:data` issue per mismatch (`ARGS=--no-issues` to skip) | narrative: `agents/narrative/crosscheck/crosscheck.py` |
+| `make fixtures` | synthetic raw-format workbooks (base + drift variants) → `tests/fixtures/` | narrative: `agents/narrative/fixtures/make_fixtures.py` |
 
 A target whose entry point doesn't exist yet fails loudly with the owner's name. Create your entry point; don't edit the Makefile.
 
@@ -143,7 +146,7 @@ A target whose entry point doesn't exist yet fails loudly with the owner's name.
   - `make setup && make run DATA=<provided xlsx>` runs with no errors from a clean clone.
   - It also runs on the synthetic drift fixtures (new county, new label, extra rows), where unknown labels are flagged, not crashed on.
   - Run instructions are written, `make test` is green, and it is packaged as `Team17_TechnicalArtifact.zip` with no data and no identity strings.
-- **Findings:** every metric has n, a denominator description, a CI where it's a proportion or mean, small-n flags and a caveat (retrospective items always). Headline numbers are hand-recomputed by a human (`docs/verification.md`).
+- **Findings:** every metric has n, a denominator description, a CI where it's a proportion or mean, small-n flags and a caveat (retrospective items always). Percentages are on a 0–100 scale. `make crosscheck` shows no open mismatches, and headline numbers are hand-recomputed by a human (`docs/verification.md`).
 - **Themes:**
   - The taxonomy is documented.
   - The offline classifier is reproducible with no API key.

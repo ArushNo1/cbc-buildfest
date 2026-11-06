@@ -35,7 +35,7 @@
         },
         "label": { "type": "string", "description": "Plain-English, as a staff member would read it." },
         "value": { "type": ["number", "null"], "description": "null iff suppressed." },
-        "unit": { "enum": ["pct", "mean", "count", "points", "nps", "median"] },
+        "unit": { "enum": ["pct", "mean", "count", "points", "nps", "median"], "description": "pct is on a 0-100 scale (78.5, not 0.785)." },
         "n": { "type": "integer", "minimum": 0, "description": "Respondents in the base (valid, non-missing answers) — the denominator count. Always reported." },
         "numerator": { "type": ["integer", "null"], "description": "For pct/count: respondents meeting the condition." },
         "n_missing": { "type": ["integer", "null"], "description": "Respondents in the group excluded for a missing/unknown answer." },

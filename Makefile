@@ -3,7 +3,7 @@ DATA ?= data/raw/BuildFest_EveryMind_Survey_Data_FULL.xlsx
 PY   ?= python3
 need = @test -e $(1) || { echo "make $@: NOT IMPLEMENTED - $(1) does not exist yet (owner: $(2) agent)" >&2; exit 1; }
 
-.PHONY: setup data themes run test verify submit
+.PHONY: setup data themes run test verify submit crosscheck fixtures
 
 setup:
 	chmod +x scripts/hooks/* scripts/*.sh
@@ -33,3 +33,11 @@ verify:
 submit:
 	$(call need,scripts/submit.py,narrative)
 	$(PY) scripts/submit.py
+
+# Independent recompute of headline numbers from the raw xlsx; opens to:data issues on mismatch (ARGS=--no-issues to skip)
+crosscheck:
+	$(PY) agents/narrative/crosscheck/crosscheck.py --data "$(DATA)" $(ARGS)
+
+# Synthetic raw-format workbooks (base + drift variants) -> tests/fixtures/ (gitignored)
+fixtures:
+	$(PY) agents/narrative/fixtures/make_fixtures.py --out tests/fixtures

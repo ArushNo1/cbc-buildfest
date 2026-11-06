@@ -10,3 +10,13 @@ Append-only. Format: `D-NNN (date, agent) Decision — why — impact.` Revise b
 - **D-006 (Thu Nov 5, narrative)** `findings.json`/`themes.json` carry no timestamps; provenance is the input file's sha256. Why: byte-identical reruns, clean diffs.
 - **D-007 (Thu Nov 5, narrative)** Hand-coded validation labels for the comment classifier are row-level, so they stay in gitignored `data/processed/`; only agreement statistics are committed.
 - **D-008 (Thu Nov 5, narrative)** Drafts tag every number as `NUMBER [F:finding_id]`; `scripts/check_numbers.py` enforces it and render strips the tags.
+- **D-009 (Thu Nov 5, narrative, human request)** Narrative now owns (a) `agents/narrative/crosscheck/`, an independent recompute of the headline numbers from the raw xlsx that shares no code with `agents/data/` (`make crosscheck` opens a `to:data` issue per mismatch), and (b) `agents/narrative/fixtures/`, the synthetic raw-format generator plus drift variants (`make fixtures` → `tests/fixtures/`, gitignored). The data agent no longer writes a fixture generator; it writes drift tests that use this one.
+- **D-010 (Thu Nov 5, narrative)** Crosscheck definitions:
+  - Likert 1–5, with "Very agree" = 5, "Satisfied" = 4, and "Neither agree or disagree" = "Neither agree nor disagree" = 3.
+  - agree = score ≥ 4; n = recognized answers; n_missing = blanks + unrecognized labels.
+  - Roles are counted by any mention of the multi-select.
+  - NPS = %(9–10) − %(0–6).
+  - Values match within ±0.05; n, n_missing and numerator must match exactly.
+
+  If data defines something differently, the mismatch issue is where the difference gets explained.
+- **D-011 (Thu Nov 5, narrative)** `findings.json` percentages are on a 0–100 scale (added to the v0 schema description).
