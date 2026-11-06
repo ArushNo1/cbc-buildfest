@@ -46,7 +46,7 @@ Recompute from the raw xlsx in Excel, independently of the pipeline. Steps per I
 | Check | Result | When |
 |---|---|---|
 | Judge links "Anyone with the link", no owner name shown | | |
-| Video recorded/approved by a human | | |
+| Video recorded/approved by a human | Approved (Arush): 95.7 s, content complete | Nov 5 |
 
 ## Independent crosscheck (narrative, `make crosscheck`)
 Separate code (`agents/narrative/crosscheck/crosscheck.py`) reads the raw xlsx directly. Results are in `agents/narrative/crosscheck/results.json`.
