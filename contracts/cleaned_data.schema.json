@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "cleaned_data.schema.json",
   "title": "Cleaned survey row",
-  "x-schema-version": "0",
-  "description": "One row of data/processed/survey_clean.csv, rebuilt locally by `make data` from data/raw/*.xlsx (sheet 'Survey Data'). ROW-LEVEL: never committed, never uploaded. v0 by narrative from the case column list; data agent owns it from v1 and must document the raw->clean label mapping in agents/data/. Likert items are 1-5, higher = more agreement/satisfaction (v0 assumption; data agent confirms scale per item). Unknown labels become null and are listed in `flags`; they never crash the pipeline. Multi-value fields are ';'-joined in CSV.",
+  "x-schema-version": "1",
+  "description": "One row of data/processed/survey_clean.csv, rebuilt locally by `make data` from data/raw/*.xlsx (sheet 'Survey Data'). ROW-LEVEL: never committed, never uploaded. v1 finalized by data agent with verified mappings in agents/data/mappings/. Likert items are 1-5, higher = more agreement/satisfaction. Unknown labels become null and are listed in `flags`; they never crash the pipeline. Multi-value fields are ';'-joined in CSV.",
   "type": "object",
   "required": [
     "response_id", "start_time", "completion_time", "language", "roles",

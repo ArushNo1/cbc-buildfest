@@ -1,0 +1,10 @@
+{
+  "strongly disagree": 1,
+  "disagree": 2,
+  "neither agree nor disagree": 3,
+  "neither agree or disagree": 3,
+  "agree": 4,
+  "satisfied": 4,
+  "strongly agree": 5,
+  "very agree": 5
+}

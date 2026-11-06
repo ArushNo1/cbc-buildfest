@@ -1,0 +1,47 @@
+{
+  "source": {
+    "file_sha256": "72b08ff71ede02e4d6203e6096ee49904dd47fc1b74bb1f4e8539c8d263c6b26",
+    "sheet": "Survey Data",
+    "n_rows": 1299
+  },
+  "validation": {
+    "row_count": 1299,
+    "missing_columns_in_source": [],
+    "duplicate_response_ids": 0,
+    "missing_per_column": {
+      "response_id": 0,
+      "start_time": 0,
+      "completion_time": 0,
+      "language": 0,
+      "roles": 0,
+      "training_date": 3,
+      "county": 0,
+      "post_identify_crisis": 0,
+      "post_describe_988": 0,
+      "post_know_when_to_use": 0,
+      "pre_identify_crisis": 0,
+      "pre_describe_988": 0,
+      "pre_know_when_to_use": 0,
+      "quality_engaging": 151,
+      "quality_knowledgeable": 154,
+      "quality_organized": 158,
+      "recommend": 33,
+      "call_988_likelihood": 1006,
+      "comment_valuable": 236,
+      "comment_improve": 648,
+      "flags": 1265,
+      "training_month": 3
+    },
+    "unknown_label_counts": {},
+    "date_range": {
+      "min_date": "2025-10-21",
+      "max_date": "2026-10-21",
+      "missing_dates": 3
+    },
+    "flags_summary": {
+      "missing_training_date": 3,
+      "straightline_all_strongly_disagree": 17,
+      "straightline_post_strongly_disagree": 31
+    }
+  }
+}
