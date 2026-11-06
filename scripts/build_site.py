@@ -14,7 +14,10 @@ APP = [
 ]
 
 if __name__ == "__main__":
-    shutil.rmtree(OUT, ignore_errors=True)
+    OUT.mkdir(exist_ok=True)
+    for old in OUT.iterdir():  # keep dotfiles: .vercel holds the deploy link
+        if not old.name.startswith("."):
+            shutil.rmtree(old) if old.is_dir() else old.unlink()
     files = sorted({p.relative_to(ROOT).as_posix() for g in APP for p in ROOT.glob(g) if p.is_file()})
     for f in files:
         (OUT / "app" / f).parent.mkdir(parents=True, exist_ok=True)
@@ -22,4 +25,5 @@ if __name__ == "__main__":
     (OUT / "app/manifest.json").write_text(json.dumps(files, indent=1))
     shutil.copy2(ROOT / "outputs/dashboard.html", OUT / "dashboard.html")
     shutil.copy2(ROOT / "scripts/site/index.html", OUT / "index.html")
+    print("deploy: cd site && npx vercel deploy --prod")
     print(f"site: {len(files)} app files -> {OUT}")

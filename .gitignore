@@ -26,3 +26,4 @@ Thumbs.db
 
 # Real names for scripts/verify.py identity check (local only, never commit)
 .identity_strings
+.vercel

@@ -83,3 +83,7 @@ Entry template:
 - Checks: pandas 2.2.3 (Pyodide's version) gives byte-identical findings to the official run. Under Node+Pyodide on the real file, findings were byte-identical in 21 s. All 6 drift fixtures exit 0. Identity scan of site/: 0 hits.
 - Error caught by testing: the first version assumed Pyodide ships openpyxl, and it doesn't ("No known package"). Switched to micropip.
 - Not checked: the page's interactive UI in a real browser (no browser on this machine).
+
+## Vercel deploy + website wording (Nov 6)
+- Deployed site/ to https://team17-everymind.vercel.app (Vercel CLI, project team17-everymind). Checked logged out with curl: index, dashboard and manifest return 200. The CLI wrote a token file to site/.env.local, which is gitignored and returns 404 when requested.
+- Memo, deck and appendix now describe the website flow instead of "run one command". submission/Team17_TechnicalArtifact.txt holds the URL.

@@ -12,7 +12,7 @@ Syntax:
 ## Turning 988 training feedback into answers EveryMind can act on
 layout: title
 kicker: EveryMind · Understanding 988 training · BuildFest 2026
-sub: A one-command tool that turns each post-training survey export into checked numbers, comment themes and a dashboard staff can share.
+sub: A website that turns each post-training survey export into checked numbers, comment themes and a dashboard staff can share.
 foot: Team 17
 notes: We built a tool EveryMind staff can run on every survey export, used it on 1,299 [F:post.identify_crisis.agree_pct.overall#n] responses, and turned the results into five recommendations.
 
@@ -25,17 +25,17 @@ card: 3 | Improve | What do participants ask for, and what should change next se
 foot: Data: 1,299 [F:post.identify_crisis.agree_pct.overall#n] post-training surveys. Every number in this deck traces to an ID in one findings file.
 notes: The business question has three parts. The tool answers each of them every time a new export arrives, not just once for this competition.
 
-## What we built: one command, one dashboard
+## What we built: a website staff can refresh themselves
 layout: solution
 step: 1 | Export | Save the survey export (.xlsx) from the survey platform.
-step: 2 | Run one command | It cleans the data, codes the comments and checks every number.
-step: 3 | Share one file | An offline dashboard for staff, presenters and funders.
+step: 2 | Drag it into the website | It cleans the data, codes the comments and checks every number, inside the browser.
+step: 3 | Share the dashboard | Download it as one file for staff, presenters and funders.
 - New counties, answer labels and rows are flagged, never dropped
 - Every number shows how many people it rests on, with a confidence range
 - Groups under 10 people are hidden, for privacy and reliability
 image: agents/tool/dist/deck_assets/01_dashboard_overview.png
 alt: The dashboard's opening view: headline tiles, each showing a value, its n and a confidence range.
-notes: Staff need no coding. The same command works on next month's export. Unknown labels show up in a data-checks panel instead of breaking the tool.
+notes: Staff need no coding: open team17-everymind.vercel.app and drag in next month's export. The file never leaves their computer. Unknown labels show up in a data-checks panel instead of breaking the tool.
 
 ## Finding 1: participants leave confident
 layout: stats
@@ -98,9 +98,9 @@ notes: Each recommendation has an owner, a cadence and a measure, so EveryMind c
 ## How staff would use it
 layout: cards
 lead: Built to be run by program staff, not analysts
-card: Who | A program coordinator. No coding: one command, or a double-click to open the dashboard.
+card: Who | A program coordinator. No coding: open the website and drag in the export.
 card: How often | Monthly, and at the end of each training season (spring and fall).
-card: What it takes | The survey export, a laptop with Python, and about five minutes.
+card: What it takes | The survey export, a web browser, and about two minutes.
 card: Privacy | Survey responses never leave EveryMind's computer. The dashboard holds totals only, and groups under 10 people are hidden.
 notes: The README in the technical artifact walks through it step by step, including how to refresh with next month's export.
 
@@ -127,6 +127,6 @@ notes: None of these change the direction of the findings, but they set how far 
 layout: closing
 - Make the call-988 question required, and add a 3-question pre-survey
 - Pilot built-in Q&A time in student sessions
-- Run the dashboard after every season: one command, about five minutes
+- Refresh the dashboard after every season: drag in the export, about two minutes
 foot: Thank you. Questions?
 notes: Three changes, all low cost, and each with a measure to show whether it worked.

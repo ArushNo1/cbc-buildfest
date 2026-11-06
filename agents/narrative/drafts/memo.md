@@ -43,16 +43,16 @@
 |---|---|---|---|---|
 | 1 | **Measure behavior intent for everyone.** Make the call-988 question required and add a true pre-survey (3 questions at the start of the session). | Evaluation lead · once, then every session | Survey edit (~1 hour) | Call-988 response rate; gains measured without recall bias |
 | 2 | **Redesign the student session for engagement.** Pilot a format with built-in Q&A time in Anne Arundel schools, since a third of improvement comments are open questions about 988. | Training manager · next semester | Facilitator time, one pilot school | Student recommend score; compare pilot vs non-pilot |
-| 3 | **Run the dashboard after every training season**, and use it for grant reports. | Program coordinator · monthly + each season | Survey export, a laptop, ~5 minutes | Report turnaround; grant reports citing it |
+| 3 | **Run the dashboard after every training season**, and use it for grant reports. | Program coordinator · monthly + each season | The survey export, a web browser, ~2 minutes | Report turnaround; grant reports citing it |
 | 4 | **Reach and hear smaller communities.** Collect at least 30 responses before judging a county or a language group; offer the Spanish survey actively. | Outreach lead · ongoing | Survey links per partner | Number of groups with n ≥ 30 |
 | 5 | **Fix the survey form**: county as a dropdown, one answer scale for all items. | Evaluation lead · once | Survey edit | Label variants and blanks fall to zero |
 
 ## Implementation
 
 - **Who and when:** a program coordinator, once a month and at the end of each training season.
-- **Steps:** export the survey to Excel and run one command (see README.md in the technical artifact). The tool rebuilds everything: cleaned data, findings and a one-file dashboard to share with staff and funders.
+- **Steps:** open the dashboard website (team17-everymind.vercel.app), click **Update with a new survey export**, and drag in the Excel export. In about a minute it rebuilds everything: cleaned data, findings, comment themes and the dashboard, which can be downloaded as one file for staff and funders. No installation or coding.
 - **What it handles:** new counties, new answer labels and extra rows are flagged rather than breaking the tool.
-- **Privacy:** no response data leaves EveryMind's computer, and only group totals appear in outputs.
+- **Privacy:** the export is processed inside the browser and is never uploaded. Only group totals appear in outputs.
 
 ## Limitations
 
