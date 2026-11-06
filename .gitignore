@@ -23,3 +23,6 @@ __pycache__/
 .ipynb_checkpoints/
 .DS_Store
 Thumbs.db
+
+# Real names for scripts/verify.py identity check (local only, never commit)
+.identity_strings
