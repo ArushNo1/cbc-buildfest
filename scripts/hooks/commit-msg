@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Hard rule 1: reject AI attribution in commit messages. The paths CLAUDE.md and .claude/ are allowed.
+# Also used by scripts/check_repo.sh on pushed commits (pass /dev/stdin).
+msg=$(grep -v '^#' "$1" | sed -E 's#(\.claude/|CLAUDE\.md)##g')
+if printf '%s\n' "$msg" | grep -Eiq 'co-authored-by|claude|anthropic|🤖'; then
+  echo "commit-msg: REJECTED (hard rule 1). Remove Co-Authored-By / Claude / Anthropic / robot emoji:" >&2
+  printf '%s\n' "$msg" | grep -Ein 'co-authored-by|claude|anthropic|🤖' >&2
+  exit 1
+fi

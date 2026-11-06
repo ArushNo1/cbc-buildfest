@@ -1,0 +1,25 @@
+# Hard rule 2: raw / row-level survey data never enters git.
+/data/
+*.xlsx
+*.xlsm
+*.xls
+*.csv
+*.tsv
+*.parquet
+*.feather
+*.sav
+*.dta
+*.sqlite
+*.db
+~$*
+
+# Local / tooling
+.claude/settings.local.json
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db

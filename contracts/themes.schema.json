@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "themes.schema.json",
+  "title": "outputs/themes.json",
+  "x-schema-version": "0",
+  "description": "Theme coding of the two free-text fields (comment_valuable, comment_improve). Aggregates only: NO comment text here (reviewed quotes live only in outputs/quotes_reviewed.json). v0 by narrative; text agent owns from v1.",
+  "type": "object",
+  "required": ["schema_version", "method", "taxonomy", "counts", "validation"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "type": "string" },
+    "note": { "type": "string" },
+    "source": { "type": "object", "properties": { "file_sha256": { "type": "string" }, "n_rows": { "type": "integer" } } },
+    "method": { "type": "string", "description": "How the offline classifier works (no API key needed) and how it was built." },
+    "taxonomy": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["theme_id", "field", "label", "description"],
+        "properties": {
+          "theme_id": { "type": "string", "pattern": "^[a-z0-9_]+$" },
+          "field": { "enum": ["valuable", "improve"] },
+          "label": { "type": "string" },
+          "description": { "type": "string" }
+        }
+      }
+    },
+    "counts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "theme_id", "field", "group", "n_mentions", "n", "pct", "small_n", "suppressed"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^themes\\.[a-z0-9_]+(\\.[a-z0-9_]+)+$", "description": "Stable citeable ID, e.g. themes.improve.more_time.pct.overall" },
+          "theme_id": { "type": "string" },
+          "field": { "enum": ["valuable", "improve"] },
+          "group": {
+            "type": "object",
+            "required": ["dimension", "level"],
+            "properties": { "dimension": { "type": "string" }, "level": { "type": "string" } }
+          },
+          "n_mentions": { "type": ["integer", "null"], "description": "Comments coded with this theme (null if suppressed)." },
+          "n": { "type": "integer", "description": "Non-empty comments for this field in this group (the denominator)." },
+          "pct": { "type": ["number", "null"] },
+          "small_n": { "type": "boolean" },
+          "suppressed": { "type": "boolean" }
+        }
+      }
+    },
+    "validation": {
+      "type": "object",
+      "required": ["sample_size", "agreement_pct", "procedure"],
+      "properties": {
+        "sample_size": { "type": "integer" },
+        "agreement_pct": { "type": ["number", "null"] },
+        "cohen_kappa": { "type": ["number", "null"] },
+        "procedure": { "type": "string", "description": "Who hand-checked what, how the sample was drawn. Must be true." }
+      }
+    },
+    "spanish": {
+      "type": "object",
+      "properties": { "n_comments": { "type": "integer" }, "handling": { "type": "string" } }
+    },
+    "pii_screen": {
+      "type": "object",
+      "properties": { "method": { "type": "string" }, "n_flagged": { "type": "integer" } }
+    }
+  }
+}

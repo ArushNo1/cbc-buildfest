@@ -1,0 +1,18 @@
+{
+  "schema_version": "0",
+  "note": "SYNTHETIC SHAPE EXAMPLE. Values are made up. Never cite.",
+  "method": "Keyword/regex rules from agents/text/codebook (offline, deterministic).",
+  "taxonomy": [
+    { "theme_id": "more_time", "field": "improve", "label": "More time / slower pace", "description": "Asks for a longer session or slower pacing." }
+  ],
+  "counts": [
+    {
+      "id": "themes.improve.more_time.pct.overall", "theme_id": "more_time", "field": "improve",
+      "group": { "dimension": "overall", "level": "all" },
+      "n_mentions": 12, "n": 60, "pct": 20.0, "small_n": false, "suppressed": false
+    }
+  ],
+  "validation": { "sample_size": 50, "agreement_pct": 80.0, "cohen_kappa": null, "procedure": "EXAMPLE ONLY." },
+  "spanish": { "n_comments": 0, "handling": "EXAMPLE ONLY." },
+  "pii_screen": { "method": "EXAMPLE ONLY.", "n_flagged": 0 }
+}

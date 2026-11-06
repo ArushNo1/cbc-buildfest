@@ -1,0 +1,40 @@
+{
+  "schema_version": "0",
+  "note": "SYNTHETIC SHAPE EXAMPLE. Values are made up. Never cite; check_numbers only reads outputs/.",
+  "source": { "file_sha256": "0000000000000000000000000000000000000000000000000000000000000000", "sheet": "Survey Data", "n_rows": 100 },
+  "small_n_threshold": 10,
+  "findings": [
+    {
+      "id": "post.identify_crisis.agree_pct.overall",
+      "label": "Agree or strongly agree they can identify signs of a crisis (after training)",
+      "value": 50.0, "unit": "pct", "n": 90, "numerator": 45, "n_missing": 10,
+      "denominator": "respondents who answered this item",
+      "ci_low": 39.9, "ci_high": 60.1, "ci_method": "wilson95",
+      "group": { "dimension": "overall", "level": "all" },
+      "small_n": false, "suppressed": false, "caveat": "",
+      "source_columns": ["post_identify_crisis"]
+    },
+    {
+      "id": "change.identify_crisis.mean_points.overall",
+      "label": "Average self-rated change, before to after (retrospective)",
+      "value": 1.0, "unit": "points", "n": 88, "numerator": null, "n_missing": 12,
+      "denominator": "respondents who answered both the before and after item",
+      "ci_low": 0.8, "ci_high": 1.2, "ci_method": "t95",
+      "group": { "dimension": "overall", "level": "all" },
+      "small_n": false, "suppressed": false,
+      "caveat": "'Before' ratings were asked after the training (retrospective), which tends to overstate change.",
+      "source_columns": ["pre_identify_crisis", "post_identify_crisis"]
+    },
+    {
+      "id": "post.identify_crisis.agree_pct.county.example_county",
+      "label": "Agree or strongly agree they can identify signs of a crisis — Example County",
+      "value": null, "unit": "pct", "n": 4, "numerator": null, "n_missing": 0,
+      "denominator": "respondents in Example County who answered this item",
+      "ci_low": null, "ci_high": null, "ci_method": null,
+      "group": { "dimension": "county", "level": "example_county" },
+      "small_n": true, "suppressed": true,
+      "caveat": "Fewer than 10 respondents; value suppressed and pooled into 'other counties'.",
+      "source_columns": ["post_identify_crisis", "county"]
+    }
+  ]
+}
