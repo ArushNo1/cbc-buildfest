@@ -53,3 +53,4 @@ Separate code (`agents/narrative/crosscheck/crosscheck.py`) reads the raw xlsx d
 | Date (ET) | Input sha256 | Metrics | Agree | Mismatch (issues) | Not in findings | Notes |
 |---|---|---|---|---|---|---|
 | Thu Nov 5 ~23:00 | see results.json | 54 | — | — | — | findings.json doesn't exist yet. Spot-checked the crosscheck itself against raw label counts tallied separately in-session: post identify agree 1,168/1,299, recommend mean 9,605/1,266, NPS (518−366)/1,266, call-988 mean 2,244/293, and subgroup n's (937 / 309 / 1,080 / 68 / 71 / 95 / 19). All matched. |
+| Thu Nov 5 22:52 | 72b08ff71ede | 54 | 54 | 0 | 0 | All 54 crosscheck metrics match outputs/findings.json within ±0.05 tolerance. Numerators and denominators match exactly. |

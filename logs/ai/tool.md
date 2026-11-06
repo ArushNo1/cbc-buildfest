@@ -41,3 +41,23 @@ Entry template:
   - The rebuilt `outputs/themes.json` differed only in its `validation` block, which was nulled because the hand labels exist only on the text machine. I restored the committed file and reported it to text.
   - Spot-checked tiles against `outputs/findings.json`: post identify-crisis 89.9 of 1,299; recommend mean 7.59 of 1,266; NPS +12.0; call-988 mean 7.66 of 293, with 1,006 missing.
   - No numbers were hand-recomputed from the xlsx. That is the human check in issue 29.
+
+## 2026-11-05 23:40 ET: artifact packaging and walkthrough notebook
+- **Prompt (representative):** "Keep going on the tool milestones: package the technical artifact zip (code, contracts, outputs, RUN.md, fixture generator; no data, no identity strings) and write the walkthrough notebook that loads only outputs/*.json."
+- **What the AI produced:**
+  - `agents/tool/package.py`:
+    - builds the zip from an allow-list of git-tracked files;
+    - runs the identity scan from `scripts/verify.py` before writing;
+    - writes a reproducible zip (fixed timestamps, sorted entries);
+    - with `--smoke`, unzips into an empty, non-git folder and runs `make run` and `make test` there.
+  - `agents/tool/walkthrough.ipynb`, committed with outputs cleared, plus a test that executes every code cell.
+- **Errors / limitations caught, and how:**
+  - **Narrative's `verify.py` would reject the zip.** Reading it before packaging showed that its data-file pattern `(^|/)data/` also matches `agents/data/`, which holds the pipeline code. Reported to narrative in #42. `package.py` blocks only a top-level `data/`.
+  - **`make setup` fails without git.** Its `git config` step fails in an unzipped folder, which is how judges will run it. Also in #42. RUN.md now gives the pip fallback.
+  - **CLAUDE.md is left out of the zip.** Its rules text contains "umd", which the identity scan flags.
+- **Revision:** none needed after the smoke test.
+- **Manually verified against data:** `python3 agents/tool/package.py --smoke DATA=data/raw/BuildFest_EveryMind_Survey_Data_FULL.xlsx`:
+  - built 44 files (153 KB);
+  - `make run` and `make test` (48 passed) succeeded in the unzipped folder;
+  - the rebuilt `outputs/findings.json` was identical to the committed file;
+  - `outputs/dashboard.html` differed only because the clean rebuild nulls the comment-coder validation stats. That is the same cause as in #41.

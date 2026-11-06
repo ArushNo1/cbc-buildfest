@@ -10,7 +10,14 @@
   "properties": {
     "schema_version": { "type": "string" },
     "note": { "type": "string" },
-    "source": { "type": "object", "properties": { "file_sha256": { "type": "string" }, "n_rows": { "type": "integer" } } },
+    "source": {
+      "type": "object",
+      "properties": {
+        "file_sha256": { "type": "string", "description": "Hash of the file this run actually read (the clean csv when it exists, otherwise the xlsx)." },
+        "raw_file_sha256": { "type": "string", "description": "Hash of the raw survey xlsx, so this file can be matched to findings.json." },
+        "n_rows": { "type": "integer" }
+      }
+    },
     "method": { "type": "string", "description": "How the offline classifier works (no API key needed) and how it was built." },
     "taxonomy": {
       "type": "array",
@@ -21,7 +28,8 @@
           "theme_id": { "type": "string", "pattern": "^[a-z0-9_]+$" },
           "field": { "enum": ["valuable", "improve"] },
           "label": { "type": "string" },
-          "description": { "type": "string" }
+          "description": { "type": "string" },
+          "kind": { "enum": ["theme", "catch_all"], "description": "catch_all is other_unclear, no_substantive, and audience_question." }
         }
       }
     },

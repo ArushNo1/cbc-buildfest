@@ -125,6 +125,38 @@ def test_fixture_cli_is_deterministic(tmp_path):
     jsonschema.validate(json.loads(first.read_text(encoding="utf-8")), SCHEMA)
 
 
+def test_catalog_marks_catch_alls():
+    kinds = {(item["field"], item["theme_id"]): item["kind"] for item in themes.theme_catalog()}
+    assert kinds[("improve", "audience_question")] == "catch_all"
+    assert kinds[("valuable", "no_substantive")] == "catch_all"
+    assert kinds[("improve", "other_unclear")] == "catch_all"
+    assert kinds[("valuable", "what_988_is")] == "theme"
+
+
+def test_stored_validation_only_for_the_same_export(tmp_path, monkeypatch):
+    summary = {
+        "sample_size": 80,
+        "agreement_pct": 90.0,
+        "cohen_kappa": 0.87,
+        "n_rows": 1299,
+        "raw_file_sha256": "abc",
+        "procedure": "stored check for this export only",
+    }
+    path = tmp_path / "validation_summary.json"
+    path.write_text(json.dumps(summary), encoding="utf-8")
+    monkeypatch.setattr(themes, "VALIDATION_SUMMARY", path)
+    monkeypatch.setattr(themes, "HAND_LABELS", tmp_path / "missing.json")
+    same = themes.validation_block([], {"n_rows": 1299, "raw_file_sha256": "abc"})
+    assert same["agreement_pct"] == 90.0
+    assert same["sample_size"] == 80
+    other = themes.validation_block([], {"n_rows": 10, "raw_file_sha256": "abc"})
+    assert other["agreement_pct"] is None
+    fixture = themes.validation_block(
+        [], {"n_rows": 1299, "raw_file_sha256": "abc"}, synthetic=True
+    )
+    assert fixture["agreement_pct"] is None
+
+
 def test_missing_input_fails(tmp_path):
     try:
         themes.main(["--input", str(tmp_path / "missing.csv"), "--output", str(tmp_path / "out.json")])

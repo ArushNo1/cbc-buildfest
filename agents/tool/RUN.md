@@ -10,12 +10,17 @@ One command turns a survey export (`.xlsx`) into every number and a dashboard yo
 
 ## First time on a computer
 
+Open a terminal in the project folder (the one that contains `Makefile`), then run:
+
 ```bash
-cd cbc-buildfest
 make setup
 ```
 
-`make setup` installs the Python packages in `requirements.txt` and turns on the repo's commit checks.
+`make setup` installs the Python packages in `requirements.txt` and, in a git checkout, turns on the repo's commit checks. If you unzipped the artifact (no git) and `make setup` stops at a `git config` error, install the packages directly instead:
+
+```bash
+python3 -m pip install -r requirements.txt
+```
 
 ## Run it
 

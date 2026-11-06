@@ -20,6 +20,9 @@ ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_INPUT = ROOT / "data" / "processed" / "survey_clean.csv"
 DEFAULT_XLSX = ROOT / "data" / "raw" / "BuildFest_EveryMind_Survey_Data_FULL.xlsx"
 HAND_LABELS = ROOT / "data" / "processed" / "hand_labels.json"
+VALIDATION_SUMMARY = ROOT / "agents" / "text" / "validation_summary.json"
+VALIDATION_REPORT = ROOT / "outputs" / "validation_report.json"
+CATCH_ALL = frozenset({"no_substantive", "other_unclear", "audience_question"})
 DEFAULT_OUTPUT = ROOT / "outputs" / "themes.json"
 SMALL_N = 10
 
@@ -696,6 +699,8 @@ def theme_catalog() -> list[dict]:
                     "description": description,
                 }
             )
+    for row in rows:
+        row["kind"] = "catch_all" if row["theme_id"] in CATCH_ALL else "theme"
     return sorted(rows, key=lambda row: (row["field"], row["theme_id"]))
 
 
@@ -801,7 +806,11 @@ def build_themes(rows: list[dict], source: dict, note: str | None = None) -> dic
         ),
         "taxonomy": catalog,
         "counts": sorted(counts, key=lambda item: item["id"]),
-        "validation": validation_block(rows),
+        "validation": validation_block(
+            rows,
+            source,
+            synthetic=bool(note and str(note).startswith("SYNTHETIC")),
+        ),
         "spanish": {
             "n_comments": len(spanish_rows),
             "handling": (
@@ -968,17 +977,84 @@ def _kappa(hand: list[int], pred: list[int]) -> float | None:
     return (observed - chance) / (1 - chance)
 
 
-def validation_block(rows: list[dict]) -> dict:
-    if not HAND_LABELS.exists():
-        return {
-            "sample_size": 0,
-            "agreement_pct": None,
-            "cohen_kappa": None,
-            "procedure": (
-                "Not run. Hand labels were not on this machine at "
-                "data/processed/hand_labels.json. No agreement rate is claimed."
-            ),
-        }
+def _not_run(procedure: str) -> dict:
+    return {
+        "sample_size": 0,
+        "agreement_pct": None,
+        "cohen_kappa": None,
+        "procedure": procedure,
+    }
+
+
+def stored_validation(source: dict) -> dict | None:
+    """Committed aggregate from the labeled sample. No row ids. Used only for the same export."""
+    if not VALIDATION_SUMMARY.exists():
+        return None
+    stored = json.loads(VALIDATION_SUMMARY.read_text(encoding="utf-8"))
+    raw = source.get("raw_file_sha256")
+    if not raw or raw != stored.get("raw_file_sha256"):
+        return None
+    if source.get("n_rows") != stored.get("n_rows"):
+        return None
+    return {
+        "sample_size": stored["sample_size"],
+        "agreement_pct": stored["agreement_pct"],
+        "cohen_kappa": stored["cohen_kappa"],
+        "procedure": stored["procedure"],
+    }
+
+
+def write_validation_summary(block: dict, source: dict) -> None:
+    if not source.get("raw_file_sha256") or not block.get("sample_size"):
+        return
+    payload = {
+        "sample_size": block["sample_size"],
+        "agreement_pct": block["agreement_pct"],
+        "cohen_kappa": block["cohen_kappa"],
+        "n_rows": source["n_rows"],
+        "raw_file_sha256": source["raw_file_sha256"],
+        "procedure": (
+            block["procedure"]
+            + " This copy is what a machine without data/processed/hand_labels.json reports. "
+            "It applies only when the raw survey sha256 and the row count match the values in this file. "
+            "The hand labels stay on the text machine and are not in git."
+        ),
+    }
+    VALIDATION_SUMMARY.write_text(dumps(payload), encoding="utf-8")
+
+
+def raw_file_sha256(path: Path | None) -> str | None:
+    if path is not None and path.suffix.lower() in {".xlsx", ".xlsm"} and path.exists():
+        return file_sha256(path)
+    if DEFAULT_XLSX.exists():
+        return file_sha256(DEFAULT_XLSX)
+    if VALIDATION_REPORT.exists():
+        report = json.loads(VALIDATION_REPORT.read_text(encoding="utf-8"))
+        sha = report.get("source", {}).get("file_sha256")
+        if isinstance(sha, str) and sha:
+            return sha
+    return None
+
+
+def validation_block(rows: list[dict], source: dict | None = None, synthetic: bool = False) -> dict:
+    source = source or {}
+    if synthetic:
+        return _not_run("Synthetic fixture. No agreement rate is claimed.")
+    if HAND_LABELS.exists():
+        live = _validation_from_labels(rows)
+        if live["sample_size"]:
+            return live
+    stored = stored_validation(source)
+    if stored is not None:
+        return stored
+    return _not_run(
+        "Not run. Hand labels were not on this machine at "
+        "data/processed/hand_labels.json, and this input is not the survey export "
+        "the stored check was computed on. No agreement rate is claimed."
+    )
+
+
+def _validation_from_labels(rows: list[dict]) -> dict:
     labeled = json.loads(HAND_LABELS.read_text(encoding="utf-8"))
     by_id = {str(row.get("response_id")): row for row in rows}
     exact = 0
@@ -1057,9 +1133,14 @@ def main(argv: list[str] | None = None) -> int:
             )
         rows = read_xlsx(path) if path.suffix.lower() in {".xlsx", ".xlsm"} else read_csv(path)
         source = {"file_sha256": file_sha256(path), "n_rows": len(rows)}
+        raw = raw_file_sha256(path)
+        if raw:
+            source["raw_file_sha256"] = raw
         note = None
 
     payload = build_themes(rows, source, note)
+    if not args.fixture and HAND_LABELS.exists() and payload["validation"]["sample_size"]:
+        write_validation_summary(payload["validation"], source)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(dumps(payload), encoding="utf-8")
     print(f"themes.py: wrote {args.output} ({source['n_rows']} rows)")
