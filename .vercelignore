@@ -1,4 +1,5 @@
-# Only the website may be deployed. A deploy started from the repo root uploads site/ and nothing else,
-# so docs, logs and agent notes (which name the team) can never be published (#49).
+# Only the website may be deployed. A deploy started from the repo root uploads site/ (plus vercel.json,
+# which maps / to site/) and nothing else, so docs, logs and agent notes (which name the team) are never published (#49).
 /*
 !/site
+!/vercel.json
