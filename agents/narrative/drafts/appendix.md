@@ -23,6 +23,7 @@ Errors were caught by tests, by cross-checks, or by a person reading the output.
 - **A classifier that missed too much.** The first version left about half of all comments unclassified. Against a hand-coded sample of 80 comments, exact agreement was 75 percent. After rules were added from the codebook, it was 90 percent (mean kappa 0.87). Caveat: the same agent wrote both the rules and the labels.
 - **A privacy-screen gap.** The PII screen missed "Dr. Rivera" because of a capitalization bug, and it still misses bare first names. So every quote goes through human review.
 - **A misleading chart.** A trend line joined months with no trainings, which implied continuity, and a summary named a 12-person county as "highest" without showing its wide range. Both were fixed after visual review.
+- **A dashboard bug.** Keyboard users never saw a bar's numbers, because scrolling closed the tooltip. Automated acceptance checks caught it, and it was fixed.
 - **A data leak in our own inspection script.** It printed two short comment snippets into the session because of a pandas data-type change. Nothing left the session, and the script was fixed.
 
 ## How we refined outputs
@@ -33,6 +34,7 @@ Errors were caught by tests, by cross-checks, or by a person reading the output.
 ## What we verified independently
 
 - **Separate recompute.** Code written separately from the pipeline recomputed 65 metrics from the raw file, and all 65 matched.
+- **Second recompute of everything.** A separate script, written by another agent, recomputed all 222 findings from the raw file, and all 222 matched. It caught all 3 errors deliberately planted in a test copy.
 - **Reproducible rebuild.** A rebuild on a second machine reproduced the findings file byte-for-byte.
 - **Robustness.** Synthetic test files (a new county, new answer labels, extra rows, a missing column, shifted dates) confirm the tool flags these cases rather than crashing.
 - **Hand recompute.** A team member recomputed 20 headline numbers by hand in Excel from the raw file, and all 20 matched the pipeline in both value and n.
