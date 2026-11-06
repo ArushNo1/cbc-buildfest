@@ -37,3 +37,6 @@ Entry template:
   - Schema v1 valid; small-n suppression consistent; caveats and CIs present.
 - **Limitation found:** the data agent tuned its definitions to match the crosscheck's (D-010), so 62/62 shows the code is right under shared definitions. It does not show that two independent analysts would choose the same definitions. The human Excel recompute (#29) remains the definition-independent check.
 - **Error caught (data agent's AI-written limitations.md):** "excluding these 31 rows raises post-agreement proportions by approximately 2.4 percentage points." Recomputed from raw: +2.20 / +2.21 / +2.26 pp (n 1,299 → 1,268), and the number had no finding ID. **Fix requested** to:data: correct the text and publish the three `*.sensitivity.excl_straightline` IDs. The crosscheck now computes them, so they are diffed when they appear.
+## Thu Nov 5 ~23:45 ET: memo v0
+- **What the AI produced:** `agents/narrative/drafts/memo.md` (883 words). Every number is tagged `[F:id]` against findings v1.
+- **Error caught by our own tool:** the first draft had a fabricated tag (a "62 metrics" count tagged with an unrelated finding ID) and untagged percentages ("95%", "77%", "12%"). check_numbers would have rejected all of them. They were reworded with no numbers, and check_numbers then reported 0 problems.
