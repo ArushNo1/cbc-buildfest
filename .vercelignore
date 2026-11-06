@@ -1,0 +1,4 @@
+# Only the website may be deployed. A deploy started from the repo root uploads site/ and nothing else,
+# so docs, logs and agent notes (which name the team) can never be published (#49).
+/*
+!/site

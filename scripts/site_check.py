@@ -56,6 +56,7 @@ def embedded(html: str) -> dict:
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("--real", type=Path, help="also rebuild from this export and compare with outputs/")
+    ap.add_argument("--url", help="test a deployed copy (e.g. the Vercel URL) instead of serving site/ locally")
     args = ap.parse_args(argv)
     from playwright.sync_api import sync_playwright
 
@@ -66,7 +67,7 @@ def main(argv=None) -> int:
     if not fixture.exists():
         print("site_check: run `make fixtures` first", file=sys.stderr)
         return 1
-    httpd, url = serve()
+    httpd, url = (None, args.url.rstrip("/") + "/") if args.url else serve()
     with sync_playwright() as p:
         b = p.chromium.launch()
         for scheme, width in (("light", 1280), ("dark", 1280), ("light", 375)):
@@ -75,7 +76,13 @@ def main(argv=None) -> int:
             errs = []
             page.on("pageerror", lambda e: errs.append(str(e)))
             page.on("console", lambda m: errs.append(m.text) if m.type == "error" else None)
-            page.goto(url)
+            resp = page.goto(url)
+            if not resp or resp.status != 200:
+                check(f"load: {url} answers 200", False, f"HTTP {resp.status if resp else 'no response'}")
+                ctx.close()
+                b.close()
+                print("site_check: the site does not load; stopping")
+                return 1
             page.wait_for_timeout(800)
             frame = page.frame_locator("#dash")
             tiles = frame.locator(".tile").count()
@@ -95,7 +102,7 @@ def main(argv=None) -> int:
         page.on("console", lambda m: off_errs.append(m.text) if m.type == "error" else None)
 
         def no_internet(route):  # simulate no internet: only the site's own server answers
-            if route.request.url.startswith("http://127.0.0.1"):
+            if route.request.url.startswith(url):
                 route.continue_()
             else:
                 off_reqs.append(route.request.url)
@@ -178,7 +185,8 @@ def main(argv=None) -> int:
         check("update: no script errors during the update flow", not [e for e in errs if "Traceback" not in e], str(errs[:2]))
         ctx.close()
         b.close()
-    httpd.shutdown()
+    if httpd:
+        httpd.shutdown()
     failed = [r for r in RESULTS if not r[1]]
     print(f"site_check: {len(RESULTS) - len(failed)}/{len(RESULTS)} passed")
     return 1 if failed else 0
